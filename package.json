@@ -1,0 +1,15 @@
+{
+  "name": "flatburn-lte",
+  "workspaces": ["documentation"],
+  "version": "2.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=18.0"
+  },
+  "description": "flatburnLTE",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
