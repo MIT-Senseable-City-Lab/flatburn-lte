@@ -1,13 +1,16 @@
-cff-version: 1.0
+cff-version: 1.2.0
 message: "If you use resources from this repository, please cite it as below."
 authors:
 - family-names: "Mora"
   given-names: "Simone"
+- family-names: "Oyinlola"
+  given-names: "Oluwatobi"
+- family-names: "Speridiao"
+  given-names: "Andrei"
+  orcid: "https://orcid.org/0009-0004-5119-7584"
 - family-names: "Wang"
   given-names: "An"
   orcid: "https://orcid.org/0000-0002-1874-2702"
-- family-names: "Oyinlola"
-  given-names: "Oluwatobi"
 - family-names: "Paul"
   given-names: "Sanjana"
 - family-names: "Nwigwe"
