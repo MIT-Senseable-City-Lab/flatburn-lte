@@ -28,7 +28,7 @@ authors:
 - family-names: "Ratti"
   given-names: "Carlo"
 title: "Open Sourced City Scanner"
-version: 1.0.0
+version: 2.0.0
 doi: 10.5281/zenodo.7762000
 date-released: 2023-03-16
 url: "https://github.com/MIT-Senseable-City-Lab/OSCS"
