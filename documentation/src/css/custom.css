@@ -36,6 +36,10 @@
   font-family: "Atkinson Hyperlegible", sans-serif !important;
 }
 
+.hidden {
+  display: none !important;
+}
+
 /* You can override the default Infima variables here. */
 :root {
   --ifm-color-primary: #2e8555;
