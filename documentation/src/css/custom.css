@@ -4,6 +4,38 @@
  * work well for content-centric websites.
  */
 
+.atkinson-hyperlegible-regular {
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  src: url("/font/AtkinsonHyperlegible-Regular.ttf");
+}
+
+.atkinson-hyperlegible-bold {
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  src: url("/font/AtkinsonHyperlegible-Bold.ttf");
+}
+
+.atkinson-hyperlegible-regular-italic {
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  src: url("/font/AtkinsonHyperlegible-Italic.ttf");
+}
+
+.atkinson-hyperlegible-bold-italic {
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  src: url("/font/AtkinsonHyperlegible-BoldItalic.ttf");
+}
+
+* {
+  font-family: "Atkinson Hyperlegible", sans-serif !important;
+}
+
 /* You can override the default Infima variables here. */
 :root {
   --ifm-color-primary: #2e8555;
@@ -18,7 +50,7 @@
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
+[data-theme="dark"] {
   --ifm-color-primary: #25c2a0;
   --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;
