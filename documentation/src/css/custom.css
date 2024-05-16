@@ -43,6 +43,18 @@
 table {
   display: table;
   width: 100%;
+  white-space: nowrap;
+}
+
+th,
+td,
+tr {
+  padding-top: 6px !important;
+  padding-bottom: 3px !important;
+  border: 0 !important;
+}
+tr:hover{
+  opacity: 75% !important;
 }
 
 a {
