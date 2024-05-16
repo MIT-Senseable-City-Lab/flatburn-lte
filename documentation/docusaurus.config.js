@@ -9,7 +9,7 @@ import { themes as prismThemes } from "prism-react-renderer";
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Flatburn LTE",
-  tagline: "An open-source City Scanner",
+  tagline: "Open-source CityScanner",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -18,6 +18,8 @@ const config = {
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/flatburn-lte/",
   trailingSlash: false,
+
+  staticDirectories: ['static'],
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
