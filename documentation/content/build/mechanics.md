@@ -1,7 +1,7 @@
 ---
-sidebar_position: 3
+sidebar_position: 5
 ---
 
-# Mechanics
+# ⚙️ Mechanics
 
 ### 3d printing

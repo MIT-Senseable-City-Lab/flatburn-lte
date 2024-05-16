@@ -2,11 +2,16 @@
 sidebar_position: 2
 ---
 
-# Device
+# 🕹️ Device
 
-how it works
+Brief description on the its purpose and why it is relevant to have such custom device made.
 
-all features
-- sensors
-- power
-- connectivity
+## How it works
+
+## Features
+
+### Sensors
+
+### Power
+
+### Connectivity

@@ -2,12 +2,8 @@
 sidebar_position: 1
 ---
 
-# Overview
+# 👀 Overview
+
+### exploded view with nomenclature for each part
 
 overview with estimated price for one unit
-
-### all parts
-exploded view with nomenclature for each part
-
-### bill of materials
-mechanical and electronics

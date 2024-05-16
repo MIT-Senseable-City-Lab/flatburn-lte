@@ -9,7 +9,7 @@ import { themes as prismThemes } from "prism-react-renderer";
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Flatburn LTE",
-  tagline: "Part of the City Scanner project",
+  tagline: "An open-source City Scanner",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -73,17 +73,24 @@ const config = {
           src: "img/logo.svg",
         },
         items: [
+          // {
+          //   type: "search",
+          //   position: "left",
+          // },
           {
             type: "docSidebar",
             sidebarId: "tutorialSidebar",
-            position: "right",
+            position: "left",
             label: "Flatburn LTE",
+            className: "project-name-label",
           },
           // { to: "/blog", label: "Blog", position: "left" },
           {
             href: "https://github.com/MIT-Senseable-City-Lab/flatburn-lte/",
-            label: "Project GitHub",
+            // label: "GitHub",
             position: "right",
+            className: "navbar-social-link navbar-github-logo",
+            "aria-label": "GitHub repository",
           },
         ],
       },
@@ -114,7 +121,7 @@ const config = {
                 label: "Twitter",
                 href: "https://twitter.com/SenseableCity",
               },
-            ],            
+            ],
           },
           {
             title: " ",
