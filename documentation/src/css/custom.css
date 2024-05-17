@@ -43,7 +43,7 @@
 table {
   display: table;
   width: 100%;
-  white-space: nowrap;
+  white-space: break-spaces;
 }
 
 th,
