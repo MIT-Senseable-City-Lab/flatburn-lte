@@ -53,13 +53,17 @@ tr {
   padding-bottom: 3px !important;
   border: 0 !important;
 }
-tr:hover{
+tr:hover {
   opacity: 75% !important;
 }
 
 a {
   /* font-weight: 700; */
   /* font-size: 110%; */
+}
+
+img {
+  border-radius: 5px;
 }
 
 /* You can override the default Infima variables here. */

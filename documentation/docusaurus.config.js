@@ -9,7 +9,7 @@ import { themes as prismThemes } from "prism-react-renderer";
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Flatburn LTE",
-  tagline: "Open-source CityScanner",
+  tagline: `From MIT Senseable City Lab, an open-source, solar-powered, and modular sensing device that can be easily deployed on road vehicles to collect environmental data.`,
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -19,7 +19,7 @@ const config = {
   baseUrl: "/flatburn-lte/",
   trailingSlash: false,
 
-  staticDirectories: ['static'],
+  staticDirectories: ["static"],
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.

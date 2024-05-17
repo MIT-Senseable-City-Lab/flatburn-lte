@@ -4,6 +4,8 @@ sidebar_position: 2
 
 # 🚚 Deployment
 
-### tips
+### Tips
 
-### dos and dont's
+### Dos and Dont's
+
+### Routine care

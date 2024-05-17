@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="91px" height="80px" viewBox="0 0 91 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>temperature</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="website" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons" transform="translate(-90.000000, -344.000000)">
+            <g id="temperature" transform="translate(91.000000, 345.000000)">
+                <path d="M37.1923077,30.4424704 L37.1923077,49.8173703 L37.1923072,49.8173726 C34.1250264,51.253726 32,54.3716654 32,57.9866667 C32,62.9645932 36.0294373,67 41,67 C45.9705627,67 50,62.9645932 50,57.9866667 C50,54.3716652 47.8749734,51.2537257 44.8076923,49.8173724 L44.8076923,18.8133333 C44.8076923,16.7072875 43.1029304,15 41,15 L41,15 L41,15 C38.8970696,15 37.1923077,16.7072875 37.1923077,18.8133333 L37.1923077,18.8133333 L37.1923077,22.610602" id="Combined-Shape" stroke="#404040" stroke-width="1.4" stroke-linecap="round"></path>
+                <circle id="Oval-4" fill="#8cc63e" cx="41.0248342" cy="57.4863584" r="5.5"></circle>
+                <path d="M41,52 L41,41" id="Line-5" stroke="#8cc63e" stroke-width="1.4" stroke-linecap="round"></path>
+                <path d="M49.3571429,46.5 L53.6428571,46.5" id="Line-6" stroke="#404040" stroke-width="1.4" stroke-linecap="round"></path>
+                <path d="M49.34375,26.5 L60,26.5" id="Line-6-Copy-4" stroke="#404040" stroke-width="1.4" stroke-linecap="round"></path>
+                <path d="M49.3571429,36.5 L53.6428571,36.5" id="Line-6-Copy-2" stroke="#404040" stroke-width="1.4" stroke-linecap="round"></path>
+                <path d="M49.3571429,17.5 L53.6428571,17.5" id="Line-6-Copy-5" stroke="#404040" stroke-width="1.4" stroke-linecap="round"></path>
+                <path d="M49.34375,41.5 L60,41.5" id="Line-6-Copy" stroke="#404040" stroke-width="1.4" stroke-linecap="round"></path>
+                <path d="M49.3571429,22.5 L53.6428571,22.5" id="Line-6-Copy-6" stroke="#404040" stroke-width="1.4" stroke-linecap="round"></path>
+                <path d="M49.3571429,31.5 L53.6428571,31.5" id="Line-6-Copy-3" stroke="#404040" stroke-width="1.4" stroke-linecap="round"></path>
+                <path d="M0.3515625,5.5 L45,5.5" id="Line-7" stroke="#8cc63e" stroke-width="1.4" stroke-linecap="round"></path>
+                <path d="M19,72.6666667 L60.7665743,72.6666667" id="Line-7-Copy-4" stroke="#8cc63e" stroke-width="1.4" stroke-linecap="round"></path>
+                <path d="M32,0.5 L75,0.5" id="Line-7-Copy-6" stroke="#8cc63e" stroke-width="1.4" stroke-linecap="round"></path>
+                <path d="M49.3508772,77.5 L88.6491228,77.5" id="Line-7-Copy-5" stroke="#8cc63e" stroke-width="1.4" stroke-linecap="round"></path>
+                <path d="M7.34375,58.5 L28.65625,58.5" id="Line-7-Copy-2" stroke="#8cc63e" stroke-width="1.4" stroke-linecap="round"></path>
+                <path d="M54.3636364,58.5 L61.6363636,58.5" id="Line-7-Copy-3" stroke="#8cc63e" stroke-width="1.4" stroke-linecap="round"></path>
+                <path d="M0.103443489,45.6964286 L32.7207263,45.6964286" id="Line-7-Copy" stroke="#8cc63e" stroke-width="1.4" stroke-linecap="round"></path>
+                <path d="M13.35,18.5 L33.65,18.5" id="Line-8" stroke="#8cc63e" stroke-width="1.4" stroke-linecap="round"></path>
+                <path d="M58.3333333,18.5 L68,18.5" id="Line-8-Copy" stroke="#8cc63e" stroke-width="1.4" stroke-linecap="round"></path>
+                <path d="M59.3287317,37.3928571 L88.2943158,37.3928571" id="Line-10-Copy" stroke="#8cc63e" stroke-width="1.4" stroke-linecap="round"></path>
+                <path d="M22,37.5 L34,37.5" id="Line-10-Copy-2" stroke="#8cc63e" stroke-width="1.4" opacity="0.3" stroke-linecap="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>

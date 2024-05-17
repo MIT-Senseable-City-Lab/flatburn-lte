@@ -4,21 +4,21 @@ sidebar_position: 4
 
 # ♾️ Evolution
 
-Short text about 8 years of learnings, where it was deployed and a main takeaway.
+What we discover when we turn urban vehicles into sensing platforms.
 
-### 2024 Flatburn LTE
+<!-- ### 2024 Flatburn LTE
 
 _Place(YYYY)_
 
 photo
 
-description
+description -->
 
 ### 2023 Flatburn
 
 _Beirut (2023), Amsterdam (2023)_
 
-photo
+![Flatburn](@site/static/files/evolution/flatburn.jpg)
 
 description
 
@@ -26,7 +26,7 @@ description
 
 _Boston (2019), New York (2020), Stockholm (2021), Oskemen (2021), Beirut (2022)_
 
-photo
+![Whiteburn](@site/static/files/evolution/whiteburn.jpg)
 
 description
 
@@ -34,22 +34,22 @@ description
 
 _Boston (2019)_
 
-photo
+![Blackburn](@site/static/files/evolution/blackburn.jpg)
 
-description
+Blackburn, a new form-factor characterized by a waterproof shell and optimized sensing hardware, enables for large sensing fleet towards long-term data collection studies.
 
 ### 2018 Greta II
 
 _Boston (2018), New York (2018)_
 
-photo
+![Greta II](@site/static/files/evolution/greta2.jpg)
 
-description
+Greta II, adds real-time data streaming, a novel non-permanent magnetic binding system and autonomous operations via solar energy.
 
 ### 2017 Greta I
 
 _Boston (2017)_
 
-photo
+![Greta I](@site/static/files/evolution/greta1.jpg)
 
-description
+Greta I, our concept prototype, an exploration of different modular sensing components for the first time deployed on a moving vehicle.

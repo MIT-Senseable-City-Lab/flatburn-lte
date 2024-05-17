@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="88px" height="89px" viewBox="0 0 88 89" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>thermal</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="website" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons" transform="translate(-93.000000, -91.000000)">
+            <g id="thermal" transform="translate(93.000000, 91.000000)">
+                <path d="M31.631728,64.368272 C29.5506373,62.2871813 26.6756373,61 23.5,61 C17.1487254,61 12,66.1487254 12,72.5 C12,78.8512746 17.1487254,84 23.5,84 L23.5,84 C29.8512746,84 35,78.8512746 35,72.5 C35,70.9407706 34.6896884,69.4540184 34.1274533,68.0981313" id="Oval" stroke="#404040" stroke-width="1.4" stroke-linecap="round"></path>
+                <circle id="Oval-2" stroke="#404040" stroke-width="1.4" cx="40" cy="64" r="3"></circle>
+                <circle id="Oval-3-Copy-63" fill="#8cc63e" cx="58" cy="84" r="4"></circle>
+                <circle id="Oval-3-Copy-56" fill="#8cc63e" cx="71" cy="71" r="4"></circle>
+                <circle id="Oval-3-Copy-55" fill="#8cc63e" cx="58" cy="71" r="4"></circle>
+                <circle id="Oval-3-Copy-49" fill="#8cc63e" cx="84" cy="58" r="4"></circle>
+                <circle id="Oval-3-Copy-48" fill="#8cc63e" cx="71" cy="58" r="4"></circle>
+                <circle id="Oval-3-Copy-47" fill="#8cc63e" cx="58" cy="58" r="4"></circle>
+                <circle id="Oval-3-Copy-41" fill="#8cc63e" cx="84" cy="44" r="4"></circle>
+                <circle id="Oval-3-Copy-40" fill="#8cc63e" cx="71" cy="44" r="4"></circle>
+                <circle id="Oval-3-Copy-39" fill="#8cc63e" cx="58" cy="44" r="4"></circle>
+                <circle id="Oval-3-Copy-38" fill="#8cc63e" cx="44" cy="44" r="4"></circle>
+                <circle id="Oval-3-Copy-37" fill="#8cc63e" cx="31" cy="44" r="4"></circle>
+                <circle id="Oval-3-Copy-36" fill="#8cc63e" cx="17" cy="44" r="4"></circle>
+                <circle id="Oval-3-Copy-35" fill="#8cc63e" cx="4" cy="44" r="4"></circle>
+                <circle id="Oval-3-Copy-33" fill="#8cc63e" cx="84" cy="31" r="4"></circle>
+                <circle id="Oval-3-Copy-32" fill="#8cc63e" cx="71" cy="31" r="4"></circle>
+                <circle id="Oval-3-Copy-31" fill="#8cc63e" cx="58" cy="31" r="4"></circle>
+                <circle id="Oval-3-Copy-30" fill="#8cc63e" cx="44" cy="31" r="4"></circle>
+                <circle id="Oval-3-Copy-29" fill="#8cc63e" cx="31" cy="31" r="4"></circle>
+                <circle id="Oval-3-Copy-28" fill="#8cc63e" cx="17" cy="31" r="4"></circle>
+                <circle id="Oval-3-Copy-25" fill="#8cc63e" cx="84" cy="17" r="4"></circle>
+                <circle id="Oval-3-Copy-24" fill="#8cc63e" cx="71" cy="17" r="4"></circle>
+                <circle id="Oval-3-Copy-23" fill="#8cc63e" cx="58" cy="17" r="4"></circle>
+                <circle id="Oval-3-Copy-22" fill="#8cc63e" cx="44" cy="17" r="4"></circle>
+                <circle id="Oval-3-Copy-21" fill="#8cc63e" cx="31" cy="17" r="4"></circle>
+                <circle id="Oval-3-Copy-16" fill="#8cc63e" cx="71" cy="4" r="4"></circle>
+                <circle id="Oval-3-Copy-15" fill="#8cc63e" cx="58" cy="4" r="4"></circle>
+                <circle id="Oval-3-Copy-14" fill="#8cc63e" cx="44" cy="4" r="4"></circle>
+                <path d="M7.36363636,54.5 L14.6726368,54.5" id="Line" stroke="#404040" stroke-width="1.4" stroke-linecap="round"></path>
+                <path d="M5.2,58 L42.8,58 L42.8,58 C45.1195959,58 47,59.8804041 47,62.2 L47,73 L47,80.7357238 L47,83.8 L47,83.8 C47,86.1195959 45.1195959,88 42.8,88 L5.2,88 L5.2,88 C2.88040405,88 1,86.1195959 1,83.8 L1,62.2 L1,62.2 C1,59.8804041 2.88040405,58 5.2,58 Z" id="Rectangle-10" stroke="#404040" stroke-width="1.4"></path>
+            </g>
+        </g>
+    </g>
+</svg>

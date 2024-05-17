@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="85px" height="87px" viewBox="0 0 85 87" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>road</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="website" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons" transform="translate(-95.000000, -469.000000)">
+            <g id="road" transform="translate(96.000000, 464.000000)">
+                <path d="M75.5312229,49.5312229 C80.1458153,44.9166306 83,38.5416306 83,31.5 C83,17.4167389 71.5832611,6 57.5,6 C43.4167389,6 32,17.4167389 32,31.5 C32,45.5832611 43.4167389,57 57.5,57 L57.5,57 C60.9574217,57 64.2541332,56.3119178 67.2606654,55.0652226" id="Oval-3" stroke="#404040" stroke-width="1.4" stroke-linecap="round" transform="translate(57.500000, 31.500000) rotate(-75.186171) translate(-57.500000, -31.500000) "></path>
+                <ellipse id="Oval-7" stroke="#404040" stroke-width="1.4" transform="translate(57.000000, 32.500000) rotate(-45.000000) translate(-57.000000, -32.500000) " cx="57" cy="32.5" rx="8" ry="25.5"></ellipse>
+                <ellipse id="Oval-7" stroke="#404040" stroke-width="1.4" transform="translate(58.500000, 33.000000) rotate(-135.000000) translate(-58.500000, -33.000000) " cx="58.5" cy="33" rx="6.5" ry="19"></ellipse>
+                <path d="M78.744478,54.744478 L37.107956,13.107956" id="Line-12" stroke="#404040" stroke-width="1.4" stroke-linecap="round"></path>
+                <path d="M14.1095202,91 L14.1095202,78.3941087 L19.0668964,75.490557 L23.9964784,78.3941087 L30.120819,76.2157019 L37.7399729,77.9530462 L30.120819,72.7425811 L23.9964784,73.76743 L19.0668964,71.1199836 L14.1095202,71.1199836 L14.1095202,67.2 L14.1095202,67.2 C14.1095202,64.8804041 12.2291162,63 9.90952024,63 L0,63" id="Path-5" stroke="#8cc63e" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M21.2901216,91 L21.2901216,80.6013054 M21.2901216,68.9172891 L21.2901216,63.0013704 L21.2901216,63.0013704 C21.2901216,59.1346203 18.1118877,56 14.1913376,56 L0,56" id="Path-6" stroke="#8cc63e" stroke-width="1.4" stroke-linecap="round"></path>
+                <path d="M49.6666667,90.9810331 L49.6666667,62.6883502" id="Line-25-Copy" stroke="#8cc63e" stroke-width="1.4" stroke-linecap="round"></path>
+                <path d="M56.6666667,90.9680343 L56.6666667,62.6753514" id="Line-25" stroke="#8cc63e" stroke-width="1.4" stroke-linecap="round"></path>
+                <polyline id="Line-26" stroke="#8cc63e" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" points="0 21 11.0702207 21 14.5 24.8251119 16.3008497 38 18.0692543 26.7052019 20.4760545 24.3826107 20.9964388 21 29 21"></polyline>
+                <path d="M35.2943568,91 L35.2941129,81.7187526 M35.2938003,69.8246425 L35.2933818,53.9036257 C35.2928962,47.329556 29.9203274,42.0003103 23.2929876,42.0003103 L0,42" id="Line-27" stroke="#8cc63e" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="1.4,4.199999999999999"></path>
+                <path d="M0,28 L11.4625258,28 M21.3300592,28 L28,28" id="Path-7" stroke="#8cc63e" stroke-width="1.4" stroke-linecap="round"></path>
+                <path d="" id="Path-8" stroke="#000000" stroke-width="0.7"></path>
+                <circle id="Oval-8" fill="#404040" cx="36" cy="12" r="2"></circle>
+            </g>
+        </g>
+    </g>
+</svg>
