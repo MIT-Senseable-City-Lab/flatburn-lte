@@ -39,11 +39,11 @@ All materials follow the same _pattern:_
 | ES-02   | Sensor  | Particulate    | Sensirion SPS30                                      |                [link](https://www.digikey.com/en/products/detail/sensirion-ag/SPS30/9598990)                 |  1  |
 | ES-03   | Sensor  | Thermal Camera | Adafruit MLX90640 110º FoV shield                    |                                [link](https://www.adafruit.com/product/4469)                                 |  1  |
 | EH-01   | Harness | Cable          | GSM antenna U.FL (UMCC) to U.FL (UMCC)               | [link](https://www.digikey.com/en/products/detail/cinch-connectivity-solutions-johnson/415-0086-050/1305528) |  1  |
-| EH-01   | Harness | Cable          | Sensor board to mother board (custom)                |                                                [⚠️](https://)                                                |  1  |
-| EH-02   | Harness | Cable          | Sensor board to SPS30                                |                                                [⚠️](https://)                                                |  1  |
-| EH-03   | Harness | Cable          | Sensor board to MLX (custom)                         |                                                [⚠️](https://)                                                |  1  |
-| EH-04   | Harness | Cable          | AreMe – 90 Degree USB-C male to female               |                            [link](https://www.amazon.com/gp/product/B0CQH48YFQ/)                             |  1  |
-| EH-05   | Harness | Cable          | QIANRENON – 90º Waterproof USB-C "pass through" 30cm |                            [link](https://www.amazon.com/gp/product/B0BPCHR24G/)                             |  1  |
+| EH-02   | Harness | Cable          | Sensor board to mother board (custom)                |                                                [⚠️](https://)                                                |  1  |
+| EH-03   | Harness | Cable          | Sensor board to SPS30                                |                                                [⚠️](https://)                                                |  1  |
+| EH-04   | Harness | Cable          | Sensor board to MLX (custom)                         |                                                [⚠️](https://)                                                |  1  |
+| EH-05   | Harness | Cable          | AreMe – 90 Degree USB-C male to female               |                            [link](https://www.amazon.com/gp/product/B0CQH48YFQ/)                             |  1  |
+| EH-06   | Harness | Cable          | QIANRENON – 90º Waterproof USB-C "pass through" 30cm |                            [link](https://www.amazon.com/gp/product/B0BPCHR24G/)                             |  1  |
 | EV-01   | Vault   | Storage Card   | 32Gb MicroSD                                         |                                [link](https://www.amazon.com/dp/B08GY9NYRM/)                                 |  1  |
 
 ### Custom Boards BOM
