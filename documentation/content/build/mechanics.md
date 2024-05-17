@@ -2,6 +2,20 @@
 sidebar_position: 5
 ---
 
-# ⚙️ Mechanics
+# ⚙️ Mechanics (files)
 
-### 3d printing
+## Overview
+
+// navigable 3d sketchfab
+
+### Top
+
+### Middle
+
+### Bottom
+
+### Switch
+
+### Battery Cover
+
+### Camera Mount

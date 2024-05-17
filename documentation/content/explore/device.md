@@ -2,13 +2,13 @@
 sidebar_position: 2
 ---
 
-# 🕹️ Device
+# 🧭 Device
+
+<!-- 🕹️ -->
 
 Brief description on the its purpose and why it is relevant to have such custom device made.
 
-## How it works
-
-## Features
+_schematic image: devices > backend > data > research_
 
 ### Sensors
 

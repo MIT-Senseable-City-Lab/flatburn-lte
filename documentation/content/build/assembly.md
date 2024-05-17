@@ -4,6 +4,10 @@ sidebar_position: 6
 
 # 🧩 Assembly
 
+## Overview
+
+What to expect, types of operations, time to assemble.
+
 ### Step 1: M2 and M3 inserts
 
 8x M2 inserts > top
