@@ -8,7 +8,7 @@ Brief description.
 
 ### Soldering Station
 
-With controllable temperature and small tip. 
+With controllable temperature and small tip.
 
 [example](https://www.amazon.com/gp/aw/d/B077JDGY1J/)
 
@@ -24,7 +24,9 @@ With controllable temperature and small tip.
 
 [example](https://www.amazon.com/iFixit-Precision-Tweezers-Set-Angled/dp/B079K874CQ/)
 
-### Hex/Allen Screwdriver Set – M2, M2.5 and M3 screws
+### Hex/Allen Screwdriver Set
+
+For M2, M2.5 and M3 screws.
 
 [example](https://www.amazon.com/Wiha-26390-Screwdriver-Metric-Precision/dp/B0006OBFCC/)
 

@@ -8,11 +8,11 @@ What we discover when we turn urban vehicles into sensing platforms.
 
 ### 2024 Flatburn LTE
 
-_Place (YYYY)_
-
-photo
+_Place (2024)_
 
 ![Flatburn LTE](@site/static/files/evolution/lte.jpg)
+
+description
 
 ### 2023 Flatburn
 

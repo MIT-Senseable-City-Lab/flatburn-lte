@@ -4,10 +4,11 @@ sidebar_position: 4
 
 # ⚡ Electronics (files)
 
-
 ### Main Board
 
 ### Sensing Board
+
+### Harnesses
 
 ### Files
 
