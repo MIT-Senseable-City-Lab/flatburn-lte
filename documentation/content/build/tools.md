@@ -57,3 +57,14 @@ For fastening M2, M2.5 and M3 screws.
 <div style={{width: "30%", marginBottom: "5%"}}>
 ![Hex/Allen Screwdriver Set](@site/static/files/tools/screwdrivers.jpg)
 </div>
+
+
+### Label Maker (optional) _[link](https://www.amazon.com/DYMO-LabelManager-Portable-One-Touch-Organization/dp/B09BK3FVLZ/)_
+
+For labelling, in case more than one device is being made.
+
+<div style={{width: "20%", marginBottom: "5%"}}>
+![Hex/Allen Screwdriver Set](@site/static/files/tools/labelmaker.jpg)
+</div>
+
+
