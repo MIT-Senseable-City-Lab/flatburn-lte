@@ -63,18 +63,18 @@ Due to the quantity of items, these lists are available in a dedicated spreadshe
 
 #### Harnesses
 
-| ID        | Type    | Subtype      | From  |  To   | Specification              |                                                    URL                                                     | Qty |
-| :-------- | :------ | :----------- | :---: | :---: | :------------------------- | :--------------------------------------------------------------------------------------------------------: | :-: |
-| EH-02-02  | Harness | Crimped Wire | EB-02 | EB-01 | Molex 0503948051-06-B6-D   |            [link](https://www.digikey.com/en/products/detail/molex/0503948051-06-B6-D/6055654)             | 20  |
-| EH-02-03  | Harness | Housing      | EB-02 | EB-01 | Molex 0511102052           | [link](https://www.digikey.com/en/products/detail/molex/0511102052/15204355?s=N4IgTCBcDaIKwEYkAYzLhAugXyA) |  2  |
-| EH-03-01  | Harness | Wire         | ES-02 | EB-02 | 0.08 mm2 (AWG 28) x 300 mm |        [link](https://www.digikey.com/en/products/detail/cnc-tech/10064-28-1-0500-001-1-TS/4486265)        |  5  |
-| EH-03-02  | Harness | Socket       | ES-02 | EB-02 | JST SZH-002T-P0.5          |       [link](https://www.digikey.com/en/products/detail/jst-sales-america-inc/szh-002t-p0-5/527363)        |  2  |
-| EH-03-023 | Harness | Housing      | ES-02 | EB-02 | JST ZHR-5                  |           [link](https://www.digikey.com/en/products/detail/jst-sales-america-inc/ZHR-5/608642)            |  2  |
-| EH-04-01  | Harness | Wire         | ES-03 | EB-02 | 0.08 mm2 (AWG 28) x 150 mm |        [link](https://www.digikey.com/en/products/detail/cnc-tech/10064-28-1-0500-001-1-TS/4486265)        |  4  |
-| EH-04-02  | Harness | Socket       | ES-03 | EB-02 | JST SSHL-002T-P0.2         |       [link](https://www.digikey.com/en/products/detail/jst-sales-america-inc/SSHL-002T-P0-2/807828)       |  1  |
-| EH-04-03  | Harness | Socket       | ES-03 | EB-02 | JST SSH-003T-P0.2-H        |      [link](https://www.digikey.com/en/products/detail/jst-sales-america-inc/ssh-003t-p0-2-h/2804713)      |  1  |
-| EH-04-04  | Harness | Housing      | ES-03 | EB-02 | JST GHR-06V-S              |         [link](https://www.digikey.com/en/products/detail/jst-sales-america-inc/GHR-06V-S/807818)          |  1  |
-| EH-04-05  | Harness | Housing      | ES-03 | EB-02 | JST SHR-04V-S-B            |        [link](https://www.digikey.com/en/products/detail/jst-sales-america-inc/shr-04v-s-b/759868)         |  1  |
+| ID       | Type    | Subtype      | From  |  To   | Specification              |                                                    URL                                                     | Qty |
+| :------- | :------ | :----------- | :---: | :---: | :------------------------- | :--------------------------------------------------------------------------------------------------------: | :-: |
+| EH-02-02 | Harness | Crimped Wire | EB-02 | EB-01 | Molex 0503948051-06-B6-D   |            [link](https://www.digikey.com/en/products/detail/molex/0503948051-06-B6-D/6055654)             | 20  |
+| EH-02-03 | Harness | Housing      | EB-02 | EB-01 | Molex 0511102052           | [link](https://www.digikey.com/en/products/detail/molex/0511102052/15204355?s=N4IgTCBcDaIKwEYkAYzLhAugXyA) |  2  |
+| EH-03-01 | Harness | Wire         | ES-02 | EB-02 | 0.08 mm2 (AWG 28) x 300 mm |        [link](https://www.digikey.com/en/products/detail/cnc-tech/10064-28-1-0500-001-1-TS/4486265)        |  5  |
+| EH-03-02 | Harness | Socket       | ES-02 | EB-02 | JST SZH-002T-P0.5          |       [link](https://www.digikey.com/en/products/detail/jst-sales-america-inc/szh-002t-p0-5/527363)        |  2  |
+| EH-03-03 | Harness | Housing      | ES-02 | EB-02 | JST ZHR-5                  |           [link](https://www.digikey.com/en/products/detail/jst-sales-america-inc/ZHR-5/608642)            |  2  |
+| EH-04-01 | Harness | Wire         | ES-03 | EB-02 | 0.08 mm2 (AWG 28) x 150 mm |        [link](https://www.digikey.com/en/products/detail/cnc-tech/10064-28-1-0500-001-1-TS/4486265)        |  4  |
+| EH-04-02 | Harness | Socket       | ES-03 | EB-02 | JST SSHL-002T-P0.2         |       [link](https://www.digikey.com/en/products/detail/jst-sales-america-inc/SSHL-002T-P0-2/807828)       |  1  |
+| EH-04-03 | Harness | Socket       | ES-03 | EB-02 | JST SSH-003T-P0.2-H        |      [link](https://www.digikey.com/en/products/detail/jst-sales-america-inc/ssh-003t-p0-2-h/2804713)      |  1  |
+| EH-04-04 | Harness | Housing      | ES-03 | EB-02 | JST GHR-06V-S              |         [link](https://www.digikey.com/en/products/detail/jst-sales-america-inc/GHR-06V-S/807818)          |  1  |
+| EH-04-05 | Harness | Housing      | ES-03 | EB-02 | JST SHR-04V-S-B            |        [link](https://www.digikey.com/en/products/detail/jst-sales-america-inc/shr-04v-s-b/759868)         |  1  |
 
 :::tip
 💡 You can buy these boards fully assembled together with harnesses [here](https://).
@@ -102,17 +102,19 @@ Due to the quantity of items, these lists are available in a dedicated spreadshe
 
 ### 3D Printed Parts
 
-| ID       | Type  | Subtype | Specification             | Weight |         URL         | Qty |
-| :------- | :---- | :------ | :------------------------ | -----: | :-----------------: | :-: |
-| MP-01    | Print | 3D      | Top                       |  350 g | [link](./mechanics) |  1  |
-| MP-02    | Print | 3D      | Middle                    |  150 g | [link](./mechanics) |  1  |
-| MP-03    | Print | 3D      | Bottom                    |  150 g | [link](./mechanics) |  1  |
-| MP-04    | Print | 3D      | Battery Cover             |   15 g | [link](./mechanics) |  1  |
-| MP-05-01 | Print | 3D      | Switch (top)              |    5 g | [link](./mechanics) |  1  |
-| MP-05-02 | Print | 3D      | Switch (bottom)           |    5 g | [link](./mechanics) |  1  |
-| MP-06-A  | Print | 3D      | Camera Mount (horizontal) |   15 g | [link](./mechanics) | (1) |
-| MP-06-B  | Print | 3D      | Camera Cap (no camera)    |   15 g | [link](./mechanics) | (1) |
-| MP-06-C  | Print | 3D      | Camera Mount (19º)        |   15 g | [link](./mechanics) | (1) |
+| ID       | Type  | Subtype | Specification   | Weight |         URL         | Qty |
+| :------- | :---- | :------ | :-------------- | -----: | :-----------------: | :-: |
+| MP-01    | Print | 3D      | Top             |  350 g | [link](./mechanics) |  1  |
+| MP-02    | Print | 3D      | Middle          |  150 g | [link](./mechanics) |  1  |
+| MP-03    | Print | 3D      | Bottom          |  150 g | [link](./mechanics) |  1  |
+| MP-04    | Print | 3D      | Battery Cover   |   15 g | [link](./mechanics) |  1  |
+| MP-05-01 | Print | 3D      | Switch (top)    |    5 g | [link](./mechanics) |  1  |
+| MP-05-02 | Print | 3D      | Switch (bottom) |    5 g | [link](./mechanics) |  1  |
+| MP-06    | Print | 3D      | Camera Mount    |   15 g | [link](./mechanics) | (1) |
+
+<!-- | MP-06-A | Print | 3D | Camera Mount (horizontal) | 15 g | [link](./mechanics) | (1) |
+| MP-06-B | Print | 3D | Camera Cap (no camera) | 15 g | [link](./mechanics) | (1) |
+| MP-06-C | Print | 3D | Camera Mount (19º) | 15 g | [link](./mechanics) | (1) | -->
 
 ## 🧵 Consumables
 

@@ -6,7 +6,7 @@ sidebar_position: 3
 
 These are usually found in makerspaces.
 
-### Bench _[link](https://www.amazon.com/WORKPRO-Adjustable-Workbench-Heavy-Duty-Workstation/dp/B08BNZDB57/?th=1)_
+### [🔗 Bench](https://www.amazon.com/WORKPRO-Adjustable-Workbench-Heavy-Duty-Workstation/dp/B08BNZDB57/?th=1)
 
 Should have plenty space to accommodate several parts at the same time.
 
@@ -14,7 +14,7 @@ Should have plenty space to accommodate several parts at the same time.
 ![Retractable Knife](@site/static/files/tools/bench.jpg)
 </div>
 
-### Soldering Station _[link](https://www.amazon.com/Hakko-FX888D-23BY-Digital-Soldering-Station/dp/B00ANZRT4M/)_
+### [🔗 Soldering Station](https://www.amazon.com/Hakko-FX888D-23BY-Digital-Soldering-Station/dp/B00ANZRT4M/)
 
 Needs controllable temperature and small tip (enough to fit a M2 hole).
 
@@ -26,7 +26,7 @@ _No wire soldering will be needed._
 ![Soldering Station](@site/static/files/tools/solderstation.jpg)
 </div>
 
-### Small Pliers Set _[link](https://www.amazon.com/Circlip-HANDSKIT-Cutting-Electronics-Jewelry/dp/B0895H524L/)_
+### [🔗 Small Pliers Set](https://www.amazon.com/Circlip-HANDSKIT-Cutting-Electronics-Jewelry/dp/B0895H524L/)
 
 Might be used to remove 3d printed supports and aid in placing connectors.
 
@@ -34,7 +34,7 @@ Might be used to remove 3d printed supports and aid in placing connectors.
 ![Small Pliers Set](@site/static/files/tools/pliers.jpg)
 </div>
 
-### Retractable Knife _[link](https://www.amazon.com/OLFA-5018-Stainless-Slide-Lock-Utility/dp/B0006Q9CMK/)_
+### [🔗 Retractable Knife](https://www.amazon.com/OLFA-5018-Stainless-Slide-Lock-Utility/dp/B0006Q9CMK/)
 
 Might be used to remove any unwanted excess material from supports.
 
@@ -42,7 +42,7 @@ Might be used to remove any unwanted excess material from supports.
 ![Retractable Knife](@site/static/files/tools/knife.jpg)
 </div>
 
-### ESD Tweezer Set _[link](https://www.amazon.com/iFixit-Precision-Tweezers-Set-Angled/dp/B079K874CQ/)_
+### [🔗 ESD Tweezer Set](https://www.amazon.com/iFixit-Precision-Tweezers-Set-Angled/dp/B079K874CQ/)
 
 Helps to pick and position small parts during assembly.
 
@@ -50,7 +50,7 @@ Helps to pick and position small parts during assembly.
 ![ESD Tweezer Set](@site/static/files/tools/tweezers.jpg)
 </div>
 
-### Hex/Allen Screwdriver Set _[link](https://www.amazon.com/Wiha-26390-Screwdriver-Metric-Precision/dp/B0006OBFCC/)_
+### [🔗 Hex/Allen Screwdriver Set](https://www.amazon.com/Wiha-26390-Screwdriver-Metric-Precision/dp/B0006OBFCC/)
 
 For fastening M2, M2.5 and M3 screws.
 
@@ -59,7 +59,7 @@ For fastening M2, M2.5 and M3 screws.
 </div>
 
 
-### Label Maker (optional) _[link](https://www.amazon.com/DYMO-LabelManager-Portable-One-Touch-Organization/dp/B09BK3FVLZ/)_
+### [🔗 Label Maker (optional)](https://www.amazon.com/DYMO-LabelManager-Portable-One-Touch-Organization/dp/B09BK3FVLZ/)
 
 For labelling, in case more than one device is being made.
 
