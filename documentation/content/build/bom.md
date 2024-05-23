@@ -25,26 +25,32 @@ All materials follow the same _pattern:_
 
 ## ⚡ Electronics
 
+:::warning
+Depending on where the device will be deployed a different type of **Particle MCU** will be needed.
+
+Make sure you order the correct option, being **EL-01-A for North America** or **EL-01-B for Europe**.
+:::
+
 ### General Parts
 
-| ID      | Type    | Subtype      | Specification                                        |                                                     URL                                                      | Qty |
-| :------ | :------ | :----------- | :--------------------------------------------------- | :----------------------------------------------------------------------------------------------------------: | :-: |
-| EB-01   | Board   | Main         | Custom                                               |                                              [custom](#boards)                                               |  1  |
-| EB-02   | Board   | Sensing      | Custom                                               |                                              [custom](#boards)                                               |  1  |
-| EL-01-A | Logic   | MCU          | Particle (for North America)                         |   [link](https://store.particle.io/collections/cellular/products/b-series-lte-cat-m1-noram-with-ethersim)    | (1) |
-| EL-01-B | Logic   | MCU          | Particle (for Europe)                                |   [link](https://store.particle.io/collections/cellular/products/b-series-lte-cat1-3g-2g-europe-ethersim)    | (1) |
-| EP-01   | Power   | Battery      | Custom                                               |                                                [⚠️](https://)                                                |  1  |
-| EP-02   | Power   | Solar Panel  | Voltaic Systems P105 - 5.5W 6V Solar Panel           |                [link](https://www.amazon.com/Voltaic-Systems-Small-Solar-Panel/dp/B085W9KG6V)                |  1  |
-| ES-01   | Sensor  | Gas          | Alphasense A4x2 (CO+NO2) + AFE board                 |                                       [⚠️](https://www.alphasense.com)                                       |  1  |
-| ES-02   | Sensor  | Particulate  | Sensirion SPS30                                      |                [link](https://www.digikey.com/en/products/detail/sensirion-ag/SPS30/9598990)                 |  1  |
-| ES-03   | Sensor  | Thermal      | Adafruit MLX90640 110º FoV shield                    |                                [link](https://www.adafruit.com/product/4469)                                 |  1  |
-| EH-01   | Harness | Cable        | U.FL to U.FL – CINCH 415-0086-050                    | [link](https://www.digikey.com/en/products/detail/cinch-connectivity-solutions-johnson/415-0086-050/1305528) |  1  |
-| EH-02   | Harness | Cable        | Custom – From Sensor Board to Main Board             |                                             [custom](#harnesses)                                             |  1  |
-| EH-03   | Harness | Cable        | Custom – From Particulate Sensor to Sensor Board     |                                             [custom](#harnesses)                                             |  1  |
-| EH-04   | Harness | Cable        | Custom – From Thermal Sensor to Sensor Board         |                                             [custom](#harnesses)                                             |  1  |
-| EH-05   | Harness | Cable        | AreMe – 90 Degree USB-C male to female               |                            [link](https://www.amazon.com/gp/product/B0CQH48YFQ/)                             |  1  |
-| EH-06   | Harness | Cable        | Qianrenon – 90º Waterproof USB-C "pass through" 30cm |                            [link](https://www.amazon.com/gp/product/B0BPCHR24G/)                             |  1  |
-| EV-01   | Vault   | Storage Card | 32GB MicroSD                                         |                                [link](https://www.amazon.com/dp/B08GY9NYRM/)                                 |  1  |
+| ID          | Type    | Subtype      | Specification                                        |                                                     URL                                                      | Qty |
+| :---------- | :------ | :----------- | :--------------------------------------------------- | :----------------------------------------------------------------------------------------------------------: | :-: |
+| EB-01       | Board   | Main         | Custom                                               |                                              [custom](#boards)                                               |  1  |
+| EB-02       | Board   | Sensing      | Custom                                               |                                              [custom](#boards)                                               |  1  |
+| **EL-01-A** | Logic   | MCU          | Particle B-SoM LTE-M B404X (for North America)       |   [link](https://store.particle.io/collections/cellular/products/b-series-lte-cat-m1-noram-with-ethersim)    | (1) |
+| **EL-01-B** | Logic   | MCU          | Particle B-SoM LTE B524 (for Europe)                 |   [link](https://store.particle.io/collections/cellular/products/b-series-lte-cat1-3g-2g-europe-ethersim)    | (1) |
+| EP-01       | Power   | Battery      | Custom                                               |                                                [⚠️](https://)                                                |  1  |
+| EP-02       | Power   | Solar Panel  | Voltaic Systems P105 - 5.5W 6V Solar Panel           |                [link](https://www.amazon.com/Voltaic-Systems-Small-Solar-Panel/dp/B085W9KG6V)                |  1  |
+| ES-01       | Sensor  | Gas          | Alphasense A4x2 (CO+NO2) + AFE board                 |                                       [⚠️](https://www.alphasense.com)                                       |  1  |
+| ES-02       | Sensor  | Particulate  | Sensirion SPS30                                      |                [link](https://www.digikey.com/en/products/detail/sensirion-ag/SPS30/9598990)                 |  1  |
+| ES-03       | Sensor  | Thermal      | Adafruit MLX90640 110º FoV shield                    |                                [link](https://www.adafruit.com/product/4469)                                 |  1  |
+| EH-01       | Harness | Cable        | U.FL to U.FL – CINCH 415-0086-050                    | [link](https://www.digikey.com/en/products/detail/cinch-connectivity-solutions-johnson/415-0086-050/1305528) |  1  |
+| EH-02       | Harness | Cable        | Custom – From Sensor Board to Main Board             |                                             [custom](#harnesses)                                             |  1  |
+| EH-03       | Harness | Cable        | Custom – From Particulate Sensor to Sensor Board     |                                             [custom](#harnesses)                                             |  1  |
+| EH-04       | Harness | Cable        | Custom – From Thermal Sensor to Sensor Board         |                                             [custom](#harnesses)                                             |  1  |
+| EH-05       | Harness | Cable        | AreMe – 90 Degree USB-C male to female               |                            [link](https://www.amazon.com/gp/product/B0CQH48YFQ/)                             |  1  |
+| EH-06       | Harness | Cable        | Qianrenon – 90º Waterproof USB-C "pass through" 30cm |                            [link](https://www.amazon.com/gp/product/B0BPCHR24G/)                             |  1  |
+| EV-01       | Vault   | Storage Card | 32GB MicroSD                                         |                                [link](https://www.amazon.com/dp/B08GY9NYRM/)                                 |  1  |
 
 ### Custom Parts
 

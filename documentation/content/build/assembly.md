@@ -6,33 +6,59 @@ sidebar_position: 6
 
 ## Overview
 
-What to expect, types of operations, time to assemble.
+The assembly process consists of **20 steps**, which should take up to **60 minutes** per device.
 
-### Step 1: M2 and M3 inserts
+You will be easily melting brass inserts into plastic, placing parts together, connecting cables and fastening screws.
+
+**The device was designed for not needing wire soldering or any complex operation.**
+
+:::info
+Consult the [bill of materials](bom) and [suggested tools](tools) that will be used throughout the process.
+:::
+
+### Step 1 – Setup and Preparation
+
+_suggested table layout_
+
+### Step 2 – Remove Printed Supports
+
+middle
+
+camera
+
+### Step 3 – M2 Inserts
 
 8x M2 inserts > top
 
-4x M2 inserts > camera horizontal OR vertical
+4x M2 inserts > camera horizontal
+
+### Step 4 – M3 Inserts
 
 13x M3 inserts > top
 
-### Step 2: 1/4" inserts
+### Step 5 – 1/4" Inserts
 
 1x ¼" insert > bottom
 
 1x ¼" insert > middle
 
-### Step 3: O-Ring cord
+### Step 6 – O-Ring Cord
 
-O-ring cord > top (cut)
+o-ring cord > top (cut)
 
-### Step 4: Populate Main Board
+### Step 7 – Populate Main Board
 
-1x M2.5 > Particle module EMEA > main board
+:::warning
+⚠️ choose particle module: EMEA or US
+:::
 
-Cable - GSM antenna > Particle module EMEA > main board
+1x M2.5 > particle module > main board
 
-### Step 5: Battery and Main Board
+cable - GSM antenna > particle module > main board
+
+microSD card > main board
+
+### Step 8 – Battery and Main Board
 
 top + battery
 
@@ -42,36 +68,76 @@ top + main board
 
 battery > main board
 
-### Step 6: Secure Main Board
+### Step 9 – Secure Main Board
 
 ( 4x M2X6 + 4x M2 washer ) > main board > top
 
-### Step 7: Thermal Camera
+### Step 10 – Thermal Camera
 
-( 4x M2X6 + 4x M2 washer ) > MLX90640 > camera horizontal OR vertical
+( 4x M2X6 + 4x M2 washer ) > MLX90640 > camera
 
-3x M2X6 > camera horizontal OR vertical > Germanium flat lens > O-ring > top
+3x M2X6 > camera > germanium flat lens > o-ring > top
 
-– OR –
+### Step 11 – Solar Panel
 
-3x M2X6 > camera cap > top
+solar Panel (cable) > top
 
-### Step 8: Solar Panel
+( 6x M3X16 + 6x M3 washer ) > solar Panel > 6x 5mm spacer > top
 
-Solar Panel (cable) > top
+solar Panel (cable) > motherboard
 
-( 6x M3X16 + 6x M3 washer ) > Solar Panel > 6x 5mm Spacer > top
+### Step 12 – Sensing Board
 
-Solar Panel (cable) > motherboard
+:::warning
+⚠️ choose gas sensor: CO+NO2 or O3+NO2
+:::
 
-### Step 9: Sensing Board
-
-Alphasense A4x2 (CO+NO2) + AFE board > sensorboard
+Alphasense AFE board > sensorboard
 
 ( 1x M2X6 + 1x M2 washer ) > sensorboard > top
 
 ( 1x M3X16 + 1x M3 washer ) > sensorboard > top
 
-### Step 10
+### Step 13 – Main Cable
 
-...
+main cable > sensor board
+
+main cable > main board
+
+### Step 14 – Switch
+
+switch_bottom > middle
+
+o-ring > switch_top
+
+( 1x M2X6 ) > switch_top > ( switch_bottom + middle )
+
+### Step 15 – USB-C Cable
+
+90 usb-c adapter > waterproof usb-c
+
+waterproof usb-c > middle
+
+### Step 16 – Particulate Sensor
+
+sensirion > middle
+
+cable > sensirion
+
+cable > sensing board
+
+### Step 17 – Bottom
+
+( 6x M3x16 ) > bottom > middle > top
+
+### Step 18 – USB-C Cap
+
+usb-c > bottom
+
+### Step 19 – Magnets
+
+2x magnet > bottom
+
+### Step 20 - Identification
+
+label > bottom
