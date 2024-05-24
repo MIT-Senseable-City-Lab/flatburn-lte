@@ -84,7 +84,7 @@ solar Panel (cable) > top
 
 ( 6x M3X16 + 6x M3 washer ) > solar Panel > 6x 5mm spacer > top
 
-solar Panel (cable) > motherboard
+solar panel (cable) > main board
 
 ### Step 12 – Sensing Board
 
@@ -114,9 +114,9 @@ o-ring > switch_top
 
 ### Step 15 – USB-C Cable
 
-90 usb-c adapter > waterproof usb-c
-
 waterproof usb-c > middle
+
+90 usb-c adapter > waterproof usb-c
 
 ### Step 16 – Particulate Sensor
 
@@ -138,6 +138,6 @@ usb-c > bottom
 
 2x magnet > bottom
 
-### Step 20 - Identification
+### Step 20 – Identification
 
 label > bottom
