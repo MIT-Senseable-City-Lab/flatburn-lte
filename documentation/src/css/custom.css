@@ -43,7 +43,8 @@
 table {
   display: table;
   width: 100%;
-  white-space: break-spaces;
+  /* white-space: break-spaces; */
+  /* white-space: pre-wrap; */
 }
 
 th,
