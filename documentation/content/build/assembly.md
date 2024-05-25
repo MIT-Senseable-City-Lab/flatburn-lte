@@ -128,6 +128,8 @@ cable > sensing board
 
 ### Step 17 – Bottom
 
+label > top (internal)
+
 ( 6x M3x16 ) > bottom > middle > top
 
 ### Step 18 – USB-C Cap
