@@ -4,6 +4,8 @@ sidebar_position: 1
 
 # 👀 Overview
 
-### exploded view with nomenclature for each part
+estimated price for one unit
 
-overview with estimated price for one unit
+nomenclature for each part
+
+![Flatburn LTE](@site/static/files/overview/exploded.png)
