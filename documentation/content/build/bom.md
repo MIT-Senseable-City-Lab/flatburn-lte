@@ -2,7 +2,9 @@
 sidebar_position: 2
 ---
 
-# 📝 Bill Of Materials
+# 📦 Bill Of Materials
+
+![Parts](@site/static/files/bom/parts.jpg)
 
 :::info
 The list below refers to a single device.

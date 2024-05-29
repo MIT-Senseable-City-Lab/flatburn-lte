@@ -6,6 +6,8 @@ sidebar_position: 2
 
 <!-- 🕹️ -->
 
+![Device](@site/static/files/device/device.jpg)
+
 Brief description on the its purpose and why it is relevant to have such custom device made.
 
 _schematic image: devices > backend > data > research_

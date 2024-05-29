@@ -4,11 +4,13 @@ sidebar_position: 4
 
 # ⚡ Electronics (files)
 
-### Main Board
+### Main and Sensing Board
 
-### Sensing Board
+![Main and Sensing Board](@site/static/files/electronics/boards.jpg)
 
 ### Harnesses
+
+![Harnesses](@site/static/files/electronics/harnesses.jpg)
 
 ### Files
 
