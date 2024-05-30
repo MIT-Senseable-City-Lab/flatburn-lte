@@ -14,7 +14,6 @@ import CameraMount from '@site/static/files/printed/camera.png'
 
 ## 3D Printed parts
 
-
 ![3D Printed Parts](@site/static/files/printed/printedparts.jpg)
 
 ###
@@ -34,6 +33,10 @@ Since the device might also be exposed to moisture, vibration and stress – dur
 - **_infill_ – 15%**
 
 These settings were used for time estimations below, with a total time of approximately **8 hours**.
+
+### Supports
+
+_image with where supports are needed_
 
 ### Parts List
 
