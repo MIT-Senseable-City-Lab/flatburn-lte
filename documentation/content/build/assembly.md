@@ -12,11 +12,11 @@ It is highly reccommended that you read this entire assembly manual to familiari
 
 The assembly process consists of **20 easy steps**, which should take up to **60 minutes** per device.
 
-You will be melting brass inserts into plastic, placing parts together, connecting cables and fastening screws.
+The device was designed for not needing wire soldering, glueing or any other complex operation.
 
-The device was designed for not needing wire soldering or any complex operation.
+You will be installing brass inserts into plastic, placing parts together, connecting cables and fastening screws.
 
-### Safety & Tips
+## Safety
 
 :::danger
 
@@ -24,21 +24,15 @@ The device was designed for not needing wire soldering or any complex operation.
 2. The metal inserts will keep **hot for a while** after inserting, especially the bigger 1/4" ones.
    :::
 
-:::tip
-
-- It is easy to misplace the inserts, pay attention to the **indicated spots** on the images.
-- The **larger holes** are meant for the **1/4 inserts**, the **medium M3** and **smaller M2**.
-- After the inserts are melted into the plastic they **cannot be easily removed** without damaging the 3d printed part.
-  :::
-
----
-
 ## Step 1 – Setup and Preparation
 
-_suggested table layout_
+1. make sure there is enough space and lighting;
+3. have all parts and components accessible on bench, placing the smallest ones on "buckets" to avoid losing them;
+2. leave the center of the bench for where the actual work is going to be, and the perimeter for tools and other parts;
+4. keep dangerous tools such as the soldering station away from where you could accidentaly hit it by mistake.
 
 :::info
-Consult the [overview reference](overview), [bill of materials](bom) and [suggested tools](tools) that will be used throughout the process.
+Meanwhile, you can always consult the [**overview reference**](overview), [**bill of materials**](bom) and [**suggested tools**](tools) throughout the process.
 :::
 
 ## Step 2 – Remove Printed Supports
@@ -50,6 +44,14 @@ Remove the support on _camera_ piece:
 ![alt text](../../static/files/assembly/DSC_5171.jpg)
 
 ## Step 3 – M2 Inserts
+
+:::tip
+
+- It is easy to misplace the inserts, pay attention to the **indicated spots** on the images.
+- The **larger holes** are meant for the **1/4" inserts**, the **medium for M3** and **smaller for M2**.
+- After the inserts are melted into the plastic they **cannot be easily removed** without damaging the 3d printed part.
+- If in doubt, think twice and check the instructions!
+  :::
 
 Start by picking-up all the 13x M2 inserts
 ![alt text](../../static/files/assembly/DSC_5174.jpg)
@@ -90,7 +92,7 @@ Pick-up 13x M3 inserts, turn the _top_ piece around, then place 6x M3 inserts on
 
 <!-- ![alt text](../../static/files/assembly/DSC_5205.jpg) -->
 
-Insert the 6x inserts with the soldering iron, turn the _top_ piece back to place and install the remaining 8x M3 inserts on the other side:
+Then, install the 6x inserts with the soldering iron, turn the _top_ piece back and place the remaining 8x M3 inserts on the other side:
 ![alt text](../../static/files/assembly/DSC_5201.jpg)
 
 Pay attention to the appropriate angle, respecting the holes' directions and the surface alignment:
@@ -110,7 +112,7 @@ Be careful, these bigger inserts take longer to heat and to cool down.
 ![alt text](../../static/files/assembly/DSC_5209.jpg)
 ![alt text](../../static/files/assembly/DSC_5210.jpg)
 
-Then, place the other ¼" insert on the rear spot in the _bottom_ piece:
+Then, place the other ¼" insert on the rear spot of the _bottom_ piece:
 :::warning
 Be careful to not place the insert in the wrong spot
 :::
@@ -135,7 +137,7 @@ Without stretching, keep pressing until reaching the other extremity of the rece
 ![alt text](../../static/files/assembly/DSC_5220.jpg)
 ![alt text](../../static/files/assembly/DSC_5221.jpg)
 
-Cut the cord to match the extremity, and press it to finalize:
+Cut the cord to match the extremity, and push it to finish:
 ![alt text](../../static/files/assembly/DSC_5222.jpg)
 
 **✅ Result**
@@ -144,16 +146,16 @@ Cut the cord to match the extremity, and press it to finalize:
 ## Step 7 – Populate Main Board
 
 :::info
-⚠️ Depending on where the device will be deployed, please choose the type of Particle module: EMEA or US.
+Remember to choose the type of Particle module (EMEA or US) according to where the device will be deployed.
 
 More information [here](https://).
 :::
 
-Pick the Main Board and the Particle module, inserting it into the slot with its branding facing up:
+Insert the Particle module into the Main Board slot with its branding facing up:
 ![alt text](../../static/files/assembly/DSC_5224.jpg)
 ![alt text](../../static/files/assembly/DSC_5226.jpg)
 
-Fasten the only 1x M2.5x4 screw into the Main Board to secure the particle module:
+Fasten the only 1x M2.5x4 screw into the Main Board to secure the module:
 ![alt text](../../static/files/assembly/DSC_5229.jpg)
 
 <!-- ![alt text](../../static/files/assembly/DSC_5228.jpg) -->
@@ -162,7 +164,7 @@ Now, pick the GSM antenna cable and connect it between the Particle module and t
 :::tip
 
 1. Depending on the Particle module type, the antenna connector will be in different place (always signed with a **_CELL_** label).
-2. It can be tricky to snap the connector on. If needed, use a plier with care to not damage the connector and boards, pressing the connector from its front face, but **never press its sides**.
+2. It can be tricky to snap the connector on. If needed, use a plier with care to not damage the connector and boards, pressing the connector from its front face, but **never press from the sides** because that will damage the connector.
    :::
    ![alt text](../../static/files/assembly/DSC_5230.jpg)
    ![alt text](../../static/files/assembly/DSC_5233.jpg)
@@ -188,7 +190,7 @@ Then, add the _battery_cover_:
 Now, pick the Main Board and connect the battery cable:
 ![alt text](../../static/files/assembly/DSC_5243.jpg)
 
-To insert the Main Board into the _top_ piece, first place its front with at an angle:
+To insert the Main Board into the _top_ piece, first place its front edge against the _top_ piece at an angle:
 ![alt text](../../static/files/assembly/DSC_5244.jpg)
 
 Finally, lower and then slide it back:
@@ -210,14 +212,14 @@ Fasten them into the four indicated holes:
 ## Step 10 – Thermal Camera
 
 :::warning
-Be careful to not touch or scratch the lens (reflective dot inside the black cylinder).
+Be careful to not touch or scratch the lens (reflective circle inside the black cylinder).
 :::
 
 Start by placing the MLX9640 module into the _camera_ piece while paying attention to the correct orientation on the image:
 ![alt text](../../static/files/assembly/DSC_5254.jpg)
-![alt text](../../static/files/assembly/DSC_5255.jpg)
 
 Now, combine 4x M2X6 screws with 4x M2 washers and place them into the four indicated spots:
+![alt text](../../static/files/assembly/DSC_5255.jpg)
 ![alt text](../../static/files/assembly/DSC_5256.jpg)
 
 **✅ Result**
@@ -228,13 +230,13 @@ To install the camera module, start by placing the O-ring inside the _top_ piece
 ![alt text](../../static/files/assembly/DSC_5261.jpg)
 ![alt text](../../static/files/assembly/DSC_5262.jpg)
 
-Then, You should angle the device and **very carefully** place the germanium lens on top of the O-ring by holding it by its edges.
+Then, tilt the device and **very carefully** place the germanium lens on top of the O-ring by holding it by its edges.
 
 It will be intentionally loose, because there will be pressure between the germanium lens, the O-ring and the _top_ piece to make the set watertight after securing the module.
 :::tip
-Do not touch any of the faces of the lens because this will compromise its imaging performance.
+Do not touch any of the faces of the germanium lens because it will compromise its imaging performance.
 
-If you eventually do so, please clean it with a microfiber cloth.
+If you accidentally do so, please clean it with a microfiber cloth immediatelly.
 :::
 
 ![alt text](../../static/files/assembly/DSC_5263.jpg)
@@ -245,7 +247,7 @@ Take advantage of the already angled device to slide the camera module in, and t
 Keep holding the module while fastening the screw:
 ![alt text](../../static/files/assembly/DSC_5267.jpg)
 
-Now, fasten 2xM2x6 screws on the superior area.
+Now, fasten 2x M2x6 screws on the superior area.
 ![alt text](../../static/files/assembly/DSC_5269.jpg)
 
 **✅ Result**
@@ -254,25 +256,25 @@ Now, fasten 2xM2x6 screws on the superior area.
 
 ## Step 11 – Solar Panel
 
-Align the panel to make sure the cable is going out backwards, then pass its cable through the hole:
+Align the panel to make sure the cable is going out backwards, then pass it through the hole:
 ![alt text](../../static/files/assembly/DSC_5272.jpg)
 ![alt text](../../static/files/assembly/DSC_5273.jpg)
 ![alt text](../../static/files/assembly/DSC_5276.jpg)
 
-There are six holes to secure the solar panel to the _top_ piece. Now, pick up 6x M3X16 screws + 6x M3 washers and 6x 5mm spacers.
+There are six holes to secure the solar panel to the _top_ piece. Pick up 6x M3X16 screws + 6x M3 washers and 6x 5mm spacers.
 
 ![alt text](../../static/files/assembly/DSC_5278.jpg)
 
 The correct order is **screw → washer → Solar Panel → spacer → _top_ piece**:
 ![alt text](../../static/files/assembly/DSC_5280.jpg)
 
-Start with both the intermeriary spots, since that will make it easier to align the Solar Panel to the _top_ piece:
+Start with both the intermediary holes, since that will make it easier to align the Solar Panel to the _top_ piece:
 ![alt text](../../static/files/assembly/DSC_5282.jpg)
 ![alt text](../../static/files/assembly/DSC_5283.jpg)
 
 Proceed to the corners:
 :::tip
-Due to variation of tolerances, it might be harder to fasten these corner screws.
+Due to variation of manufacturing tolerances, it might be harder to fasten these corner screws.
 
 Make sure the screw is properly aligned to the insert on the _top_ piece and fasten while making sure it is following the right angle.
 :::
@@ -320,13 +322,13 @@ Finally, slide the Sensing Board away, making sure the Solar Panel cable is on t
 To secure the Sensing Board, pick 1x M3X16 screw with 1x M3 washer and fasten it into the right hole.
 ![alt text](../../static/files/assembly/DSC_5297.jpg)
 :::warning
-Do not fasten the screw excessively or you might damage the Sensing Board.
+Do not fasten the M3 screw excessively or you might damage the Sensing Board.
 
 It should be enough just for the Sensing Board to be held at place
 :::
 ![alt text](../../static/files/assembly/DSC_5299.jpg)
 
-Finally, pick 1x M2X6 screw with 1x M2 washer to de fastened on the left hole.
+Finally, pick 1x M2X6 screw with 1x M2 washer to used on the left hole.
 :::tip
 This is trickier since the screw needs to be put underneath the Alphasense AFE board.
 
@@ -362,7 +364,7 @@ To organize the cables, place them underneath the Alphasense AFE board.
 
 ## Step 14 - Camera Cable
 
-Now you can connect the camera cable, beginning to the camera:
+Now you can connect the camera cable, beginning with the camera:
 ![alt text](../../static/files/assembly/DSC_5343.jpg)
 ![alt text](../../static/files/assembly/DSC_5344.jpg)
 :::tip
@@ -388,10 +390,10 @@ Align, then join the _switch_top_ and _switch_bottom_ with 1x M2X6 screw while k
 ![alt text](../../static/files/assembly/DSC_5320.jpg)
 
 **✅ Result**
-![alt text](../../static/files/assembly/DSC_5323.jpg)
 :::info
 The switch must move freely between start and end, but there should be no play between the three parts.
 :::
+![alt text](../../static/files/assembly/DSC_5323.jpg)
 ![alt text](../../static/files/assembly/DSC_5324.jpg)
 
 ## Step 16 – USB-C Cable
@@ -402,11 +404,11 @@ Pick the _Waterproof USB-C cable_:
 Now, unscrew the cap and nut, remove them completely leaving the rubber seal, then put it back:
 ![alt text](../../static/files/assembly/DSC_5326.jpg)
 
-Place the cable in the appropriate place:
+Place the cable in the appropriate place respecting the correct order of **cable screw → rubber ring → _middle_ piece**:
 ![alt text](../../static/files/assembly/DSC_5327.jpg)
 ![alt text](../../static/files/assembly/DSC_5328.jpg)
 
-Turn the _middle_ piece around and add the cap-holding ring, leaving its strip pointing to the right.
+While holding everything together, turn the _middle_ piece around and add the cap ring, leaving its strip pointing to the right.
 ![alt text](../../static/files/assembly/DSC_5329.jpg)
 
 Fasten the nut while keeping the cap strip at the same position:
@@ -416,10 +418,10 @@ Fasten the nut while keeping the cap strip at the same position:
 Screw the cap:
 ![alt text](../../static/files/assembly/DSC_5332.jpg)
 
-Connect the 90º usb-c adapter to the _Waterproof USB-C cable_:
+Connect the _90º USB-C adapter_ to the _Waterproof USB-C cable_:
 ![alt text](../../static/files/assembly/DSC_5333.jpg)
 
-Twist the cable as indicated, this will help avoiding collision with other parts when finishing the assembly:
+Twist the cable as indicated to help avoiding collision with other parts when finishing the assembly:
 ![alt text](../../static/files/assembly/DSC_5335.jpg)
 
 ## Step 17 – Particulate Sensor
@@ -427,11 +429,11 @@ Twist the cable as indicated, this will help avoiding collision with other parts
 :::tip
 Pay attention to the correct orientation, since there are several ways for assembling it wrong.
 :::
-Place the Sensirion sensor into its craddle on the _middle_ piece:
+Place the _Sensirion sensor_ into its craddle on the _middle_ piece:
 ![alt text](../../static/files/assembly/DSC_5337.jpg)
 ![alt text](../../static/files/assembly/DSC_5338.jpg)
 
-Attach the cable to the Sensirion sensor:
+Attach the cable to the _Sensirion sensor_:
 ![alt text](../../static/files/assembly/DSC_5339.jpg)
 ![alt text](../../static/files/assembly/DSC_5340.jpg)
 
@@ -440,10 +442,10 @@ If you need, use a tweezer or screwdriver to help attaching the sensor properly 
 :::
 ![alt text](../../static/files/assembly/DSC_5341.jpg)
 
-To allow for the _middle_ piece to be attached to the _top_ piece correctly, align the switch longitudinally:
+To allow for the _middle_ piece to be attached to the _top_ piece correctly, align the switch longitudinally ("on" position):
 ![alt text](../../static/files/assembly/DSC_5347.jpg)
 
-And push the Main Board switch to the right:
+And push the _Main Board_ switch to the right ("on" position):
 ![alt text](../../static/files/assembly/DSC_5348.jpg)
 
 Roll the Sensirion cable to remove the excess and connect it to the indicate spot:
@@ -455,17 +457,17 @@ Roll the Sensirion cable to remove the excess and connect it to the indicate spo
 
 ## Step 18 – Closing
 
-Connect the 90º USB-C Adapter to the Main Board:
+Connect the _90º USB-C Adapter_ to the _Main Board_:
 ![alt text](../../static/files/assembly/DSC_5353.jpg)
 
-With care, align the _middle_ and _top_ pieces together while respecting the switch position:
+With care, align the _middle_ and _top_ pieces together while respecting the _switch_ position:
 ![alt text](../../static/files/assembly/DSC_5354.jpg)
 
 :::warning
 Now you **must move back the switch** counter-clockwise to turn the device off.
 :::
 
-Fasten 3x M3x16 screws, joining the middle and top pieces together:
+Fasten 3x M3x16 screws, joining the _middle_ and _top_ pieces together:
 ![alt text](../../static/files/assembly/DSC_5356.jpg)
 ![alt text](../../static/files/assembly/DSC_5358.jpg)
 ![alt text](../../static/files/assembly/DSC_5359.jpg)
@@ -484,29 +486,33 @@ Place the last 4x M3x16 screws into the four bottom openings:
 
 Fasten to hold it together with middle and top pieces:
 :::tip
-Due to the angles it might be more dificult than usual to fasten the screws.
+Due to the angles it might be more dificult to fasten the screws than usual.
 
-It helps if each one is tightened a bit at a time, instead of fixing one at once.
+Instead of fixing one at once then proceding to the next, it is easier if each one is tightened a bit at a time.
 :::
 ![alt text](../../static/files/assembly/DSC_5364.jpg)
 
 **✅ Result**
+:::warning
+Make sure all seams are neatly aligned to avoid sealing issues.
+:::
 ![alt text](../../static/files/assembly/DSC_5365.jpg)
 
 ## Step 19 – Magnets
 
-It is almost over, now screw both _magnets_ into the _botton_ piece, making sure it is well tightened:
+Fasten both _magnets_ into the _botton_ piece, making sure it is well tightened:
 ![alt text](../../static/files/assembly/DSC_5366.jpg)
 ![alt text](../../static/files/assembly/DSC_5367.jpg)
 ![alt text](../../static/files/assembly/DSC_5368.jpg)
 
 ## Step 20 – Identification
-
-It is recommended to label each unit to avoid issues later:
+:::tip
+It is recommended to label each unit with a unique ID to avoid data identification issues:
+:::
 ![alt text](../../static/files/assembly/DSC_5369.jpg)
 ![alt text](../../static/files/assembly/DSC_5370.jpg)
 
-## Final Result
+## You made it!
 
 <!-- ![alt text](../../static/files/assembly/DSC_5375.jpg)
 ![alt text](../../static/files/assembly/DSC_5376.jpg) -->
