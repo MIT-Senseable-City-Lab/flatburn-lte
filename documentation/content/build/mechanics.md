@@ -10,7 +10,7 @@ import SwitchTop from '@site/static/files/printed/switch_top.png'
 import SwitchBottom from '@site/static/files/printed/switch_bottom.png'
 import CameraMount from '@site/static/files/printed/camera.png'
 
-# ⚙️ Mechanics (files)
+# 🔩 Mechanics (files)
 
 ## 3D Printed parts
 
@@ -48,12 +48,12 @@ Both _middle_ and _camera_ are the only parts that need supports.
 The 3d files below are provided with optimal orientation for printing, which is different from their respective reference images.
 :::
 
-| ID       | name              |                                              image                                              | support | weight | ~time |     download     |
-| :------- | :---------------- | :---------------------------------------------------------------------------------------------: | :-----: | -----: | :---: | :--------------: |
-| MP_01    | **top**           |     <img src={Top} style={{width: "75%", filter: "drop-shadow(0 0 1px rgba(0,0,0,1))"}} />      |    N    |  350 g | 07:30 | [link](https://) |
-| MP_02    | **middle**        |    <img src={Middle} style={{width: "75%", filter: "drop-shadow(0 0 1px rgba(0,0,0,1))"}} />    |    Y    |  150 g | 03:30 | [link](https://) |
-| MP_03    | **bottom**        |    <img src={Bottom} style={{width: "75%", filter: "drop-shadow(0 0 1px rgba(0,0,0,1))"}} />    |    N    |  150 g | 03:30 | [link](https://) |
-| MP_04    | **battery_cover** | <img src={BatteryCover} style={{width: "75%", filter: "drop-shadow(0 0 1px rgba(0,0,0,1))"}} /> |    N    |   15 g | 00:30 | [link](https://) |
-| MP_05_01 | **switch_top**    |  <img src={SwitchTop} style={{width: "20%", filter: "drop-shadow(0 0 1px rgba(0,0,0,1))"}} />   |    N    |    5 g | 00:10 | [link](https://) |
-| MP_05_02 | **switch_bottom** | <img src={SwitchBottom} style={{width: "20%", filter: "drop-shadow(0 0 1px rgba(0,0,0,1))"}} /> |    N    |    5 g | 00:10 | [link](https://) |
-| MP_06    | **camera**        | <img src={CameraMount} style={{width: "25%", filter: "drop-shadow(0 0 1px rgba(0,0,0,1))"}} />  |    Y    |   15 g | 00:30 | [link](https://) |
+| ID       | name              |                                              image                                              | support | weight | ~time |            download            |
+| :------- | :---------------- | :---------------------------------------------------------------------------------------------: | :-----: | -----: | :---: | :----------------------------: |
+| MP_01    | **top**           |     <img src={Top} style={{width: "75%", filter: "drop-shadow(0 0 1px rgba(0,0,0,1))"}} />      |    N    |  350 g | 07:30 | [link](https://www.google.com) |
+| MP_02    | **middle**        |    <img src={Middle} style={{width: "75%", filter: "drop-shadow(0 0 1px rgba(0,0,0,1))"}} />    |    Y    |  150 g | 03:30 | [link](https://www.google.com) |
+| MP_03    | **bottom**        |    <img src={Bottom} style={{width: "75%", filter: "drop-shadow(0 0 1px rgba(0,0,0,1))"}} />    |    N    |  150 g | 03:30 | [link](https://www.google.com) |
+| MP_04    | **battery_cover** | <img src={BatteryCover} style={{width: "75%", filter: "drop-shadow(0 0 1px rgba(0,0,0,1))"}} /> |    N    |   15 g | 00:30 | [link](https://www.google.com) |
+| MP_05_01 | **switch_top**    |  <img src={SwitchTop} style={{width: "20%", filter: "drop-shadow(0 0 1px rgba(0,0,0,1))"}} />   |    N    |    5 g | 00:10 | [link](https://www.google.com) |
+| MP_05_02 | **switch_bottom** | <img src={SwitchBottom} style={{width: "20%", filter: "drop-shadow(0 0 1px rgba(0,0,0,1))"}} /> |    N    |    5 g | 00:10 | [link](https://www.google.com) |
+| MP_06    | **camera**        | <img src={CameraMount} style={{width: "25%", filter: "drop-shadow(0 0 1px rgba(0,0,0,1))"}} />  |    Y    |   15 g | 00:30 | [link](https://www.google.com) |

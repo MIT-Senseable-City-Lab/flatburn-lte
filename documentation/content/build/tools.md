@@ -10,7 +10,7 @@ import Tweezers from '@site/static/files/tools/tweezers.png'
 import Allen from '@site/static/files/tools/screwdrivers.png'
 import Label from '@site/static/files/tools/labelmaker.png'
 
-# 🪛 Tools
+# 🧰 Tools
 
 ![Tools](@site/static/files/tools/tools.jpg)
 

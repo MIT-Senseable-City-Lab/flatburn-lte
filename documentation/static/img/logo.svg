@@ -5,8 +5,8 @@
     <title>Group 4</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Artboard" transform="translate(-60.000000, -103.000000)" fill="#8cc63e">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="#666">
+        <g id="Artboard" transform="translate(-60.000000, -103.000000)">
             <g id="Group-4" transform="translate(65, 103.720044)">
                 <polygon id="Path-2-Copy" points="0.0391160101 13.0474334 0.0391160101 0.0615885483 16.8182552 0.0615885483 16.8182552 6.09551566 6.03112189 6.09551566 6.03112189 13.0474334"></polygon>
                 <polygon id="Path-4-Copy" points="20.778114 13.0546599 20.778114 0.0788836428 37.5417692 0.0788836428 37.5417692 6.08493889 26.8018487 6.08493889 26.8018487 13.0528688"></polygon>
@@ -19,3 +19,35 @@
         </g>
     </g>
 </svg>
+
+
+<!-- <?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="181.9898 60.2125 195.8219 38.5115" width="195.8219" height="38.5115" xmlns="http://www.w3.org/2000/svg">
+  <g id="MIT" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="matrix(1, 0, 0, 1, 181.98977661132812, 60.212532043457024)">
+    <g id="Desktop-HD" transform="translate(-1495.000000, -50.000000)">
+      <g id="header" transform="translate(52.000000, 50.000000)">
+        <g id="mit_logo" transform="translate(1443.000000, 0.000000)">
+          <path d="M52,8 L72,8 L72,0 L52,0 L52,8 Z" id="Fill-1" style="fill: rgb(0, 0, 0);"/>
+          <path d="M13,26 L21,26 L21,0 L13,0 L13,26 Z" id="Fill-2" style="fill: rgb(0, 0, 0);"/>
+          <path d="M26,38 L34,38 L34,0 L26,0 L26,38 Z" id="Fill-3" style="fill: rgb(0, 0, 0);"/>
+          <path d="M0,38 L8,38 L8,0 L0,0 L0,38 Z" id="Fill-4" style="fill: rgb(0, 0, 0);"/>
+          <path d="M52,37.999 L60,37.999 L60,13 L52,13 L52,37.999 Z" id="Fill-5" style="fill: rgb(0, 0, 0);"/>
+          <path d="M39,8 L47,8 L47,0 L39,0 L39,8 Z" id="Fill-6" style="fill: rgb(0, 0, 0);"/>
+          <path d="M39,38 L47,38 L47,13 L39,13 L39,38 Z" id="Fill-7" style="fill: rgb(0, 0, 0);"/>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g id="SCL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="matrix(1.2903110980987549, 0, 0, 1.2903110980987549, 192.8791961669922, 59.20397949218749)" style="">
+    <g id="Artboard" transform="translate(-60.000000, -103.000000)" fill="#BCBCBC">
+      <g id="Group-4" transform="translate(145, 103.720044)">
+        <polygon id="Path-2-Copy" points="0.0391160101 13.0474334 0.0391160101 0.0615885483 16.8182552 0.0615885483 16.8182552 6.09551566 6.03112189 6.09551566 6.03112189 13.0474334" style="fill: rgb(0, 0, 0);"/>
+        <polygon id="Path-4-Copy" points="20.778114 13.0546599 20.778114 0.0788836428 37.5417692 0.0788836428 37.5417692 6.08493889 26.8018487 6.08493889 26.8018487 13.0528688" style="fill: rgb(0, 0, 0);"/>
+        <polygon id="Path-5-Copy" points="20.7847752 16.5635673 26.8022436 16.5635673 26.8022436 23.5241754 37.5198758 23.5241754 37.5198758 29.5173292 20.7847752 29.5173292" style="fill: rgb(0, 0, 0);"/>
+        <polygon id="Path-6-Copy" points="41.5771429 29.5463122 41.5771429 16.5546814 47.5812503 16.5546814 47.5812503 23.5286151 58.3239797 23.5286151 58.3239797 29.538342" style="fill: rgb(0, 0, 0);"/>
+        <polygon id="Path-3-Copy" points="0.0322629991 23.5257742 10.7589329 23.5257742 10.7589329 16.5290443 16.8014517 16.5290443 16.8014517 29.5376093 0.0322629991 29.5376093" style="fill: rgb(0, 0, 0);"/>
+      </g>
+    </g>
+  </g>
+  <rect x="278.751" y="60.27" width="1.465" height="38.454" style="" transform="matrix(1, 0, 0, 1, 1.4210854715202004e-14, 0)"/>
+</svg> -->

@@ -41,7 +41,7 @@ Make sure you order the correct option, being **EL_01_A for North America** or *
 | EB_02       | Board   | Sensing      | Custom                                               |                                              [custom](#boards)                                               |  1  |
 | **EL_01_A** | Logic   | MCU          | Particle B-SoM LTE-M B404X (for North America)       |   [link](https://store.particle.io/collections/cellular/products/b-series-lte-cat-m1-noram-with-ethersim)    | (1) |
 | **EL-01_B** | Logic   | MCU          | Particle B-SoM LTE B524 (for Europe)                 |   [link](https://store.particle.io/collections/cellular/products/b-series-lte-cat1-3g-2g-europe-ethersim)    | (1) |
-| EP_01       | Power   | Battery      | Custom                                               |                                                [⚠️](https://)                                                |  1  |
+| EP_01       | Power   | Battery      | Custom                                               |                                                [⚠️](https://www.google.com)                                                |  1  |
 | EP_02       | Power   | Solar Panel  | Voltaic Systems P105 - 5.5W 6V Solar Panel           |                [link](https://www.amazon.com/Voltaic-Systems-Small-Solar-Panel/dp/B085W9KG6V)                |  1  |
 | ES_01       | Sensor  | Gas          | Alphasense A4x2 (CO+NO2) + AFE board                 |                                       [⚠️](https://www.alphasense.com)                                       |  1  |
 | ES_02       | Sensor  | Particulate  | Sensirion SPS30                                      |                [link](https://www.digikey.com/en/products/detail/sensirion-ag/SPS30/9598990)                 |  1  |
@@ -79,7 +79,7 @@ Due to the quantity of items, these lists are available in a dedicated spreadshe
 | EH_04_05 | Harness | Housing      | ES_03 | EB_02 | JST SHR-04V-S-B            |        [link](https://www.digikey.com/en/products/detail/jst-sales-america-inc/shr-04v-s-b/759868)         |  1  |
 
 :::tip
-💡 You can buy these boards fully assembled together with harnesses [here](https://).
+💡 You can buy these boards fully assembled together with harnesses [here](https://www.google.com).
 :::
 
 ## ⚙️ Mechanics
@@ -124,7 +124,7 @@ Due to the quantity of items, these lists are available in a dedicated spreadshe
 | ID    | Type    | Subtype       | Specification |                                                     URL                                                     |  Qty   |
 | :---- | :------ | :------------ | :------------ | :---------------------------------------------------------------------------------------------------------: | :----: |
 | CP_01 | Print   | Filament      | PLA White     | [link](https://us.store.bambulab.com/collections/bambu-lab-3d-printer-filament/products/pla-basic-filament) | 0.7 kg |
-| CS_01 | Sealing | Lubrification | Rubber Grease |                                              [link](https://)                                               |  5 g   |
+| CS_01 | Sealing | Lubrification | Rubber Grease |                                              [link](https://www.google.com)                                               |  5 g   |
 
 ## 🔌 Accessories
 
@@ -138,10 +138,10 @@ Please, choose among the cable options below according to your needs (A or B).
 
 | ID      | Type   | Subtype             | Specification           |       URL        | Qty |
 | :------ | :----- | :------------------ | :---------------------- | :--------------: | :-: |
-| AL_01_A | Logic  | Data + power cable  | USB-C → USB-C           | [link](https://) |  1  |
-| AL_01_B | Logic  | Data + power cable  | USB-C → USB-A           | [link](https://) |  1  |
-| AP_01_A | Power  | Outlet Charger      | USB-C, ?? Watts, Bivolt | [link](https://) |  1  |
-| AP_01_B | Power  | Outlet Charger      | USB-A, ?? Watts, Bivolt | [link](https://) |  1  |
-| AV_01_A | Vault  | MicroSD Card Reader | USB-C                   | [link](https://) |  1  |
-| AV_01_B | Vault  | MicroSD Card Reader | USB-A                   | [link](https://) |  1  |
-| AO_01   | Optics | Cleaning Cloth      | Microfiber              | [link](https://) |  1  |
+| AL_01_A | Logic  | Data + power cable  | USB-C → USB-C           | [link](https://www.google.com) |  1  |
+| AL_01_B | Logic  | Data + power cable  | USB-C → USB-A           | [link](https://www.google.com) |  1  |
+| AP_01_A | Power  | Outlet Charger      | USB-C, ?? Watts, Bivolt | [link](https://www.google.com) |  1  |
+| AP_01_B | Power  | Outlet Charger      | USB-A, ?? Watts, Bivolt | [link](https://www.google.com) |  1  |
+| AV_01_A | Vault  | MicroSD Card Reader | USB-C                   | [link](https://www.google.com) |  1  |
+| AV_01_B | Vault  | MicroSD Card Reader | USB-A                   | [link](https://www.google.com) |  1  |
+| AO_01   | Optics | Cleaning Cloth      | Microfiber              | [link](https://www.google.com) |  1  |

@@ -8,15 +8,20 @@ import { themes as prismThemes } from "prism-react-renderer";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
+  markdown: {
+    mermaid: true,
+  },
+  themes: ["@docusaurus/theme-mermaid"],
+
   title: "Flatburn LTE",
-  tagline: `From MIT Senseable City Lab, an open-source, solar-powered, and modular sensing device that can be easily deployed on road vehicles to collect environmental data.`,
+  tagline: `An open-source, solar-powered, and modular sensing device that can be easily deployed on road vehicles to collect environmental data.`,
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
   url: "https://mit-senseable-city-lab.github.io/",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/flatburn-lte/",
+  baseUrl: "/",
   trailingSlash: false,
 
   staticDirectories: ["static"],
@@ -43,7 +48,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          path: "content",
+          path: "./content",
           sidebarPath: "./sidebars.js",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -62,16 +67,18 @@ const config = {
       }),
     ],
   ],
-
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      mermaid: {
+        theme: { light: "", dark: "dark" },
+      },
       // Replace with your project's social card
       image: "img/docusaurus-social-card.jpg",
       navbar: {
         // title: "Flatburn LTE",
         logo: {
-          alt: "My Site Logo",
+          alt: "MIT Senseable City Lab",
           src: "img/logo.svg",
         },
         items: [

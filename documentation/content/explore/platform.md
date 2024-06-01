@@ -6,7 +6,26 @@ sidebar_position: 1
 
 <!-- Explain how all different researches and devices are structured under the long-term City Scanner project. -->
 
-_schematic image: city scanner > devices > research_
+```mermaid
+graph TD;
+    A[City Scanner Platform] -->B(Octo)
+    A[City Scanner Platform] -->C(Flatburn LTE)
+    A[City Scanner Platform] -->D(Nautilus)
+
+    B --> |Data| E[Repository]
+    C --> |Data| E[Repository]
+    D --> |Data| E[Repository]
+
+    E --> F{Research}
+
+    F --> G[Air Pollution]
+    F --> H[Urban Heat]
+    F --> I[Greenery Health]
+
+    G --> P[Papers]
+    H --> P[Papers]
+    I --> P[Papers]
+```
 
 The City Scanner platform proposes a drive-by solution to capture the spatiotemporal variation in environmental indicators in urban areas, such as air quality or the thermal flux of the built environment. Instead of relying on a dedicated fleet, the project began by deploying various types of environmental sensors on garbage trucks in the City of Cambridge.
 

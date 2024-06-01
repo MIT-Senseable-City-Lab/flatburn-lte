@@ -1,6 +1,8 @@
 {
   "name": "flatburn-lte",
-  "workspaces": ["documentation"],
+  "workspaces": [
+    "documentation"
+  ],
   "version": "2.0.0",
   "private": true,
   "engines": {

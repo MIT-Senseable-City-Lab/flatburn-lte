@@ -148,7 +148,7 @@ Cut the cord to match the extremity, and push it to finish:
 :::info
 Remember to choose the type of Particle module (EMEA or US) according to where the device will be deployed.
 
-More information [here](https://).
+More information [here](https://www.google.com).
 :::
 
 Insert the Particle module into the Main Board slot with its branding facing up:
@@ -297,7 +297,7 @@ Attach the connector to the Main Board socket:
 :::info
 Depending on your needs, choose the appropriate gas sensor: CO+NO2 or O3+NO2 (depicted).
 
-More information [here](https://).
+More information [here](https://www.google.com).
 :::
 
 First, start by assembling the desired Alphasense AFE board module into the Sensor Board:

@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# ❇️ About
+# About
 
 _We empower communities around the world to monitor their environment._
 
