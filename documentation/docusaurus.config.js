@@ -21,7 +21,7 @@ const config = {
   url: "https://mit-senseable-city-lab.github.io/",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/",
+  baseUrl: "/flatburn-lte/",
   trailingSlash: false,
 
   staticDirectories: ["static"],
@@ -48,7 +48,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          path: "./content",
+          path: "content",
           sidebarPath: "./sidebars.js",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
