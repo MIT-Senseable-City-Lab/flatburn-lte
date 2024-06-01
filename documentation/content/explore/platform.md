@@ -8,7 +8,7 @@ sidebar_position: 1
 
 ```mermaid
 graph TD;
-    A[City Scanner Platform] -->B(Octo)
+    A[City Scanner Platform] -->B(Octopus)
     A[City Scanner Platform] -->C(Flatburn LTE)
     A[City Scanner Platform] -->D(Nautilus)
 
