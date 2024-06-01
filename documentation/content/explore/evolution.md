@@ -6,6 +6,18 @@ sidebar_position: 4
 
 What we discover when we turn urban vehicles into sensing platforms.
 
+```mermaid
+
+timeline
+    2017  <br> Greta I
+    2018  <br> Greta II
+    2019  <br> Blackburn
+    2022  <br> Whiteburn
+    2023  <br> Flatburn
+    2024  <br> Flatburn LTE
+
+```
+
 ### 2024 Flatburn LTE
 
 _Place (2024)_

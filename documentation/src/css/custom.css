@@ -40,6 +40,10 @@
   display: none !important;
 }
 
+div.mermaid {
+  text-align: center;
+}
+
 table {
   display: table;
   width: 100%;
