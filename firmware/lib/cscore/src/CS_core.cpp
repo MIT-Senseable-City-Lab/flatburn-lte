@@ -123,9 +123,9 @@ void CS_core::begin(uint8_t hw_release)
     //pinMode(STAT2, INPUT_PULLUP);
 
     //default configuration - everything OFF
-    digitalWrite(EN_3V, HIGH);
-	  digitalWrite(EN_3V_GPS, HIGH);
-    digitalWrite(EN_5V, HIGH);
+    digitalWrite(EN_3V, LOW);
+	  digitalWrite(EN_3V_GPS, LOW);
+    digitalWrite(EN_5V, LOW);
     //digitalWrite(EN_OPC, LOW);
     //digitalWrite(EN_HEATER, LOW);
 
@@ -302,13 +302,13 @@ void CS_core::enable3V3(bool command)
     if (command)
     {
       digitalWrite(EN_3V, HIGH);
-	    //digitalWrite(EN_3V_GPS, HIGH);
+	    digitalWrite(EN_3V_GPS, HIGH);
       Log.info("3V3 Enabled");
     }
     else
     {
       digitalWrite(EN_3V, LOW);
-	    //digitalWrite(EN_3V_GPS, LOW);
+	    digitalWrite(EN_3V_GPS, LOW);
       Log.info("3V3 Disabled");
     }
     break;
