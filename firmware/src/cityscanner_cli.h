@@ -78,32 +78,37 @@ int commandLine(String command)
 
   else if (!first_parameter.compareTo("sd"))
   {
-    if (!second_parameter.compareTo("dump")){
-      if(!third_parameter.compareTo("all")){
+    if (!second_parameter.compareTo("dump")) 
+    {
+      if(!third_parameter.compareTo("all")) 
+      {
         Log.info("Dumping All Data Files");
         CityStore::instance().dumpData(ALL_FILES);
         if (Particle.connected())
         Particle.publish("DUMP", "ended_dumping_all_data");
       }
-      else{
+      else
+      {
         Log.info("Dumping Some Data Files");
         CityStore::instance().dumpData(third_parameter.toInt());
         if (Particle.connected())
-        Particle.publish("DUMP", "ended_dumping_" + String(third_parameter.toInt()) + "_files");
+          Particle.publish("DUMP", "ended_dumping_" + String(third_parameter.toInt()) + "_files");
       }
-  }
-  else if (!second_parameter.compareTo("files")){
-    String files_in_queue = String::format("%u", CityStore::instance().countFilesInQueue());
-    Log.info(files_in_queue);
-    if (Particle.connected())
-      Particle.publish("FILES", files_in_queue);
-  }
-  else if (!second_parameter.compareTo("format")){
-    CityStore::instance().reInit();
-    Log.info("Format SD");
-    if (Particle.connected())
-      Particle.publish("Format SD", "SD card initialized");
-  }
+    } 
+    else if (!second_parameter.compareTo("files"))
+    {
+      String files_in_queue = String::format("%u", CityStore::instance().countFilesInQueue());
+      Log.info(files_in_queue);
+      if (Particle.connected())
+        Particle.publish("FILES", files_in_queue);
+    }
+    else if (!second_parameter.compareTo("format"))
+    {
+      CityStore::instance().reInit();
+      Log.info("Format SD");
+      if (Particle.connected())
+        Particle.publish("Format SD", "SD card initialized");
+    }
   }
 
   else if (!first_parameter.compareTo("autosleep"))

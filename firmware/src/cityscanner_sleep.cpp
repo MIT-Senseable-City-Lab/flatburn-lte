@@ -64,8 +64,9 @@ void CitySleep::stop(){
     delay(1s);
     core.enable5V(TRUE);
     delay(1s);
-    if(OPC_ENABLED)
-        sense.startOPC();
+    sense.startOPC();
+    //if(OPC_ENABLED)
+      //  sense.startOPC();
 }
 
 void CitySleep::hibernate(uint8_t duration, uint8_t type){
