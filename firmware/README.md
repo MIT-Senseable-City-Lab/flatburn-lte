@@ -1,0 +1,64 @@
+# Flatburn Firmware-LTE
+
+## Environment
+- Code developed using [Particle.io plugin for MS Code](https://www.particle.io/workbench/)
+- Devices can be flashed both via cable or cloud flash (data costs)
+- Currently testing on bsom [Particle deviceOS@5.5.0](https://docs.particle.io/reference/device-os/firmware)
+- Written in C++ and [Particle deviceOS APIs](https://docs.particle.io/reference/device-os/firmware/)
+
+## Dev Environment Setup
+
+1. Clone this repository
+2. Open Particle Workbench
+3. Run the `Particle: Import Project` command, follow the prompts, and wait for the project to load
+4. Run the `Particle: Configure Workspace for Device` command and select a compatible Device OS version and the `bsom` platform when prompted ([docs](https://docs.particle.io/tutorials/developer-tools/workbench/#cloud-build-and-flash))
+5. Connect your device
+6. Compile & Flash!
+
+## Quick overview of classes and files
+- *cityscanner_config.h* main config file, needs to be updated before flashing
+- *main.h* the program startpoint, should not be modified
+- *cityscanner class* handles operation modes (more below)
+- *CitySense class* manages data acquisition for environemental sensors (air quality, etc)
+- *CityVitals class* acquires telemetry data (battery status, solar energy production, etc)
+- *CityStore class* manages storing data on the SDcard, dumping data over TCP and over Particle Publish methods
+- *MotionService class* used to send the device to sleep when the vehicle is not moving
+- *LocationService class* provides gps data to other classes (e.g. CityStore)
+
+## Operation modes
+- *IDLE* sensors off, provides only telemetry data
+- *REALTIME* logs data onto the SD card and send it in real time (via Particle publish)
+- *LOGGING* buffer data onto the SD card and send multiple records upon request (via TCP)
+- *PWRSAVE* like LOGGING but keeping the cellular modem OFF
+
+
+#### Payload
+
+deviceID, timestamp, latitude, longitude, PM1.0, PM 2.5, PM4, PM10, numPM0.5, numPM1, numPM2.5, numPM4, numPM10, PM size, temperature, humidity, gas_op1_w, gas_op1_r, gas_op2_w, gas_op2_r, noise, Thermal
+
+### Vitals
+deviceID, timestamp, latitude, longitude, voltage_batt, current_batt, isCharging, isCharginS, isCharged, temp_int, hum_int, voltage_solar, current_solar, cell_strenght
+
+# Command line interface
+The CLI is available via REST, Particle.io Console and Slack. Each command might have 0-3 parameters. Some command return via Particle events or serial. *Commands are comma-separated* 
+
+Command | Parameter #1 | Parameter #2 | Parameter #3 | Description
+--------|--------------|--------------|--------------|-------------
+battery |              |              |               | returns battery state_of_charge,temperature,voltage,voltage_alt,current,isCharging
+solar   |              |              |               | returns solar panel voltage,current 
+stop | || |Stops the device (light sleep) for 12hours or until it woken up by a motion even 
+hibernate | [duration] | seconds OR minutes OR hours| Hibernate the device (heavy sleep)
+reboot  | | | | Resets the device to default
+location | | | | Returns the latest known GPS coordinates
+device | check | | Return the device ID and last payload, useful for multiple devices
+last | payload | | Return the last payload (See payload schema above)
+last | vitals | |  Return the last vitals (See vitals schema above)
+sd | files | | | Returns n. of files buffered in the SD card
+sd | dump | all | | Dump all files queued on the SD to mongoDB via TCP
+sd | dump | [files_number]] | | Dump the number of files passed as parameter to mongoDB via TCP
+sd | format | | | Format SD card *DO NOT USE*
+cellularOFF | | | | Turns off the cellular modem untill the device is manually powercycled 
+autosleep | on | | | Device goes to sleep after x minutes of no montion
+autosleep | off | | | 
+heat-cool | on | | | Turns on the heater or the fan
+heat-cool | off | | |
