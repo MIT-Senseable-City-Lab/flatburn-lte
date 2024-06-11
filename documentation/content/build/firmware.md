@@ -8,7 +8,7 @@ sidebar_position: 7
 
 - Code developed using [Particle.io plugin for MS Code](https://www.particle.io/workbench/);
 - Devices can be flashed both via cable or cloud flash (data costs);
-- Currently testing on bsom [Particle deviceOS@4.0.0](https://docs.particle.io/reference/device-os/firmware);
+- Currently testing on bsom [Particle deviceOS@5.5.0](https://docs.particle.io/reference/device-os/firmware);
 - Written in C++ and [Particle deviceOS APIs](https://docs.particle.io/reference/device-os/firmware/);
 
 ## Dev Environment Setup
@@ -40,11 +40,11 @@ sidebar_position: 7
 
 ### Payload
 
-_deviceID, timestamp, latitude, longitude, PM1, PM25, PM10, bin0, bin1, bin2, bin3, bin4, bin5, bin6, bin7, bin8, bin9, bin10, bin11, bin12, bin13, bin14, bin15, bin16, bin17, bin18, bin19, bin20, bin21, bin22, bin23, flowrate, countglitch, laser_status, temperature_opc, humidity_opc, data_is_valid, temperature, humidity, ambient_IR, object_IR, gas_op1_w, gas_op1_r, gas_op2_w, gas_op2_r, noise_
+_deviceID, timestamp, latitude, longitude, PM1.0, PM 2.5, PM4, PM10, numPM0.5, numPM1, numPM2.5, numPM4, numPM10, PM size, temperature, humidity, gas_op1_w, gas_op1_r, gas_op2_w, gas_op2_r, noise, Thermal_
 
 ### Vitals
 
-_deviceID, timestamp, latitude, longitude, SOC_batt, temp_batt, voltage_batt, voltage_particle, current_batt, isCharging, isCharginS, isCharged, temp_int, hum_int, voltage_solar, current_solar, cell_strenght_
+_deviceID, timestamp, latitude, longitude, voltage_batt, current_batt, isCharging, isCharginS, isCharged, temp_int, hum_int, voltage_solar, current_solar, cell_strenght_
 
 # Command line interface
 
