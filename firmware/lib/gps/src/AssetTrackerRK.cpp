@@ -17,7 +17,7 @@
  * https://github.com/rickkas7/AssetTrackerRK
  */
 
-static const int GPS_POWER_PIN = D6;
+static const int GPS_POWER_PIN = D5;
 static const int GPS_BAUD = 9600;
 
 char emptyResponse[1] = {0};
@@ -259,8 +259,8 @@ void AssetTracker::begin(void) {
 void AssetTracker::gpsOn(void) {
 	AssetTrackerBase::begin();
 
-    //pinMode(GPS_POWER_PIN, OUTPUT);
-    //digitalWrite(GPS_POWER_PIN, LOW);
+    pinMode(GPS_POWER_PIN, OUTPUT);
+    digitalWrite(GPS_POWER_PIN, LOW);
 }
 
 void AssetTracker::gpsOff(void) {
