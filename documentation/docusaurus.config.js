@@ -21,7 +21,7 @@ const config = {
   url: "https://mit-senseable-city-lab.github.io/",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/flatburn-lte/docs/about",
+  baseUrl: "/flatburn-lte",
   trailingSlash: false,
 
   staticDirectories: ["static"],
@@ -50,6 +50,7 @@ const config = {
         docs: {
           path: "content",
           sidebarPath: "./sidebars.js",
+          routeBasePath: '/', // Serve the docs at the site's root
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl: "https://github.com/MIT-Senseable-City-Lab/flatburn-lte/tree/main/documentation",
