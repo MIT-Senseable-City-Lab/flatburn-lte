@@ -9,8 +9,7 @@ sidebar_position: 1
 <div style={{textAlign: 'center', padding: 25}}>
  ```mermaid
 graph LR;
-    A[City Scanner Platform] -->B(Octopus)
-    A[City Scanner Platform] -->C(Flatburn LTE)
+    A[City Scanner Platform] -->C(Flatburn)
     A[<b>City Scanner Platform</b>] -->D(Nautilus)
 
     B --> |Data| E[Repository]

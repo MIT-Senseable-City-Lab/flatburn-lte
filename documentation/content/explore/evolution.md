@@ -14,15 +14,15 @@ timeline
     2019  <br> Blackburn
     2022  <br> Whiteburn
     2023  <br> Flatburn
-    2024  <br> Flatburn LTE
+    2024  <br> Flatburn
 
 ```
 
-### 2024 Flatburn LTE
+### 2024 Flatburn
 
-_Place (2024)_
+_Stockolm (2024), Bologna (2024)_
 
-![Flatburn LTE](@site/static/files/evolution/lte.jpg)
+![Flatburn](@site/static/files/evolution/lte.jpg)
 
 description
 

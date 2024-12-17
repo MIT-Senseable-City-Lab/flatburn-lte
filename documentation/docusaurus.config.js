@@ -13,7 +13,7 @@ const config = {
   },
   themes: ["@docusaurus/theme-mermaid"],
 
-  title: "Flatburn LTE",
+  title: "Flatburn",
   tagline: `An open-source, solar-powered, and modular sensing device that can be easily deployed on road vehicles to collect environmental data.`,
   favicon: "img/favicon.ico",
 
@@ -29,7 +29,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "MIT Senseable City Lab", // Usually your GitHub org/user name.
-  projectName: "Flatburn LTE", // Usually your repo name.
+  projectName: "Flatburn", // Usually your repo name.
 
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
@@ -76,7 +76,7 @@ const config = {
       // Replace with your project's social card
       image: "img/docusaurus-social-card.jpg",
       navbar: {
-        // title: "Flatburn LTE",
+        // title: "Flatburn",
         logo: {
           alt: "MIT Senseable City Lab",
           src: "img/logo.svg",
@@ -90,7 +90,7 @@ const config = {
             type: "docSidebar",
             sidebarId: "tutorialSidebar",
             position: "left",
-            label: "Flatburn LTE",
+            label: "Flatburn",
             className: "project-name-label",
           },
           // { to: "/blog", label: "Blog", position: "left" },

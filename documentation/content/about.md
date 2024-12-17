@@ -6,7 +6,7 @@ sidebar_position: 1
 
 _We empower communities around the world to monitor their environment._
 
-![Flatburn LTE](@site/static/files/evolution/lte.jpg)
+![Flatburn](@site/static/files/evolution/lte.jpg)
 
 Part of the City Scanner project, Flatburn is an open-source, 3D-printed environmental sensor.
 

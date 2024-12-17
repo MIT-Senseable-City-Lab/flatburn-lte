@@ -8,4 +8,4 @@ estimated price for one unit
 
 nomenclature for each part
 
-![Flatburn LTE](@site/static/files/overview/exploded.png)
+![Flatburn](@site/static/files/overview/exploded.png)
