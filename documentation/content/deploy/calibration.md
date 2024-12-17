@@ -6,10 +6,8 @@ sidebar_position: 2
 
 **City Scanner In-Situ Calibration and Deployment: A Manual**
 
-_By An Wang (an_wang@mit.edu) – Senseable City Lab, MIT_
-
 :::info
-A PDF version is available [here](https://www.google.com).
+A PDF version is available [here](https://github.com/MIT-Senseable-City-Lab/flatburn-lte/blob/main/documentation/content/__legacy_documentation/Explore/Calibration%20Handbook/Calibration%20Handbook.pdf).
 :::
 
 ## 1 Getting to know City Scanner
