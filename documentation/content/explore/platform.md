@@ -12,7 +12,6 @@ graph LR;
     A[City Scanner Platform] -->C(Flatburn)
     A[<b>City Scanner Platform</b>] -->D(Nautilus)
 
-    B --> |Data| E[Repository]
     C --> |Data| E[Repository]
     D --> |Data| E[Repository]
 
