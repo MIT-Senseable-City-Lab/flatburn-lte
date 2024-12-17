@@ -45,7 +45,6 @@ Make sure you order the correct option, being **EL_01_A for North America** or *
 | EP_02       | Power   | Solar Panel  | Voltaic Systems P105 - 5.5W 6V Solar Panel           |                [link](https://www.amazon.com/Voltaic-Systems-Small-Solar-Panel/dp/B085W9KG6V)                |  1  |
 | ES_01       | Sensor  | Gas          | Alphasense A4x2 (CO+NO2) + AFE board                 |                                       [⚠️](https://www.alphasense.com)                                       |  1  |
 | ES_02       | Sensor  | Particulate  | Sensirion SPS30                                      |                [link](https://www.digikey.com/en/products/detail/sensirion-ag/SPS30/9598990)                 |  1  |
-| ES_03       | Sensor  | Thermal      | Adafruit MLX90640 110º FoV shield                    |                                [link](https://www.adafruit.com/product/4469)                                 |  1  |
 | EH_01       | Harness | Cable        | U.FL to U.FL – CINCH 415-0086-050                    | [link](https://www.digikey.com/en/products/detail/cinch-connectivity-solutions-johnson/415-0086-050/1305528) |  1  |
 | EH_02       | Harness | Cable        | Custom – From Sensor Board to Main Board             |                                             [custom](#harnesses)                                             |  1  |
 | EH_03       | Harness | Cable        | Custom – From Particulate Sensor to Sensor Board     |                                             [custom](#harnesses)                                             |  1  |
