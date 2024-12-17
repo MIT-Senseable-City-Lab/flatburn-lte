@@ -28,30 +28,12 @@ mindmap
             NO2
             O3
             & more
-        Thermal Imaging
         Noise
         Road Quality
         Position
 ```
 
 </div>
-
-### 📷 Thermal Imaging
-
-<!-- ![Thermal Imaging](@site/static/files/device/thermal.svg) -->
-<div style={{display: "flex", justifyContent:"space-between"}}>
-    <div style={{width: "49%"}}>
-        ![alt text](../../static/files/device/mlx90640.jpg)
-    </div>
-    <div style={{width: "49%"}}>
-        ![alt text](../../static/files/device/DSC_5448.jpg)
-    </div>
-</div>
-_Sensor: MLX90640 (110º FoV)._
-
-Thermal imaging can be used to assess the energy efficiency of building envelopes, monitor infrastructure, and study the impact of anthropogenic heat in the cities (e.g. Urban Heat Island effect).
-
-The thermal camera is protected by a sealed germanium flat lens, which allows infrared frequencies to be captured.
 
 ### 💨 Gases
 

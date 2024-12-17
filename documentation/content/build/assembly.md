@@ -209,51 +209,6 @@ Fasten them into the four indicated holes:
 **✅ Result**
 ![alt text](../../static/files/assembly/DSC_5250.jpg)
 
-## Step 10 – Thermal Camera
-
-:::warning
-Be careful to not touch or scratch the lens (reflective circle inside the black cylinder).
-:::
-
-Start by placing the MLX9640 module into the _camera_ piece while paying attention to the correct orientation on the image:
-![alt text](../../static/files/assembly/DSC_5254.jpg)
-
-Now, combine 4x M2X6 screws with 4x M2 washers and place them into the four indicated spots:
-![alt text](../../static/files/assembly/DSC_5255.jpg)
-![alt text](../../static/files/assembly/DSC_5256.jpg)
-
-**✅ Result**
-![alt text](../../static/files/assembly/DSC_5257.jpg)
-![alt text](../../static/files/assembly/DSC_5258.jpg)
-
-To install the camera module, start by placing the O-ring inside the _top_ piece, making sure it is well aligned to the receptacle:
-![alt text](../../static/files/assembly/DSC_5261.jpg)
-![alt text](../../static/files/assembly/DSC_5262.jpg)
-
-Then, tilt the device and **very carefully** place the germanium lens on top of the O-ring by holding it by its edges.
-
-It will be intentionally loose, because there will be pressure between the germanium lens, the O-ring and the _top_ piece to make the set watertight after securing the module.
-:::tip
-Do not touch any of the faces of the germanium lens because it will compromise its imaging performance.
-
-If you accidentally do so, please clean it with a microfiber cloth immediatelly.
-:::
-
-![alt text](../../static/files/assembly/DSC_5263.jpg)
-
-Take advantage of the already angled device to slide the camera module in, and then hold it steadily in place while inserting 1x M2x6 screw into the left hole (the front is reserved for an M3 screw that will be used later)
-![alt text](../../static/files/assembly/DSC_5265.jpg)
-
-Keep holding the module while fastening the screw:
-![alt text](../../static/files/assembly/DSC_5267.jpg)
-
-Now, fasten 2x M2x6 screws on the superior area.
-![alt text](../../static/files/assembly/DSC_5269.jpg)
-
-**✅ Result**
-![alt text](../../static/files/assembly/DSC_5270.jpg)
-![alt text](../../static/files/assembly/DSC_5271.jpg)
-
 ## Step 11 – Solar Panel
 
 Align the panel to make sure the cable is going out backwards, then pass it through the hole:

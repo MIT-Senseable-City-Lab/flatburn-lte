@@ -48,7 +48,6 @@ Make sure you order the correct option, being **EL_01_A for North America** or *
 | EH_01       | Harness | Cable        | U.FL to U.FL – CINCH 415-0086-050                    | [link](https://www.digikey.com/en/products/detail/cinch-connectivity-solutions-johnson/415-0086-050/1305528) |  1  |
 | EH_02       | Harness | Cable        | Custom – From Sensor Board to Main Board             |                                             [custom](#harnesses)                                             |  1  |
 | EH_03       | Harness | Cable        | Custom – From Particulate Sensor to Sensor Board     |                                             [custom](#harnesses)                                             |  1  |
-| EH_04       | Harness | Cable        | Custom – From Thermal Sensor to Sensor Board         |                                             [custom](#harnesses)                                             |  1  |
 | EH_05       | Harness | Cable        | AreMe – 90 Degree USB-C male to female               |                            [link](https://www.amazon.com/gp/product/B0CQH48YFQ/)                             |  1  |
 | EH_06       | Harness | Cable        | Qianrenon – 90º Waterproof USB-C "pass through" 30cm |                            [link](https://www.amazon.com/gp/product/B0BPCHR24G/)                             |  1  |
 | EV_01       | Vault   | Storage Card | 32GB MicroSD                                         |                                [link](https://www.amazon.com/dp/B08GY9NYRM/)                                 |  1  |
