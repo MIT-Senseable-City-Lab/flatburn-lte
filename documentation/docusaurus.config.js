@@ -21,7 +21,7 @@ const config = {
   url: "https://mit-senseable-city-lab.github.io/",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/flatburn-lte/",
+  baseUrl: "/flatburn-lte/docs/about",
   trailingSlash: false,
 
   staticDirectories: ["static"],
