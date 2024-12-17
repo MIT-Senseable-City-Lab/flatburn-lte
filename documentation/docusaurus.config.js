@@ -53,6 +53,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl: "https://github.com/MIT-Senseable-City-Lab/flatburn-lte/tree/main/documentation",
+          routeBasePath: '/about', 
         },
         // blog: {
         //   showReadingTime: true,
