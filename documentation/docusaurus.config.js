@@ -75,7 +75,7 @@ const config = {
         theme: { light: "neutral", dark: "dark" },
       },
       // Replace with your project's social card
-      image: "img/docusaurus-social-card.jpg",
+      image: "img/flatburn-social-card.jpg",
       navbar: {
         // title: "Flatburn",
         logo: {

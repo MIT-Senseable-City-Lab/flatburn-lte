@@ -11,4 +11,4 @@ The City Scanner platform proposes a drive-by solution to capture the spatiotemp
 With a few garbage trucks, we collected various environmental data for the whole city over several months. The result was 1.6 million data points including temperature, humidity, and air quality data.
 
 The spatio­temporal datasets play a significant role in smart city domain by empowering advanced analytics solutions for decision makers and urban managers. The City Scanner project follows a centralized IoT regime to generate a near real-time map of sensed data, building on existing fleets and moving sensing platforms.
-```
+

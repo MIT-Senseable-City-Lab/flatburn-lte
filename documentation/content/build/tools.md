@@ -12,7 +12,7 @@ import Label from '@site/static/files/tools/labelmaker.png'
 
 # 🧰 Tools
 
-![Tools](@site/static/files/tools/tools.jpg)
+![Tools](@site/static/files/tools/tools_blind.jpg)
 
 All tools needed are usually found in makerspaces.
 

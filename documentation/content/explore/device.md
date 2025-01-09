@@ -6,7 +6,7 @@ sidebar_position: 2
 
 The Flatburn device is based on almost a decade of experience in drive-by sensing, which resulted in a sturdy and compact device that can be deployed on vehicles of different sizes. See below all its features in depth.
 
-![Device](@site/static/files/device/device.jpg)
+![Device](@site/static/files/device/device_blind.jpg)
 
 ## Sensing
 
