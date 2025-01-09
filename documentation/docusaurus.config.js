@@ -87,13 +87,13 @@ const config = {
           //   type: "search",
           //   position: "left",
           // },
-          {
-            type: "docSidebar",
-            sidebarId: "tutorialSidebar",
-            position: "left",
-            label: "Flatburn",
-            className: "project-name-label",
-          },
+          // {
+          //   type: "docSidebar",
+          //   sidebarId: "tutorialSidebar",
+          //   position: "left",
+          //   label: "Flatburn",
+          //   className: "project-name-label",
+          // },
           // { to: "/blog", label: "Blog", position: "left" },
           {
             href: "https://github.com/MIT-Senseable-City-Lab/flatburn-lte/",

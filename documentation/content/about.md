@@ -3,7 +3,7 @@ sidebar_position: 1
 slug: /
 ---
 
-# About
+# Flatburn
 
 _We empower communities around the world to monitor their environment._
 
