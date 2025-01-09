@@ -195,10 +195,10 @@ The USB-C can be used to charge the device, flash firmware, debug and retrieve d
 The two magnets on the bottom make it easy to **attach the device to any ferromagnetic material**, such as most of automobile roofs.
 <div style={{display: "flex", justifyContent:"space-between"}}>
     <div style={{width: "49%"}}>
-        ![alt text](../../static/files/device/magnets.jpg)
+        ![alt text](../../static/files/device/magnets_blind.jpg)
     </div>
     <div style={{width: "49%"}}>
-        ![alt text](../../static/files/device/nomagnets.jpg)
+        ![alt text](../../static/files/device/nomagnets_blind.jpg)
     </div>
 </div>
 Alternatively, the magnets can be removed, leaving the rear standard camera 1/4" thread to **mount the device with other accessories.**
@@ -211,7 +211,7 @@ Each unit weighs 1.5kg, and at least 5 devices can be fitted inside a small carr
 
 <div style={{display: "flex", justifyContent:"space-between"}}>
     <div style={{width: "48%"}}>
-        ![alt text](../../static/files/device/compact.jpg)
+        ![alt text](../../static/files/device/compact_blind.jpg)
     </div>
     <div style={{width: "48%"}}>
         _image with overall dimensions_
