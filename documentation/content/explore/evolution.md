@@ -22,7 +22,7 @@ timeline
 
 _Stockolm (2024), Bologna (2024)_
 
-![Flatburn](@site/static/files/evolution/lte.jpg)
+![Flatburn](@site/static/files/evolution/lte_blind.jpg)
 
 description
 
