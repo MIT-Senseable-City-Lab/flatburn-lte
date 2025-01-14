@@ -8,26 +8,18 @@
 #define V3 0
 #define V4 1
 
-//#define MB_RST A3
-//#define MB_INT A1		// Interrupt from Accelerometer. In previous short with mikrobus interrupt
 #define MB_AN A6
 #define MB_CS D23
 #define MB_PWM A2
 
-//#define STAT1 B0
-//#define STAT2 B3
 
 #define EN_3V D6
 #define EN_3V_GPS D5
 #define EN_5V D7
-//#define EN_OPC C5
-//#define EN_HEATER C4
-
 #define BATTERY_VOLTAGE_PIN A5
 
-//#define INT_ACC WKP
 #define INT_ACC A1
-//#define INT_GPS A0
+
 
 // This is your main class that users will import into their application
 class CS_core
