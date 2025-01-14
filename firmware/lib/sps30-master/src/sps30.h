@@ -243,17 +243,17 @@ enum debug_serial {
      * From a sketch you can check the impact by calling I2C_expect(), which will return the number of valid float values.
      */
 
-    #define I2C_LENGTH 32
+    #define I2C_LENGTH 512
 
     #if defined BUFFER_LENGTH           // Arduino  & ESP8266 & Softwire
         #undef  I2C_LENGTH
         #define I2C_LENGTH  BUFFER_LENGTH
     #endif
 
-    #if defined I2C_BUFFER_LENGTH       // ESP32
-        #undef  I2C_LENGTH
-        #define I2C_LENGTH  I2C_BUFFER_LENGTH
-    #endif
+    //#if defined I2C_BUFFER_LENGTH       // ESP32
+      //  #undef  I2C_LENGTH
+        //#define I2C_LENGTH  I2C_BUFFER_LENGTH
+    //#endif
 
     /* version 1.3.2 added support for SAMD SERCOM detection */
     /* version 1.4.8 autodetection for Apollo3 */

@@ -184,7 +184,8 @@ void SPS30::DebugPrintf(const char *pcFmt, ...)
     if (_SPS30_Debug > level){
 
         va_start(pArgs, pcFmt);
-        vsprintf(prfbuf, pcFmt, pArgs);
+        //vsprintf(prfbuf, pcFmt, pArgs);
+        vsnprintf(prfbuf, sizeof(prfbuf), pcFmt, pArgs);  // Corrected line: Added buffer size as the second parameter
         va_end(pArgs);
 
         if (_SPS30_Debug_Serial == STANDARD)
