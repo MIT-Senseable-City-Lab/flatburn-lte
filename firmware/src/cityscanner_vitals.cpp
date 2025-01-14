@@ -1,6 +1,5 @@
 #include "cityscanner_vitals.h"
 #include "BQ27200_I2C.h"
-#include "HTS221.h"
 #include "ISL28022.h"
 #include "CS_core.h"
 
@@ -59,29 +58,48 @@ float CityVitals::getBatteryVoltage()
     return battery_voltage;
 }
 
-String CityVitals::getBatteryData(){
-    if(BATT_started)
+String CityVitals::getBatteryData() {
+    if (BATT_started)
     {
-    //batt.read_data(BQ27200_VOLT);
-    
-    String battery = "na,na,";
-    
-    String batteryVoltageStr = String::format("%.2f", getBatteryVoltage());
-    //battery.concat(battery_voltage);
-    battery += batteryVoltageStr;
-    battery += ",na,na";
-    /*float voltage_v = 5;
-    voltage_v = batt.voltage() / 1000;
-    battery = String::format("%.0f", batt.state_of_charge()) + "," +
-                String::format("%.1f", batt.temperature()) + "," +
-                String::format("%.2f", voltage_v) + "," +
-                String::format("%.2f", fuelg.getVCell()) + "," +
-                String::format("%.0f", batt.current()) + "," +
-                String::format("%u", batt.isCharging());*/
-    return battery;
+        String battery_data;
+        float batt_voltage = getBatteryVoltage();
+        if (batt_voltage > 4.19)
+        {
+            battery_data = "100";
+        }
+        else if (batt_voltage > 4.01)
+        {
+            battery_data = "80";
+        }
+        else if (batt_voltage > 3.86)
+        {
+            battery_data = "60";
+        }
+        else if (batt_voltage > 3.79)
+        {
+            battery_data = "40";
+        }
+        else if (batt_voltage > 3.72)
+        {
+            battery_data = "20";
+        }
+        else if (batt_voltage > 3.70)
+        {
+            battery_data = "15";
+        }
+
+        battery_data += ",";
+
+        String batteryVoltageStr = String::format("%.2f", getBatteryVoltage());
+        battery_data += batteryVoltageStr;
+        
+        return battery_data;
     }
     else
-    return "na,na,na,na,na";
+    {
+        return "na,na";
+    }
+
 }
 
 bool isBatteryLow(){
@@ -97,6 +115,13 @@ bool isBatteryLow(){
 
 String CityVitals::getChargingStatus(){
     //String charge_status = String::format("%u,%u", CS_core::instance().isCharging(), CS_core::instance().isCharged());
+
+    //Serial.isConnected();
+    /*const uint32_t *usbRegStatus = (const uint32_t*)(0x40027470);
+    bool usbConnected = (usbRegStatus != 0);
+    Serial.print("Usb Connected? : ");
+    Serial.println(usbConnected);
+
     String charge_status = "0";
     if (SOLAR_started)
     {
@@ -113,7 +138,39 @@ String CityVitals::getChargingStatus(){
         {
             charge_status.concat(0);
         }
+    }*/
+
+    String charge_status = "0";
+    // Check if USB is connected
+    const uint32_t *usbRegStatus = (const uint32_t*)(0x40027470);
+    bool usbConnected = (usbRegStatus != 0);
+
+    if (SOLAR_started)
+    {
+        if ((solar.getBusVoltage_V() > 0) && (getBatteryVoltage() < 4.19) && usbConnected)
+        {
+            charge_status = String::format("%u", 1);
+        }
+        charge_status += ",";
+        if ((solar.getBusVoltage_V() > 0) && (getBatteryVoltage() < 4.19) && !usbConnected)
+        {
+            charge_status.concat(1);
+        }
+        else
+        {
+            charge_status.concat(0);
+        }
+        charge_status += ",";
+        if (getBatteryVoltage() > 4.19)
+        {
+            charge_status.concat(1);
+        } 
+        else
+        {
+            charge_status.concat(0);
+        }
     }
+
     return charge_status;
 }
 

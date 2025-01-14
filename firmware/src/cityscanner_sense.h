@@ -4,7 +4,6 @@
 #define BASE 0 
 #define EXTENDED 1 
 
-
 class CitySense {
     public:
         static CitySense &instance() {
@@ -38,17 +37,10 @@ class CitySense {
         bool stopGAS(void);
         bool GAS_started = false;
         String getGASdata(void);
-        //bool startIR(void);
-        //bool stopIR(void);
-        //bool IR_started = false;
-        String getIRdata(void);
-        bool startIR90640(void);
-        bool stopIR90640(void);
-        bool IR90640_started = false;
-        String getIRdata90640(void);
+        // New methods for handling sleep and wakeup of sensors
+        void wakeAllSensors();
+        void sleepAllSensors();
 
-
-    
     private:
         CitySense();
         static CitySense* _instance;

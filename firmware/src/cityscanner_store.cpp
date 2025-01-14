@@ -40,7 +40,6 @@ int CityStore::init()
   switch_logfile();
   return 1;
 }
-
 int CityStore::stop()
 {
   activeFile.flush();
@@ -113,9 +112,6 @@ void CityStore::logData(int broadcastType, int payloadType, String data)
   String output = String::format("%d,%s,%s,%s,%s", payloadType, deviceID.c_str(), LocationService::instance().getEpochTime().c_str(), LocationService::instance().getGPSdata().c_str(), data.c_str());
   writeData(output);
   Serial.println("");
-
-  Serial.println("Sending data on Serial 1");
-  Serial1.println(output);
 
   switch (broadcastType)
   {

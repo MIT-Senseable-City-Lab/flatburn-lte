@@ -1,6 +1,6 @@
 #include "cityscanner_sleep.h"
 #include "cityscanner.h"
-
+#include "cityscanner_store.h"
 
 CitySleep *CitySleep::_instance = nullptr;
 
@@ -22,13 +22,11 @@ void CitySleep::stop(){
     delay(100);
     //motionService.stop();
     locationService.stop();
-    //stop sd card
-    //store.stop();
-    //SPI.endTransaction();
-    //SPI.end();
-   
     vitals.stop_all();
     sense.stop_all();
+     // Stop all sensors including SPS30
+    sense.sleepAllSensors();
+    sense.stopOPC();
     core.enable3V3(FALSE);
     core.enableOPC(FALSE);
     core.enable5V(FALSE);
@@ -61,9 +59,12 @@ void CitySleep::stop(){
     sense.startGAS();
     //init SD card
     //store.init();
-    delay(1s);
+    delay(5s);
     core.enable5V(TRUE);
-    delay(1s);
+    delay(5s);
+
+      // Wake up all sensors including SPS30
+    sense.wakeAllSensors();
     sense.startOPC();
     //if(OPC_ENABLED)
       //  sense.startOPC();
@@ -114,5 +115,18 @@ void CitySleep::hibernate(uint8_t duration, uint8_t type){
     if(Cityscanner::instance().debug_mode)
         Cityscanner::instance().sendWarning("BACK_FROM_HIBERNATION");
     delay(100);
+
+
+    // Wake up all sensors including SPS30
+    sense.wakeAllSensors();
+    core.enable3V3(TRUE);
+    locationService.start();
+    vitals.init();
+    sense.startNOISE();
+    sense.startTEMP();
+    sense.startGAS();
+    delay(5s);
+    core.enable5V(TRUE);
+    delay(5s);
 
 }

@@ -8,6 +8,7 @@
 #include "cityscanner_sleep.h"
 #include "cityscanner.h"
 
+
 int commandLine(String command);
 
 int initCLI()
@@ -102,6 +103,8 @@ int commandLine(String command)
       if (Particle.connected())
         Particle.publish("FILES", files_in_queue);
     }
+
+
     else if (!second_parameter.compareTo("format"))
     {
       CityStore::instance().reInit();
@@ -158,15 +161,18 @@ int commandLine(String command)
     }
   }
 
-  else if (!first_parameter.compareTo("device-check"))
-  {
-     String response = "na";
-     response = System.deviceID() + "," + LocationService::instance().getEpochTime() + "," + LocationService::instance().getGPSdata() + "," + Cityscanner::instance().data_payload;
-     if (Particle.connected())
-        Particle.publish("device",response);
-  }
+else if (!first_parameter.compareTo("device-check"))
+{
+    // Construct the initial part of the payload with device ID, epoch time, and GPS data
+   String response = System.deviceID() + "," + String(LocationService::instance().getEpochTime()) + "," + LocationService::instance().getGPSdata() + "," + CitySense::instance().getOPCdata(BASE) + "," + CitySense::instance().getTEMPdata() + "," + CitySense::instance().getGASdata() + "," + CitySense::instance().getNOISEdata();
+    // Publish the response if the device is connected
+    if (Particle.connected())
+    {
+        Particle.publish("device", response);
+    }
+}
 
-  else if (!first_parameter.compareTo("location"))
+else if (!first_parameter.compareTo("location"))
   {
     String status = "na";
     status = LocationService::instance().getGPSdata();

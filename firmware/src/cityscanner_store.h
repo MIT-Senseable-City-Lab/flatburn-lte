@@ -40,6 +40,7 @@ class CityStore {
         bool dumpData(int files_to_dump);
         int countFilesInQueue();
         String deviceID = "na";
+        
     
     private:
         CityStore();
@@ -51,5 +52,6 @@ class CityStore {
         
         bool deleteAll(bool removeDirs);
         void delFiles(const char *folder_name);
+     
        
 };

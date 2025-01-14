@@ -2,6 +2,11 @@
 #include "Particle.h"
 #include "cityscanner_cli.h"
 
+//Automatic payload publish
+unsigned long lastPublishTime = 0;  // Track the last publish time
+const unsigned long publishInterval = 3600000; // 1-hour interval for Bologna
+
+
 Cityscanner *Cityscanner::_instance = nullptr;
 
 bool flag_sampling = false;
@@ -54,6 +59,7 @@ void Cityscanner::startup()
 void blink(void);
 
 int Cityscanner::init()
+
 {
   delay(3s);
   Log.info("Init block");
@@ -61,9 +67,6 @@ int Cityscanner::init()
   initCLI();
   Log.info("Starting Core Library");
   core.begin(HW_VERSION);
-  delay(DTIME);
-  Log.info("Turning ON Accelerometer");
-  motionService.start();
   delay(DTIME);
   Serial.println("Turning ON SD card");
   store.init();
@@ -114,14 +117,15 @@ int Cityscanner::init()
     break;
   default:
     Serial.println("Turning ON 3V3");
+    delay(10s);
     core.enable3V3(true);
     delay(DTIME);
-    delay(1s);
     Serial.println("Turning ON 5V line");
+    delay(10s);
     core.enable5V(true);
     delay(DTIME);
-    delay(1s);
     Serial.println("Turning ON GPS");
+    delay(5s);
     locationService.start();
     delay(DTIME);
     Serial.println("Turning ON Vitals");
@@ -131,24 +135,23 @@ int Cityscanner::init()
     sense.startNOISE();
     delay(DTIME);
     Serial.println("Turning ON Temperature sensor");
+    delay(10s);
     sense.startTEMP(); // TBC
     delay(DTIME);
-    //if (IR_ENABLED)
-    //{
-      Serial.println("Turning ON IR sensor");
-      sense.startIR90640();
-      delay(DTIME);
-    //}
     Serial.println("Turning ON Gas sensor");
+    delay(3s);
     sense.startGAS(); // TBC
     delay(DTIME);
-    delay(1s);
-    //if (OPC_ENABLED)
-    //{
+  
+    Log.info("Turning ON Accelerometer");
+    delay(5s);
+    motionService.start();
+    delay(DTIME);
       Serial.println("Turning ON OPC");
+      delay(5s);
       sense.startOPC();
       delay(DTIME);
-    //}
+    
     break;
   }
   Log.info("end INIT");
@@ -157,25 +160,40 @@ int Cityscanner::init()
 
 void Cityscanner::loop()
 {
+if (millis() - lastPublishTime >= publishInterval) {
+        // Construct the response string
+        String response = String(Time.now());
+        response += "," + LocationService::instance().getGPSdata() + ",";
+        response += data_payload;  // Use the existing `data_payload` variable
+
+        Log.info("Publishing: " + response);
+
+        // Publish only if connected to the cloud
+        if (Particle.connected()) {
+            bool publishSuccess = Particle.publish("last_payload", response);
+
+            if (publishSuccess) {
+                lastPublishTime = millis(); // Update only after successful publish
+                Log.info("last_payload published successfully");
+            } else {
+                Log.warn("Publish failed. Retrying on the next interval.");
+            }
+        } else {
+            Log.warn("Device not connected to the cloud.");
+        }
+
+        // Prevent rapid retries by updating the last publish time regardless
+        lastPublishTime = millis();
+    }
+
 
   if (flag_sampling)
   {
     flag_sampling = false;
-
-    if (HARVARD_PILOT)
-    {
-      data_payload = String::format("%s,%s,%s", sense.getOPCdata(EXTENDED).c_str(), // PM1,PM25,PM10,[bins],flow_rate,countglitch,laser_status,tempOPC,humOPC,valid
-                                    sense.getTEMPdata().c_str(),                    // temp,humidity
-                                    sense.getGASdata().c_str());                    // w1,r1
-    }
-    else
     {
 
-     data_payload = String::format("%s,%s,%s,%s,%s", sense.getOPCdata(OPC_DATA_VERSION).c_str(), sense.getTEMPdata().c_str(), sense.getGASdata().c_str(), sense.getNOISEdata().c_str(), sense.getIRdata90640().c_str());  //Temp,Gas,Noise,Thermal
+     data_payload = String::format("%s,%s,%s,%s", sense.getOPCdata(OPC_DATA_VERSION).c_str(), sense.getTEMPdata().c_str(), sense.getGASdata().c_str(), sense.getNOISEdata().c_str());  //Temp,Gas,Noise
       
-      //data_payload = String::format("%s,%s,%s,%s", sense.getOPCdata(OPC_DATA_VERSION).c_str(), sense.getTEMPdata().c_str(), sense.getGASdata().c_str(), sense.getNOISEdata().c_str());  //Temp,Gas,Noise
-                                                                                                                                 
-      // data_payload = String::format("%s,%s", sense.getOPCdata(OPC_DATA_VERSION).c_str(), sense.getNOISEdata().c_str());            //TBC
     }
 
     switch (MODE)
@@ -235,46 +253,9 @@ void Cityscanner::loop()
       break;
     default:
       break;
-      /*cellular.smartconnect();    // Check if cellular is connected, if not turn off modem
-
-        num_mins_waiting_to_turnoff_modem_pwrsave++;  // Increment elapsed time in waiting
-        // If enough elpsed time in waiting has passed
-        if (num_mins_waiting_to_turnoff_modem_pwrsave >= num_min_to_turnoff_modem_pwrsave)
-        {
-          Cellular.off();   // Turn off modem
-        }
-        //else    // If cellular is not connected to the cloud
-        else
-      {
-        Particle.connect();   // Connect to cloud
-        
-      }*/
-
      }
 }
-/*
-{
-    case IDLE:
-      Log.info("Idle Mode");
-      break;
-    case REALTIME:
-      store.logData(BROADCAST_IMMEDIATE, Vitals, vitals_payload);
-      Log.info("Real Time");
-      break;
-    case LOGGING:
-      store.logData(BROADCAST_NONE, Vitals, vitals_payload);
-      Log.info("Vitals Logging");
-      break;
-    case PWRSAVE:
-      Log.info("Pwrsave");
-      break;
-    case TEST:
-      Log.info("test");
-      break;
-    default:
-      break;
-    }
-  }*/
+
 
   if (flag_routine)
   {
@@ -364,15 +345,36 @@ void Cityscanner::checkbattery()
   int batt_volt_adc = analogRead(BATTERY_VOLTAGE_PIN);
   float battery_v = (batt_volt_adc / 4095.0) * 3.3 * 2;
   Log.info("Battery voltage:" + String(battery_v));
-  if (battery_v < LOW_BATTERY_THRESHOLD)
-  {
-    String message = "LOW_BATTERY_" + String(battery_v) + "_v";
-    Log.info(message);
-    sendWarning(message);
-    delay(2s);
-    CitySleep::instance().hibernate(6, HOURS);
+  // Check if the battery is low
+    if (battery_v < LOW_BATTERY_THRESHOLD)
+    {
+        Log.info("Low battery detected. Rechecking in 10 seconds...");
+        delay(10s);
+        batt_volt_adc = analogRead(BATTERY_VOLTAGE_PIN);
+        battery_v = (batt_volt_adc / 4095.0) * 3.3 * 2;
+
+        // If still low, enter hibernation or check charging status
+        if (battery_v < LOW_BATTERY_THRESHOLD)
+        {
+            String message = "LOW_BATTERY_" + String(battery_v) + "_v";
+            Log.info(message);
+            sendWarning(message);
+
+            // Check charging status before hibernating
+            String charging_status = CityVitals::instance().getChargingStatus();
+            if (charging_status.startsWith("1")) // Charging detected
+            {
+                Log.info("Charging detected. Staying awake.");
+                return;
+            }
+
+            // No charging detected, hibernate for 30 minutes
+            Log.info("Battery low and no charging detected. Hibernating for 30 minutes.");
+            CitySleep::instance().hibernate(30, MINUTES);
+        }
     }
 }
+
 
 void Cityscanner::sendWarning(String warning)
 {
@@ -396,10 +398,6 @@ void Cityscanner::printDebug()
   Serial.print("GPS: ");
   Serial.print(locationService.getGPSdata());
   Serial.println(" *latitude,longitude*");
-  //Serial.print("OPC: ");
-  //Serial.print(sense.getOPCdata(BASE));
-  //Serial.println(" *PM1,PM2.5,PM10,flow-rate,countglitch,laser_status,valid,tempOPC,humOPC*");
-  Serial.print("TEMP-EXT: ");
   Serial.print(sense.getTEMPdata());
   Serial.println(" *temperature,humidity*");
   Serial.print("TEMP-INT: ");

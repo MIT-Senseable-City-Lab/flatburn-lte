@@ -9,7 +9,7 @@
 #include "motion_service.h"
 #include "cityscanner_cellular.h"
 
-
+extern float frame[768];
 class Cityscanner {
     public:
         static Cityscanner &instance() {
