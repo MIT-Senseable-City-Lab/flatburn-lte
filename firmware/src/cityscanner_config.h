@@ -28,5 +28,4 @@
 #define RECORDS_PER_FILE 200 //standard is 200
 #define LOW_BATTERY_THRESHOLD 3.60 //volt
 
-
-#define TCP_ENDPOINT "3.236.127.62" //MIT BACKEND
+#define TCP_ENDPOINT "127.0.0.1" //change the IP address to dump data over TCP
