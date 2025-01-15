@@ -121,12 +121,8 @@ Please, choose among the cable options below according to your needs (A or B).
 
 ### General
 
-| ID      | Type   | Subtype             | Specification           |              URL               |  Qty  |
-| :------ | :----- | :------------------ | :---------------------- | :----------------------------: | :---: |
-| AL_01_A | Logic  | Data + power cable  | USB-C → USB-C           | [link](https://www.google.com) |   1   |
-| AL_01_B | Logic  | Data + power cable  | USB-C → USB-A           | [link](https://www.google.com) |   1   |
-| AP_01_A | Power  | Outlet Charger      | USB-C, ?? Watts, Bivolt | [link](https://www.google.com) |   1   |
-| AP_01_B | Power  | Outlet Charger      | USB-A, ?? Watts, Bivolt | [link](https://www.google.com) |   1   |
-| AV_01_A | Vault  | MicroSD Card Reader | USB-C                   | [link](https://www.google.com) |   1   |
-| AV_01_B | Vault  | MicroSD Card Reader | USB-A                   | [link](https://www.google.com) |   1   |
-| AO_01   | Optics | Cleaning Cloth      | Microfiber              | [link](https://www.google.com) |   1   |
+| ID      | Type  | Subtype            | Specification           |                                           URL                                           |  Qty  |
+| :------ | :---- | :----------------- | :---------------------- | :-------------------------------------------------------------------------------------: | :---: |
+| AL_01_A | Logic | Data + power cable | USB-C → USB-C           | [link](https://www.amazon.com/Amazon-Basics-Charging-Transfer-Certified/dp/B085SB6RSN/) |   1   |
+| AL_01_B | Logic | Data + power cable | USB-C → USB-A           |  [link](https://www.amazon.com/Amazon-Basics-Charger-480Mbps-Certified/dp/B01GGKYN0A/)  |   1   |
+| AP_01_A | Power | Outlet Charger     | USB-C, 30 Watts, Bivolt |           [link](https://www.amazon.com/dp/B0B2MM1W65/ref=twister_B0DNYG7ZY9)           |   1   |
