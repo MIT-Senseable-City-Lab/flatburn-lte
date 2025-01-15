@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # 💻 Coding Exercise (files)
 
-[This folder]((https://www.google.com)) contains a coding activity written in Python to introduce users to air quality and environmental sensing methods by working with CityScanner Data, exploring time series analysis, geospatial analysis, and pollution hotspot analysis.
+[This folder](https://github.com/MIT-Senseable-City-Lab/flatburn-lte/tree/main/documentation/content/_files/coding_exercise) contains a coding activity written in Python to introduce users to air quality and environmental sensing methods by working with CityScanner Data, exploring time series analysis, geospatial analysis, and pollution hotspot analysis.
 
 There are 2 versions:
 
