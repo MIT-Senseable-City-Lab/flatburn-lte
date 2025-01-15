@@ -213,7 +213,4 @@ Each unit weighs 1.5kg, and at least 5 devices can be fitted inside a small carr
     <div style={{width: "48%"}}>
         ![alt text](../../static/files/device/compact_blind.jpg)
     </div>
-    <div style={{width: "48%"}}>
-        _image with overall dimensions_
-    </div>
 </div>
