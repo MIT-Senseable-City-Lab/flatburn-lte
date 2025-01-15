@@ -4,11 +4,7 @@ sidebar_position: 6
 
 # 🗂️ Datasets (files)
 
-[This folder](https://github.com/MIT-Senseable-City-Lab/flatburn-lte/tree/main/documentation/content/_files/datasets) contains open City Scanner data sets collected in four deployments in three cities. Raw sensor readings were collected and calibrated following standardized air sensor performance evaluation guidelines recommended by the U.S. EPA. The general method is presented in the following diagram and details can be found in the open source [calibration handbook](https://github.com/MIT-Senseable-City-Lab/OSCS/blob/main/Explore/Calibration%20Handbook/Calibration%20Handbook.pdf).
-
-<!-- <img src="https://github.com/MIT-Senseable-City-Lab/OSCS/blob/main/flatburn-images/CityScanner%20Schematic%20Design.drawio.png" width="800px"> -->
-
-_Figure 1. Data post-processing and validation protocols_
+[This folder](https://github.com/MIT-Senseable-City-Lab/flatburn-lte/tree/main/documentation/content/_files/datasets) contains open City Scanner data sets collected in four deployments in three cities. Raw sensor readings were collected and calibrated following standardized air sensor performance evaluation guidelines recommended by the U.S. EPA. The general method is presented in the following diagram and details can be found in the open source [calibration page](../deploy/calibration.md).
 
 Detailed information about the deployments and data files is included in he following table. In total, there are eight data files. Given that the second pilot in NYC contains a huge amount of data, its full dataset is divided into five sections. A [data descriptor](https://github.com/MIT-Senseable-City-Lab/OSCS/blob/main/Explore/Datasets/OSCS_OpenDataSupplement.pdf) is also included.
 
