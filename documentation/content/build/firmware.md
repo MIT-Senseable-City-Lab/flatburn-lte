@@ -8,7 +8,7 @@ sidebar_position: 7
 
 - Code developed using [Particle.io plugin for MS Code](https://www.particle.io/workbench/);
 - Devices can be flashed both via cable or cloud flash (data costs);
-- Currently testing on bsom [Particle deviceOS@5.5.0](https://docs.particle.io/reference/device-os/firmware);
+- Currently testing on bsom [Particle deviceOS@6.1.1](https://docs.particle.io/reference/device-os/firmware);
 - Written in C++ and [Particle deviceOS APIs](https://docs.particle.io/reference/device-os/firmware/);
 
 ## Dev Environment Setup
@@ -72,5 +72,3 @@ Commands are comma-separated.
 | `cellularOFF` |              |                                 | Turns off the cellular modem untill the device is manually powercycled                              |
 | `autosleep`   | `on`         |                                 | Device goes to sleep after x minutes of no motion                                                   |
 | `autosleep`   | `off`        |                                 |                                                                                                     |
-| `heat-cool`   | `on`         |                                 | Turns on the heater or the fan                                                                      |
-| `heat-cool`   | `off`        |                                 |                                                                                                     |
