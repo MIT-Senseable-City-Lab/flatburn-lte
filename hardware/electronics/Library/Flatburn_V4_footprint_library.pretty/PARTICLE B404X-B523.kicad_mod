@@ -1,0 +1,364 @@
+(footprint "PARTICLE B404X-B523"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "PowerPAK® 1212-8 Single_2-1")
+	(tags "MOSFET (P-Channel)")
+	(property "Reference" "REF**"
+		(at 0.9 -0.5 180)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "2873b4f8-0f62-447e-a58b-90f606afaa88")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.07)
+			)
+		)
+	)
+	(property "Value" "B404x"
+		(at 19.75 17.55 180)
+		(layer "User.1")
+		(hide yes)
+		(uuid "affa941d-d651-4287-a633-9fe41a160193")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.07)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "71466f94-5e92-45bb-a796-a19e9d4094df")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "Som B404x PARTICLE"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e132862d-8e57-4d12-b032-d59513beb2f6")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Distributor" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d40e33f0-181d-46e7-9b34-485219a73a95")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MPN" "B404x"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "fafe55e6-5fbe-4f5f-9fbe-2ffd6223a1d8")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Pkg Type" "SMD"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "958130e0-7745-42be-83f0-49e48026595d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Price Distributor Cad" "59,0"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "40935950-3df5-4f6a-8ed0-8f171156db29")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Temp Range" "-20°..+65°"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a7edad7c-9842-4dda-859f-266816e61dc0")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Implementation" "FAE_LB"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "57725f01-b69d-466b-8f8b-d0e97eeda2d2")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd exclude_from_bom)
+	(fp_line
+		(start 0 0)
+		(end 38 0)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "1dce043f-e2d7-48ab-ac46-d52cae22b4db")
+	)
+	(fp_line
+		(start 0 11.475)
+		(end 0 0)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "80e148f9-4dd1-4b8b-8460-3869d9ec34ee")
+	)
+	(fp_line
+		(start 0 30)
+		(end 0 18.525)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "5ab83d47-0dea-421d-893f-c4f5b908e8ab")
+	)
+	(fp_line
+		(start 0 30)
+		(end 38 30)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "29d4727c-35c6-45d2-8c32-74b232ff4b17")
+	)
+	(fp_line
+		(start 38 2.95)
+		(end 38 0)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "5ccec320-d332-46d0-9df9-d1905596dcaa")
+	)
+	(fp_line
+		(start 38 30)
+		(end 38 27.05)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "7dcd9eb9-ca87-4508-9c27-4fedf838157a")
+	)
+	(fp_line
+		(start 0 0)
+		(end 38 0)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "b7bf58bd-60db-4653-b160-751881c67257")
+	)
+	(fp_line
+		(start 0 11.975)
+		(end 0 0)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "e04c61cb-7b4d-4684-9b87-05dcfd1786ab")
+	)
+	(fp_line
+		(start 0 30)
+		(end 0 16.75)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "810ecc4a-a325-4b01-8728-1596f9f9dbf4")
+	)
+	(fp_line
+		(start 0 30)
+		(end 38 30)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "1d81250a-c6bc-4623-99ec-66e615dd87a8")
+	)
+	(fp_line
+		(start 38 5.075)
+		(end 38 0)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "70f4912b-d97f-4a66-a339-15d52cce0bc7")
+	)
+	(fp_line
+		(start 38 5.075)
+		(end 42 5.075)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "61f4af3b-8642-4823-bac3-9435096148d5")
+	)
+	(fp_line
+		(start 38 24.925)
+		(end 42 24.925)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "6b34ea86-8ae4-4831-b64f-c92f1223c37c")
+	)
+	(fp_line
+		(start 38 30)
+		(end 38 24.925)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "18494bed-219f-4ae6-a802-993a226e7384")
+	)
+	(fp_line
+		(start 39.09 12.975)
+		(end 42 12.975)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "96d87eb6-19ef-4f50-af62-72328075b20b")
+	)
+	(fp_line
+		(start 39.125 11.775)
+		(end 42 11.775)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "ac10421f-e9ce-44b9-b32f-b0cbc074e7b9")
+	)
+	(fp_line
+		(start 42 11.775)
+		(end 42 5.075)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "1e8dbc89-d1c8-4038-845c-9301481f8a6f")
+	)
+	(fp_line
+		(start 42 24.925)
+		(end 42 12.975)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "79a640ab-d0b2-4b88-b341-b22d5a2a7569")
+	)
+	(fp_arc
+		(start 39.09 12.975)
+		(mid 38.49 12.375)
+		(end 39.09 11.775)
+		(stroke
+			(width 0.2)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "04014125-59c2-4c18-b9b9-86ad135106a2")
+	)
+	(fp_text user "PARTICLE BOARD"
+		(at 7.14 16.3235 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "3bc1f2f6-fae4-4574-8d23-4a48d4ef05bc")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.3)
+			)
+			(justify left bottom)
+		)
+	)
+	(fp_text user "PARTICLE BOARD"
+		(at 16.387445 15.980109 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "89aafc43-c1a8-4f28-81c0-d3a1d2353258")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.07)
+			)
+			(justify left bottom)
+		)
+	)
+	(embedded_fonts no)
+	(model "${FAE_3D_DIR}/B523.step"
+		(offset
+			(xyz 42 -15.1 2)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 -90)
+		)
+	)
+)
