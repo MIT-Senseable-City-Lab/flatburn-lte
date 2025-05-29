@@ -1,0 +1,2 @@
+Gerber e drill cambiati su safe rispetto a quelli inviati ai proto
+In bom cambiare condensatore GRM155C71C105KE11D con GRM155C71C105KE11J 
