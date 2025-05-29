@@ -56,7 +56,7 @@ Make sure you order the correct option, being **EL_01_A for North America** or *
 #### Boards
 
 Due to the quantity of items, these lists are available in a dedicated spreadsheet:
-- [📝 Main Board](https://docs.google.com/spreadsheets/d/1auN_yF0JGPYfZu30dk296jcuLERBpaTcwPwNGI0ffaU/edit?usp=sharing) (2025-XX-XX)
+- [📝 Main Board](https://github.com/MIT-Senseable-City-Lab/flatburn-lte/blob/main/hardware/Production/BOM_Flatburn_V4.csv) (2025-04-18)
 
 #### Cables
 
