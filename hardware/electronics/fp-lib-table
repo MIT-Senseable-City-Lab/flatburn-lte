@@ -1,4 +1,0 @@
-(fp_lib_table
-  (version 7)
-  (lib (name "Flatburn_V4_footprint_library")(type "KiCad")(uri "${KIPRJMOD}/Flatburn_V4_footprint_library.pretty")(options "")(descr ""))
-)
