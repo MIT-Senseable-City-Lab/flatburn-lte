@@ -26,24 +26,26 @@ You will be installing brass inserts into plastic, placing parts together, conne
 
 ## Step 1 – Setup and Preparation
 
-1. make sure there is enough space and lighting;
-3. have all parts and components accessible on bench, placing the smallest ones on "buckets" to avoid losing them;
-2. leave the center of the bench for where the actual work is going to be, and the perimeter for tools and other parts;
-4. keep dangerous tools such as the soldering station away from where you could accidentaly hit it by mistake.
+1. Make sure there is enough space and lighting;
+3. Have all parts and components accessible on bench, placing the smallest ones on "buckets" to avoid losing them;
+2. Leave the center of the bench for where the actual work is going to be, and the perimeter for tools and other parts;
+4. Keep dangerous tools such as the soldering station away from where you could accidentaly hit it by mistake.
 
 :::info
 Meanwhile, you can always consult the [**overview reference**](overview), [**bill of materials**](bom) and [**suggested tools**](tools) throughout the process.
 :::
 
-## Step 2 – Remove Printed Supports
+
+<!-- ## Step 2 – Remove Printed Supports
 
 Remove the support on _middle_ piece:
 ![alt text](../../static/files/assembly/DSC_5172.jpg)
 
 Remove the support on _camera_ piece:
-![alt text](../../static/files/assembly/DSC_5171.jpg)
+![alt text](../../static/files/assembly/DSC_5171.jpg) -->
 
-## Step 3 – M2 Inserts
+
+## Step 2 – M2 Inserts
 
 :::tip
 
@@ -54,54 +56,54 @@ Remove the support on _camera_ piece:
   :::
 
 Start by picking-up all the 13x M2 inserts
-![alt text](../../static/files/assembly/DSC_5174.jpg)
+![alt text](../../static/files/assembly/DSC09209.jpg)
 
 Of which, place 8x M2 inserts on _top_:
-![alt text](../../static/files/assembly/DSC_5179.jpg)
-![alt text](../../static/files/assembly/DSC_5176.jpg)
+![alt text](../../static/files/assembly/DSC09213-2.jpg)
+![alt text](../../static/files/assembly/DSC09217-2.jpg)
 
-Then, place 4x M2 inserts on _camera_:
+<!-- Then, place 4x M2 inserts on _camera_:
 ![alt text](../../static/files/assembly/DSC_5181.jpg)
 
 Finally, place the last 1x M2 insert on _switch_bottom_:
-![alt text](../../static/files/assembly/DSC_5182.jpg)
+![alt text](../../static/files/assembly/DSC_5182.jpg) -->
 
 Set the soldering iron to 300ºC, wait for it to reach the temperature, then slowly press the soldering tip perpendicularly (avoid twisting) to the inserts until all them are flush with the printed surfaces:
-![alt text](../../static/files/assembly/DSC_5187.jpg)
-![alt text](../../static/files/assembly/DSC_5188.jpg)
+<!-- ![alt text](../../static/files/assembly/DSC_5187.jpg)
+![alt text](../../static/files/assembly/DSC_5188.jpg) 
 
-![alt text](../../static/files/assembly/DSC_5194.jpg)
-![alt text](../../static/files/assembly/DSC_5198.jpg)
+![alt text](../../static/files/assembly/DSC_5194.jpg) -->
+![alt text](../../static/files/assembly/DSC09222.jpg)
 
 In the end, this should be the result:
 
-**✅ _switch_bottom_**
+<!-- **✅ _switch_bottom_**
 ![alt text](../../static/files/assembly/DSC_5192.jpg)
 
 **✅ _camera_**
-![alt text](../../static/files/assembly/DSC_5193.jpg)
+![alt text](../../static/files/assembly/DSC_5193.jpg) -->
 
 **✅ _top_**
-![alt text](../../static/files/assembly/DSC_5199.jpg)
-![alt text](../../static/files/assembly/DSC_5200.jpg)
+![alt text](../../static/files/assembly/DSC09225.jpg)
+![alt text](../../static/files/assembly/DSC09227.jpg)
 
-## Step 4 – M3 Inserts
+## Step 3 – M3 Inserts
 
 Pick-up 13x M3 inserts, turn the _top_ piece around, then place 6x M3 inserts on it:
-![alt text](../../static/files/assembly/DSC_5206.jpg)
+![alt text](../../static/files/assembly/DSC09230-2.jpg)
 
 <!-- ![alt text](../../static/files/assembly/DSC_5205.jpg) -->
 
 Then, install the 6x inserts with the soldering iron, turn the _top_ piece back and place the remaining 8x M3 inserts on the other side:
-![alt text](../../static/files/assembly/DSC_5201.jpg)
+![alt text](../../static/files/assembly/DSC09231-2.jpg)
 
 Pay attention to the appropriate angle, respecting the holes' directions and the surface alignment:
-![alt text](../../static/files/assembly/DSC_5203.jpg)
+![alt text](../../static/files/assembly/DSC09234-2.jpg)
 
-## Step 5 – 1/4" Inserts
+## Step 4 – 1/4" Inserts
 
 Place 1x ¼" insert on the designated spot on _middle_ piece:
-![alt text](../../static/files/assembly/DSC_5208.jpg)
+![alt text](../../static/files/assembly/DSC09235.jpg)
 
 <!-- ![alt text](../../static/files/assembly/DSC_5207.jpg) -->
 
@@ -109,52 +111,55 @@ Place 1x ¼" insert on the designated spot on _middle_ piece:
 Be careful, these bigger inserts take longer to heat and to cool down.
 :::
 
-![alt text](../../static/files/assembly/DSC_5209.jpg)
+![alt text](../../static/files/assembly/DSC09238.jpg)
+
+**🚨🚨🚨🚨🚨 _need to update photo_🚨🚨🚨🚨🚨**
 ![alt text](../../static/files/assembly/DSC_5210.jpg)
 
 Then, place the other ¼" insert on the rear spot of the _bottom_ piece:
 :::warning
 Be careful to not place the insert in the wrong spot
 :::
-![alt text](../../static/files/assembly/DSC_5212.jpg)
-![alt text](../../static/files/assembly/DSC_5213.jpg)
+![alt text](../../static/files/assembly/DSC09240.jpg)
+![alt text](../../static/files/assembly/DSC09242-2.jpg)
 
 <!-- ![alt text](../../static/files/assembly/DSC_5211.jpg) -->
 
 **✅ Result**
+**🚨🚨🚨🚨🚨 _need to update photo_🚨🚨🚨🚨🚨**
 ![alt text](../../static/files/assembly/DSC_5214.jpg)
 
-## Step 6 – O-Ring Cord
+## Step 5 – O-Ring Cord
 
 Pick the O-ring cord and unroll it:
-![alt text](../../static/files/assembly/DSC_5215.jpg)
+![alt text](../../static/files/assembly/DSC09244.jpg)
 
 Align the tip of the cord to the recess on the _top_ piece, then gently press it perpendicularly to fit inside:
-![alt text](../../static/files/assembly/DSC_5216.jpg)
+![alt text](../../static/files/assembly/DSC09246-2.jpg)
 
 Without stretching, keep pressing until reaching the other extremity of the recess:
-![alt text](../../static/files/assembly/DSC_5219.jpg)
-![alt text](../../static/files/assembly/DSC_5220.jpg)
-![alt text](../../static/files/assembly/DSC_5221.jpg)
+![alt text](../../static/files/assembly/DSC09248.jpg)
+![alt text](../../static/files/assembly/DSC09250.jpg)
+![alt text](../../static/files/assembly/DSC09251.jpg)
 
 Cut the cord to match the extremity, and push it to finish:
-![alt text](../../static/files/assembly/DSC_5222.jpg)
+![alt text](../../static/files/assembly/DSC09254-2.jpg)
 
 **✅ Result**
-![alt text](../../static/files/assembly/DSC_5223.jpg)
+![alt text](../../static/files/assembly/DSC09256.jpg)
 
-## Step 7 – Populate Main Board
+## Step 6 – Populate Main Board
 
 :::info
 Remember to choose the type of Particle module (EMEA or US) according to where the device will be deployed.
 :::
 
 Insert the Particle module into the Main Board slot with its branding facing up:
-![alt text](../../static/files/assembly/DSC_5224.jpg)
-![alt text](../../static/files/assembly/DSC_5226.jpg)
+![alt text](../../static/files/assembly/DSC09258.jpg)
+![alt text](../../static/files/assembly/DSC09259.jpg)
 
 Fasten the only 1x M2.5x4 screw into the Main Board to secure the module:
-![alt text](../../static/files/assembly/DSC_5229.jpg)
+![alt text](../../static/files/assembly/DSC09262-2.jpg)
 
 <!-- ![alt text](../../static/files/assembly/DSC_5228.jpg) -->
 
@@ -164,35 +169,39 @@ Now, pick the GSM antenna cable and connect it between the Particle module and t
 1. Depending on the Particle module type, the antenna connector will be in different place (always signed with a **_CELL_** label).
 2. It can be tricky to snap the connector on. If needed, use a plier with care to not damage the connector and boards, pressing the connector from its front face, but **never press from the sides** because that will damage the connector.
    :::
+   **🚨🚨🚨🚨🚨 _need to update photo_🚨🚨🚨🚨🚨**
    ![alt text](../../static/files/assembly/DSC_5230.jpg)
-   ![alt text](../../static/files/assembly/DSC_5233.jpg)
+   ![alt text](../../static/files/assembly/DSC09265.jpg)
 
 To finish, add the microSD card to the Main Board slot:
-![alt text](../../static/files/assembly/DSC_5236.jpg)
+![alt text](../../static/files/assembly/DSC09266-2.jpg)
 
 **✅ Result**
-![alt text](../../static/files/assembly/DSC_5237.jpg)
+![alt text](../../static/files/assembly/DSC09269.jpg)
 
-## Step 8 – Battery and Main Board
-
+## Step 7 – Battery and Main Board
+**🚨🚨🚨🚨🚨 _need to update photo_🚨🚨🚨🚨🚨**
 Place the battery on the _top_ piece, making sure the cable orientation follows the image:
 ![alt text](../../static/files/assembly/DSC_5239.jpg)
 
 <!-- ![alt text](../../static/files/assembly/DSC_5238.jpg) -->
 
 Then, add the _battery_cover_:
+**🚨🚨🚨🚨🚨 _need to update photo_🚨🚨🚨🚨🚨**
 ![alt text](../../static/files/assembly/DSC_5241.jpg)
 
 <!-- ![alt text](../../static/files/assembly/DSC_5240.jpg) -->
 
 Now, pick the Main Board and connect the battery cable:
+**🚨🚨🚨🚨🚨 _need to update photo_🚨🚨🚨🚨🚨**
 ![alt text](../../static/files/assembly/DSC_5243.jpg)
 
 To insert the Main Board into the _top_ piece, first place its front edge against the _top_ piece at an angle:
+**🚨🚨🚨🚨🚨 _need to update photo_🚨🚨🚨🚨🚨**
 ![alt text](../../static/files/assembly/DSC_5244.jpg)
 
 Finally, lower and then slide it back:
-![alt text](../../static/files/assembly/DSC_5245.jpg)
+![alt text](../../static/files/assembly/DSC09272.jpg)
 
 ## Step 9 – Secure Main Board
 
