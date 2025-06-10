@@ -203,7 +203,7 @@ To insert the Main Board into the _top_ piece, first place its front edge agains
 Finally, lower and then slide it back:
 ![alt text](../../static/files/assembly/DSC09272.jpg)
 
-## Step 9 – Secure Main Board
+## Step 8 – Secure Main Board
 
 For fixing the Main Board, pick 4x M2 washers and put each into 4x M2X6 screws
 ![alt text](../../static/files/assembly/DSC_5246.jpg)
@@ -216,7 +216,7 @@ Fasten them into the four indicated holes:
 **✅ Result**
 ![alt text](../../static/files/assembly/DSC_5250.jpg)
 
-## Step 11 – Solar Panel
+## Step 9 – Solar Panel
 
 Align the panel to make sure the cable is going out backwards, then pass it through the hole:
 ![alt text](../../static/files/assembly/DSC_5272.jpg)
@@ -254,7 +254,7 @@ Gently wind the cable while making sure it enters through the indicated spot on 
 Attach the connector to the Main Board socket:
 ![alt text](../../static/files/assembly/DSC_5288.jpg)
 
-## Step 12 – Sensing Board
+<!-- ## Step 12 – Sensing Board
 
 :::info
 Depending on your needs, choose the appropriate gas sensor: CO+NO2 or O3+NO2 (depicted).
@@ -333,9 +333,9 @@ You might carefully use a tweezer or screwdriver to gently push the connector, b
 ![alt text](../../static/files/assembly/DSC_5345.jpg)
 
 Finally, connect the cable to the Sensing Board:
-![alt text](../../static/files/assembly/DSC_5346.jpg)
+![alt text](../../static/files/assembly/DSC_5346.jpg) --> 
 
-## Step 15 – Switch
+## Step 10 – Switch
 
 Place the _switch_bottom_ into the _middle_ piece, from below:
 ![alt text](../../static/files/assembly/DSC_5313.jpg)
@@ -356,7 +356,7 @@ The switch must move freely between start and end, but there should be no play b
 ![alt text](../../static/files/assembly/DSC_5323.jpg)
 ![alt text](../../static/files/assembly/DSC_5324.jpg)
 
-## Step 16 – USB-C Cable
+## Step 11 – USB-C Cable
 
 Pick the _Waterproof USB-C cable_:
 ![alt text](../../static/files/assembly/DSC_5325.jpg)
@@ -384,7 +384,7 @@ Connect the _90º USB-C adapter_ to the _Waterproof USB-C cable_:
 Twist the cable as indicated to help avoiding collision with other parts when finishing the assembly:
 ![alt text](../../static/files/assembly/DSC_5335.jpg)
 
-## Step 17 – Particulate Sensor
+## Step 12 – Particulate Sensor
 
 :::tip
 Pay attention to the correct orientation, since there are several ways for assembling it wrong.
@@ -415,7 +415,7 @@ Roll the Sensirion cable to remove the excess and connect it to the indicate spo
 **✅ Result**
 ![alt text](../../static/files/assembly/DSC_5352.jpg)
 
-## Step 18 – Closing
+## Step 13 – Closing
 
 Connect the _90º USB-C Adapter_ to the _Main Board_:
 ![alt text](../../static/files/assembly/DSC_5353.jpg)
@@ -458,14 +458,14 @@ Make sure all seams are neatly aligned to avoid sealing issues.
 :::
 ![alt text](../../static/files/assembly/DSC_5365.jpg)
 
-## Step 19 – Magnets
+## Step 14 – Magnets
 
 Fasten both _magnets_ into the _botton_ piece, making sure it is well tightened:
 ![alt text](../../static/files/assembly/DSC_5366.jpg)
 ![alt text](../../static/files/assembly/DSC_5367.jpg)
 ![alt text](../../static/files/assembly/DSC_5368.jpg)
 
-## Step 20 – Identification
+## Step 15 – Identification
 :::tip
 It is recommended to label each unit with a unique ID to avoid data identification issues:
 :::
