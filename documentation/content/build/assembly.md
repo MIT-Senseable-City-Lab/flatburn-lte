@@ -5,7 +5,7 @@ sidebar_position: 6
 # 🧩 Assembly
 
 :::info
-It is highly reccommended that you read this entire assembly manual to familiarize yourself before starting!
+It is highly recommended that you read this entire assembly manual to familiarize yourself before starting!
 :::
 
 ## Overview
