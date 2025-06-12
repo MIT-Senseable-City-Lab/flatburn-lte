@@ -166,7 +166,7 @@ Now, pick the GSM antenna cable and connect it between the Particle module and t
 1. Depending on the Particle module type, the antenna connector will be in different place (always signed with a **_CELL_** label).
 2. It can be tricky to snap the connector on. If needed, use a plier with care to not damage the connector and boards, pressing the connector from its front face, but **never press from the sides** because that will damage the connector.
    :::
-   ![alt text](../../static/files/assembly/DSC_5230.jpg)
+   ![alt text](../../static/files/assembly/DSC09263-2.jpg)
    ![alt text](../../static/files/assembly/DSC09265-2.jpg)
 
 To finish, add the microSD card to the Main Board slot:
