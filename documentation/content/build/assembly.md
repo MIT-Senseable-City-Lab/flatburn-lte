@@ -156,7 +156,7 @@ Insert the Particle module into the Main Board slot with its branding facing up:
 ![alt text](../../static/files/assembly/DSC09259.jpg)
 
 Fasten the only 1x M2.5x4 screw into the Main Board to secure the module:
-![alt text](../../static/files/assembly/DSC09262-2.jpg)
+![alt text](../../static/files/assembly/DSC09262.jpg)
 
 <!-- ![alt text](../../static/files/assembly/DSC_5228.jpg) -->
 
@@ -166,11 +166,11 @@ Now, pick the GSM antenna cable and connect it between the Particle module and t
 1. Depending on the Particle module type, the antenna connector will be in different place (always signed with a **_CELL_** label).
 2. It can be tricky to snap the connector on. If needed, use a plier with care to not damage the connector and boards, pressing the connector from its front face, but **never press from the sides** because that will damage the connector.
    :::
-   ![alt text](../../static/files/assembly/DSC09263-2.jpg)
-   ![alt text](../../static/files/assembly/DSC09265-2.jpg)
+   ![alt text](../../static/files/assembly/DSC09263.jpg)
+   ![alt text](../../static/files/assembly/DSC09265.jpg)
 
 To finish, add the microSD card to the Main Board slot:
-![alt text](../../static/files/assembly/DSC09266-2.jpg)
+![alt text](../../static/files/assembly/DSC09266.jpg)
 
 **✅ Result**
 ![alt text](../../static/files/assembly/DSC09269.jpg)
@@ -180,8 +180,8 @@ To insert the Main Board into the _top_ piece, first place its front edge agains
 ![alt text](../../static/files/assembly/DSC09291.jpg)
 
 Finally, lower and then slide it back:
-![alt text](../../static/files/assembly/DSC09270-2.jpg)
-![alt text](../../static/files/assembly/DSC09272-2.jpg)
+![alt text](../../static/files/assembly/DSC09270.jpg)
+![alt text](../../static/files/assembly/DSC09272.jpg)
 
 Place the battery on the _top_ piece, making sure the cable orientation follows the image:
 ![alt text](../../static/files/assembly/DSC09299.jpg)
@@ -204,7 +204,7 @@ For fixing the Main Board, pick 4x M2 washers and put each into 4x M2X6 screws
 <!-- ![alt text](../../static/files/assembly/DSC_5247.jpg) -->
 
 Fasten them into the four indicated holes:
-![alt text](../../static/files/assembly/DSC09311-2.jpg)
+![alt text](../../static/files/assembly/DSC09311.jpg)
 ![alt text](../../static/files/assembly/DSC09314.jpg)
 
 **✅ Result**
@@ -243,7 +243,7 @@ Please make sure there is no surplus of cable above the _top_ piece, all excess 
 ![alt text](../../static/files/assembly/DSC09336-2.jpg)
 
 Gently wind the cable while making sure it enters through the indicated spot on the back of the _top_ piece and respects the boundaries of its compartment above the _battery_holder_:
-![alt text](../../static/files/assembly/DSC09337-2.jpg)
+![alt text](../../static/files/assembly/DSC09337.jpg)
 
 <!-- Attach the connector to the Main Board socket:
 ![alt text](../../static/files/assembly/DSC_5288.jpg) --> 
