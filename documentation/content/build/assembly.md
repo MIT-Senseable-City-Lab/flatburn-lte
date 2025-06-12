@@ -112,9 +112,7 @@ Be careful, these bigger inserts take longer to heat and to cool down.
 :::
 
 ![alt text](../../static/files/assembly/DSC09238.jpg)
-
-**🚨🚨🚨🚨🚨 _need to update photo_🚨🚨🚨🚨🚨**
-![alt text](../../static/files/assembly/DSC_5210.jpg)
+![alt text](../../static/files/assembly/DSC09278.jpg)
 
 Then, place the other ¼" insert on the rear spot of the _bottom_ piece:
 :::warning
@@ -126,8 +124,7 @@ Be careful to not place the insert in the wrong spot
 <!-- ![alt text](../../static/files/assembly/DSC_5211.jpg) -->
 
 **✅ Result**
-**🚨🚨🚨🚨🚨 _need to update photo_🚨🚨🚨🚨🚨**
-![alt text](../../static/files/assembly/DSC_5214.jpg)
+![alt text](../../static/files/assembly/DSC09284.jpg)
 
 ## Step 5 – O-Ring Cord
 
@@ -169,9 +166,8 @@ Now, pick the GSM antenna cable and connect it between the Particle module and t
 1. Depending on the Particle module type, the antenna connector will be in different place (always signed with a **_CELL_** label).
 2. It can be tricky to snap the connector on. If needed, use a plier with care to not damage the connector and boards, pressing the connector from its front face, but **never press from the sides** because that will damage the connector.
    :::
-   **🚨🚨🚨🚨🚨 _need to update photo_🚨🚨🚨🚨🚨**
    ![alt text](../../static/files/assembly/DSC_5230.jpg)
-   ![alt text](../../static/files/assembly/DSC09265.jpg)
+   ![alt text](../../static/files/assembly/DSC09265-2.jpg)
 
 To finish, add the microSD card to the Main Board slot:
 ![alt text](../../static/files/assembly/DSC09266-2.jpg)
@@ -180,59 +176,57 @@ To finish, add the microSD card to the Main Board slot:
 ![alt text](../../static/files/assembly/DSC09269.jpg)
 
 ## Step 7 – Battery and Main Board
-**🚨🚨🚨🚨🚨 _need to update photo_🚨🚨🚨🚨🚨**
-Place the battery on the _top_ piece, making sure the cable orientation follows the image:
-![alt text](../../static/files/assembly/DSC_5239.jpg)
-
-<!-- ![alt text](../../static/files/assembly/DSC_5238.jpg) -->
-
-Then, add the _battery_cover_:
-**🚨🚨🚨🚨🚨 _need to update photo_🚨🚨🚨🚨🚨**
-![alt text](../../static/files/assembly/DSC_5241.jpg)
-
-<!-- ![alt text](../../static/files/assembly/DSC_5240.jpg) -->
-
-Now, pick the Main Board and connect the battery cable:
-**🚨🚨🚨🚨🚨 _need to update photo_🚨🚨🚨🚨🚨**
-![alt text](../../static/files/assembly/DSC_5243.jpg)
-
 To insert the Main Board into the _top_ piece, first place its front edge against the _top_ piece at an angle:
-**🚨🚨🚨🚨🚨 _need to update photo_🚨🚨🚨🚨🚨**
-![alt text](../../static/files/assembly/DSC_5244.jpg)
+![alt text](../../static/files/assembly/DSC09291.jpg)
 
 Finally, lower and then slide it back:
-![alt text](../../static/files/assembly/DSC09272.jpg)
+![alt text](../../static/files/assembly/DSC09270-2.jpg)
+![alt text](../../static/files/assembly/DSC09272-2.jpg)
+
+Place the battery on the _top_ piece, making sure the cable orientation follows the image:
+![alt text](../../static/files/assembly/DSC09299.jpg)
+
+Then, add the _battery_cover_:
+![alt text](../../static/files/assembly/DSC09301.jpg)
+
+**✅ Result**
+![alt text](../../static/files/assembly/DSC09303.jpg)
+
+<!-- ![alt text](../../static/files/assembly/DSC_5238.jpg) -->
+<!-- ![alt text](../../static/files/assembly/DSC_5240.jpg) -->
+<!-- Now, pick the Main Board and connect the battery cable: -->
 
 ## Step 8 – Secure Main Board
 
 For fixing the Main Board, pick 4x M2 washers and put each into 4x M2X6 screws
-![alt text](../../static/files/assembly/DSC_5246.jpg)
+![alt text](../../static/files/assembly/DSC09306.jpg)
 
 <!-- ![alt text](../../static/files/assembly/DSC_5247.jpg) -->
 
 Fasten them into the four indicated holes:
-![alt text](../../static/files/assembly/DSC_5248.jpg)
+![alt text](../../static/files/assembly/DSC09311-2.jpg)
+![alt text](../../static/files/assembly/DSC09314.jpg)
 
 **✅ Result**
-![alt text](../../static/files/assembly/DSC_5250.jpg)
+![alt text](../../static/files/assembly/DSC09314.jpg)
 
 ## Step 9 – Solar Panel
 
 Align the panel to make sure the cable is going out backwards, then pass it through the hole:
-![alt text](../../static/files/assembly/DSC_5272.jpg)
-![alt text](../../static/files/assembly/DSC_5273.jpg)
-![alt text](../../static/files/assembly/DSC_5276.jpg)
+![alt text](../../static/files/assembly/DSC09317.jpg)
+![alt text](../../static/files/assembly/DSC09319.jpg)
+![alt text](../../static/files/assembly/DSC09320.jpg)
 
 There are six holes to secure the solar panel to the _top_ piece. Pick up 6x M3X16 screws + 6x M3 washers and 6x 5mm spacers.
 
-![alt text](../../static/files/assembly/DSC_5278.jpg)
+![alt text](../../static/files/assembly/DSC09322.jpg)
 
 The correct order is **screw → washer → Solar Panel → spacer → _top_ piece**:
-![alt text](../../static/files/assembly/DSC_5280.jpg)
+![alt text](../../static/files/assembly/DSC09326-2.jpg)
 
 Start with both the intermediary holes, since that will make it easier to align the Solar Panel to the _top_ piece:
-![alt text](../../static/files/assembly/DSC_5282.jpg)
-![alt text](../../static/files/assembly/DSC_5283.jpg)
+![alt text](../../static/files/assembly/DSC09328-2.jpg)
+![alt text](../../static/files/assembly/DSC09330-2.jpg)
 
 Proceed to the corners:
 :::tip
@@ -240,19 +234,179 @@ Due to variation of manufacturing tolerances, it might be harder to fasten these
 
 Make sure the screw is properly aligned to the insert on the _top_ piece and fasten while making sure it is following the right angle.
 :::
-![alt text](../../static/files/assembly/DSC_5284.jpg)
+![alt text](../../static/files/assembly/DSC09331.jpg)
 
 **✅ Result**
-![alt text](../../static/files/assembly/DSC_5285.jpg)
+![alt text](../../static/files/assembly/DSC09333.jpg)
 
 Please make sure there is no surplus of cable above the _top_ piece, all excess should be below:
-![alt text](../../static/files/assembly/DSC_5286.jpg)
+![alt text](../../static/files/assembly/DSC09336-2.jpg)
 
 Gently wind the cable while making sure it enters through the indicated spot on the back of the _top_ piece and respects the boundaries of its compartment above the _battery_holder_:
-![alt text](../../static/files/assembly/DSC_5287.jpg)
+![alt text](../../static/files/assembly/DSC09337-2.jpg)
 
-Attach the connector to the Main Board socket:
-![alt text](../../static/files/assembly/DSC_5288.jpg)
+<!-- Attach the connector to the Main Board socket:
+![alt text](../../static/files/assembly/DSC_5288.jpg) --> 
+
+## Step 10 – USB-C Cable
+
+Pick the _Waterproof USB-C cable_:
+![alt text](../../static/files/assembly/DSC09365.jpg)
+
+Now, unscrew the cap and nut, remove them completely leaving the rubber seal, then put it back:
+![alt text](../../static/files/assembly/DSC09367-2.jpg)
+
+Place the cable in the appropriate place respecting the correct order of **cable screw → rubber ring → _middle_ piece**:
+![alt text](../../static/files/assembly/DSC09368-2.jpg)
+![alt text](../../static/files/assembly/DSC09370.jpg)
+
+While holding everything together, turn the _middle_ piece around and add the cap ring, leaving its strip pointing to the right.
+![alt text](../../static/files/assembly/DSC09372.jpg)
+
+Fasten the nut while keeping the cap strip at the same position:
+![alt text](../../static/files/assembly/DSC09375.jpg)
+![alt text](../../static/files/assembly/DSC09378.jpg)
+
+Screw the cap:
+![alt text](../../static/files/assembly/DSC09386.jpg)
+
+Connect the _90º USB-C adapter_ to the _Waterproof USB-C cable_ and twist the cable as indicated to help avoiding collision with other parts when finishing the assembly:
+![alt text](../../static/files/assembly/DSC09386-2.jpg)
+
+## Step 11 – Particulate Sensor
+
+:::tip
+Pay attention to the correct orientation, since there are several ways for assembling it wrong.
+:::
+Place the _Sensirion sensor_ into its craddle on the _middle_ piece:
+![alt text](../../static/files/assembly/DSC09387.jpg)
+![alt text](../../static/files/assembly/DSC09389.jpg)
+
+Attach the cable to the _Sensirion sensor_:
+![alt text](../../static/files/assembly/DSC09392.jpg)
+![alt text](../../static/files/assembly/DSC09394.jpg)
+
+:::tip
+If you need, use a tweezer or screwdriver to help attaching the sensor properly to the end.
+:::
+![alt text](../../static/files/assembly/DSC09396.jpg)
+
+To allow for the _middle_ piece to be attached to the _top_ piece correctly, align the switch longitudinally ("on" position):
+![alt text](../../static/files/assembly/DSC_5347.jpg)
+
+And turn the _Main Board_ switch until the green light turns on ("on" position):
+![alt text](../../static/files/assembly/DSC09407.jpg)
+
+Roll the Sensirion cable to remove the excess and connect it to the indicate spot:
+![alt text](../../static/files/assembly/DSC09409.jpg)
+![alt text](../../static/files/assembly/DSC09414-2.jpg)
+
+## Step 12 – Switch & Closing
+
+<!-- Connect the _90º USB-C Adapter_ to the _Main Board_:
+![alt text](../../static/files/assembly/DSC_5353.jpg) --> 
+
+With care, align the _middle_ and _top_ pieces together while respecting the _switch_ position:
+![alt text](../../static/files/assembly/DSC09426.jpg)
+
+:::warning
+Now you **must move back the switch** counter-clockwise to turn the device off.
+:::
+
+Fasten 3x M3x16 screws, joining the _middle_ and _top_ pieces together:
+![alt text](../../static/files/assembly/DSC09429.jpg)
+![alt text](../../static/files/assembly/DSC09431-2.jpg)
+![alt text](../../static/files/assembly/DSC09434.jpg)
+![alt text](../../static/files/assembly/DSC09436.jpg)
+
+Align the _switch_top_ with the _top_ piece while respecting the _switch_ position:
+![alt text](../../static/files/assembly/DSC09437.jpg)
+![alt text](../../static/files/assembly/DSC09439.jpg)
+
+Position the _bottom_ piece over the _top_ and _middle_ pieces:
+![alt text](../../static/files/assembly/DSC09442.jpg)
+
+Keep the cap strip out of the way:
+![alt text](../../static/files/assembly/DSC09445.jpg)
+
+Then insert it into the appropriate entrance on the right:
+![alt text](../../static/files/assembly/DSC09472.jpg)
+
+Place the last 4x M3x16 screws into the four bottom openings:
+![alt text](../../static/files/assembly/DSC09449.jpg)
+
+Fasten to hold it together with middle and top pieces:
+:::tip
+Due to the angles it might be more dificult to fasten the screws than usual.
+
+Instead of fixing one at once then proceding to the next, it is easier if each one is tightened a bit at a time.
+:::
+![alt text](../../static/files/assembly/DSC09453-2.jpg)
+
+**✅ Result**
+:::warning
+Make sure all seams are neatly aligned to avoid sealing issues.
+:::
+![alt text](../../static/files/assembly/DSC09453.jpg)
+
+## Step 13 – Magnets
+
+Fasten both _magnets_ into the _botton_ piece, making sure it is well tightened:
+![alt text](../../static/files/assembly/DSC09455.jpg)
+![alt text](../../static/files/assembly/DSC09458.jpg)
+![alt text](../../static/files/assembly/DSC09459.jpg)
+
+## Step 14 – Identification
+:::tip
+It is recommended to label each unit with a unique ID to avoid data identification issues:
+:::
+![alt text](../../static/files/assembly/DSC09462.jpg)
+![alt text](../../static/files/assembly/DSC09464-2.jpg)
+
+## You made it!
+
+<!-- ![alt text](../../static/files/assembly/DSC_5375.jpg)
+![alt text](../../static/files/assembly/DSC_5376.jpg) -->
+<!-- ![alt text](../../static/files/assembly/DSC_5389.jpg) -->
+
+![alt text](../../static/files/assembly/DSC09465.jpg)
+
+<!-- ![alt text](../../static/files/assembly/DSC_5392.jpg) -->
+
+![alt text](../../static/files/assembly/DSC09470.jpg)
+
+<!-- ![alt text](../../static/files/assembly/DSC_5394.jpg)
+![alt text](../../static/files/assembly/DSC_5395.jpg)
+![alt text](../../static/files/assembly/DSC_5396.jpg)
+![alt text](../../static/files/assembly/DSC_5397.jpg)
+![alt text](../../static/files/assembly/DSC_5398.jpg)
+![alt text](../../static/files/assembly/DSC_5399.jpg)
+![alt text](../../static/files/assembly/DSC_5400.jpg) -->
+
+
+
+<!-- ARCHIVE --> 
+
+<!-- ## Step 10 – Switch
+
+Place the _switch_bottom_ into the _middle_ piece, from below:
+![alt text](../../static/files/assembly/DSC_5313.jpg)
+![alt text](../../static/files/assembly/DSC_5314.jpg)
+
+Insert the o-ring into the _switch_top_, observing if it is perfectly fitting into its recess:
+![alt text](../../static/files/assembly/DSC_5316.jpg)
+![alt text](../../static/files/assembly/DSC_5317.jpg)
+
+Align, then join the _switch_top_ and _switch_bottom_ with 1x M2X6 screw while keeping the _middle_ piece in between:
+![alt text](../../static/files/assembly/DSC_5319.jpg)
+![alt text](../../static/files/assembly/DSC_5320.jpg)
+
+**✅ Result**
+:::info
+The switch must move freely between start and end, but there should be no play between the three parts.
+:::
+![alt text](../../static/files/assembly/DSC_5323.jpg)
+![alt text](../../static/files/assembly/DSC_5324.jpg) --> 
 
 <!-- ## Step 12 – Sensing Board
 
@@ -334,160 +488,3 @@ You might carefully use a tweezer or screwdriver to gently push the connector, b
 
 Finally, connect the cable to the Sensing Board:
 ![alt text](../../static/files/assembly/DSC_5346.jpg) --> 
-
-## Step 10 – Switch
-
-Place the _switch_bottom_ into the _middle_ piece, from below:
-![alt text](../../static/files/assembly/DSC_5313.jpg)
-![alt text](../../static/files/assembly/DSC_5314.jpg)
-
-Insert the o-ring into the _switch_top_, observing if it is perfectly fitting into its recess:
-![alt text](../../static/files/assembly/DSC_5316.jpg)
-![alt text](../../static/files/assembly/DSC_5317.jpg)
-
-Align, then join the _switch_top_ and _switch_bottom_ with 1x M2X6 screw while keeping the _middle_ piece in between:
-![alt text](../../static/files/assembly/DSC_5319.jpg)
-![alt text](../../static/files/assembly/DSC_5320.jpg)
-
-**✅ Result**
-:::info
-The switch must move freely between start and end, but there should be no play between the three parts.
-:::
-![alt text](../../static/files/assembly/DSC_5323.jpg)
-![alt text](../../static/files/assembly/DSC_5324.jpg)
-
-## Step 11 – USB-C Cable
-
-Pick the _Waterproof USB-C cable_:
-![alt text](../../static/files/assembly/DSC_5325.jpg)
-
-Now, unscrew the cap and nut, remove them completely leaving the rubber seal, then put it back:
-![alt text](../../static/files/assembly/DSC_5326.jpg)
-
-Place the cable in the appropriate place respecting the correct order of **cable screw → rubber ring → _middle_ piece**:
-![alt text](../../static/files/assembly/DSC_5327.jpg)
-![alt text](../../static/files/assembly/DSC_5328.jpg)
-
-While holding everything together, turn the _middle_ piece around and add the cap ring, leaving its strip pointing to the right.
-![alt text](../../static/files/assembly/DSC_5329.jpg)
-
-Fasten the nut while keeping the cap strip at the same position:
-![alt text](../../static/files/assembly/DSC_5330.jpg)
-![alt text](../../static/files/assembly/DSC_5331.jpg)
-
-Screw the cap:
-![alt text](../../static/files/assembly/DSC_5332.jpg)
-
-Connect the _90º USB-C adapter_ to the _Waterproof USB-C cable_:
-![alt text](../../static/files/assembly/DSC_5333.jpg)
-
-Twist the cable as indicated to help avoiding collision with other parts when finishing the assembly:
-![alt text](../../static/files/assembly/DSC_5335.jpg)
-
-## Step 12 – Particulate Sensor
-
-:::tip
-Pay attention to the correct orientation, since there are several ways for assembling it wrong.
-:::
-Place the _Sensirion sensor_ into its craddle on the _middle_ piece:
-![alt text](../../static/files/assembly/DSC_5337.jpg)
-![alt text](../../static/files/assembly/DSC_5338.jpg)
-
-Attach the cable to the _Sensirion sensor_:
-![alt text](../../static/files/assembly/DSC_5339.jpg)
-![alt text](../../static/files/assembly/DSC_5340.jpg)
-
-:::tip
-If you need, use a tweezer or screwdriver to help attaching the sensor properly to the end.
-:::
-![alt text](../../static/files/assembly/DSC_5341.jpg)
-
-To allow for the _middle_ piece to be attached to the _top_ piece correctly, align the switch longitudinally ("on" position):
-![alt text](../../static/files/assembly/DSC_5347.jpg)
-
-And push the _Main Board_ switch to the right ("on" position):
-![alt text](../../static/files/assembly/DSC_5348.jpg)
-
-Roll the Sensirion cable to remove the excess and connect it to the indicate spot:
-![alt text](../../static/files/assembly/DSC_5350.jpg)
-![alt text](../../static/files/assembly/DSC_5351.jpg)
-
-**✅ Result**
-![alt text](../../static/files/assembly/DSC_5352.jpg)
-
-## Step 13 – Closing
-
-Connect the _90º USB-C Adapter_ to the _Main Board_:
-![alt text](../../static/files/assembly/DSC_5353.jpg)
-
-With care, align the _middle_ and _top_ pieces together while respecting the _switch_ position:
-![alt text](../../static/files/assembly/DSC_5354.jpg)
-
-:::warning
-Now you **must move back the switch** counter-clockwise to turn the device off.
-:::
-
-Fasten 3x M3x16 screws, joining the _middle_ and _top_ pieces together:
-![alt text](../../static/files/assembly/DSC_5356.jpg)
-![alt text](../../static/files/assembly/DSC_5358.jpg)
-![alt text](../../static/files/assembly/DSC_5359.jpg)
-
-Position the _bottom_ piece over the _top_ and _middle_ pieces:
-![alt text](../../static/files/assembly/DSC_5360.jpg)
-
-Keep the cap strip out of the way:
-![alt text](../../static/files/assembly/DSC_5361.jpg)
-
-Then insert it into the appropriate entrance on the right:
-![alt text](../../static/files/assembly/DSC_5362.jpg)
-
-Place the last 4x M3x16 screws into the four bottom openings:
-![alt text](../../static/files/assembly/DSC_5363.jpg)
-
-Fasten to hold it together with middle and top pieces:
-:::tip
-Due to the angles it might be more dificult to fasten the screws than usual.
-
-Instead of fixing one at once then proceding to the next, it is easier if each one is tightened a bit at a time.
-:::
-![alt text](../../static/files/assembly/DSC_5364.jpg)
-
-**✅ Result**
-:::warning
-Make sure all seams are neatly aligned to avoid sealing issues.
-:::
-![alt text](../../static/files/assembly/DSC_5365.jpg)
-
-## Step 14 – Magnets
-
-Fasten both _magnets_ into the _botton_ piece, making sure it is well tightened:
-![alt text](../../static/files/assembly/DSC_5366.jpg)
-![alt text](../../static/files/assembly/DSC_5367.jpg)
-![alt text](../../static/files/assembly/DSC_5368.jpg)
-
-## Step 15 – Identification
-:::tip
-It is recommended to label each unit with a unique ID to avoid data identification issues:
-:::
-![alt text](../../static/files/assembly/DSC_5369.jpg)
-![alt text](../../static/files/assembly/DSC_5370.jpg)
-
-## You made it!
-
-<!-- ![alt text](../../static/files/assembly/DSC_5375.jpg)
-![alt text](../../static/files/assembly/DSC_5376.jpg) -->
-<!-- ![alt text](../../static/files/assembly/DSC_5389.jpg) -->
-
-![alt text](../../static/files/assembly/DSC_5390.jpg)
-
-<!-- ![alt text](../../static/files/assembly/DSC_5392.jpg) -->
-
-![alt text](../../static/files/assembly/DSC_5393.jpg)
-
-<!-- ![alt text](../../static/files/assembly/DSC_5394.jpg)
-![alt text](../../static/files/assembly/DSC_5395.jpg)
-![alt text](../../static/files/assembly/DSC_5396.jpg)
-![alt text](../../static/files/assembly/DSC_5397.jpg)
-![alt text](../../static/files/assembly/DSC_5398.jpg)
-![alt text](../../static/files/assembly/DSC_5399.jpg)
-![alt text](../../static/files/assembly/DSC_5400.jpg) -->
