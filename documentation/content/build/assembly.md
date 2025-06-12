@@ -291,8 +291,8 @@ If you need, use a tweezer or screwdriver to help attaching the sensor properly 
 :::
 ![alt text](../../static/files/assembly/DSC09396.jpg)
 
-To allow for the _middle_ piece to be attached to the _top_ piece correctly, align the switch longitudinally ("on" position):
-![alt text](../../static/files/assembly/DSC_5347.jpg)
+<!-- To allow for the _middle_ piece to be attached to the _top_ piece correctly, align the switch longitudinally ("on" position):
+![alt text](../../static/files/assembly/DSC_5347.jpg) --> 
 
 And turn the _Main Board_ switch until the green light turns on ("on" position):
 ![alt text](../../static/files/assembly/DSC09407.jpg)
