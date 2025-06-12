@@ -3,7 +3,7 @@
 ## Environment
 - Code developed using [Particle.io plugin for MS Code](https://www.particle.io/workbench/)
 - Devices can be flashed both via cable or cloud flash (data costs)
-- Compatible with [Particle deviceOS@6.1.1](https://docs.particle.io/reference/device-os/firmware)
+- Compatible with [Particle deviceOS@6.2.1](https://docs.particle.io/reference/device-os/firmware)
 - Written in C++ and [Particle deviceOS APIs](https://docs.particle.io/reference/device-os/firmware/)
 
 ## Dev Environment Setup
