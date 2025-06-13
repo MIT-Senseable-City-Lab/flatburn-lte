@@ -10,7 +10,7 @@ It is highly recommended that you read this entire assembly manual to familiariz
 
 ## Overview
 
-The assembly process consists of **15 easy steps**, which should take up to **60 minutes** per device.
+The assembly process consists of **14 easy steps**, which should take up to **60 minutes** per device.
 
 The device was designed for not needing wire soldering, glueing or any other complex operation.
 
