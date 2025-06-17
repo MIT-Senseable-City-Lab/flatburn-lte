@@ -210,7 +210,7 @@ Fasten them into the four indicated holes:
 **✅ Result**
 ![alt text](../../static/files/assembly/DSC09314.jpg)
 
-## Step 9 – Solar Panel
+## Step 9 – Solar Panel & Gas
 
 Align the panel to make sure the cable is going out backwards, then pass it through the hole:
 ![alt text](../../static/files/assembly/DSC09317.jpg)
@@ -242,8 +242,26 @@ Make sure the screw is properly aligned to the insert on the _top_ piece and fas
 Please make sure there is no surplus of cable above the _top_ piece, all excess should be below:
 ![alt text](../../static/files/assembly/DSC09336-2.jpg)
 
+Pick up 1x M2 washers, and solder into the hole. 
+![alt text](../../static/files/assembly/DSC09485.jpg)
+![alt text](../../static/files/assembly/DSC09486.jpg)
+
+Pick up the gas and cable, and gently attach the pieces together. 
+![alt text](../../static/files/assembly/DSC09488.jpg)
+![alt text](../../static/files/assembly/DSC09491.jpg)
+
+Push the gas into the corner so it sits on the ledge. 
+![alt text](../../static/files/assembly/DSC09492.jpg)
+
+Pick up 1x M2 screw to attach the gas into place. 
+![alt text](../../static/files/assembly/DSC09494.jpg)
+![alt text](../../static/files/assembly/DSC09497.jpg)
+
+Attach the connector to the Main Board socket
+![alt text](../../static/files/assembly/DSC09500.jpg)
+
 Gently wind the cable while making sure it enters through the indicated spot on the back of the _top_ piece and respects the boundaries of its compartment above the _battery_holder_:
-![alt text](../../static/files/assembly/DSC09337.jpg)
+![alt text](../../static/files/assembly/DSC09501.jpg)
 
 <!-- Attach the connector to the Main Board socket:
 ![alt text](../../static/files/assembly/DSC_5288.jpg) --> 
@@ -303,20 +321,21 @@ Roll the Sensirion cable to remove the excess and connect it to the indicate spo
 
 ## Step 12 – Switch & Closing
 
-<!-- Connect the _90º USB-C Adapter_ to the _Main Board_:
-![alt text](../../static/files/assembly/DSC_5353.jpg) --> 
+Connect the _90º USB-C Adapter_ to the _Main Board_:
+![alt text](../../static/files/assembly/DSC09506.jpg) 
+![alt text](../../static/files/assembly/DSC09509.jpg) 
 
 With care, align the _middle_ and _top_ pieces together while respecting the _switch_ position:
-![alt text](../../static/files/assembly/DSC09426.jpg)
+![alt text](../../static/files/assembly/DSC09511.jpg)
 
 :::warning
 Now you **must move back the switch** counter-clockwise to turn the device off.
 :::
 
 Fasten 3x M3x16 screws, joining the _middle_ and _top_ pieces together:
-![alt text](../../static/files/assembly/DSC09429.jpg)
-![alt text](../../static/files/assembly/DSC09431-2.jpg)
-![alt text](../../static/files/assembly/DSC09434.jpg)
+![alt text](../../static/files/assembly/DSC09512.jpg)
+![alt text](../../static/files/assembly/DSC09514.jpg)
+![alt text](../../static/files/assembly/DSC09517.jpg)
 ![alt text](../../static/files/assembly/DSC09436.jpg)
 
 Align the _switch_top_ with the _top_ piece while respecting the _switch_ position:
