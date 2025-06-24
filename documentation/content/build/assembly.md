@@ -1,4 +1,4 @@
----
+ic---
 sidebar_position: 6 
 ---
 
@@ -30,7 +30,7 @@ You will be installing brass inserts into plastic, placing parts together, conne
 3. Have all parts and components accessible on bench, placing the smallest ones on "buckets" to avoid losing them;
 2. Leave the center of the bench for where the actual work is going to be, and the perimeter for tools and other parts;
 4. Keep dangerous tools such as the soldering station away from where you could accidentaly hit it by mistake.
-5. Print all 3D printed parts - you can consult the [**materials**](materials) for printer settings and files. 
+5. Print all 3D printed parts - you can consult the [**materials**](mechanics) for printer settings and files. 
 
 :::info
 Meanwhile, you can always consult the [**overview reference**](overview), [**bill of materials**](bom) and [**suggested tools**](tools) throughout the process.
