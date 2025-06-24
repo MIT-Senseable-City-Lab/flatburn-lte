@@ -32,7 +32,7 @@ Since the device might also be exposed to moisture, vibration and stress – dur
 - **_walls_ – 5**
 - **_infill_ – 15%**
 
-These settings were used for time estimations below, with a total time of approximately **8 hours**.
+These settings were used for time estimations below, with a total time of approximately **15 hours**.
 
 ### Supports
 
