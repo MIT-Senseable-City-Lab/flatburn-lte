@@ -35,6 +35,8 @@ You will be installing brass inserts into plastic, placing parts together, conne
 Meanwhile, you can always consult the [**overview reference**](overview), [**bill of materials**](bom) and [**suggested tools**](tools) throughout the process.
 :::
 
+5. Print all 3D printed parts - you can consult the [**materials**](materials) for printer settings and files. 
+
 
 <!-- ## Step 2 – Remove Printed Supports
 
