@@ -1,16 +1,12 @@
-define MODE PWRSAVE
+#define MODE PWRSAVE
 
 #define AUTOSLEEP FALSE             //Autosleep when inactive
 #define INACTIVITY_TIME 420         //Seconds, triggers light sleep
 #define DEBUG TRUE
  
 #define HW_VERSION V4
-
 #define CELLULAR_ON_STARTUP FALSE    // TRUE or FALSE
 #define DTIME 100  
-
-
-
 #define BATT_ENABLED TRUE
 
 #define OPC_DATA_VERSION EXTENDED       // BASE or EXTENDED for full BIN data
