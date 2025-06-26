@@ -3,9 +3,27 @@
 #include "CS_core.h"
 #include "BME280.h"
 #include "sps30.h"
-#include <i2c_adc_ads7828.h>
+#include <ADS1256.h>
+#include <Adafruit_TLC59711.h>
 #include <map>
 #include <string>
+
+
+// Define SPI and ADS1256-related pins
+#define ADS1256_DRDY_PIN D16   // From ADC_nDRDY
+#define ADS1256_RESET_PIN D5   // Assigned manually
+#define ADS1256_SYNC_PIN D7    // Assigned manually
+#define ADS1256_CS_PIN D4      // Assigned manually
+#define ADS1256_VREF 2.500
+
+#define NUM_TLC59711 1
+#define RGB_CLOCK_PIN 43
+#define RGB_DATA_PIN 45
+
+Adafruit_TLC59711 rgbController(NUM_TLC59711, RGB_CLOCK_PIN, RGB_DATA_PIN);
+
+ADS1256 ads(ADS1256_DRDY_PIN, ADS1256_RESET_PIN, ADS1256_SYNC_PIN, ADS1256_CS_PIN, ADS1256_VREF, &SPI);
+
 
 CitySense *CitySense::_instance = nullptr;
 
@@ -17,18 +35,7 @@ SPS30 sps30;
 uint8_t ret, error_cnt = 0;
 struct sps_values val;
 BME280 tempext;
-//DFRobot_SHT20 sht20;
 
-
-// device 0
-// Address: A1=0, A0=0
-// Command: SD=1, PD1=1, PD0=1
-ADS7828 device(0, SINGLE_ENDED | REFERENCE_OFF | ADC_ON, 0x0F);
-ADS7828* adc = &device;
-ADS7828Channel* adc0 = adc->channel(0);
-ADS7828Channel* adc1 = adc->channel(1);
-ADS7828Channel* adc2 = adc->channel(2);
-ADS7828Channel* adc3 = adc->channel(3);
 
 CitySense::CitySense() {}
 
@@ -42,9 +49,6 @@ int CitySense::init()
     delay(DTIME);
     if(!GAS_started)
         startGAS();
-    delay(DTIME);
-    if(!OPC_started && OPC_ENABLED)
-        startOPC();
     delay(DTIME);
     return 1;
 }
@@ -76,6 +80,26 @@ HAL_I2C_Config acquireWireBuffer() {
         .tx_buffer_size = I2C_BUFFER_SIZE
     };
     return config;
+}
+
+bool CitySense::startRGB() {
+    if (RGB_started) return true;
+
+    if (!rgbController.begin()) {
+        Serial.println("RGB controller failed to begin");
+        return false;
+    }
+
+    RGB_started = true;
+    setRGB(65535, 0, 0); // Turn LED red to confirm it's working
+    return true;
+}
+
+
+void CitySense::setRGB(uint16_t r, uint16_t g, uint16_t b) {
+    if (!RGB_started) return;
+    rgbController.setLED(0, r, g, b);
+    rgbController.write();
 }
 
 
@@ -196,25 +220,15 @@ String CitySense::getNOISEdata(){
 
 bool CitySense::startGAS()
 {
-    // enable I2C communication
-    ADS7828::begin();
-
-    // adjust scaling on an individual channel basis
-    adc0->minScale = 220;
-    adc0->maxScale = 470;
-
-    adc1->minScale = 220;
-    adc1->maxScale = 420;
-
-    adc2->minScale = 270;
-    adc2->maxScale = 330;
-
-    adc3->minScale = 270;
-    adc3->maxScale = 300;
+    ads.InitializeADC();              // Core initialization
+    ads.setPGA(PGA_1);                // Optional: set gain (PGA_1 to PGA_64)
+    ads.setDRATE(DRATE_10SPS);        // Optional: set data rate (see header for options)
 
     GAS_started = true;
-    return 1;
+    return true;
 }
+
+
 
 bool CitySense::stopGAS()
 {
@@ -222,22 +236,22 @@ bool CitySense::stopGAS()
     return 1;
 }
 
-String CitySense::getGASdata(){
-    if(GAS_started)
-    {
-        {
-            int16_t sn1_w,sn1_r,sn2_w,sn2_r;
-            ADS7828::updateAll();
-            sn2_w = adc0->value();
-            sn2_r = adc1->value();
-            sn1_w = adc2->value();
-            sn1_r = adc3->value();
-            String payload = String::format("%d,%d,%d,%d", sn2_w,sn2_r,sn1_w,sn1_r);
-            return payload;
-        }
-    } else
-        return "na,na,na,na";
+String CitySense::getGASdata()
+{
+    if (!GAS_started) return "na,na,na,na";
+
+    ads.setMUX(SING_0); delay(5); float sn2_w = ads.convertToVoltage(ads.readSingle());
+    ads.setMUX(SING_1); delay(5); float sn2_r = ads.convertToVoltage(ads.readSingle());
+    ads.setMUX(SING_2); delay(5); float sn1_w = ads.convertToVoltage(ads.readSingle());
+    ads.setMUX(SING_3); delay(5); float sn1_r = ads.convertToVoltage(ads.readSingle());
+
+    String payload = String::format("%.6f,%.6f,%.6f,%.6f", sn2_w, sn2_r, sn1_w, sn1_r);
+    return payload;
 }
+
+
+
+
 
 //waking up SPS30
 
@@ -246,7 +260,8 @@ void CitySense::wakeAllSensors()
     if (!sps30.wakeup()) {
         Serial.println("Could not wake up SPS30.");
     }
-    
+    startRGB();
+    setRGB(65535, 0, 0); // Red = system awake
     startNOISE();
     startTEMP();
     startGAS();
@@ -259,9 +274,14 @@ void CitySense::sleepAllSensors()
     if (sps30.sleep() != SPS30_ERR_OK) {
         Serial.println("Could not set SPS30 to sleep.");
     }
-    
+    setRGB(0, 0, 0);
+    stopRGB();
     stopNOISE();
     stopTEMP();
     stopGAS();
     stopOPC();
+}
+bool CitySense::stopRGB() {
+    RGB_started = false;
+    return true;
 }
