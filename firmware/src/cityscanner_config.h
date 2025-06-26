@@ -1,18 +1,16 @@
-#define MODE PWRSAVE
+define MODE PWRSAVE
 
-#define AUTOSLEEP TRUE             //Autosleep when inactive
+#define AUTOSLEEP FALSE             //Autosleep when inactive
 #define INACTIVITY_TIME 420         //Seconds, triggers light sleep
 #define DEBUG TRUE
  
 #define HW_VERSION V4
 
-#define OPC_ENABLED FALSE           //For Stockholm (Turn off) 
-#define IR_ENABLED TRUE
-#define CELLULAR_ON_STARTUP TRUE    // TRUE or FALSE
+#define CELLULAR_ON_STARTUP FALSE    // TRUE or FALSE
 #define DTIME 100  
 
-#define HARVARD_PILOT FALSE         //Is this an Harvard pilot device?
-#define OLD_TEMPERATURE_SENSOR FALSE
+
+
 #define BATT_ENABLED TRUE
 
 #define OPC_DATA_VERSION EXTENDED       // BASE or EXTENDED for full BIN data
