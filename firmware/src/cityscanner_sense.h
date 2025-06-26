@@ -37,9 +37,14 @@ class CitySense {
         bool stopGAS(void);
         bool GAS_started = false;
         String getGASdata(void);
-        // New methods for handling sleep and wakeup of sensors
         void wakeAllSensors();
         void sleepAllSensors();
+        bool startRGB(void);
+        bool stopRGB(void);
+        void setRGB(uint16_t r, uint16_t g, uint16_t b);
+
+        bool RGB_started = false;
+
 
     private:
         CitySense();
