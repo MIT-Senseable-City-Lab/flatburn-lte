@@ -7,7 +7,6 @@ import Middle from '@site/static/files/printed/middle.png'
 import Bottom from '@site/static/files/printed/bottom.png'
 import BatteryCover from '@site/static/files/printed/battery_cover.png'
 import SwitchTop from '@site/static/files/printed/switch_top.png'
-<!-- import SwitchBottom from '@site/static/files/printed/switch_bottom.png' --> 
 import CameraMount from '@site/static/files/printed/camera.png'
 
 # 🔩 Mechanics (files)
