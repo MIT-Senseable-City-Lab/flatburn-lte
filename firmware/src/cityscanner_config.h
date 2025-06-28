@@ -1,4 +1,4 @@
-define MODE PWRSAVE
+#define MODE PWRSAVE
 
 #define AUTOSLEEP FALSE             //Autosleep when inactive
 #define INACTIVITY_TIME 420         //Seconds, triggers light sleep
