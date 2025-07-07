@@ -98,7 +98,7 @@ Then, install the six inserts with the soldering iron, turn the _top_ piece back
 ![alt text](../../static/files/assembly/DSC09231-2.jpg)
 
 Pay attention to the appropriate angle, respecting the holes' directions and the surface alignment:
-![alt text](../../static/files/assembly/DSC09234-2.jpg)
+![alt text](../../static/files/assembly/DSC09234.jpg)
 
 ## Step 4 – 1/4" Inserts
 
