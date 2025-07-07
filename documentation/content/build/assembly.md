@@ -55,17 +55,17 @@ Remove the support on _camera_ piece:
 - If in doubt, think twice and check the instructions!
   :::
 
-Start by picking-up all the 13x M2 inserts
+Start by picking-up all the thirteen M2 inserts
 ![alt text](../../static/files/assembly/DSC09209.jpg)
 
-Of which, place 8x M2 inserts on _top_:
+Of which, place eight M2 inserts on _top_:
 ![alt text](../../static/files/assembly/DSC09213-2.jpg)
 ![alt text](../../static/files/assembly/DSC09217-2.jpg)
 
-<!-- Then, place 4x M2 inserts on _camera_:
+<!-- Then, place four M2 inserts on _camera_:
 ![alt text](../../static/files/assembly/DSC_5181.jpg)
 
-Finally, place the last 1x M2 insert on _switch_bottom_:
+Finally, place the last M2 insert on _switch_bottom_:
 ![alt text](../../static/files/assembly/DSC_5182.jpg) -->
 
 Set the soldering iron to 300ºC, wait for it to reach the temperature, then slowly press the soldering tip perpendicularly (avoid twisting) to the inserts until all them are flush with the printed surfaces:
@@ -89,12 +89,12 @@ In the end, this should be the result:
 
 ## Step 3 – M3 Inserts
 
-Pick-up 13x M3 inserts, turn the _top_ piece around, then place 6x M3 inserts on it:
+Pick-up thirteen M3 inserts, turn the _top_ piece around, then place six M3 inserts on it:
 ![alt text](../../static/files/assembly/DSC09230-2.jpg)
 
 <!-- ![alt text](../../static/files/assembly/DSC_5205.jpg) -->
 
-Then, install the 6x inserts with the soldering iron, turn the _top_ piece back and place the remaining 8x M3 inserts on the other side:
+Then, install the six inserts with the soldering iron, turn the _top_ piece back and place the remaining 8 M3 inserts on the other side:
 ![alt text](../../static/files/assembly/DSC09231-2.jpg)
 
 Pay attention to the appropriate angle, respecting the holes' directions and the surface alignment:
@@ -102,7 +102,7 @@ Pay attention to the appropriate angle, respecting the holes' directions and the
 
 ## Step 4 – 1/4" Inserts
 
-Place 1x ¼" insert on the designated spot on _middle_ piece:
+Place a ¼" insert on the designated spot on _middle_ piece:
 ![alt text](../../static/files/assembly/DSC09235.jpg)
 
 <!-- ![alt text](../../static/files/assembly/DSC_5207.jpg) -->
@@ -155,7 +155,7 @@ Insert the Particle module into the Main Board slot with its branding facing up:
 ![alt text](../../static/files/assembly/DSC09258.jpg)
 ![alt text](../../static/files/assembly/DSC09259.jpg)
 
-Fasten the only 1x M2.5x4 screw into the Main Board to secure the module:
+Fasten the M2.5x4 screw into the Main Board to secure the module:
 ![alt text](../../static/files/assembly/DSC09262.jpg)
 
 <!-- ![alt text](../../static/files/assembly/DSC_5228.jpg) -->
@@ -198,7 +198,7 @@ Then, add the _battery_cover_:
 
 ## Step 8 – Secure Main Board
 
-For fixing the Main Board, pick 4x M2 washers and put each into 4x M2X6 screws
+For fixing the Main Board, pick four M2 washers and put each into four M2X6 screws
 ![alt text](../../static/files/assembly/DSC09306.jpg)
 
 <!-- ![alt text](../../static/files/assembly/DSC_5247.jpg) -->
@@ -217,7 +217,7 @@ Align the panel to make sure the cable is going out backwards, then pass it thro
 ![alt text](../../static/files/assembly/DSC09319.jpg)
 ![alt text](../../static/files/assembly/DSC09320.jpg)
 
-There are six holes to secure the solar panel to the _top_ piece. Pick up 6x M3X16 screws + 6x M3 washers and 6x 5mm spacers.
+Pick up six M3X16 screws, six M3 washers, and six 5mm spacers. These will be used to secure the solar panel to the _top_ piece in the six holes.
 
 ![alt text](../../static/files/assembly/DSC09322.jpg)
 
@@ -242,7 +242,7 @@ Make sure the screw is properly aligned to the insert on the _top_ piece and fas
 Please make sure there is no surplus of cable above the _top_ piece, all excess should be below:
 ![alt text](../../static/files/assembly/DSC09336-2.jpg)
 
-Pick up 1x M2 washers, and solder into the hole. 
+Pick up a M2 washer, and solder into the hole. 
 ![alt text](../../static/files/assembly/DSC09485.jpg)
 ![alt text](../../static/files/assembly/DSC09486.jpg)
 
@@ -253,14 +253,14 @@ Pick up the gas and cable, and gently attach the pieces together.
 Push the gas into the corner so it sits on the ledge. 
 ![alt text](../../static/files/assembly/DSC09492.jpg)
 
-Pick up 1x M2 screw to attach the gas into place. 
+Pick up a M2 screw to attach the gas into place. 
 ![alt text](../../static/files/assembly/DSC09494.jpg)
 ![alt text](../../static/files/assembly/DSC09497.jpg)
 
 Attach the connector to the Main Board socket
 ![alt text](../../static/files/assembly/DSC09500.jpg)
 
-Gently wind the cable while making sure it enters through the indicated spot on the back of the _top_ piece and respects the boundaries of its compartment above the _battery_holder_:
+Gently wind the cable while making sure it enters through the indicated spot on the back of the _top_ piece:
 ![alt text](../../static/files/assembly/DSC09501.jpg)
 
 <!-- Attach the connector to the Main Board socket:
@@ -268,10 +268,10 @@ Gently wind the cable while making sure it enters through the indicated spot on 
 
 ## Step 10 – USB-C Cable
 
-Pick the _Waterproof USB-C cable_:
+Pick up the _Waterproof USB-C cable_:
 ![alt text](../../static/files/assembly/DSC09365.jpg)
 
-Now, unscrew the cap and nut, remove them completely leaving the rubber seal, then put it back:
+Now, unscrew the cap and nut, remove them completely leaving the rubber seal, then put the rubber seal back:
 ![alt text](../../static/files/assembly/DSC09367-2.jpg)
 
 Place the cable in the appropriate place respecting the correct order of **cable screw → rubber ring → _middle_ piece**:
@@ -321,7 +321,7 @@ Roll the Sensirion cable to remove the excess and connect it to the indicate spo
 
 ## Step 12 – Switch & Closing
 
-Connect the _90º USB-C Adapter_ to the _Main Board_:
+Plug in the _90º USB-C Adapter_ to the _Main Board_:
 ![alt text](../../static/files/assembly/DSC09506.jpg) 
 ![alt text](../../static/files/assembly/DSC09509.jpg) 
 
@@ -416,7 +416,7 @@ Insert the o-ring into the _switch_top_, observing if it is perfectly fitting in
 ![alt text](../../static/files/assembly/DSC_5316.jpg)
 ![alt text](../../static/files/assembly/DSC_5317.jpg)
 
-Align, then join the _switch_top_ and _switch_bottom_ with 1x M2X6 screw while keeping the _middle_ piece in between:
+Align, then join the _switch_top_ and _switch_bottom_ with a M2X6 screw while keeping the _middle_ piece in between:
 ![alt text](../../static/files/assembly/DSC_5319.jpg)
 ![alt text](../../static/files/assembly/DSC_5320.jpg)
 
@@ -452,7 +452,7 @@ Swing it down, while paying attention to the fitting on the left side:
 Finally, slide the Sensing Board away, making sure the Solar Panel cable is on the proper place:
 ![alt text](../../static/files/assembly/DSC_5296.jpg)
 
-To secure the Sensing Board, pick 1x M3X16 screw with 1x M3 washer and fasten it into the right hole.
+To secure the Sensing Board, pick a M3X16 screw with a M3 washer and fasten it into the right hole.
 ![alt text](../../static/files/assembly/DSC_5297.jpg)
 :::warning
 Do not fasten the M3 screw excessively or you might damage the Sensing Board.
@@ -461,7 +461,7 @@ It should be enough just for the Sensing Board to be held at place
 :::
 ![alt text](../../static/files/assembly/DSC_5299.jpg)
 
-Finally, pick 1x M2X6 screw with 1x M2 washer to used on the left hole.
+Finally, pick a M2X6 screw with a M2 washer to used on the left hole.
 :::tip
 This is trickier since the screw needs to be put underneath the Alphasense AFE board.
 
