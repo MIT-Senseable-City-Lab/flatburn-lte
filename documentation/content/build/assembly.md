@@ -155,7 +155,7 @@ Insert the Particle module into the Main Board slot with its branding facing up:
 ![alt text](../../static/files/assembly/DSC09258.jpg)
 ![alt text](../../static/files/assembly/DSC09259.jpg)
 
-Fasten the M2.5x4 screw into the Main Board to secure the module:
+Fasten a M2.5x4 screw with a washer and bolt into the Main Board to secure the module:
 ![alt text](../../static/files/assembly/DSC09262.jpg)
 
 <!-- ![alt text](../../static/files/assembly/DSC_5228.jpg) -->
