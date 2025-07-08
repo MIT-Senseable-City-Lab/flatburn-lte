@@ -312,7 +312,7 @@ If you need, use a tweezer or screwdriver to help attaching the sensor properly 
 <!-- To allow for the _middle_ piece to be attached to the _top_ piece correctly, align the switch longitudinally ("on" position):
 ![alt text](../../static/files/assembly/DSC_5347.jpg) --> 
 
-And turn the _Main Board_ switch until the green light turns on ("on" position):
+And turn the _Main Board_ switch twice until the green light turns on ("on" position):
 ![alt text](../../static/files/assembly/DSC09407.jpg)
 
 Roll the Sensirion cable to remove the excess and connect it to the indicate spot:
