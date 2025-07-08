@@ -94,7 +94,7 @@ Pick-up thirteen M3 inserts, turn the _top_ piece around, then place six M3 inse
 
 <!-- ![alt text](../../static/files/assembly/DSC_5205.jpg) -->
 
-Then, install the six inserts with the soldering iron, turn the _top_ piece back and place the remaining 8 M3 inserts on the other side:
+Then, install the six inserts with the soldering iron, turn the _top_ piece back and place the remaining eight M3 inserts on the other side:
 ![alt text](../../static/files/assembly/DSC09231-2.jpg)
 
 Pay attention to the appropriate angle, respecting the holes' directions and the surface alignment:
