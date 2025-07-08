@@ -50,7 +50,7 @@ Remove the support on _camera_ piece:
 :::tip
 
 - It is easy to misplace the inserts, pay attention to the **indicated spots** on the images.
-- The **larger holes** are meant for the **1/4" inserts**, the **medium for M3** and **smaller for M2**.
+- The **larger holes** are meant for the **1/4" inserts**, the **medium for M3** and **smaller for M2** - the documentation will indicate where to put each specific insert size. 
 - After the inserts are melted into the plastic they **cannot be easily removed** without damaging the 3d printed part.
 - If in doubt, think twice and check the instructions!
   :::
