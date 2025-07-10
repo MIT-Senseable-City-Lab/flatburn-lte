@@ -14,10 +14,9 @@ sidebar_position: 4
 
 ### Files
 
-- schematics
+- [schematics](https://github.com/MIT-Senseable-City-Lab/flatburn-lte/blob/main/hardware/electronics/Doc/Flatburn_V4_schematic.pdf) (2025-04-18)
 
-- KiCad file with embedded component libraries
+- [KiCad files](https://github.com/MIT-Senseable-City-Lab/flatburn-lte/tree/main/hardware/electronics) with embedded component libraries
 
-- gerbers and centroid files
+- [gerbers and centroid files](https://github.com/MIT-Senseable-City-Lab/flatburn-lte/tree/main/hardware/Production/Gerber%20and%20drill)
 
-- buy electronics from turnkey services: pcbway, jlcpcb
