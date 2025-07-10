@@ -8,9 +8,9 @@ sidebar_position: 4
 
 ![Main and Sensing Board](@site/static/files/electronics/boards.jpg)
 
-### Harnesses
+<!-- ### Harnesses
 
-![Harnesses](@site/static/files/electronics/harnesses.jpg)
+![Harnesses](@site/static/files/electronics/harnesses.jpg) --> 
 
 ### Files
 
