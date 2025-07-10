@@ -5,7 +5,7 @@ sidebar_position: 5
 import Top from '@site/static/files/printed/top.png'
 import Middle from '@site/static/files/printed/middle.png'
 import Bottom from '@site/static/files/printed/bottom.png'
-import BatteryCover from '@site/static/files/printed/battery_cover.png'
+<!-- import BatteryCover from '@site/static/files/printed/battery_cover.png' --> 
 import SwitchTop from '@site/static/files/printed/switch_top.png'
 import CameraMount from '@site/static/files/printed/camera.png'
 
@@ -53,8 +53,9 @@ The 3d files below are provided with optimal orientation for printing, which is 
 | MP_02    | **middle**        |  <img src={Middle} style={{width: "75%", filter: "drop-shadow(0 0 1px rgba(0,0,0,1))"}} />    |    Y    |  150 g | 03:30 | [link](https://github.com/MIT-Senseable-City-Lab/flatburn-lte/tree/main/hardware/enclosure/stl) |
 | MP_03    | **bottom**        |  <img src={Bottom} style={{width: "75%", filter: "drop-shadow(0 0 1px rgba(0,0,0,1))"}} />    |    N    |  150 g | 03:30 | [link](https://github.com/MIT-Senseable-City-Lab/flatburn-lte/tree/main/hardware/enclosure/stl) |
 | MP_04    | **switch_top**    |  <img src={SwitchTop} style={{width: "20%", filter: "drop-shadow(0 0 1px rgba(0,0,0,1))"}} />   |    N    |    5 g | 00:10 | [link](https://github.com/MIT-Senseable-City-Lab/flatburn-lte/tree/main/hardware/enclosure/stl) |
-| MP_06    | **battery_cover** | <img src={BatteryCover} style={{width: "25%", filter: "drop-shadow(0 0 1px rgba(0,0,0,1))"}} />  |    Y    |   15 g | 00:30 | [link](https://github.com/MIT-Senseable-City-Lab/flatburn-lte/tree/main/hardware/enclosure/stl) |
 
+
+<!-- | MP_06    | **battery_cover** | <img src={BatteryCover} style={{width: "25%", filter: "drop-shadow(0 0 1px rgba(0,0,0,1))"}} />  |    Y    |   15 g | 00:30 | [link](https://github.com/MIT-Senseable-City-Lab/flatburn-lte/tree/main/hardware/enclosure/stl) | --> 
 <!--  | MP_04    | **battery_cover** |  <img src={BatteryCover} style={{width: "75%", filter: "drop-shadow(0 0 1px rgba(0,0,0,1))"}} /> |    N    |   15 g | 00:30 | [link](https://github.com/MIT-Senseable-City-Lab/flatburn-lte/tree/main/hardware/enclosure/stl) | --> 
 <!-- | MP_05_02 | **switch_bottom** | <img src={SwitchBottom} style={{width: "20%", filter: "drop-shadow(0 0 1px rgba(0,0,0,1))"}} /> |    N    |    5 g | 00:10 | [link](https://github.com/MIT-Senseable-City-Lab/flatburn-lte/tree/main/hardware/enclosure/stl) | --> 
 
