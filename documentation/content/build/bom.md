@@ -69,9 +69,9 @@ Due to the quantity of items, these lists are available in a dedicated spreadshe
 <!-- | EH_01_02 | Harness | Connector | EB_01 | ES_01 | TBD                        |                                              TBD                                              |   2   | --> 
 
 
-:::tip
+<!-- :::tip
 💡 You can buy these boards fully assembled together with cables by contacting [My Fast PCBA from FAE Technology S.p.a.](myfastpcba@fae.technology).
-:::
+::: --> 
 
 ## ⚙️ Mechanics
 
@@ -89,21 +89,10 @@ Due to the quantity of items, these lists are available in a dedicated spreadshe
 | MF_07 | Fixation | Spacer          | M3 6mm spacer – ABS                                    |             [link](https://www.amazon.com/dp/B09N2NKNDJ?smid=A2U2UFFPJ8JX7R)             |   6   |
 | MS_01 | Sealing  | O-Ring          | Oil-Resistant Buna-N – 3/32 Fractional Width, Dash 116 |                        [link](https://www.mcmaster.com/9452K28/)                         |   2   |
 | MS_02 | Sealing  | O-Ring Cord     | Oil-Resistant Soft Buna-N – 3/32 Fractional Width      |                        [link](https://www.mcmaster.com/9864K25/)                         | 2 ft  |
-| MI_01 | ID       | Label           | Plastic Thermal Label (optional)                       | [link](https://www.amazon.com/LabelManager-Handheld-Label-QWERTY-Keyboard/dp/B006O87KUA) |   2   |
 
 ### [3D Printed Parts](./mechanics)
 
 More info in the [mechanics](./mechanics) section.
-
-| ID    | Type  | Subtype | Specification         |  Qty  |
-| :---- | :---- | :------ | :-------------------- | :---: |
-| MP_01 | Print | 3D      | Top                   |   1   |
-| MP_02 | Print | 3D      | Middle                |   1   |
-| MP_03 | Print | 3D      | Bottom                |   1   |
-| MP_04 | Print | 3D      | Switch (top piece)    |   1   |
-| MP_05 | Print | 3D      | Switch (bottom piece) |   1   |
-| MP_06 | Print | 3D      | Battery Cover         |   1   |
-
 
 ## 🧵 Consumables
 
