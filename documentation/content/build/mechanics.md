@@ -5,7 +5,7 @@ sidebar_position: 5
 import Top from '@site/static/files/printed/top.png'
 import Middle from '@site/static/files/printed/middle.png'
 import Bottom from '@site/static/files/printed/bottom.png'
-<!-- import BatteryCover from '@site/static/files/printed/battery_cover.png' --> 
+import BatteryCover from '@site/static/files/printed/battery_cover.png'
 import SwitchTop from '@site/static/files/printed/switch_top.png'
 import CameraMount from '@site/static/files/printed/camera.png'
 
