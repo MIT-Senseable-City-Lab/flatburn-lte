@@ -39,3 +39,12 @@ This is a secondary RGB LED on the Flatburn board, separate from the built-in Pa
 🔴 Solid Red: Critical error (e.g., sensor failure, not temp data, or pm data)
 
 This would give quick visual insight into the system’s state.
+
+# Data download
+
+## Step 1: Connect Flatburn to Your Computer
+## Step 2: Run the USB Data Script
+## Step 3: Select the USB Port
+## Step 4: Choose Files to Download
+## Step 5: Choose Files to Parse
+## Step 6: You're Done!
