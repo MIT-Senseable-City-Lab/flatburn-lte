@@ -46,7 +46,6 @@ Make sure you order the correct option, being **EL_01_A for North America** or *
 | ES_01       | Sensor  | Gas          | Alphasense A4x2 (CO+NO2) + AFE board                 |                                      [link](https://www.alphasense.com)                                      |   1   |
 | ES_02       | Sensor  | Particulate  | Sensirion SPS30                                      |                [link](https://www.digikey.com/en/products/detail/sensirion-ag/SPS30/9598990)                 |   1   |
 | EH_01       | Harness | Cable        | U.FL to U.FL – CINCH 415-0086-050                    | [link](https://www.digikey.com/en/products/detail/cinch-connectivity-solutions-johnson/415-0086-050/1305528) |   1   |
-| EH_02       | Harness | Cable        | Custom – From Particulate Sensor to Sensor Board     |                                             [custom](#harnesses)                                             |   1   |
 | EH_03       | Harness | Cable        | AreMe – 90 Degree USB-C male to female               |                            [link](https://www.amazon.com/gp/product/B0CQH48YFQ/)                             |   1   |
 | EH_04       | Harness | Cable        | Qianrenon – 90º Waterproof USB-C "pass through" 30cm |                            [link](https://www.amazon.com/gp/product/B0BPCHR24G/)                             |   1   |
 | EV_01       | Vault   | Storage Card | 32GB MicroSD                                         |                                [link](https://www.amazon.com/dp/B08GY9NYRM/)                                 |   1   |
@@ -62,11 +61,12 @@ Due to the quantity of items, these lists are available in a dedicated spreadshe
 
 | ID       | Type    | Subtype   | From  |  To   | Specification              |                                              URL                                              |  Qty  |
 | :------- | :------ | :-------- | :---: | :---: | :------------------------- | :-------------------------------------------------------------------------------------------: | :---: |
-| EH_01_01 | Harness | Wire      | EB_01 | ES_01 | TBD                        |                                              TBD                                              |   1   |
-| EH_01_02 | Harness | Connector | EB_01 | ES_01 | TBD                        |                                              TBD                                              |   2   |
 | EH_02_01 | Harness | Wire      | EB_01 | ES_02 | 0.08 mm2 (AWG 28) x 300 mm | [link](https://www.digikey.com/en/products/detail/cnc-tech/10064-28-1-0500-001-1-TS/4486265)  |   5   |
 | EH_02_02 | Harness | Socket    | EB_01 | ES_02 | JST SZH-002T-P0.5          | [link](https://www.digikey.com/en/products/detail/jst-sales-america-inc/szh-002t-p0-5/527363) |  10   |
 | EH_02_03 | Harness | Housing   | EB_01 | ES_02 | JST ZHR-5                  |     [link](https://www.digikey.com/en/products/detail/jst-sales-america-inc/ZHR-5/608642)     |   2   |
+
+<!-- | EH_01_01 | Harness | Wire      | EB_01 | ES_01 | TBD                        |                                              TBD                                              |   1   | --> 
+<!-- | EH_01_02 | Harness | Connector | EB_01 | ES_01 | TBD                        |                                              TBD                                              |   2   | --> 
 
 
 :::tip
