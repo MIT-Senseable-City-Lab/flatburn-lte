@@ -11,7 +11,7 @@ import Image5 from '@site/static/files/facilitator/image5.png';
 import Image6 from '@site/static/files/facilitator/image6.png';
 import Image7 from '@site/static/files/facilitator/image7.png';
 
-## 🤸 Coding Activity Facilitator Guide
+## Coding Activity Facilitator Guide
 
 ### Schedule
 
