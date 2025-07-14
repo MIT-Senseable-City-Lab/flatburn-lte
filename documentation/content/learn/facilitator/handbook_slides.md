@@ -1,10 +1,11 @@
 ---
+title: 🛝 Workshop Slides
 sidebar_position: 4
 ---
 
 import WorkshopSlides from '@site/static/files/facilitator/workshop_slides.pdf';
 
-# Workshop Slides
+# 🛝 Workshop Slides
 
 An educational presentation on the background of environmental sensing, mobile air quality monitoring, and the CityScanner platform.
 
