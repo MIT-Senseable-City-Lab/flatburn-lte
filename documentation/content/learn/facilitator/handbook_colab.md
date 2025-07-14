@@ -1,5 +1,5 @@
 ---
-title: Colab
+title: 🤸 Colab
 sidebar_position: 3
 ---
 
