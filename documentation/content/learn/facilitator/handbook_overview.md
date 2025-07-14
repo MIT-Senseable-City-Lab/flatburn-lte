@@ -3,7 +3,7 @@ title: 🎈 Overview
 sidebar_position: 1
 ---
 
-# Overview
+# 🎈 Overview
 
 This **Python coding activity** aims to provide users with background information and context on mobile air quality monitoring and environmental sensing, as well as teach coding skills and analysis techniques, including:
 
