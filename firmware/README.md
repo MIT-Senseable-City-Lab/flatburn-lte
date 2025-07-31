@@ -19,18 +19,17 @@
 - *cityscanner_config.h* main config file, needs to be updated before flashing
 - *main.h* the program startpoint, should not be modified
 - *cityscanner class* handles operation modes (more below)
-- *CitySense class* manages data acquisition for environemental sensors (air quality, etc)
+- *CitySense class* manages data acquisition for environmental sensors (air quality, etc)
 - *CityVitals class* acquires telemetry data (battery status, solar energy production, etc)
-- *CityStore class* manages storing data on the SDcard, dumping data over TCP and over Particle Publish methods
+- *CityStore class* manages storing data on the SD card, dumping data over USB
 - *MotionService class* used to send the device to sleep when the vehicle is not moving
-- *LocationService class* provides gps data to other classes (e.g. CityStore)
+- *LocationService class* provides GPS data to other classes (e.g. CityStore)
 
 ## Operation modes
 - *IDLE* sensors off, provides only telemetry data
-- *REALTIME* logs data onto the SD card and send it in real time (via Particle publish)
-- *LOGGING* buffer data onto the SD card and send multiple records upon request (via TCP)
-- *PWRSAVE* like LOGGING but keeping the cellular modem OFF
-
+- *REALTIME* logs data onto the SD card
+- *LOGGING* buffer data onto the SD card and send multiple records upon request (via USB)
+- *PWRSAVE* like LOGGING but in low power mode
 
 #### Payload
 
@@ -40,7 +39,7 @@ deviceID, timestamp, latitude, longitude, PM1.0, PM 2.5, PM4, PM10, numPM0.5, nu
 deviceID, time, latitude, longitude, SOC_batt, temp_batt, voltage_batt, voltage_particle, current_batt, isCharging, isCharginS, temp_int, hum_int, voltage_solar, current_solar, cell_strenght
 
 # Command line interface
-The CLI is available via REST, Particle.io Console and Slack. Each command might have 0-3 parameters. Some command return via Particle events or serial. *Commands are comma-separated* 
+The CLI is available via Python script to retrieve the data over USB
 
 Command | Parameter #1 | Parameter #2 | Parameter #3 | Description
 --------|--------------|--------------|--------------|-------------
