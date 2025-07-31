@@ -4,11 +4,7 @@ sidebar_position: 2
 
 # 🎯 Calibration (files)
 
-**City Scanner In-Situ Calibration and Deployment: A Manual**
-
-:::info
-A PDF version is available [here](https://github.com/MIT-Senseable-City-Lab/flatburn-lte/blob/main/documentation/content/__legacy_documentation/Explore/Calibration%20Handbook/Calibration%20Handbook.pdf).
-:::
+**City Scanner In-Situ Calibration and Deployment**
 
 ## 1 Getting to know City Scanner
 
