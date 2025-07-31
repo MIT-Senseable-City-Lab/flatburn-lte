@@ -20,16 +20,61 @@ sidebar_position: 7
 5. Connect your device;
 6. Compile & Flash!
 
-## Quick overview of classes and files
+## Main Firmware Functionalities
+- Cityscanner: Handles operation modes;
+- CitySense: Collects environmental data (payload);
+- CityVitals: Collects telemetry/status (vitals);
+- CityStore: Handles SD card and USB data storage/transfer;
+- MotionService: Puts device to sleep when vehicle is not moving;
+- LocationService: Provides GPS data;
 
-- _cityscanner_config.h_ main config file, needs to be updated before flashing;
-- _main.h_ the program startpoint, should not be modified;
-- _cityscanner class_ handles operation modes (more below);
-- _CitySense class_ manages data acquisition for environmental sensors (air quality, etc);
-- _CityVitals class_ acquires telemetry data (battery status, solar energy production, etc);
-- _CityStore class_ manages storing data on the SD card, dumping data over USB;
-- _MotionService class_ used to send the device to sleep when the vehicle is not moving;
-- _LocationService class_ provides gps data to other classes (e.g. CityStore).
+## Block Diagram
+```mermaid
+flowchart LR
+
+    subgraph Device [Flatburn]
+        config[cityscanner_config]
+        entry[main]
+        scan[cityscanner]
+        sense[CitySense]
+        vitals[CityVitals]
+        store[CityStore]
+        motion[MotionService]
+        location[LocationService]
+        config --> entry
+        entry --> scan
+        scan --> sense
+        scan --> vitals
+        scan --> store
+        scan --> motion
+        scan --> location
+    end
+
+    subgraph OperationModes [Operation Modes]
+        idle[IDLE]
+        realtime[REALTIME]
+        logging[LOGGING]
+        pwrsave[PWRSAVE]
+        scan --> idle
+        scan --> realtime
+        scan --> logging
+        scan --> pwrsave
+    end
+
+    subgraph DataFlow [Data Flow]
+        payload[Payload]
+        vitalsData[Vitals]
+        sense --> payload
+        vitals --> vitalsData
+        location --> payload
+        location --> vitalsData
+        payload --> store
+        vitalsData --> store
+    end
+
+    motion --> scan
+    store --> sd[SD Card/USB]
+```
 
 ## Operation modes
 
@@ -40,11 +85,49 @@ sidebar_position: 7
 
 ### Payload
 
-_deviceID, timestamp, latitude, longitude, PM1.0, PM 2.5, PM4, PM10, numPM0.5, numPM1, numPM2.5, numPM4, numPM10, PM size, temperature, humidity, gas_op1_w, gas_op1_r, gas_op2_w, gas_op2_r, noise.
+| # | Element             | Type         | Purpose                                | Source                   |
+|---|---------------------|-------------|----------------------------------------|--------------------------|
+| 0 | deviceID            | identifier  | Unique device identifier from particle               | Partile module         |
+| 1 | timestamp           | temporal    | UTC time of measurement                | GPStime in Epoch        |
+| 2 | latitude            | spatial     | Latitude (decimal degrees)             | GPS module   |
+| 3 | longitude           | spatial     | Longitude (decimal degrees)            | GPS module    |
+| 4 | PM1.0               | atmospheric | Particulated Matter (1 μm)             | Sensirion SPS30          |
+| 5 | PM2.5               | atmospheric | Particulated Matter (2.5 μm)           | Sensirion SPS30          |
+| 6 | PM4                 | atmospheric | Particulated Matter (4 μm)             | Sensirion SPS30          |
+| 7 | PM10                | atmospheric | Particulated Matter (10 μm)            | Sensirion SPS30          |
+| 8 | numPM0.5            | atmospheric | Particle count (0.5 μm)                | Sensirion SPS30          |
+| 9 | numPM1              | atmospheric | Particle count (1 μm)                  | Sensirion SPS30          |
+| 10| numPM2.5            | atmospheric | Particle count (2.5 μm)                | Sensirion SPS30          |
+| 11| numPM4              | atmospheric | Particle count (4 μm)                  | Sensirion SPS30          |
+| 12| numPM10             | atmospheric | Particle count (10 μm)                 | Sensirion SPS30          |
+| 13| PM size             | atmospheric | Average particle size                  | Sensirion SPS30          |
+| 14| temperature         | atmospheric | Ambient air temperature (°C)           | BME280             |
+| 15| humidity            | atmospheric | Ambient relative humidity (%)          | BME280             |
+| 16| gas_op1_w           | air quality | Gas sensor 1 (write pin)               | Alphasense AFE       |
+| 17| gas_op1_r           | air quality | Gas sensor 1 (read pin)                | Alphasense AFE       |
+| 18| gas_op2_w           | air quality | Gas sensor 2 (write pin)               | Alphasense AFE       |
+| 19| gas_op2_r           | air quality | Gas sensor 2 (read pin)                | Alphasense AFE       |
+| 20| noise               | sound       | Environmental noise in (dB)               | Alphasense AFE       |
+
+---
 
 ### Vitals
 
-_deviceID, timestamp, latitude, longitude, voltage_batt, current_batt, isCharging, isCharginS, isCharged, temp_int, hum_int, voltage_solar, current_solar, cell_strenght_
+| # | Element          | Type        | Purpose                                  | Source                   |
+|---|------------------|------------|------------------------------------------|--------------------------|
+| 0 | deviceID         | identifier | Unique device identifier from particle                 | Particle module          |
+| 1 | timestamp        | temporal   | UTC time of measurement                  | GPStime in Epoch        |
+| 2 | latitude         | spatial    | Latitude (decimal degrees)               | GPS module    |
+| 3 | longitude        | spatial    | Longitude (decimal degrees)              | GPS module    |
+| 4 | voltage_batt     | electrical | Battery voltage (V)                      | Battery IC    |
+| 5 | current_batt     | electrical | Battery current (mA)                     | Battery IC    |
+| 6 | isCharging       | status     | Charging status (boolean)                | Firmware |
+| 7 | isCharginS       | status     | Secondary charging status (boolean)      | Firmware       |
+| 8 | isCharged        | status     | Battery fully charged                    | Firmware       |
+|11 | voltage_solar    | electrical | Solar panel voltage (V)                  | Solar      |
+|12 | current_solar    | electrical | Solar panel current (mA)                 | Solar      |
+|13 | cell_strength    | signal     | Cellular network signal strength         | Cellular RSSI |
+
 
 # Command line interface
 
