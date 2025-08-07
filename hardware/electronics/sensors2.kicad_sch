@@ -5,15 +5,1184 @@
 	(uuid "7b5e49c4-847d-4eb6-b80b-f727bfc7bf91")
 	(paper "A3")
 	(title_block
-		(date "18-04-2025")
-		(rev "1")
-		(comment 1 "Flatburn_V4")
+		(date "29-07-2025")
+		(rev "2")
+		(comment 1 "Flatburn_V5")
 		(comment 2 "Luca Brighenti")
 		(comment 3 "-")
 		(comment 4 "MIT")
 	)
 	(lib_symbols
-		(symbol "Flatburn_V4_sym_library:ADC - 24Bit/8Ch -  ADS1256IDBR"
+		(symbol "Connector:TestPoint"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TP"
+				(at 0 6.858 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "test point"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TestPoint_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "FAE-CAP:CS-C-0402-100n/50V-10%"
+			(pin_numbers
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at -1.778 -4.318 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Value" "100n/50V"
+				(at -1.778 1.27 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+				(at 21.59 -94.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 21.59 -194.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Description" "CHIP CAP.CER. 100nF 50V 10% X7R 0402"
+				(at 8.382 -53.594 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Distributor" "FAE-043362"
+				(at 0.254 -55.372 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "MPN" ""
+				(at 21.59 -494.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Pkg Type" "SMD"
+				(at 21.59 -594.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Price Distributor Cad" ""
+				(at 0.254 -13.716 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Temp Range" "-°..+°"
+				(at 0 -10.922 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Implementation" "FAE_LB"
+				(at 0 -12.954 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "CS-C-0402-100n/50V-10%_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "CS-C-0402-100n/50V-10%_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "FAE-CAP:CS-C-0402-1u/16V-10%"
+			(pin_numbers
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at -1.778 -4.318 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Value" "1u/16V"
+				(at -1.778 1.27 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+				(at 21.59 -94.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 21.59 -194.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Description" "CHIP CAP.CER. 1uF 16V 10% X7S 0402"
+				(at 8.382 -53.594 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Distributor" "M-81-GRM155C71C105KE1D "
+				(at 0.254 -55.372 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "MPN" "GRM155C71C105KE11D "
+				(at 21.59 -494.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Pkg Type" "SMD"
+				(at 21.59 -594.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Price Distributor Cad" "0,095"
+				(at 0.254 -13.716 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Temp Range" "-°..+°"
+				(at 0 -10.922 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Implementation" "FAE_LB"
+				(at 0 -12.954 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "CS-C-0402-1u/16V-10%_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "CS-C-0402-1u/16V-10%_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "FAE-CAP:CS-C-0603-18p/50V-5%"
+			(pin_numbers
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at -1.778 -4.318 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Value" "18p/50V"
+				(at -1.778 1.27 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+				(at 21.59 -94.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 21.59 -194.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Description" "CHIP CAP.CER. 18p 50V 5% C0G 0603"
+				(at 8.382 -53.594 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Distributor" "M-80-C0603C180J5G7411 "
+				(at 0.254 -55.372 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "MPN" "C0603C180J5GAC7411"
+				(at 21.59 -494.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Pkg Type" "SMD"
+				(at 21.59 -594.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Price Distributor Cad" ""
+				(at 0.254 -13.716 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Temp Range" "-55°..+125°"
+				(at 0 -10.922 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Implementation" "FAE_LB"
+				(at 0 -12.954 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "CS-C-0603-18p/50V-5%_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "CS-C-0603-18p/50V-5%_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "FAE-CAP:CS-C-0603-1u/25V-10%"
+			(pin_numbers
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at -1.778 -4.318 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Value" "1u/25V"
+				(at -1.778 1.27 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+				(at 21.59 -94.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 21.59 -194.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Description" "CHIP CAP.CER. 1u 25V 10% X7R 0603"
+				(at 8.382 -53.594 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Distributor" "FAE-100573"
+				(at 0.254 -55.372 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "MPN" "CL10B105KA8NNNC"
+				(at 21.59 -494.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Pkg Type" "SMD"
+				(at 21.59 -594.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Price Distributor Cad" ""
+				(at 0.254 -13.716 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Temp Range" "-°..+°"
+				(at 0 -10.922 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Implementation" "FAE_LB"
+				(at 0 -12.954 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "CS-C-0603-1u/25V-10%_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "CS-C-0603-1u/25V-10%_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "FAE-CAP:CS-C-0603-22u/16V-20%"
+			(pin_numbers
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at -1.778 -4.318 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Value" "22u/16V"
+				(at -1.778 1.27 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+				(at 21.59 -94.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 21.59 -194.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Description" "CHIP CAP.CER. 22u 16V 20% X5R 0603"
+				(at 8.382 -53.594 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Distributor" "M-581-KGM15CR51C226MT "
+				(at 0.254 -55.372 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "MPN" "KGM15CR51C226MT"
+				(at 21.59 -494.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Pkg Type" "SMD"
+				(at 21.59 -594.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Price Distributor Cad" "0,404"
+				(at 0.254 -13.716 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Temp Range" "-55°..+85°"
+				(at 0 -10.922 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Implementation" "FAE_LB"
+				(at 0 -12.954 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "CS-C-0603-22u/16V-20%_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "CS-C-0603-22u/16V-20%_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "FAE-CAP:CS-C-0603-4.7u/10V-10%"
+			(pin_numbers
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at -1.778 -4.318 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Value" "4.7u/10V"
+				(at -1.778 1.27 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+				(at 21.59 -94.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 21.59 -194.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Description" "CHIP CAP.CER. 4.7u 10V 10% X5R 0603"
+				(at 8.382 -53.594 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Distributor" "FAE-033362"
+				(at 0.254 -55.372 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "MPN" ""
+				(at 21.59 -494.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Pkg Type" "SMD"
+				(at 21.59 -594.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Price Distributor Cad" ""
+				(at 0.254 -13.716 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Temp Range" "-°..+°"
+				(at 0 -10.922 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Implementation" "FAE_LB"
+				(at 0 -12.954 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "CS-C-0603-4.7u/10V-10%_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "CS-C-0603-4.7u/10V-10%_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "FAE-IC:ADC - 24Bit/8Ch -  ADS1256IDBR"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -657,1289 +1826,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Flatburn_V4_sym_library:CRYSTAL - 7.68MHz - HCM497680000ABJT "
-			(pin_names
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "Y"
-				(at -7.874 6.35 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Value" "HCM497680000ABJT"
-				(at -7.874 4.572 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Footprint" "FAE-XTAL:HCM497680000ABJT"
-				(at 21.59 -94.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 21.59 -194.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Description" "Crystal 7.680MHz, 18pF"
-				(at 8.382 -53.594 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Distributor" "M-695-HCM49-768-U "
-				(at 0.254 -55.372 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "MPN" "HCM497680000ABJT "
-				(at 21.59 -494.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Pkg Type" "SMD"
-				(at 21.59 -594.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Price Distributor Cad" "0,513"
-				(at 0.254 -13.716 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Temp Range" "-10°..+60°"
-				(at 0 -7.112 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Implementation" "FAE_LB"
-				(at 0 -10.16 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "CRYSTAL - 7.68MHz - HCM497680000ABJT _0_1"
-				(polyline
-					(pts
-						(xy -2.54 0) (xy -1.905 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.905 -1.27) (xy -1.905 1.27)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.143 2.54)
-					(end 1.143 -2.54)
-					(stroke
-						(width 0.3048)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.905 -1.27) (xy 1.905 1.27)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 0) (xy 1.905 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "CRYSTAL - 7.68MHz - HCM497680000ABJT _1_1"
-				(text "7.68MHz"
-					(at 0.254 -3.81 0)
-					(effects
-						(font
-							(size 1.143 1.143)
-						)
-					)
-				)
-				(pin passive line
-					(at -3.81 0 0)
-					(length 1.27)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 0 180)
-					(length 1.27)
-					(name "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Flatburn_V4_sym_library:CS-C-0402-100n/50V-10%"
-			(pin_numbers
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "C"
-				(at -1.778 -4.318 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Value" "100n/50V"
-				(at -1.778 1.27 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-				(at 21.59 -94.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 21.59 -194.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Description" "CHIP CAP.CER. 100nF 50V 10% X7R 0402"
-				(at 8.382 -53.594 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Distributor" "FAE-043362"
-				(at 0.254 -55.372 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "MPN" ""
-				(at 21.59 -494.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Pkg Type" "SMD"
-				(at 21.59 -594.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Price Distributor Cad" ""
-				(at 0.254 -13.716 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Temp Range" "-°..+°"
-				(at 0 -10.922 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Implementation" "FAE_LB"
-				(at 0 -12.954 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "CS-C-0402-100n/50V-10%_0_1"
-				(polyline
-					(pts
-						(xy -2.032 0.762) (xy 2.032 0.762)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.032 -0.762) (xy 2.032 -0.762)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "CS-C-0402-100n/50V-10%_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 2.794)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 2.794)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Flatburn_V4_sym_library:CS-C-0402-1u/16V-10%"
-			(pin_numbers
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "C"
-				(at -1.778 -4.318 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Value" "1u/16V"
-				(at -1.778 1.27 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-				(at 21.59 -94.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 21.59 -194.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Description" "CHIP CAP.CER. 1uF 16V 10% X7S 0402"
-				(at 8.382 -53.594 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Distributor" "M-81-GRM155C71C105KE1D "
-				(at 0.254 -55.372 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "MPN" "GRM155C71C105KE11D "
-				(at 21.59 -494.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Pkg Type" "SMD"
-				(at 21.59 -594.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Price Distributor Cad" "0,095"
-				(at 0.254 -13.716 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Temp Range" "-°..+°"
-				(at 0 -10.922 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Implementation" "FAE_LB"
-				(at 0 -12.954 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "CS-C-0402-1u/16V-10%_0_1"
-				(polyline
-					(pts
-						(xy -2.032 0.762) (xy 2.032 0.762)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.032 -0.762) (xy 2.032 -0.762)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "CS-C-0402-1u/16V-10%_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 2.794)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 2.794)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Flatburn_V4_sym_library:CS-C-0603-18p/50V-5%"
-			(pin_numbers
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "C"
-				(at -1.778 -4.318 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Value" "18p/50V"
-				(at -1.778 1.27 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-				(at 21.59 -94.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 21.59 -194.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Description" "CHIP CAP.CER. 18p 50V 5% C0G 0603"
-				(at 8.382 -53.594 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Distributor" "M-80-C0603C180J5G7411 "
-				(at 0.254 -55.372 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "MPN" "C0603C180J5GAC7411"
-				(at 21.59 -494.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Pkg Type" "SMD"
-				(at 21.59 -594.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Price Distributor Cad" ""
-				(at 0.254 -13.716 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Temp Range" "-55°..+125°"
-				(at 0 -10.922 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Implementation" "FAE_LB"
-				(at 0 -12.954 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "CS-C-0603-18p/50V-5%_0_1"
-				(polyline
-					(pts
-						(xy -2.032 0.762) (xy 2.032 0.762)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.032 -0.762) (xy 2.032 -0.762)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "CS-C-0603-18p/50V-5%_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 2.794)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 2.794)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Flatburn_V4_sym_library:CS-C-0603-1u/25V-10%"
-			(pin_numbers
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "C"
-				(at -1.778 -4.318 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Value" "1u/25V"
-				(at -1.778 1.27 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-				(at 21.59 -94.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 21.59 -194.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Description" "CHIP CAP.CER. 1u 25V 10% X7R 0603"
-				(at 8.382 -53.594 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Distributor" "FAE-100573"
-				(at 0.254 -55.372 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "MPN" "CL10B105KA8NNNC"
-				(at 21.59 -494.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Pkg Type" "SMD"
-				(at 21.59 -594.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Price Distributor Cad" ""
-				(at 0.254 -13.716 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Temp Range" "-°..+°"
-				(at 0 -10.922 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Implementation" "FAE_LB"
-				(at 0 -12.954 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "CS-C-0603-1u/25V-10%_0_1"
-				(polyline
-					(pts
-						(xy -2.032 0.762) (xy 2.032 0.762)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.032 -0.762) (xy 2.032 -0.762)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "CS-C-0603-1u/25V-10%_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 2.794)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 2.794)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Flatburn_V4_sym_library:CS-C-0603-22u/6.3V-20%"
-			(pin_numbers
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "C"
-				(at -1.778 -4.318 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Value" "22u/16V"
-				(at -1.778 1.27 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-				(at 21.59 -94.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 21.59 -194.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Description" "CHIP CAP.CER. 22u 6.3V 20% X5R 0603"
-				(at 8.382 -53.594 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Distributor" "M-81-GRM188R60J226ME0D "
-				(at 0.254 -55.372 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "MPN" "GRM188R60J226MEA0D"
-				(at 21.59 -494.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Pkg Type" "SMD"
-				(at 21.59 -594.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Price Distributor Cad" "0,143"
-				(at 0.254 -13.716 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Temp Range" "-55°..+85°"
-				(at 0 -10.922 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Implementation" "FAE_LB"
-				(at 0 -12.954 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "CS-C-0603-22u/6.3V-20%_0_1"
-				(polyline
-					(pts
-						(xy -2.032 0.762) (xy 2.032 0.762)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.032 -0.762) (xy 2.032 -0.762)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "CS-C-0603-22u/6.3V-20%_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 2.794)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 2.794)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Flatburn_V4_sym_library:CS-C-0603-4.7u/10V-10%"
-			(pin_numbers
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "C"
-				(at -1.778 -4.318 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Value" "4.7u/10V"
-				(at -1.778 1.27 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-				(at 21.59 -94.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 21.59 -194.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Description" "CHIP CAP.CER. 4.7u 10V 10% X5R 0603"
-				(at 8.382 -53.594 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Distributor" "FAE-033362"
-				(at 0.254 -55.372 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "MPN" ""
-				(at 21.59 -494.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Pkg Type" "SMD"
-				(at 21.59 -594.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Price Distributor Cad" ""
-				(at 0.254 -13.716 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Temp Range" "-°..+°"
-				(at 0 -10.922 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Implementation" "FAE_LB"
-				(at 0 -12.954 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "CS-C-0603-4.7u/10V-10%_0_1"
-				(polyline
-					(pts
-						(xy -2.032 0.762) (xy 2.032 0.762)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.032 -0.762) (xy 2.032 -0.762)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "CS-C-0603-4.7u/10V-10%_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 2.794)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 2.794)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Flatburn_V4_sym_library:LEVEL SHIF - 2x - TXS0102DQER"
+		(symbol "FAE-IC:LEVEL SHIF - 2x - TXS0102DQER"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -2215,7 +2102,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Flatburn_V4_sym_library:OPAMP - 5.5V/10MHz - MCP6022-I/SN"
+		(symbol "FAE-IC:OPAMP - 5.5V/10MHz - MCP6022-I/SN"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -2595,7 +2482,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Flatburn_V4_sym_library:OPAMP - 5V/1MHz - AD8541ARTZ-REEL7 "
+		(symbol "FAE-IC:OPAMP - 5V/1MHz - AD8541ARTZ-REEL7 "
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -2859,223 +2746,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Flatburn_V4_sym_library:PW - 2.2uH/0.35A -LQM18PN2R2MGHD "
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "L"
-				(at -5.334 1.524 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Value" "LQM18PN2R2MGHD"
-				(at -20.828 -0.508 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Footprint" "Inductor_SMD:L_0603_1608Metric"
-				(at 21.59 -94.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 21.59 -194.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Description" "SDM 2.2uH, 20% ,Isat0.35A, 0603"
-				(at 8.382 -53.594 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Distributor" "M-81-LQM18PN2R2MGHD "
-				(at 0.254 -55.372 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "MPN" "LQM18PN2R2MGHD "
-				(at 21.59 -494.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Pkg Type" "SMD"
-				(at 21.59 -594.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Price Distributor Cad" "0,247"
-				(at 0.254 -13.716 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Temp Range" "-40°..+85°"
-				(at 0 -9.906 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Implementation" "FAE_LB"
-				(at 0 -11.938 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "PW - 2.2uH/0.35A -LQM18PN2R2MGHD _0_1"
-				(arc
-					(start 0 1.016)
-					(mid -0.5058 1.524)
-					(end 0 2.032)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0 0)
-					(mid -0.5058 0.508)
-					(end 0 1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0 -1.016)
-					(mid -0.5058 -0.508)
-					(end 0 0)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0 -2.032)
-					(mid -0.5058 -1.524)
-					(end 0 -1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "PW - 2.2uH/0.35A -LQM18PN2R2MGHD _1_1"
-				(polyline
-					(pts
-						(xy -1.27 2.032) (xy -1.27 -2.032) (xy -1.27 -1.778)
-					)
-					(stroke
-						(width 0.4572)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at 0 2.54 270)
-					(length 0.508)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -2.54 90)
-					(length 0.508)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Flatburn_V4_sym_library:REF - 2.5V/10mA -  REF5025AIDR"
+		(symbol "FAE-IC:REF - 2.5V/10mA -  REF5025AIDR"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -3351,7 +3022,223 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Flatburn_V4_sym_library:RS-0402-0R 1/5W 0.5%"
+		(symbol "FAE-IND:PW - 2.2uH/0.35A -LQM18PN2R2MGHD "
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "L"
+				(at -5.334 1.524 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Value" "LQM18PN2R2MGHD"
+				(at -20.828 -0.508 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Footprint" "Inductor_SMD:L_0603_1608Metric"
+				(at 21.59 -94.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 21.59 -194.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Description" "SDM 2.2uH, 20% ,Isat0.35A, 0603"
+				(at 8.382 -53.594 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Distributor" "M-81-LQM18PN2R2MGHD "
+				(at 0.254 -55.372 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "MPN" "LQM18PN2R2MGHD "
+				(at 21.59 -494.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Pkg Type" "SMD"
+				(at 21.59 -594.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Price Distributor Cad" "0,247"
+				(at 0.254 -13.716 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Temp Range" "-40°..+85°"
+				(at 0 -9.906 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Implementation" "FAE_LB"
+				(at 0 -11.938 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "PW - 2.2uH/0.35A -LQM18PN2R2MGHD _0_1"
+				(arc
+					(start 0 1.016)
+					(mid -0.5058 1.524)
+					(end 0 2.032)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 0)
+					(mid -0.5058 0.508)
+					(end 0 1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 -1.016)
+					(mid -0.5058 -0.508)
+					(end 0 0)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 -2.032)
+					(mid -0.5058 -1.524)
+					(end 0 -1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "PW - 2.2uH/0.35A -LQM18PN2R2MGHD _1_1"
+				(polyline
+					(pts
+						(xy -1.27 2.032) (xy -1.27 -2.032) (xy -1.27 -1.778)
+					)
+					(stroke
+						(width 0.4572)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 0 2.54 270)
+					(length 0.508)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 0.508)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "FAE-RES:RS-0402-0R 1/5W 0.5%"
 			(pin_numbers
 				(hide yes)
 			)
@@ -3518,7 +3405,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Flatburn_V4_sym_library:RS-0402-100K 1/16W 1%"
+		(symbol "FAE-RES:RS-0402-100K 1/16W 1%"
 			(pin_numbers
 				(hide yes)
 			)
@@ -3685,7 +3572,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Flatburn_V4_sym_library:RS-0402-100R 1/16W 1%"
+		(symbol "FAE-RES:RS-0402-100R 1/16W 1%"
 			(pin_numbers
 				(hide yes)
 			)
@@ -3852,7 +3739,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Flatburn_V4_sym_library:RS-0402-10K 1/16W 1%"
+		(symbol "FAE-RES:RS-0402-10K 1/16W 1%"
 			(pin_numbers
 				(hide yes)
 			)
@@ -4019,7 +3906,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Flatburn_V4_sym_library:RS-0402-10R 1/16W 0.5%"
+		(symbol "FAE-RES:RS-0402-10R 1/16W 0.5%"
 			(pin_numbers
 				(hide yes)
 			)
@@ -4186,174 +4073,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Flatburn_V4_sym_library:RS-0402-2K2 1/16W 1%"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "R"
-				(at -1.778 -6.096 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Value" "2.2k"
-				(at -1.778 3.556 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-				(at 21.59 -94.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 21.59 -194.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Description" "CHIP. RES 2K2 0402 1/16W 1%"
-				(at 8.382 -53.594 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Distributor" "FAE-035095"
-				(at 0.254 -55.372 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "MPN" ""
-				(at 21.59 -494.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Pkg Type" "SMD"
-				(at 21.59 -594.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Price Distributor Cad" ""
-				(at 0.254 -13.716 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Temp Range" "-°..+°"
-				(at -0.254 -12.954 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Implementation" "FAE_LB"
-				(at -1.016 -15.748 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "RS-0402-2K2 1/16W 1%_0_1"
-				(rectangle
-					(start -1.016 -2.54)
-					(end 1.016 2.54)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "RS-0402-2K2 1/16W 1%_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Flatburn_V4_sym_library:RS-0402-4K7 1/16W 1%"
+		(symbol "FAE-RES:RS-0402-4K7 1/16W 1%"
 			(pin_numbers
 				(hide yes)
 			)
@@ -4520,35 +4240,53 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Flatburn_V4_sym_library:TestPoint"
-			(pin_numbers
-				(hide yes)
-			)
+		(symbol "FAE-XTAL:CRYSTAL - 7.68MHz - HCM497680000ABJT "
 			(pin_names
-				(offset 0.762)
 				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "TP"
-				(at 0 6.858 0)
+			(property "Reference" "Y"
+				(at -7.874 6.35 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left top)
 				)
 			)
-			(property "Value" "TestPoint"
-				(at 0 5.08 0)
+			(property "Value" "HCM497680000ABJT"
+				(at -7.874 4.572 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left top)
 				)
 			)
-			(property "Footprint" ""
-				(at 5.08 0 0)
+			(property "Footprint" "FAE-XTAL:HCM497680000ABJT"
+				(at 21.59 -94.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 21.59 -194.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Description" "Crystal 7.680MHz, 18pF"
+				(at 8.382 -53.594 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -4556,8 +4294,38 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "~"
-				(at 5.08 0 0)
+			(property "Distributor" "M-695-HCM49-768-U "
+				(at 0.254 -55.372 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "MPN" "HCM497680000ABJT "
+				(at 21.59 -494.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Pkg Type" "SMD"
+				(at 21.59 -594.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Price Distributor Cad" "0,513"
+				(at 0.254 -13.716 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -4565,8 +4333,8 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "test point"
-				(at 0 0 0)
+			(property "Temp Range" "-10°..+60°"
+				(at 0 -7.112 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -4574,8 +4342,8 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "test point tp"
-				(at 0 0 0)
+			(property "Implementation" "FAE_LB"
+				(at 0 -10.16 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -4583,19 +4351,58 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "Pin* Test*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
+			(symbol "CRYSTAL - 7.68MHz - HCM497680000ABJT _0_1"
+				(polyline
+					(pts
+						(xy -2.54 0) (xy -1.905 0)
 					)
-					(hide yes)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
 				)
-			)
-			(symbol "TestPoint_0_1"
-				(circle
-					(center 0 3.302)
-					(radius 0.762)
+				(polyline
+					(pts
+						(xy -1.905 -1.27) (xy -1.905 1.27)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.143 2.54)
+					(end 1.143 -2.54)
+					(stroke
+						(width 0.3048)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.905 -1.27) (xy 1.905 1.27)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 1.905 0)
+					)
 					(stroke
 						(width 0)
 						(type default)
@@ -4605,10 +4412,18 @@
 					)
 				)
 			)
-			(symbol "TestPoint_1_1"
+			(symbol "CRYSTAL - 7.68MHz - HCM497680000ABJT _1_1"
+				(text "7.68MHz"
+					(at 0.254 -3.81 0)
+					(effects
+						(font
+							(size 1.143 1.143)
+						)
+					)
+				)
 				(pin passive line
-					(at 0 0 90)
-					(length 2.54)
+					(at -3.81 0 0)
+					(length 1.27)
 					(name "1"
 						(effects
 							(font
@@ -4617,6 +4432,24 @@
 						)
 					)
 					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 1.27)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -9086,7 +8919,7 @@
 	)
 	(wire
 		(pts
-			(xy 377.19 95.25) (xy 387.35 95.25)
+			(xy 377.19 95.25) (xy 386.08 95.25)
 		)
 		(stroke
 			(width 0)
@@ -10315,7 +10148,7 @@
 		)
 		(uuid "d6c8b049-fa65-4a76-813e-eba6a8636d89")
 	)
-	(global_label "I2C_SDA"
+	(global_label "I2C_SCL"
 		(shape bidirectional)
 		(at 311.15 95.25 180)
 		(fields_autoplaced yes)
@@ -10327,7 +10160,7 @@
 		)
 		(uuid "0dc48cea-a552-4338-b3f0-d3a197d8b82a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 299.4335 95.25 0)
+			(at 299.494 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10425,7 +10258,7 @@
 			)
 		)
 	)
-	(global_label "I2C_SCL"
+	(global_label "I2C_SDA"
 		(shape input)
 		(at 311.15 97.79 180)
 		(fields_autoplaced yes)
@@ -10437,7 +10270,7 @@
 		)
 		(uuid "4441946a-aa95-4590-97c9-6d2f747817c6")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 300.6053 97.79 0)
+			(at 300.5448 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10491,9 +10324,9 @@
 			)
 		)
 	)
-	(global_label "5V_I2C_SDA"
+	(global_label "5V_I2C_SCL"
 		(shape bidirectional)
-		(at 387.35 95.25 0)
+		(at 386.08 95.25 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -10503,7 +10336,7 @@
 		)
 		(uuid "93f103f3-2cf7-4fab-aa01-89ffd0f0a468")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 402.3322 95.25 0)
+			(at 401.0017 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10645,7 +10478,7 @@
 			)
 		)
 	)
-	(global_label "5V_I2C_SCL"
+	(global_label "5V_I2C_SDA"
 		(shape output)
 		(at 387.35 97.79 0)
 		(fields_autoplaced yes)
@@ -10657,7 +10490,7 @@
 		)
 		(uuid "dc4a888e-b2b7-4895-89f2-baea3c5de7f8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 401.1604 97.79 0)
+			(at 401.2209 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10712,7 +10545,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:OPAMP - 5V/1MHz - AD8541ARTZ-REEL7 ")
+		(lib_id "FAE-IC:OPAMP - 5V/1MHz - AD8541ARTZ-REEL7 ")
 		(at 223.52 49.53 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -10920,7 +10753,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-100K 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-100K 1/16W 1%")
 		(at 369.57 105.41 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -11056,7 +10889,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-100K 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-100K 1/16W 1%")
 		(at 288.29 168.91 180)
 		(unit 1)
 		(exclude_from_sim no)
@@ -11190,7 +11023,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0402-100n/50V-10%")
+		(lib_id "FAE-CAP:CS-C-0402-100n/50V-10%")
 		(at 91.44 160.02 0)
 		(mirror y)
 		(unit 1)
@@ -11327,7 +11160,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-10R 1/16W 0.5%")
+		(lib_id "FAE-RES:RS-0402-10R 1/16W 0.5%")
 		(at 248.92 203.2 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -11462,7 +11295,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0402-100n/50V-10%")
+		(lib_id "FAE-CAP:CS-C-0402-100n/50V-10%")
 		(at 91.44 238.76 0)
 		(mirror y)
 		(unit 1)
@@ -11599,7 +11432,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-10K 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-10K 1/16W 1%")
 		(at 260.35 220.98 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -11744,7 +11577,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:OPAMP - 5.5V/10MHz - MCP6022-I/SN")
+		(lib_id "FAE-IC:OPAMP - 5.5V/10MHz - MCP6022-I/SN")
 		(at 66.04 275.59 0)
 		(unit 2)
 		(exclude_from_sim no)
@@ -11961,7 +11794,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:TestPoint")
+		(lib_id "Connector:TestPoint")
 		(at 231.14 208.28 180)
 		(unit 1)
 		(exclude_from_sim no)
@@ -12035,7 +11868,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-100K 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-100K 1/16W 1%")
 		(at 345.44 220.98 180)
 		(unit 1)
 		(exclude_from_sim no)
@@ -12169,7 +12002,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-0R 1/5W 0.5%")
+		(lib_id "FAE-RES:RS-0402-0R 1/5W 0.5%")
 		(at 252.73 49.53 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -12368,7 +12201,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0402-1u/16V-10%")
+		(lib_id "FAE-CAP:CS-C-0402-1u/16V-10%")
 		(at 184.15 238.76 0)
 		(mirror y)
 		(unit 1)
@@ -12505,7 +12338,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0402-100n/50V-10%")
+		(lib_id "FAE-CAP:CS-C-0402-100n/50V-10%")
 		(at 74.93 104.14 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -12641,7 +12474,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0402-100n/50V-10%")
+		(lib_id "FAE-CAP:CS-C-0402-100n/50V-10%")
 		(at 204.47 105.41 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -12842,7 +12675,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-100K 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-100K 1/16W 1%")
 		(at 350.52 220.98 180)
 		(unit 1)
 		(exclude_from_sim no)
@@ -13041,7 +12874,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-10R 1/16W 0.5%")
+		(lib_id "FAE-RES:RS-0402-10R 1/16W 0.5%")
 		(at 248.92 195.58 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -13176,7 +13009,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0603-18p/50V-5%")
+		(lib_id "FAE-CAP:CS-C-0603-18p/50V-5%")
 		(at 364.49 223.52 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -13312,7 +13145,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-10R 1/16W 0.5%")
+		(lib_id "FAE-RES:RS-0402-10R 1/16W 0.5%")
 		(at 248.92 200.66 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -13447,7 +13280,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0402-100n/50V-10%")
+		(lib_id "FAE-CAP:CS-C-0402-100n/50V-10%")
 		(at 365.76 57.15 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -13583,7 +13416,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-4K7 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-4K7 1/16W 1%")
 		(at 203.2 40.64 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -13849,7 +13682,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-100K 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-100K 1/16W 1%")
 		(at 318.77 55.88 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -13985,7 +13818,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-10R 1/16W 0.5%")
+		(lib_id "FAE-RES:RS-0402-10R 1/16W 0.5%")
 		(at 248.92 190.5 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -14185,7 +14018,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:ADC - 24Bit/8Ch -  ADS1256IDBR")
+		(lib_id "FAE-IC:ADC - 24Bit/8Ch -  ADS1256IDBR")
 		(at 313.69 194.31 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -14462,7 +14295,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-100K 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-100K 1/16W 1%")
 		(at 161.29 104.14 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -14663,7 +14496,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0603-1u/25V-10%")
+		(lib_id "FAE-CAP:CS-C-0603-1u/25V-10%")
 		(at 187.96 171.45 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -14873,7 +14706,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-100K 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-100K 1/16W 1%")
 		(at 58.42 57.15 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -15009,7 +14842,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:LEVEL SHIF - 2x - TXS0102DQER")
+		(lib_id "FAE-IC:LEVEL SHIF - 2x - TXS0102DQER")
 		(at 224.79 96.52 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -15161,7 +14994,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:LEVEL SHIF - 2x - TXS0102DQER")
+		(lib_id "FAE-IC:LEVEL SHIF - 2x - TXS0102DQER")
 		(at 58.42 95.25 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -15378,7 +15211,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-10K 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-10K 1/16W 1%")
 		(at 326.39 55.88 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -15514,7 +15347,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0402-1u/16V-10%")
+		(lib_id "FAE-CAP:CS-C-0402-1u/16V-10%")
 		(at 86.36 238.76 0)
 		(mirror y)
 		(unit 1)
@@ -15651,7 +15484,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:OPAMP - 5.5V/10MHz - MCP6022-I/SN")
+		(lib_id "FAE-IC:OPAMP - 5.5V/10MHz - MCP6022-I/SN")
 		(at 66.04 147.32 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -15803,7 +15636,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-100K 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-100K 1/16W 1%")
 		(at 195.58 57.15 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -16135,7 +15968,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:REF - 2.5V/10mA -  REF5025AIDR")
+		(lib_id "FAE-IC:REF - 2.5V/10mA -  REF5025AIDR")
 		(at 171.45 158.75 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -16417,7 +16250,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-100K 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-100K 1/16W 1%")
 		(at 80.01 104.14 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -16553,7 +16386,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-100R 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-100R 1/16W 1%")
 		(at 118.11 93.98 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -16687,7 +16520,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0603-22u/6.3V-20%")
+		(lib_id "FAE-CAP:CS-C-0603-22u/16V-20%")
 		(at 194.31 171.45 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -16705,12 +16538,12 @@
 			)
 		)
 		(property "Value" "22u/16V"
-			(at 193.04 169.545 90)
+			(at 192.532 170.18 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify left top)
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
@@ -16733,7 +16566,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "CHIP CAP.CER. 22u 6.3V 20% X5R 0603"
+		(property "Description" "CHIP CAP.CER. 22u 16V 20% X5R 0603"
 			(at 202.692 225.044 0)
 			(effects
 				(font
@@ -16742,7 +16575,7 @@
 				(hide yes)
 			)
 		)
-		(property "Distributor" "M-81-GRM188R60J226ME0D "
+		(property "Distributor" "M-581-KGM15CR51C226MT "
 			(at 194.564 226.822 0)
 			(effects
 				(font
@@ -16752,7 +16585,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "GRM188R60J226MEA0D"
+		(property "MPN" "KGM15CR51C226MT"
 			(at 215.9 666.37 0)
 			(effects
 				(font
@@ -16772,7 +16605,7 @@
 				(hide yes)
 			)
 		)
-		(property "Price Distributor Cad" "0,143"
+		(property "Price Distributor Cad" "0,404"
 			(at 194.564 185.166 0)
 			(effects
 				(font
@@ -16823,7 +16656,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0402-100n/50V-10%")
+		(lib_id "FAE-CAP:CS-C-0402-100n/50V-10%")
 		(at 189.23 238.76 0)
 		(mirror y)
 		(unit 1)
@@ -17026,7 +16859,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-2K2 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-4K7 1/16W 1%")
 		(at 256.54 88.9 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -17043,13 +16876,13 @@
 				(justify left)
 			)
 		)
-		(property "Value" "2.2k"
-			(at 250.825 89.535 0)
+		(property "Value" "4.7k"
+			(at 250.825 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify left top)
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
@@ -17072,7 +16905,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "CHIP. RES 2K2 0402 1/16W 1%"
+		(property "Description" "CHIP. RES 4K7 0402 1/16W 1%"
 			(at 264.922 142.494 0)
 			(effects
 				(font
@@ -17081,7 +16914,7 @@
 				(hide yes)
 			)
 		)
-		(property "Distributor" "FAE-035095"
+		(property "Distributor" "FAE-025131"
 			(at 256.794 144.272 0)
 			(effects
 				(font
@@ -17162,7 +16995,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-10K 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-10K 1/16W 1%")
 		(at 257.81 220.98 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -17307,7 +17140,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:OPAMP - 5.5V/10MHz - MCP6022-I/SN")
+		(lib_id "FAE-IC:OPAMP - 5.5V/10MHz - MCP6022-I/SN")
 		(at 163.83 275.59 0)
 		(unit 2)
 		(exclude_from_sim no)
@@ -17459,7 +17292,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0402-100n/50V-10%")
+		(lib_id "FAE-CAP:CS-C-0402-100n/50V-10%")
 		(at 123.19 104.14 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -17725,7 +17558,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-4K7 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-4K7 1/16W 1%")
 		(at 66.04 41.91 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -17861,7 +17694,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0402-100n/50V-10%")
+		(lib_id "FAE-CAP:CS-C-0402-100n/50V-10%")
 		(at 330.2 57.15 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -17997,7 +17830,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0402-100n/50V-10%")
+		(lib_id "FAE-CAP:CS-C-0402-100n/50V-10%")
 		(at 69.85 58.42 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -18133,7 +17966,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0402-100n/50V-10%")
+		(lib_id "FAE-CAP:CS-C-0402-100n/50V-10%")
 		(at 241.3 105.41 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -18269,7 +18102,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0402-100n/50V-10%")
+		(lib_id "FAE-CAP:CS-C-0402-100n/50V-10%")
 		(at 361.95 105.41 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -18405,7 +18238,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-10R 1/16W 0.5%")
+		(lib_id "FAE-RES:RS-0402-10R 1/16W 0.5%")
 		(at 248.92 193.04 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -18540,7 +18373,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-100K 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-100K 1/16W 1%")
 		(at 248.92 105.41 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -18676,7 +18509,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-10K 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-10K 1/16W 1%")
 		(at 262.89 220.98 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -18821,7 +18654,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:LEVEL SHIF - 2x - TXS0102DQER")
+		(lib_id "FAE-IC:LEVEL SHIF - 2x - TXS0102DQER")
 		(at 140.97 95.25 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -19038,7 +18871,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:OPAMP - 5V/1MHz - AD8541ARTZ-REEL7 ")
+		(lib_id "FAE-IC:OPAMP - 5V/1MHz - AD8541ARTZ-REEL7 ")
 		(at 346.71 48.26 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -19181,7 +19014,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:TestPoint")
+		(lib_id "Connector:TestPoint")
 		(at 237.49 184.15 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -19320,7 +19153,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:TestPoint")
+		(lib_id "Connector:TestPoint")
 		(at 236.22 208.28 180)
 		(unit 1)
 		(exclude_from_sim no)
@@ -19394,7 +19227,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:TestPoint")
+		(lib_id "Connector:TestPoint")
 		(at 232.41 184.15 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -19468,7 +19301,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-2K2 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-4K7 1/16W 1%")
 		(at 377.19 88.9 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -19485,13 +19318,13 @@
 				(justify left)
 			)
 		)
-		(property "Value" "2.2k"
-			(at 371.475 89.535 0)
+		(property "Value" "4.7k"
+			(at 371.475 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify left top)
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
@@ -19514,7 +19347,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "CHIP. RES 2K2 0402 1/16W 1%"
+		(property "Description" "CHIP. RES 4K7 0402 1/16W 1%"
 			(at 385.572 142.494 0)
 			(effects
 				(font
@@ -19523,7 +19356,7 @@
 				(hide yes)
 			)
 		)
-		(property "Distributor" "FAE-035095"
+		(property "Distributor" "FAE-025131"
 			(at 377.444 144.272 0)
 			(effects
 				(font
@@ -19604,7 +19437,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0402-1u/16V-10%")
+		(lib_id "FAE-CAP:CS-C-0402-1u/16V-10%")
 		(at 276.86 219.71 0)
 		(mirror y)
 		(unit 1)
@@ -19741,7 +19574,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-100R 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-100R 1/16W 1%")
 		(at 33.02 96.52 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -19875,7 +19708,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0402-100n/50V-10%")
+		(lib_id "FAE-CAP:CS-C-0402-100n/50V-10%")
 		(at 341.63 223.52 0)
 		(mirror y)
 		(unit 1)
@@ -20143,7 +19976,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:OPAMP - 5.5V/10MHz - MCP6022-I/SN")
+		(lib_id "FAE-IC:OPAMP - 5.5V/10MHz - MCP6022-I/SN")
 		(at 163.83 226.06 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -20295,7 +20128,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0603-4.7u/10V-10%")
+		(lib_id "FAE-CAP:CS-C-0603-4.7u/10V-10%")
 		(at 152.4 171.45 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -20431,7 +20264,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-0R 1/5W 0.5%")
+		(lib_id "FAE-RES:RS-0402-0R 1/5W 0.5%")
 		(at 375.92 48.26 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -20630,7 +20463,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:LEVEL SHIF - 2x - TXS0102DQER")
+		(lib_id "FAE-IC:LEVEL SHIF - 2x - TXS0102DQER")
 		(at 345.44 96.52 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -20782,7 +20615,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-2K2 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-4K7 1/16W 1%")
 		(at 260.35 88.9 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -20799,13 +20632,13 @@
 				(justify left)
 			)
 		)
-		(property "Value" "2.2k"
-			(at 261.62 89.535 0)
+		(property "Value" "4.7k"
+			(at 261.62 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify left top)
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
@@ -20828,7 +20661,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "CHIP. RES 2K2 0402 1/16W 1%"
+		(property "Description" "CHIP. RES 4K7 0402 1/16W 1%"
 			(at 268.732 142.494 0)
 			(effects
 				(font
@@ -20837,7 +20670,7 @@
 				(hide yes)
 			)
 		)
-		(property "Distributor" "FAE-035095"
+		(property "Distributor" "FAE-025131"
 			(at 260.604 144.272 0)
 			(effects
 				(font
@@ -20984,7 +20817,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0402-100n/50V-10%")
+		(lib_id "FAE-CAP:CS-C-0402-100n/50V-10%")
 		(at 40.64 104.14 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -21185,7 +21018,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0603-18p/50V-5%")
+		(lib_id "FAE-CAP:CS-C-0603-18p/50V-5%")
 		(at 359.41 223.52 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -21386,7 +21219,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-10K 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-10K 1/16W 1%")
 		(at 270.51 220.98 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -21531,7 +21364,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0402-100n/50V-10%")
+		(lib_id "FAE-CAP:CS-C-0402-100n/50V-10%")
 		(at 105.41 58.42 0)
 		(mirror y)
 		(unit 1)
@@ -21668,7 +21501,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-2K2 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-4K7 1/16W 1%")
 		(at 381 88.9 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -21685,13 +21518,13 @@
 				(justify left)
 			)
 		)
-		(property "Value" "2.2k"
-			(at 382.27 89.535 0)
+		(property "Value" "4.7k"
+			(at 382.27 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify left top)
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
@@ -21714,7 +21547,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "CHIP. RES 2K2 0402 1/16W 1%"
+		(property "Description" "CHIP. RES 4K7 0402 1/16W 1%"
 			(at 389.382 142.494 0)
 			(effects
 				(font
@@ -21723,7 +21556,7 @@
 				(hide yes)
 			)
 		)
-		(property "Distributor" "FAE-035095"
+		(property "Distributor" "FAE-025131"
 			(at 381.254 144.272 0)
 			(effects
 				(font
@@ -21804,7 +21637,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-10K 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-10K 1/16W 1%")
 		(at 66.04 57.15 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -21940,7 +21773,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0402-100n/50V-10%")
+		(lib_id "FAE-CAP:CS-C-0402-100n/50V-10%")
 		(at 242.57 58.42 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -22141,7 +21974,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:OPAMP - 5.5V/10MHz - MCP6022-I/SN")
+		(lib_id "FAE-IC:OPAMP - 5.5V/10MHz - MCP6022-I/SN")
 		(at 66.04 226.06 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -22358,7 +22191,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:PW - 2.2uH/0.35A -LQM18PN2R2MGHD ")
+		(lib_id "FAE-IND:PW - 2.2uH/0.35A -LQM18PN2R2MGHD ")
 		(at 255.27 177.8 270)
 		(unit 1)
 		(exclude_from_sim no)
@@ -22492,7 +22325,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-100K 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-100K 1/16W 1%")
 		(at 347.98 220.98 180)
 		(unit 1)
 		(exclude_from_sim no)
@@ -22626,7 +22459,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-10K 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-10K 1/16W 1%")
 		(at 203.2 57.15 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -22762,7 +22595,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0402-1u/16V-10%")
+		(lib_id "FAE-CAP:CS-C-0402-1u/16V-10%")
 		(at 86.36 160.02 0)
 		(mirror y)
 		(unit 1)
@@ -22899,7 +22732,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0402-100n/50V-10%")
+		(lib_id "FAE-CAP:CS-C-0402-100n/50V-10%")
 		(at 207.01 58.42 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -23035,7 +22868,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:OPAMP - 5.5V/10MHz - MCP6022-I/SN")
+		(lib_id "FAE-IC:OPAMP - 5.5V/10MHz - MCP6022-I/SN")
 		(at 66.04 196.85 0)
 		(unit 2)
 		(exclude_from_sim no)
@@ -23187,7 +23020,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-10K 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-10K 1/16W 1%")
 		(at 265.43 220.98 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -23397,7 +23230,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-4K7 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-4K7 1/16W 1%")
 		(at 326.39 40.64 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -23598,7 +23431,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-0R 1/5W 0.5%")
+		(lib_id "FAE-RES:RS-0402-0R 1/5W 0.5%")
 		(at 115.57 49.53 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -23732,7 +23565,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0402-100n/50V-10%")
+		(lib_id "FAE-CAP:CS-C-0402-100n/50V-10%")
 		(at 281.94 219.71 0)
 		(mirror y)
 		(unit 1)
@@ -23869,7 +23702,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0402-100n/50V-10%")
+		(lib_id "FAE-CAP:CS-C-0402-100n/50V-10%")
 		(at 325.12 105.41 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -24005,7 +23838,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0402-100n/50V-10%")
+		(lib_id "FAE-CAP:CS-C-0402-100n/50V-10%")
 		(at 156.21 104.14 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -24141,7 +23974,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-10K 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-10K 1/16W 1%")
 		(at 267.97 220.98 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -24286,7 +24119,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-100K 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-100K 1/16W 1%")
 		(at 353.06 220.98 180)
 		(unit 1)
 		(exclude_from_sim no)
@@ -24420,7 +24253,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:TestPoint")
+		(lib_id "Connector:TestPoint")
 		(at 226.06 208.28 180)
 		(unit 1)
 		(exclude_from_sim no)
@@ -24494,7 +24327,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-100R 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-100R 1/16W 1%")
 		(at 33.02 93.98 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -24628,7 +24461,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:OPAMP - 5V/1MHz - AD8541ARTZ-REEL7 ")
+		(lib_id "FAE-IC:OPAMP - 5V/1MHz - AD8541ARTZ-REEL7 ")
 		(at 86.36 49.53 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -24836,7 +24669,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:TestPoint")
+		(lib_id "Connector:TestPoint")
 		(at 227.33 184.15 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -24910,7 +24743,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-10R 1/16W 0.5%")
+		(lib_id "FAE-RES:RS-0402-10R 1/16W 0.5%")
 		(at 248.92 198.12 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -25045,7 +24878,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CRYSTAL - 7.68MHz - HCM497680000ABJT ")
+		(lib_id "FAE-XTAL:CRYSTAL - 7.68MHz - HCM497680000ABJT ")
 		(at 367.03 201.93 90)
 		(mirror x)
 		(unit 1)

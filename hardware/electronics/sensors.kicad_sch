@@ -5,58 +5,43 @@
 	(uuid "16d6ae8f-6fff-4fb2-8bb0-3b7e839fdf2d")
 	(paper "A3")
 	(title_block
-		(date "18-04-2025")
-		(rev "1")
-		(comment 1 "Flatburn_V4")
+		(date "29-07-2025")
+		(rev "2")
+		(comment 1 "Flatburn_V5")
 		(comment 2 "Luca Brighenti")
 		(comment 3 "-")
 		(comment 4 "MIT")
 	)
 	(lib_symbols
-		(symbol "Flatburn_V4_sym_library:ACCEL- KXTJ3-1057 "
+		(symbol "Connector:TestPoint"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "U"
-				(at 3.81 15.494 0)
+			(property "Reference" "TP"
+				(at 0 6.858 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 			)
-			(property "Value" "KXTJ3-1057"
-				(at 3.81 13.97 0)
+			(property "Value" "TestPoint"
+				(at 0 5.08 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 			)
-			(property "Footprint" "FAE-SENS:LGA12_2X2X0.9_KNX-M"
-				(at 21.59 -94.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 21.59 -194.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Description" "Tri-axis ±2g, ±4g, ±8g, or ±16g accelerometer, 1.71-3.6V supply, I2C, 8-12-14 bit resolution"
-				(at 8.382 -53.594 0)
+			(property "Footprint" ""
+				(at 5.08 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -64,38 +49,8 @@
 					(hide yes)
 				)
 			)
-			(property "Distributor" "M-912-KXTJ3-1057 "
-				(at 0.254 -55.372 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "MPN" "KXTJ3-1057 "
-				(at 21.59 -494.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Pkg Type" "SMD"
-				(at 21.59 -594.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Price Distributor Cad" "1,7"
-				(at -1.016 -32.512 0)
+			(property "Datasheet" "~"
+				(at 5.08 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -103,8 +58,8 @@
 					(hide yes)
 				)
 			)
-			(property "Temp Range" "-40°..+85°"
-				(at -1.27 -30.734 0)
+			(property "Description" "test point"
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -112,8 +67,8 @@
 					(hide yes)
 				)
 			)
-			(property "Implementation" "FAE_LB"
-				(at -1.27 -28.448 0)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -121,10 +76,19 @@
 					(hide yes)
 				)
 			)
-			(symbol "ACCEL- KXTJ3-1057 _0_1"
-				(rectangle
-					(start 11.938 21.082)
-					(end 11.938 21.082)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TestPoint_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
 					(stroke
 						(width 0)
 						(type default)
@@ -134,39 +98,11 @@
 					)
 				)
 			)
-			(symbol "ACCEL- KXTJ3-1057 _1_1"
-				(rectangle
-					(start -9.906 10.16)
-					(end 10.16 -10.16)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(text "ACCEL."
-					(at -6.35 -8.89 0)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(text "Current consumption 3.3V: 155uA\n"
-					(at 20.066 11.684 0)
-					(effects
-						(font
-							(size 1.27 1.27)
-							(color 132 0 0 1)
-						)
-					)
-				)
-				(pin input line
-					(at -15.24 3.81 0)
-					(length 5.08)
-					(name "ADDR"
+			(symbol "TestPoint_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -181,208 +117,10 @@
 						)
 					)
 				)
-				(pin bidirectional line
-					(at -15.24 1.27 0)
-					(length 5.08)
-					(name "SDA"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -15.24 -1.27 0)
-					(length 5.08)
-					(name "IO_VDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -15.24 -3.81 0)
-					(length 5.08)
-					(name "RES"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -1.27 15.24 270)
-					(length 5.08)
-					(name "SCL"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "12"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -1.27 -15.24 90)
-					(length 5.08)
-					(name "INT"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 1.27 15.24 270)
-					(length 5.08)
-					(name "IO_VDD2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 1.27 -15.24 90)
-					(length 5.08)
-					(name "GND1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 15.24 3.81 180)
-					(length 5.08)
-					(name "VDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 15.24 1.27 180)
-					(length 5.08)
-					(name "GND3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 15.24 -1.27 180)
-					(length 5.08)
-					(name "GND2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 15.24 -3.81 180)
-					(length 5.08)
-					(name "VDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Flatburn_V4_sym_library:CS-C-0402-100n/50V-10%"
+		(symbol "FAE-CAP:CS-C-0402-100n/50V-10%"
 			(pin_numbers
 				(hide yes)
 			)
@@ -559,7 +297,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Flatburn_V4_sym_library:CS-C-0402-1u/16V-10%"
+		(symbol "FAE-CAP:CS-C-0402-1u/16V-10%"
 			(pin_numbers
 				(hide yes)
 			)
@@ -736,7 +474,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Flatburn_V4_sym_library:CS-C-0603-10u/10V-10%"
+		(symbol "FAE-CAP:CS-C-0603-10u/10V-10%"
 			(pin_numbers
 				(hide yes)
 			)
@@ -913,7 +651,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Flatburn_V4_sym_library:DAC - 12bit/2.7-5V -  TXS0102DQER_1_1"
+		(symbol "FAE-IC:DAC - 12bit/2.7-5V -  TXS0102DQER_1_1"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1225,291 +963,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Flatburn_V4_sym_library:HUM/TEMP/PRESS - BME280"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "U"
-				(at -10.16 12.192 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Value" "BME280"
-				(at -10.16 10.414 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Footprint" "FAE-SENS:PSON65P250X250X100-8N"
-				(at 21.59 -94.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 21.59 -194.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Description" "Humidity, temperature and pressure sensor, 1.7-3.6V"
-				(at 8.382 -53.594 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Distributor" "M-262-BME280 "
-				(at 0.254 -55.372 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "MPN" "BME280"
-				(at 21.59 -494.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Pkg Type" "SMD"
-				(at 21.59 -594.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Price Distributor Cad" "3,78"
-				(at -1.016 -32.512 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Temp Range" "-40°..+85°"
-				(at -1.27 -30.734 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Implementation" "FAE_LB"
-				(at -1.27 -28.448 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "HUM/TEMP/PRESS - BME280_1_1"
-				(rectangle
-					(start -10.16 6.35)
-					(end 10.16 -6.096)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(text "HUM.\nTEMP.\nPRESS."
-					(at 0.508 -0.254 0)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(text "Current consumption 1.8V: 2mA\n"
-					(at 5.334 7.62 0)
-					(effects
-						(font
-							(size 1.27 1.27)
-							(color 132 0 0 1)
-						)
-					)
-				)
-				(pin power_in line
-					(at -15.24 3.81 0)
-					(length 5.08)
-					(name "VDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -15.24 1.27 0)
-					(length 5.08)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -15.24 -1.27 0)
-					(length 5.08)
-					(name "VDDIO"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at -15.24 -3.81 0)
-					(length 5.08)
-					(name "SDO"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_out line
-					(at 15.24 3.81 180)
-					(length 5.08)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 15.24 1.27 180)
-					(length 5.08)
-					(name "CSB"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 15.24 -1.27 180)
-					(length 5.08)
-					(name "SDI"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 15.24 -3.81 180)
-					(length 5.08)
-					(name "SCK"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Flatburn_V4_sym_library:LEVEL SHIF - 2x - TXS0102DQER"
+		(symbol "FAE-IC:LEVEL SHIF - 2x - TXS0102DQER"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1785,722 +1239,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Flatburn_V4_sym_library:MIC - 94dB/1KHz -  CMM-2718AT-42316-TR "
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "U"
-				(at -9.398 12.954 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Value" "CMM-2718AT-42316-TR"
-				(at -9.398 11.176 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Footprint" "FAE-SENS:CMM2718AT42316TR"
-				(at 21.59 -94.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 21.59 -194.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Description" "Microphone, 94dB,1KHz"
-				(at 8.382 -53.594 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Distributor" "M-490-CMM2718AT42316TR  "
-				(at 0.254 -55.372 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "MPN" "CMM-2718AT-42316-TR "
-				(at 21.59 -494.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Pkg Type" "SMD"
-				(at 21.59 -594.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Price Distributor Cad" "0,665"
-				(at -1.016 -32.512 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Temp Range" "-40°..+100°"
-				(at -1.27 -30.734 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Implementation" "FAE_LB"
-				(at -1.27 -28.448 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "MIC - 94dB/1KHz -  CMM-2718AT-42316-TR _0_1"
-				(polyline
-					(pts
-						(xy -2.032 2.54) (xy -2.032 -2.54)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.508 3.81) (xy -4.318 3.81)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.508 3.81) (xy 0.508 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 0.508 0)
-					(radius 2.54)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.508 -3.81) (xy -4.318 -3.81)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.508 -3.81) (xy 0.508 -2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.048 0) (xy 5.842 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "MIC - 94dB/1KHz -  CMM-2718AT-42316-TR _1_1"
-				(rectangle
-					(start -8.89 7.112)
-					(end 10.16 -7.366)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(circle
-					(center -3.302 -3.81)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy -3.302 -3.81) (xy -3.302 -1.27) (xy -4.318 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(text "MICROPHONE"
-					(at 0.508 -6.096 0)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(text "Current consumption 2V: 160uA\n"
-					(at 6.096 8.382 0)
-					(effects
-						(font
-							(size 1.27 1.27)
-							(color 132 0 0 1)
-						)
-					)
-				)
-				(pin power_in line
-					(at -13.97 3.81 0)
-					(length 5.08)
-					(name "VDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -13.97 -1.27 0)
-					(length 5.08)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -13.97 -3.81 0)
-					(length 5.08)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 15.24 0 180)
-					(length 5.08)
-					(name "OUT"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Flatburn_V4_sym_library:NMOS - 30V 350mA -  DMN63D8L-7"
-			(pin_names
-				(offset 0.254)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "Q"
-				(at -17.272 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Value" "DMN63D8L-7"
-				(at -17.272 3.302 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-				(at 21.59 -94.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 21.59 -194.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Description" "NMOS, 30Vdss  RDS 2,8Ohm 20Vgss -350mA Id"
-				(at 1.778 -19.304 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Distributor" "M-621-DMN63D8L-7 "
-				(at -10.414 -21.336 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "MPN" "DMN63D8L-7 "
-				(at 21.59 -494.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Pkg Type" "SMD"
-				(at 21.59 -594.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Price Distributor Cad" "0,095"
-				(at 0 -12.7 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Temp Range" "-55°..+150°"
-				(at 0 -14.732 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Implementation" "FAE_LB"
-				(at -0.254 -16.51 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "NMOS - 30V 350mA -  DMN63D8L-7_0_1"
-				(polyline
-					(pts
-						(xy -2.032 -1.27) (xy -4.572 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.524 0.254) (xy -1.524 -0.254)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.524 0) (xy -0.508 -0.381) (xy -0.508 0.381) (xy -1.524 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.508 1.27) (xy 0 1.27) (xy -1.524 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.508 -1.016) (xy 0 -1.016) (xy -1.524 -1.016)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 1.27) (xy 0 2.54) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 0 0)
-					(radius 3.0294)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -2.54) (xy 0 0) (xy -1.524 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -2.54) (xy 0 -1.778) (xy 0 -1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 2.032) (xy 1.27 2.032) (xy 0 2.032)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 -1.778) (xy 1.27 -1.778) (xy 0 -1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 0.508) (xy 1.27 0.508) (xy 1.27 2.032)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 0.508) (xy 0.508 -0.762) (xy 2.032 -0.762) (xy 1.27 0.508)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -1.778) (xy 1.27 -1.778) (xy 1.27 -0.508)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "NMOS - 30V 350mA -  DMN63D8L-7_1_1"
-				(polyline
-					(pts
-						(xy -2.032 1.524) (xy -2.032 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.524 1.524) (xy -1.524 1.016)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.524 -0.762) (xy -1.524 -1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 0.508) (xy 1.016 0.508) (xy 1.778 0.508)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(text "n"
-					(at -0.762 2.032 0)
-					(effects
-						(font
-							(size 0.889 0.889)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -1.27 0)
-					(length 2.54)
-					(name "G"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 5.08 270)
-					(length 2.54)
-					(name "D"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 0 -5.08 90)
-					(length 2.54)
-					(name "S"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Flatburn_V4_sym_library:OPAMP - 5.5V/10MHz - MCP6022-I/SN"
+		(symbol "FAE-IC:OPAMP - 5.5V/10MHz - MCP6022-I/SN"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -2880,7 +1619,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Flatburn_V4_sym_library:OPAMP - 5V/1MHz - AD8541ARTZ-REEL7 "
+		(symbol "FAE-IC:OPAMP - 5V/1MHz - AD8541ARTZ-REEL7 "
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -3144,7 +1883,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Flatburn_V4_sym_library:RMS-DC CONV - +-5.5V -  TXS0102DQER_1"
+		(symbol "FAE-IC:RMS-DC CONV - +-5.5V -  TXS0102DQER_1"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -3420,1677 +2159,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Flatburn_V4_sym_library:RS-0402-0R 1/5W 0.5%"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "R"
-				(at -1.778 -6.096 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Value" "0R"
-				(at -1.778 3.556 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-				(at 21.59 -94.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 21.59 -194.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Description" "CHIP. RES 0 1/5W 0402 0,5%"
-				(at 8.382 -53.594 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Distributor" "M-71-RCS04020000Z0ED "
-				(at 0.254 -55.372 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "MPN" "RCS04020000Z0ED"
-				(at 21.59 -494.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Pkg Type" "SMD"
-				(at 21.59 -594.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Price Distributor Cad" "0,095"
-				(at 0.254 -13.716 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Temp Range" "-°..+°"
-				(at -0.254 -12.954 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Implementation" "FAE_LB"
-				(at -1.016 -15.748 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "RS-0402-0R 1/5W 0.5%_0_1"
-				(rectangle
-					(start -1.016 -2.54)
-					(end 1.016 2.54)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "RS-0402-0R 1/5W 0.5%_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Flatburn_V4_sym_library:RS-0402-100K 1/16W 1%"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "R"
-				(at -1.778 -6.096 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Value" "100k"
-				(at -1.778 3.556 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-				(at 21.59 -94.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 21.59 -194.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Description" "CHIP. RES 100K 1/16W 0402 1%"
-				(at 8.382 -53.594 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Distributor" "FAE-025127"
-				(at 0.254 -55.372 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "MPN" ""
-				(at 21.59 -494.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Pkg Type" "SMD"
-				(at 21.59 -594.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Price Distributor Cad" ""
-				(at 0.254 -13.716 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Temp Range" "-°..+°"
-				(at -0.254 -12.954 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Implementation" "FAE_LB"
-				(at -1.016 -15.748 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "RS-0402-100K 1/16W 1%_0_1"
-				(rectangle
-					(start -1.016 -2.54)
-					(end 1.016 2.54)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "RS-0402-100K 1/16W 1%_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Flatburn_V4_sym_library:RS-0402-100R 1/16W 1%"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "R"
-				(at -1.778 -6.096 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Value" "100R"
-				(at -1.778 3.556 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-				(at 21.59 -94.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 21.59 -194.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Description" "CHIP. RES 100 1/16W 0402 1%"
-				(at 8.382 -53.594 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Distributor" "FAE-026315"
-				(at 0.254 -55.372 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "MPN" ""
-				(at 21.59 -494.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Pkg Type" "SMD"
-				(at 21.59 -594.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Price Distributor Cad" ""
-				(at 0.254 -13.716 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Temp Range" "-°..+°"
-				(at -0.254 -12.954 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Implementation" "FAE_LB"
-				(at -1.016 -15.748 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "RS-0402-100R 1/16W 1%_0_1"
-				(rectangle
-					(start -1.016 -2.54)
-					(end 1.016 2.54)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "RS-0402-100R 1/16W 1%_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Flatburn_V4_sym_library:RS-0402-10K 1/16W 1%"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "R"
-				(at -1.778 -6.096 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Value" "10k"
-				(at -1.778 3.556 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-				(at 21.59 -94.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 21.59 -194.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Description" "CHIP. RES 10K 0402 1/16W 1%"
-				(at 8.382 -53.594 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Distributor" "FAE-025129"
-				(at 0.254 -55.372 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "MPN" ""
-				(at 21.59 -494.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Pkg Type" "SMD"
-				(at 21.59 -594.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Price Distributor Cad" ""
-				(at 0.254 -13.716 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Temp Range" "-°..+°"
-				(at -0.254 -12.954 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Implementation" "FAE_LB"
-				(at -1.016 -15.748 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "RS-0402-10K 1/16W 1%_0_1"
-				(rectangle
-					(start -1.016 -2.54)
-					(end 1.016 2.54)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "RS-0402-10K 1/16W 1%_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Flatburn_V4_sym_library:RS-0402-120K 1/16W 1%"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "R"
-				(at -1.778 -6.096 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Value" "120k"
-				(at -1.778 3.556 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-				(at 21.59 -94.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 21.59 -194.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Description" "CHIP. RES 120K 0402 1/16W 0.1%"
-				(at 8.382 -53.594 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Distributor" "FAE-051352"
-				(at 0.254 -55.372 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "MPN" "CRCW0402120KFKED "
-				(at 21.59 -494.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Pkg Type" "SMD"
-				(at 21.59 -594.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Price Distributor Cad" ""
-				(at 0.254 -13.716 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Temp Range" "-°..+°"
-				(at -0.254 -12.954 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Implementation" "FAE_LB"
-				(at -1.016 -15.748 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "RS-0402-120K 1/16W 1%_0_1"
-				(rectangle
-					(start -1.016 -2.54)
-					(end 1.016 2.54)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "RS-0402-120K 1/16W 1%_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Flatburn_V4_sym_library:RS-0402-1K 1/16W 1%"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "R"
-				(at -1.778 -6.096 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Value" "1k"
-				(at -1.778 3.556 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-				(at 21.59 -94.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 21.59 -194.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Description" "CHIP. RES 1K 0402 1/16W 1%"
-				(at 8.382 -53.594 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Distributor" "FAE-033446"
-				(at 0.254 -55.372 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "MPN" ""
-				(at 21.59 -494.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Pkg Type" "SMD"
-				(at 21.59 -594.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Price Distributor Cad" ""
-				(at 0.254 -13.716 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Temp Range" "-°..+°"
-				(at -0.254 -12.954 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Implementation" "FAE_LB"
-				(at -1.016 -15.748 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "RS-0402-1K 1/16W 1%_0_1"
-				(rectangle
-					(start -1.016 -2.54)
-					(end 1.016 2.54)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "RS-0402-1K 1/16W 1%_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Flatburn_V4_sym_library:RS-0402-1M 1/16W 1%"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "R"
-				(at -1.778 -6.096 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Value" "1M"
-				(at -1.778 3.556 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-				(at 21.59 -94.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 21.59 -194.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Description" "CHIP. RES 1M 0402 1/16W 1%"
-				(at 8.382 -53.594 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Distributor" "FAE-032464"
-				(at 0.254 -55.372 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "MPN" ""
-				(at 21.59 -494.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Pkg Type" "SMD"
-				(at 21.59 -594.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Price Distributor Cad" ""
-				(at 0.254 -13.716 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Temp Range" "-°..+°"
-				(at -0.254 -12.954 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Implementation" "FAE_LB"
-				(at -1.016 -15.748 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "RS-0402-1M 1/16W 1%_0_1"
-				(rectangle
-					(start -1.016 -2.54)
-					(end 1.016 2.54)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "RS-0402-1M 1/16W 1%_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Flatburn_V4_sym_library:RS-0402-2K2 1/16W 1%"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "R"
-				(at -1.778 -6.096 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Value" "2.2k"
-				(at -1.778 3.556 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-				(at 21.59 -94.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 21.59 -194.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Description" "CHIP. RES 2K2 0402 1/16W 1%"
-				(at 8.382 -53.594 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Distributor" "FAE-035095"
-				(at 0.254 -55.372 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "MPN" ""
-				(at 21.59 -494.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Pkg Type" "SMD"
-				(at 21.59 -594.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Price Distributor Cad" ""
-				(at 0.254 -13.716 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Temp Range" "-°..+°"
-				(at -0.254 -12.954 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Implementation" "FAE_LB"
-				(at -1.016 -15.748 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "RS-0402-2K2 1/16W 1%_0_1"
-				(rectangle
-					(start -1.016 -2.54)
-					(end 1.016 2.54)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "RS-0402-2K2 1/16W 1%_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Flatburn_V4_sym_library:RS-0402-4K7 1/16W 1%"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "R"
-				(at -1.778 -6.096 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Value" "4.7k"
-				(at -1.778 3.556 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-				(at 21.59 -94.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 21.59 -194.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Description" "CHIP. RES 4K7 0402 1/16W 1%"
-				(at 8.382 -53.594 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Distributor" "FAE-025131"
-				(at 0.254 -55.372 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "MPN" ""
-				(at 21.59 -494.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Pkg Type" "SMD"
-				(at 21.59 -594.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Price Distributor Cad" ""
-				(at 0.254 -13.716 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Temp Range" "-°..+°"
-				(at -0.254 -12.954 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Implementation" "FAE_LB"
-				(at -1.016 -15.748 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "RS-0402-4K7 1/16W 1%_0_1"
-				(rectangle
-					(start -1.016 -2.54)
-					(end 1.016 2.54)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "RS-0402-4K7 1/16W 1%_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Flatburn_V4_sym_library:RS-0603-390R 1/16W 1%"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "R"
-				(at -1.778 -6.096 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Value" "390R"
-				(at -1.778 3.556 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-				(at 21.59 -94.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 21.59 -194.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Description" "CHIP. RES 390R 0603 1/16W 1%"
-				(at 8.382 -53.594 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Distributor" "FAE-020433"
-				(at 0.254 -55.372 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "MPN" ""
-				(at 21.59 -494.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Pkg Type" "SMD"
-				(at 21.59 -594.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Price Distributor Cad" ""
-				(at 0.254 -13.716 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Temp Range" "-°..+°"
-				(at -0.254 -12.954 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Implementation" "FAE_LB"
-				(at -1.016 -15.748 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "RS-0603-390R 1/16W 1%_0_1"
-				(rectangle
-					(start -1.016 -2.54)
-					(end 1.016 2.54)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "RS-0603-390R 1/16W 1%_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Flatburn_V4_sym_library:SWITCH - 4x - 74LV4066PW"
+		(symbol "FAE-IC:SWITCH - 4x - 74LV4066PW"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -5664,35 +2733,56 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Flatburn_V4_sym_library:TestPoint"
+		(symbol "FAE-RES:RS-0402-0R 1/5W 0.5%"
 			(pin_numbers
 				(hide yes)
 			)
 			(pin_names
-				(offset 0.762)
 				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "TP"
-				(at 0 6.858 0)
+			(property "Reference" "R"
+				(at -1.778 -6.096 90)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left top)
 				)
 			)
-			(property "Value" "TestPoint"
-				(at 0 5.08 0)
+			(property "Value" "0R"
+				(at -1.778 3.556 90)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left top)
 				)
 			)
-			(property "Footprint" ""
-				(at 5.08 0 0)
+			(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+				(at 21.59 -94.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 21.59 -194.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Description" "CHIP. RES 0 1/5W 0402 0,5%"
+				(at 8.382 -53.594 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -5700,8 +2790,38 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "~"
-				(at 5.08 0 0)
+			(property "Distributor" "M-71-RCS04020000Z0ED "
+				(at 0.254 -55.372 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "MPN" "RCS04020000Z0ED"
+				(at 21.59 -494.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Pkg Type" "SMD"
+				(at 21.59 -594.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Price Distributor Cad" "0,095"
+				(at 0.254 -13.716 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -5709,8 +2829,8 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "test point"
-				(at 0 0 0)
+			(property "Temp Range" "-°..+°"
+				(at -0.254 -12.954 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -5718,8 +2838,8 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "test point tp"
-				(at 0 0 0)
+			(property "Implementation" "FAE_LB"
+				(at -1.016 -15.748 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -5727,8 +2847,109 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "Pin* Test*"
-				(at 0 0 0)
+			(symbol "RS-0402-0R 1/5W 0.5%_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "RS-0402-0R 1/5W 0.5%_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "FAE-RES:RS-0402-100K 1/16W 1%"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at -1.778 -6.096 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Value" "100k"
+				(at -1.778 3.556 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+				(at 21.59 -94.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 21.59 -194.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Description" "CHIP. RES 100K 1/16W 0402 1%"
+				(at 8.382 -53.594 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -5736,10 +2957,1564 @@
 					(hide yes)
 				)
 			)
-			(symbol "TestPoint_0_1"
-				(circle
-					(center 0 3.302)
-					(radius 0.762)
+			(property "Distributor" "FAE-025127"
+				(at 0.254 -55.372 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "MPN" ""
+				(at 21.59 -494.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Pkg Type" "SMD"
+				(at 21.59 -594.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Price Distributor Cad" ""
+				(at 0.254 -13.716 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Temp Range" "-°..+°"
+				(at -0.254 -12.954 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Implementation" "FAE_LB"
+				(at -1.016 -15.748 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "RS-0402-100K 1/16W 1%_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "RS-0402-100K 1/16W 1%_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "FAE-RES:RS-0402-100R 1/16W 1%"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at -1.778 -6.096 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Value" "100R"
+				(at -1.778 3.556 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+				(at 21.59 -94.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 21.59 -194.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Description" "CHIP. RES 100 1/16W 0402 1%"
+				(at 8.382 -53.594 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Distributor" "FAE-026315"
+				(at 0.254 -55.372 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "MPN" ""
+				(at 21.59 -494.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Pkg Type" "SMD"
+				(at 21.59 -594.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Price Distributor Cad" ""
+				(at 0.254 -13.716 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Temp Range" "-°..+°"
+				(at -0.254 -12.954 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Implementation" "FAE_LB"
+				(at -1.016 -15.748 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "RS-0402-100R 1/16W 1%_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "RS-0402-100R 1/16W 1%_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "FAE-RES:RS-0402-10K 1/16W 1%"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at -1.778 -6.096 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Value" "10k"
+				(at -1.778 3.556 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+				(at 21.59 -94.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 21.59 -194.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Description" "CHIP. RES 10K 0402 1/16W 1%"
+				(at 8.382 -53.594 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Distributor" "FAE-025129"
+				(at 0.254 -55.372 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "MPN" ""
+				(at 21.59 -494.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Pkg Type" "SMD"
+				(at 21.59 -594.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Price Distributor Cad" ""
+				(at 0.254 -13.716 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Temp Range" "-°..+°"
+				(at -0.254 -12.954 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Implementation" "FAE_LB"
+				(at -1.016 -15.748 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "RS-0402-10K 1/16W 1%_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "RS-0402-10K 1/16W 1%_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "FAE-RES:RS-0402-120K 1/16W 1%"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at -1.778 -6.096 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Value" "120k"
+				(at -1.778 3.556 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+				(at 21.59 -94.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 21.59 -194.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Description" "CHIP. RES 120K 0402 1/16W 0.1%"
+				(at 8.382 -53.594 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Distributor" "FAE-051352"
+				(at 0.254 -55.372 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "MPN" "CRCW0402120KFKED "
+				(at 21.59 -494.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Pkg Type" "SMD"
+				(at 21.59 -594.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Price Distributor Cad" ""
+				(at 0.254 -13.716 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Temp Range" "-°..+°"
+				(at -0.254 -12.954 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Implementation" "FAE_LB"
+				(at -1.016 -15.748 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "RS-0402-120K 1/16W 1%_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "RS-0402-120K 1/16W 1%_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "FAE-RES:RS-0402-1K 1/16W 1%"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at -1.778 -6.096 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Value" "1k"
+				(at -1.778 3.556 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+				(at 21.59 -94.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 21.59 -194.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Description" "CHIP. RES 1K 0402 1/16W 1%"
+				(at 8.382 -53.594 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Distributor" "FAE-033446"
+				(at 0.254 -55.372 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "MPN" ""
+				(at 21.59 -494.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Pkg Type" "SMD"
+				(at 21.59 -594.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Price Distributor Cad" ""
+				(at 0.254 -13.716 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Temp Range" "-°..+°"
+				(at -0.254 -12.954 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Implementation" "FAE_LB"
+				(at -1.016 -15.748 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "RS-0402-1K 1/16W 1%_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "RS-0402-1K 1/16W 1%_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "FAE-RES:RS-0402-1M 1/16W 1%"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at -1.778 -6.096 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Value" "1M"
+				(at -1.778 3.556 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+				(at 21.59 -94.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 21.59 -194.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Description" "CHIP. RES 1M 0402 1/16W 1%"
+				(at 8.382 -53.594 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Distributor" "FAE-032464"
+				(at 0.254 -55.372 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "MPN" ""
+				(at 21.59 -494.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Pkg Type" "SMD"
+				(at 21.59 -594.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Price Distributor Cad" ""
+				(at 0.254 -13.716 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Temp Range" "-°..+°"
+				(at -0.254 -12.954 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Implementation" "FAE_LB"
+				(at -1.016 -15.748 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "RS-0402-1M 1/16W 1%_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "RS-0402-1M 1/16W 1%_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "FAE-RES:RS-0402-2K2 1/16W 1%"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at -1.778 -6.096 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Value" "2.2k"
+				(at -1.778 3.556 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+				(at 21.59 -94.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 21.59 -194.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Description" "CHIP. RES 2K2 0402 1/16W 1%"
+				(at 8.382 -53.594 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Distributor" "FAE-035095"
+				(at 0.254 -55.372 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "MPN" ""
+				(at 21.59 -494.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Pkg Type" "SMD"
+				(at 21.59 -594.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Price Distributor Cad" ""
+				(at 0.254 -13.716 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Temp Range" "-°..+°"
+				(at -0.254 -12.954 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Implementation" "FAE_LB"
+				(at -1.016 -15.748 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "RS-0402-2K2 1/16W 1%_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "RS-0402-2K2 1/16W 1%_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "FAE-RES:RS-0402-4K7 1/16W 1%"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at -1.778 -6.096 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Value" "4.7k"
+				(at -1.778 3.556 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+				(at 21.59 -94.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 21.59 -194.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Description" "CHIP. RES 4K7 0402 1/16W 1%"
+				(at 8.382 -53.594 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Distributor" "FAE-025131"
+				(at 0.254 -55.372 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "MPN" ""
+				(at 21.59 -494.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Pkg Type" "SMD"
+				(at 21.59 -594.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Price Distributor Cad" ""
+				(at 0.254 -13.716 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Temp Range" "-°..+°"
+				(at -0.254 -12.954 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Implementation" "FAE_LB"
+				(at -1.016 -15.748 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "RS-0402-4K7 1/16W 1%_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "RS-0402-4K7 1/16W 1%_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "FAE-RES:RS-0603-390R 1/16W 1%"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at -1.778 -6.096 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Value" "390R"
+				(at -1.778 3.556 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+				(at 21.59 -94.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 21.59 -194.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Description" "CHIP. RES 390R 0603 1/16W 1%"
+				(at 8.382 -53.594 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Distributor" "FAE-020433"
+				(at 0.254 -55.372 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "MPN" ""
+				(at 21.59 -494.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Pkg Type" "SMD"
+				(at 21.59 -594.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Price Distributor Cad" ""
+				(at 0.254 -13.716 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Temp Range" "-°..+°"
+				(at -0.254 -12.954 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Implementation" "FAE_LB"
+				(at -1.016 -15.748 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "RS-0603-390R 1/16W 1%_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "RS-0603-390R 1/16W 1%_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "FAE-SENS:ACCEL- KXTJ3-1057 "
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at 3.81 15.494 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Value" "KXTJ3-1057"
+				(at 3.81 13.97 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Footprint" "FAE-SENS:LGA12_2X2X0.9_KNX-M"
+				(at 21.59 -94.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 21.59 -194.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Description" "Tri-axis ±2g, ±4g, ±8g, or ±16g accelerometer, 1.71-3.6V supply, I2C, 8-12-14 bit resolution"
+				(at 8.382 -53.594 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Distributor" "M-912-KXTJ3-1057 "
+				(at 0.254 -55.372 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "MPN" "KXTJ3-1057 "
+				(at 21.59 -494.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Pkg Type" "SMD"
+				(at 21.59 -594.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Price Distributor Cad" "1,7"
+				(at -1.016 -32.512 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Temp Range" "-40°..+85°"
+				(at -1.27 -30.734 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Implementation" "FAE_LB"
+				(at -1.27 -28.448 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "ACCEL- KXTJ3-1057 _0_1"
+				(rectangle
+					(start 11.938 21.082)
+					(end 11.938 21.082)
 					(stroke
 						(width 0)
 						(type default)
@@ -5749,11 +4524,39 @@
 					)
 				)
 			)
-			(symbol "TestPoint_1_1"
-				(pin passive line
-					(at 0 0 90)
-					(length 2.54)
-					(name "1"
+			(symbol "ACCEL- KXTJ3-1057 _1_1"
+				(rectangle
+					(start -9.906 10.16)
+					(end 10.16 -10.16)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(text "ACCEL."
+					(at -6.35 -8.89 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(text "Current consumption 3.3V: 155uA\n"
+					(at 20.066 11.684 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+							(color 132 0 0 1)
+						)
+					)
+				)
+				(pin input line
+					(at -15.24 3.81 0)
+					(length 5.08)
+					(name "ADDR"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5761,6 +4564,1203 @@
 						)
 					)
 					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -15.24 1.27 0)
+					(length 5.08)
+					(name "SDA"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -15.24 -1.27 0)
+					(length 5.08)
+					(name "IO_VDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -15.24 -3.81 0)
+					(length 5.08)
+					(name "RES"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -1.27 15.24 270)
+					(length 5.08)
+					(name "SCL"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -1.27 -15.24 90)
+					(length 5.08)
+					(name "INT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 1.27 15.24 270)
+					(length 5.08)
+					(name "IO_VDD2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 1.27 -15.24 90)
+					(length 5.08)
+					(name "GND1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 15.24 3.81 180)
+					(length 5.08)
+					(name "VDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 15.24 1.27 180)
+					(length 5.08)
+					(name "GND3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 15.24 -1.27 180)
+					(length 5.08)
+					(name "GND2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 15.24 -3.81 180)
+					(length 5.08)
+					(name "VDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "FAE-SENS:HUM/TEMP/PRESS - BME280"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at -10.16 12.192 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Value" "BME280"
+				(at -10.16 10.414 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Footprint" "FAE-SENS:PSON65P250X250X100-8N"
+				(at 21.59 -94.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 21.59 -194.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Description" "Humidity, temperature and pressure sensor, 1.7-3.6V"
+				(at 8.382 -53.594 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Distributor" "M-262-BME280 "
+				(at 0.254 -55.372 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "MPN" "BME280"
+				(at 21.59 -494.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Pkg Type" "SMD"
+				(at 21.59 -594.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Price Distributor Cad" "3,78"
+				(at -1.016 -32.512 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Temp Range" "-40°..+85°"
+				(at -1.27 -30.734 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Implementation" "FAE_LB"
+				(at -1.27 -28.448 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "HUM/TEMP/PRESS - BME280_1_1"
+				(rectangle
+					(start -10.16 6.35)
+					(end 10.16 -6.096)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(text "HUM.\nTEMP.\nPRESS."
+					(at 0.508 -0.254 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(text "Current consumption 1.8V: 2mA\n"
+					(at 5.334 7.62 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+							(color 132 0 0 1)
+						)
+					)
+				)
+				(pin power_in line
+					(at -15.24 3.81 0)
+					(length 5.08)
+					(name "VDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -15.24 1.27 0)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -15.24 -1.27 0)
+					(length 5.08)
+					(name "VDDIO"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at -15.24 -3.81 0)
+					(length 5.08)
+					(name "SDO"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 15.24 3.81 180)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 15.24 1.27 180)
+					(length 5.08)
+					(name "CSB"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 15.24 -1.27 180)
+					(length 5.08)
+					(name "SDI"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 15.24 -3.81 180)
+					(length 5.08)
+					(name "SCK"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "FAE-SENS:MIC - 94dB/1KHz -  CMM-2718AT-42316-TR "
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at -9.398 12.954 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Value" "CMM-2718AT-42316-TR"
+				(at -9.398 11.176 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Footprint" "FAE-SENS:CMM2718AT42316TR"
+				(at 21.59 -94.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 21.59 -194.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Description" "Microphone, 94dB,1KHz"
+				(at 8.382 -53.594 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Distributor" "M-490-CMM2718AT42316TR  "
+				(at 0.254 -55.372 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "MPN" "CMM-2718AT-42316-TR "
+				(at 21.59 -494.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Pkg Type" "SMD"
+				(at 21.59 -594.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Price Distributor Cad" "0,665"
+				(at -1.016 -32.512 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Temp Range" "-40°..+100°"
+				(at -1.27 -30.734 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Implementation" "FAE_LB"
+				(at -1.27 -28.448 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "MIC - 94dB/1KHz -  CMM-2718AT-42316-TR _0_1"
+				(polyline
+					(pts
+						(xy -2.032 2.54) (xy -2.032 -2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.508 3.81) (xy -4.318 3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.508 3.81) (xy 0.508 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0.508 0)
+					(radius 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.508 -3.81) (xy -4.318 -3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.508 -3.81) (xy 0.508 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.048 0) (xy 5.842 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "MIC - 94dB/1KHz -  CMM-2718AT-42316-TR _1_1"
+				(rectangle
+					(start -8.89 7.112)
+					(end 10.16 -7.366)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(circle
+					(center -3.302 -3.81)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.302 -3.81) (xy -3.302 -1.27) (xy -4.318 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(text "MICROPHONE"
+					(at 0.508 -6.096 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(text "Current consumption 2V: 160uA\n"
+					(at 6.096 8.382 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+							(color 132 0 0 1)
+						)
+					)
+				)
+				(pin power_in line
+					(at -13.97 3.81 0)
+					(length 5.08)
+					(name "VDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -13.97 -1.27 0)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -13.97 -3.81 0)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 15.24 0 180)
+					(length 5.08)
+					(name "OUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "FAE-TRANSISTOR:NMOS - 30V 350mA -  DMN63D8L-7"
+			(pin_names
+				(offset 0.254)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "Q"
+				(at -17.272 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Value" "DMN63D8L-7"
+				(at -17.272 3.302 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+				(at 21.59 -94.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 21.59 -194.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Description" "NMOS, 30Vdss  RDS 2,8Ohm 20Vgss -350mA Id"
+				(at 1.778 -19.304 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Distributor" "M-621-DMN63D8L-7 "
+				(at -10.414 -21.336 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "MPN" "DMN63D8L-7 "
+				(at 21.59 -494.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Pkg Type" "SMD"
+				(at 21.59 -594.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Price Distributor Cad" "0,095"
+				(at 0 -12.7 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Temp Range" "-55°..+150°"
+				(at 0 -14.732 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Implementation" "FAE_LB"
+				(at -0.254 -16.51 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "NMOS - 30V 350mA -  DMN63D8L-7_0_1"
+				(polyline
+					(pts
+						(xy -2.032 -1.27) (xy -4.572 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 0.254) (xy -1.524 -0.254)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 0) (xy -0.508 -0.381) (xy -0.508 0.381) (xy -1.524 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.508 1.27) (xy 0 1.27) (xy -1.524 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.508 -1.016) (xy 0 -1.016) (xy -1.524 -1.016)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.27) (xy 0 2.54) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 0)
+					(radius 3.0294)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -2.54) (xy 0 0) (xy -1.524 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -2.54) (xy 0 -1.778) (xy 0 -1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 2.032) (xy 1.27 2.032) (xy 0 2.032)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.778) (xy 1.27 -1.778) (xy 0 -1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0.508) (xy 1.27 0.508) (xy 1.27 2.032)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0.508) (xy 0.508 -0.762) (xy 2.032 -0.762) (xy 1.27 0.508)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.778) (xy 1.27 -1.778) (xy 1.27 -0.508)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "NMOS - 30V 350mA -  DMN63D8L-7_1_1"
+				(polyline
+					(pts
+						(xy -2.032 1.524) (xy -2.032 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 1.524) (xy -1.524 1.016)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 -0.762) (xy -1.524 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 0.508) (xy 1.016 0.508) (xy 1.778 0.508)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(text "n"
+					(at -0.762 2.032 0)
+					(effects
+						(font
+							(size 0.889 0.889)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -1.27 0)
+					(length 2.54)
+					(name "G"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 5.08 270)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 0 -5.08 90)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -10664,7 +10664,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0402-100n/50V-10%")
+		(lib_id "FAE-CAP:CS-C-0402-100n/50V-10%")
 		(at 231.14 191.77 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -10865,7 +10865,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-100K 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-100K 1/16W 1%")
 		(at 166.37 66.04 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -11001,7 +11001,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:OPAMP - 5.5V/10MHz - MCP6022-I/SN")
+		(lib_id "FAE-IC:OPAMP - 5.5V/10MHz - MCP6022-I/SN")
 		(at 173.99 172.72 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -11153,7 +11153,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:MIC - 94dB/1KHz -  CMM-2718AT-42316-TR ")
+		(lib_id "FAE-SENS:MIC - 94dB/1KHz -  CMM-2718AT-42316-TR ")
 		(at 53.34 175.26 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -11293,7 +11293,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-100K 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-100K 1/16W 1%")
 		(at 304.8 160.02 180)
 		(unit 1)
 		(exclude_from_sim no)
@@ -11427,7 +11427,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0402-100n/50V-10%")
+		(lib_id "FAE-CAP:CS-C-0402-100n/50V-10%")
 		(at 203.2 186.69 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -11628,7 +11628,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-1M 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-1M 1/16W 1%")
 		(at 95.25 166.37 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -11764,7 +11764,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-2K2 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-4K7 1/16W 1%")
 		(at 179.07 93.98 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -11781,13 +11781,13 @@
 				(justify left)
 			)
 		)
-		(property "Value" "2.2k"
-			(at 180.34 94.615 0)
+		(property "Value" "4.7k"
+			(at 180.34 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify left top)
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
@@ -11810,7 +11810,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "CHIP. RES 2K2 0402 1/16W 1%"
+		(property "Description" "CHIP. RES 4K7 0402 1/16W 1%"
 			(at 187.452 147.574 0)
 			(effects
 				(font
@@ -11819,7 +11819,7 @@
 				(hide yes)
 			)
 		)
-		(property "Distributor" "FAE-035095"
+		(property "Distributor" "FAE-025131"
 			(at 179.324 149.352 0)
 			(effects
 				(font
@@ -11900,7 +11900,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-10K 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-10K 1/16W 1%")
 		(at 46.99 248.92 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -12036,7 +12036,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-10K 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-10K 1/16W 1%")
 		(at 43.18 224.79 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -12181,7 +12181,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:OPAMP - 5.5V/10MHz - MCP6022-I/SN")
+		(lib_id "FAE-IC:OPAMP - 5.5V/10MHz - MCP6022-I/SN")
 		(at 320.04 223.52 0)
 		(unit 2)
 		(exclude_from_sim no)
@@ -12333,7 +12333,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:OPAMP - 5V/1MHz - AD8541ARTZ-REEL7 ")
+		(lib_id "FAE-IC:OPAMP - 5V/1MHz - AD8541ARTZ-REEL7 ")
 		(at 45.72 71.12 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -12476,7 +12476,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-100K 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-100K 1/16W 1%")
 		(at 227.33 53.34 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -12612,7 +12612,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0402-1u/16V-10%")
+		(lib_id "FAE-CAP:CS-C-0402-1u/16V-10%")
 		(at 121.92 186.69 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -12746,7 +12746,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0402-100n/50V-10%")
+		(lib_id "FAE-CAP:CS-C-0402-100n/50V-10%")
 		(at 123.19 110.49 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -12882,7 +12882,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:NMOS - 30V 350mA -  DMN63D8L-7")
+		(lib_id "FAE-TRANSISTOR:NMOS - 30V 350mA -  DMN63D8L-7")
 		(at 135.89 255.27 0)
 		(mirror y)
 		(unit 1)
@@ -13022,7 +13022,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0402-100n/50V-10%")
+		(lib_id "FAE-CAP:CS-C-0402-100n/50V-10%")
 		(at 328.93 76.2 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -13289,7 +13289,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0402-100n/50V-10%")
+		(lib_id "FAE-CAP:CS-C-0402-100n/50V-10%")
 		(at 369.57 184.15 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -13425,7 +13425,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-0R 1/5W 0.5%")
+		(lib_id "FAE-RES:RS-0402-0R 1/5W 0.5%")
 		(at 242.57 74.93 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -13626,7 +13626,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-100R 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-100R 1/16W 1%")
 		(at 153.67 256.54 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -13760,7 +13760,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:DAC - 12bit/2.7-5V -  TXS0102DQER_1_1")
+		(lib_id "FAE-IC:DAC - 12bit/2.7-5V -  TXS0102DQER_1_1")
 		(at 68.58 236.22 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -13918,7 +13918,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:TestPoint")
+		(lib_id "Connector:TestPoint")
 		(at 114.3 233.68 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -13992,7 +13992,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-100K 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-100K 1/16W 1%")
 		(at 130.81 66.04 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -14128,7 +14128,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0402-100n/50V-10%")
+		(lib_id "FAE-CAP:CS-C-0402-100n/50V-10%")
 		(at 334.01 76.2 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -14264,7 +14264,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0402-100n/50V-10%")
+		(lib_id "FAE-CAP:CS-C-0402-100n/50V-10%")
 		(at 31.75 186.69 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -14400,7 +14400,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0402-100n/50V-10%")
+		(lib_id "FAE-CAP:CS-C-0402-100n/50V-10%")
 		(at 363.22 184.15 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -14536,7 +14536,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:HUM/TEMP/PRESS - BME280")
+		(lib_id "FAE-SENS:HUM/TEMP/PRESS - BME280")
 		(at 354.33 59.69 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -14688,7 +14688,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-100K 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-100K 1/16W 1%")
 		(at 167.64 110.49 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -14890,7 +14890,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-10K 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-10K 1/16W 1%")
 		(at 149.86 181.61 180)
 		(unit 1)
 		(exclude_from_sim no)
@@ -15092,7 +15092,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0402-100n/50V-10%")
+		(lib_id "FAE-CAP:CS-C-0402-100n/50V-10%")
 		(at 228.6 246.38 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -15228,7 +15228,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-0R 1/5W 0.5%")
+		(lib_id "FAE-RES:RS-0402-0R 1/5W 0.5%")
 		(at 74.93 71.12 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -15362,7 +15362,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-10K 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-10K 1/16W 1%")
 		(at 321.31 74.93 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -15563,7 +15563,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-10K 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-10K 1/16W 1%")
 		(at 46.99 224.79 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -15773,7 +15773,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-1M 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-1M 1/16W 1%")
 		(at 95.25 184.15 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -15909,7 +15909,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-10K 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-10K 1/16W 1%")
 		(at 237.49 74.93 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -16045,7 +16045,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0402-100n/50V-10%")
+		(lib_id "FAE-CAP:CS-C-0402-100n/50V-10%")
 		(at 88.9 254 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -16181,7 +16181,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0402-100n/50V-10%")
+		(lib_id "FAE-CAP:CS-C-0402-100n/50V-10%")
 		(at 149.86 189.23 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -16317,7 +16317,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-120K 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-120K 1/16W 1%")
 		(at 250.19 154.94 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -16451,7 +16451,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:SWITCH - 4x - 74LV4066PW")
+		(lib_id "FAE-IC:SWITCH - 4x - 74LV4066PW")
 		(at 151.13 53.34 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -16621,7 +16621,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:OPAMP - 5.5V/10MHz - MCP6022-I/SN")
+		(lib_id "FAE-IC:OPAMP - 5.5V/10MHz - MCP6022-I/SN")
 		(at 204.47 232.41 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -16773,7 +16773,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0402-100n/50V-10%")
+		(lib_id "FAE-CAP:CS-C-0402-100n/50V-10%")
 		(at 309.88 185.42 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -17040,7 +17040,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RMS-DC CONV - +-5.5V -  TXS0102DQER_1")
+		(lib_id "FAE-IC:RMS-DC CONV - +-5.5V -  TXS0102DQER_1")
 		(at 330.2 171.45 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -17192,7 +17192,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-4K7 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-4K7 1/16W 1%")
 		(at 25.4 59.69 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -17328,7 +17328,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0402-100n/50V-10%")
+		(lib_id "FAE-CAP:CS-C-0402-100n/50V-10%")
 		(at 160.02 110.49 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -17464,7 +17464,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0402-1u/16V-10%")
+		(lib_id "FAE-CAP:CS-C-0402-1u/16V-10%")
 		(at 208.28 186.69 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -17600,7 +17600,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0402-100n/50V-10%")
+		(lib_id "FAE-CAP:CS-C-0402-100n/50V-10%")
 		(at 232.41 76.2 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -17802,7 +17802,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:TestPoint")
+		(lib_id "Connector:TestPoint")
 		(at 386.08 175.26 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -17876,7 +17876,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:TestPoint")
+		(lib_id "Connector:TestPoint")
 		(at 124.46 44.45 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -17950,7 +17950,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0402-100n/50V-10%")
+		(lib_id "FAE-CAP:CS-C-0402-100n/50V-10%")
 		(at 185.42 66.04 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -18152,7 +18152,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0402-100n/50V-10%")
+		(lib_id "FAE-CAP:CS-C-0402-100n/50V-10%")
 		(at 64.77 85.09 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -18288,7 +18288,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-120K 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-120K 1/16W 1%")
 		(at 175.26 157.48 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -18488,7 +18488,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0603-10u/10V-10%")
+		(lib_id "FAE-CAP:CS-C-0603-10u/10V-10%")
 		(at 93.98 254 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -18624,7 +18624,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-10K 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-10K 1/16W 1%")
 		(at 43.18 248.92 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -18825,7 +18825,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:LEVEL SHIF - 2x - TXS0102DQER")
+		(lib_id "FAE-IC:LEVEL SHIF - 2x - TXS0102DQER")
 		(at 143.51 101.6 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -18977,7 +18977,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0402-1u/16V-10%")
+		(lib_id "FAE-CAP:CS-C-0402-1u/16V-10%")
 		(at 295.91 82.55 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -19113,7 +19113,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-2K2 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-2K2 1/16W 1%")
 		(at 102.87 233.68 270)
 		(unit 1)
 		(exclude_from_sim no)
@@ -19249,7 +19249,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-1K 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-1K 1/16W 1%")
 		(at 114.3 240.03 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -19516,7 +19516,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:TestPoint")
+		(lib_id "Connector:TestPoint")
 		(at 114.3 262.89 180)
 		(unit 1)
 		(exclude_from_sim no)
@@ -19656,7 +19656,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0603-390R 1/16W 1%")
+		(lib_id "FAE-RES:RS-0603-390R 1/16W 1%")
 		(at 107.95 175.26 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -19790,7 +19790,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:TestPoint")
+		(lib_id "Connector:TestPoint")
 		(at 137.16 44.45 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -19864,7 +19864,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-100K 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-100K 1/16W 1%")
 		(at 289.56 170.18 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -19998,7 +19998,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:OPAMP - 5.5V/10MHz - MCP6022-I/SN")
+		(lib_id "FAE-IC:OPAMP - 5.5V/10MHz - MCP6022-I/SN")
 		(at 245.11 170.18 0)
 		(unit 2)
 		(exclude_from_sim no)
@@ -20215,7 +20215,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0402-1u/16V-10%")
+		(lib_id "FAE-CAP:CS-C-0402-1u/16V-10%")
 		(at 233.68 246.38 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -20416,7 +20416,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-10K 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-10K 1/16W 1%")
 		(at 25.4 82.55 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -20552,7 +20552,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0402-100n/50V-10%")
+		(lib_id "FAE-CAP:CS-C-0402-100n/50V-10%")
 		(at 290.83 82.55 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -20688,7 +20688,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0402-1u/16V-10%")
+		(lib_id "FAE-CAP:CS-C-0402-1u/16V-10%")
 		(at 80.01 175.26 270)
 		(unit 1)
 		(exclude_from_sim no)
@@ -20822,7 +20822,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-0R 1/5W 0.5%")
+		(lib_id "FAE-RES:RS-0402-0R 1/5W 0.5%")
 		(at 232.41 53.34 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -20958,7 +20958,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-2K2 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-4K7 1/16W 1%")
 		(at 175.26 93.98 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -20975,13 +20975,13 @@
 				(justify left)
 			)
 		)
-		(property "Value" "2.2k"
-			(at 169.545 94.615 0)
+		(property "Value" "4.7k"
+			(at 169.545 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify left top)
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
@@ -21004,7 +21004,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "CHIP. RES 2K2 0402 1/16W 1%"
+		(property "Description" "CHIP. RES 4K7 0402 1/16W 1%"
 			(at 183.642 147.574 0)
 			(effects
 				(font
@@ -21013,7 +21013,7 @@
 				(hide yes)
 			)
 		)
-		(property "Distributor" "FAE-035095"
+		(property "Distributor" "FAE-025131"
 			(at 175.514 149.352 0)
 			(effects
 				(font
@@ -21225,7 +21225,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-10K 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-10K 1/16W 1%")
 		(at 114.3 254 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -21361,7 +21361,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0402-100n/50V-10%")
+		(lib_id "FAE-CAP:CS-C-0402-100n/50V-10%")
 		(at 29.21 85.09 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -21497,7 +21497,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-100K 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-100K 1/16W 1%")
 		(at 304.8 182.88 180)
 		(unit 1)
 		(exclude_from_sim no)
@@ -21697,7 +21697,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-100K 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-100K 1/16W 1%")
 		(at 19.05 82.55 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -21833,7 +21833,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-10K 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-10K 1/16W 1%")
 		(at 231.14 181.61 180)
 		(unit 1)
 		(exclude_from_sim no)
@@ -21969,7 +21969,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:CS-C-0402-100n/50V-10%")
+		(lib_id "FAE-CAP:CS-C-0402-100n/50V-10%")
 		(at 339.09 236.22 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -22105,7 +22105,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-10K 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-10K 1/16W 1%")
 		(at 237.49 53.34 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -22250,7 +22250,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:TestPoint")
+		(lib_id "Connector:TestPoint")
 		(at 130.81 44.45 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -22324,7 +22324,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:ACCEL- KXTJ3-1057 ")
+		(lib_id "FAE-SENS:ACCEL- KXTJ3-1057 ")
 		(at 259.08 66.04 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -22490,7 +22490,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Flatburn_V4_sym_library:RS-0402-10K 1/16W 1%")
+		(lib_id "FAE-RES:RS-0402-10K 1/16W 1%")
 		(at 321.31 53.34 0)
 		(unit 1)
 		(exclude_from_sim no)
