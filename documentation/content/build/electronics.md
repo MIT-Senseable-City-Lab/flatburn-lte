@@ -14,7 +14,7 @@ sidebar_position: 4
 
 ### Files
 
-- [schematics](https://github.com/MIT-Senseable-City-Lab/flatburn-lte/blob/main/hardware/electronics/Doc/Flatburn_V4_schematic.pdf) (2025-04-18)
+- [schematics](https://github.com/MIT-Senseable-City-Lab/flatburn-lte/blob/main/hardware/electronics/Doc/Flatburn_V5_schematic.pdf) (2025-07-29)
 
 - [KiCad files](https://github.com/MIT-Senseable-City-Lab/flatburn-lte/tree/main/hardware/electronics) with embedded component libraries
 
