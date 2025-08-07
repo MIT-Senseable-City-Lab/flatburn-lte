@@ -8,6 +8,10 @@ sidebar_position: 4
 
 The Python script to use is [here](https://github.com/MIT-Senseable-City-Lab/flatburn-lte/blob/main/documentation/content/explore/usb_flatburn_v1.py)
 
+**A sample demo of how to retrieve the data via USB**
+
+![USB Data Retrieval Demo](../explore/demo_usb_data.gif)
+
 ## Step 1: Connect Flatburn to Your Computer
 Turn on your Flatburn device.
 
