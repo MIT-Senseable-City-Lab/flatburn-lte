@@ -5,6 +5,9 @@ sidebar_position: 4
 # 📊 Data retrieval via USB cable
 
 **Follow these steps to retrieve data from the Flatburn device using the python script.**
+
+The Python script to use is [here](https://github.com/MIT-Senseable-City-Lab/flatburn-lte/blob/main/documentation/content/explore/usb_flatburn_v1.py)
+
 ## Step 1: Connect Flatburn to Your Computer
 Turn on your Flatburn device.
 
