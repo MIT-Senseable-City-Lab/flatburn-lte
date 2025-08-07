@@ -1,0 +1,12 @@
+  (version 1)
+(rule "Via Hole to Track Clearance"
+    (constraint hole_clearance (min 0.19mm))
+    (condition "A.Type == 'Via' && B.Type == 'Track'"))
+
+(rule "Via Hole to Via Hole"
+    (constraint hole_clearance (min 0.2mm))
+    (condition "A.Type == 'Via' && B.Type == 'Via'"))
+
+(rule "Via Hole to Pad"
+    (constraint hole_clearance (min 0.2mm))
+    (condition "A.Type == 'Via' && B.Type == 'Pad'"))
