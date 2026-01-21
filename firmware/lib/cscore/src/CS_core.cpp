@@ -103,35 +103,31 @@ void CS_core::begin(uint8_t hw_release)
   }
   case V4:
   {
-    pinMode(EN_3V, OUTPUT);
-	  pinMode(EN_3V_GPS, OUTPUT);
-    pinMode(EN_5V, OUTPUT);
-    //pinMode(EN_OPC, OUTPUT);
-    //pinMode(EN_HEATER, OUTPUT);
+    // Initialize I2C at 100kHz for reliable sensor communication
+    Wire.begin();
+    Wire.setSpeed(CLOCK_SPEED_100KHZ);
 
-    //pinMode(INT_GPS, INPUT);
+    // Configure power enable pins (from schematic page 5)
+    pinMode(EN_3V3_SENSOR, OUTPUT);   // 3V3 to sensors
+    pinMode(EN_3V3_GPS, OUTPUT);      // 3V3 to GPS
+    pinMode(EN_3V3_QWICC, OUTPUT);    // 3V3 to QWICC connector
+    pinMode(EN_5V, OUTPUT);           // 5V rail
 
-    //pinMode(MB_RST, OUTPUT);
-    //pinMode(MB_INT, INPUT);
+    // Motherboard pins
     pinMode(MB_AN, INPUT);
     pinMode(MB_CS, OUTPUT);
-   // pinMode(MB_PWM, OUTPUT);
 
-    pinMode(INT_ACC, INPUT);
+    // Interrupt pins
+    pinMode(INT_ACC, INPUT);          // Accelerometer interrupt
 
-    //pinMode(STAT1, INPUT_PULLUP);
-    //pinMode(STAT2, INPUT_PULLUP);
-
-    //default configuration - everything OFF
-    digitalWrite(EN_3V, LOW);
-	  digitalWrite(EN_3V_GPS, LOW);
+    // Default configuration - everything OFF
+    digitalWrite(EN_3V3_SENSOR, LOW);
+    digitalWrite(EN_3V3_GPS, LOW);
+    digitalWrite(EN_3V3_QWICC, LOW);
     digitalWrite(EN_5V, LOW);
-    //digitalWrite(EN_OPC, LOW);
-    //digitalWrite(EN_HEATER, LOW);
 
-    //digitalWrite(MB_RST, LOW);
     digitalWrite(MB_CS, LOW);
-    //digitalWrite(MB_PWM, LOW);
+    break;
   }
   default:
     break;
@@ -299,17 +295,70 @@ void CS_core::enable3V3(bool command)
   }
   case V4:
   {
+    // V4: Enable sensor 3V3 rail only (separate control for GPS and QWICC)
     if (command)
     {
-      digitalWrite(EN_3V, HIGH);
-	    digitalWrite(EN_3V_GPS, HIGH);
-      Log.info("3V3 Enabled");
+      digitalWrite(EN_3V3_SENSOR, HIGH);
+      Log.info("3V3 Sensor Enabled");
     }
     else
     {
-      digitalWrite(EN_3V, LOW);
-	    digitalWrite(EN_3V_GPS, LOW);
-      Log.info("3V3 Disabled");
+      digitalWrite(EN_3V3_SENSOR, LOW);
+      Log.info("3V3 Sensor Disabled");
+    }
+    break;
+  }
+  default:
+    break;
+  }
+}
+
+void CS_core::enable3V3_GPS(bool command)
+{
+  switch (hw_version)
+  {
+  case V3:
+    // V3 uses same rail for all 3V3
+    enable3V3(command);
+    break;
+  case V4:
+  {
+    if (command)
+    {
+      digitalWrite(EN_3V3_GPS, HIGH);
+      Log.info("3V3 GPS Enabled");
+    }
+    else
+    {
+      digitalWrite(EN_3V3_GPS, LOW);
+      Log.info("3V3 GPS Disabled");
+    }
+    break;
+  }
+  default:
+    break;
+  }
+}
+
+void CS_core::enable3V3_QWICC(bool command)
+{
+  switch (hw_version)
+  {
+  case V3:
+    // V3 uses same rail for all 3V3
+    enable3V3(command);
+    break;
+  case V4:
+  {
+    if (command)
+    {
+      digitalWrite(EN_3V3_QWICC, HIGH);
+      Log.info("3V3 QWICC Enabled");
+    }
+    else
+    {
+      digitalWrite(EN_3V3_QWICC, LOW);
+      Log.info("3V3 QWICC Disabled");
     }
     break;
   }
@@ -375,15 +424,16 @@ void CS_core::enableOPC(bool command)
   }
   case V4:
   {
+    // V4: SPS30 uses 5V rail (EN_5V = D8)
     if (command)
     {
-      //digitalWrite(EN_OPC, HIGH);
-      Log.info("OPC Enabled");
+      digitalWrite(EN_5V, HIGH);
+      Log.info("OPC/5V Enabled");
     }
     else
     {
-      //digitalWrite(EN_OPC, LOW);
-      Log.info("OPC Disabled");
+      digitalWrite(EN_5V, LOW);
+      Log.info("OPC/5V Disabled");
     }
     break;
   }
@@ -519,26 +569,23 @@ void CS_core::enableALL(bool command)
   case V4:
     if (command)
     {
-      digitalWrite(EN_3V, HIGH);
-	    delay(500);
-	    digitalWrite(EN_3V_GPS, HIGH);
-      delay(500);
+      digitalWrite(EN_3V3_SENSOR, HIGH);
+      delay(100);
+      digitalWrite(EN_3V3_GPS, HIGH);
+      delay(100);
+      digitalWrite(EN_3V3_QWICC, HIGH);
+      delay(100);
       digitalWrite(EN_5V, HIGH);
-      delay(500);
-      //digitalWrite(EN_OPC, HIGH);
-      //delay(500);
-      //digitalWrite(EN_HEATER, HIGH);
-      //delay(500); 
-      Log.info("Enable ALL");
+      delay(100);
+      Log.info("Enable ALL power rails");
     }
     else
     {
-      digitalWrite(EN_3V, LOW);
-      digitalWrite(EN_3V_GPS, LOW);
+      digitalWrite(EN_3V3_SENSOR, LOW);
+      digitalWrite(EN_3V3_GPS, LOW);
+      digitalWrite(EN_3V3_QWICC, LOW);
       digitalWrite(EN_5V, LOW);
-      //digitalWrite(EN_OPC, LOW);
-      //digitalWrite(EN_HEATER, LOW);
-      Log.info("Deactivate ALL");
+      Log.info("Disable ALL power rails");
     }
     break;
   default:
