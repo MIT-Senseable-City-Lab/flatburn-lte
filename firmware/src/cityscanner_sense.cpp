@@ -11,10 +11,9 @@
 
 // Define SPI and ADS1256-related pins
 #define ADS1256_DRDY_PIN D16   // From ADC_nDRDY
-#define ADS1256_RESET_PIN D5   // Assigned manually
-#define ADS1256_SYNC_PIN D7    // Assigned manually
-#define ADS1256_CS_PIN D4      // Assigned manually
-#define ADS1256_VREF 2.500
+#define ADS1256_CS_PIN D4
+#define ADS1256_VREF 2.500f
+
 
 #define NUM_TLC59711 1
 #define RGB_CLOCK_PIN 43
@@ -22,7 +21,8 @@
 
 Adafruit_TLC59711 rgbController(NUM_TLC59711, RGB_CLOCK_PIN, RGB_DATA_PIN);
 
-ADS1256 ads(ADS1256_DRDY_PIN, ADS1256_RESET_PIN, ADS1256_SYNC_PIN, ADS1256_CS_PIN, ADS1256_VREF, &SPI);
+// Use SPI1, RESET=0, SYNC=0 (those pins are power enables)
+ADS1256 ads(ADS1256_DRDY_PIN, 0, 0, ADS1256_CS_PIN, ADS1256_VREF, &SPI1);
 
 
 CitySense *CitySense::_instance = nullptr;
@@ -70,9 +70,9 @@ int CitySense::stop_all()
     return 1;
 }
 
-HAL_I2C_Config acquireWireBuffer() {
-    HAL_I2C_Config config = {
-        .size = sizeof(HAL_I2C_Config),
+hal_i2c_config_t acquireWireBuffer() {
+    hal_i2c_config_t config = {
+        .size = sizeof(hal_i2c_config_t),
         .version = HAL_I2C_CONFIG_VERSION_1,
         .rx_buffer = new (std::nothrow) uint8_t[I2C_BUFFER_SIZE],
         .rx_buffer_size = I2C_BUFFER_SIZE,
@@ -80,6 +80,30 @@ HAL_I2C_Config acquireWireBuffer() {
         .tx_buffer_size = I2C_BUFFER_SIZE
     };
     return config;
+}
+
+bool CitySense::initI2C()
+{
+    Serial.println("Configuring I2C bus with 256-byte buffer...");
+    Wire.end();
+    delay(100);
+    
+    static uint8_t i2c_rx_buf[256];
+    static uint8_t i2c_tx_buf[256];
+    
+    hal_i2c_config_t config = {
+        .size = sizeof(hal_i2c_config_t),
+        .version = HAL_I2C_CONFIG_VERSION_1,
+        .rx_buffer = i2c_rx_buf,
+        .rx_buffer_size = sizeof(i2c_rx_buf),
+        .tx_buffer = i2c_tx_buf,
+        .tx_buffer_size = sizeof(i2c_tx_buf)
+    };
+    
+    hal_i2c_begin(HAL_I2C_INTERFACE1, I2C_MODE_MASTER, 0x00, &config);
+    Wire.setSpeed(CLOCK_SPEED_100KHZ);
+    Serial.println("I2C configured");
+    return true;
 }
 
 bool CitySense::startRGB() {
@@ -107,18 +131,46 @@ void CitySense::setRGB(uint16_t r, uint16_t g, uint16_t b) {
 bool CitySense::startOPC()
 {
     CS_core::instance().enableOPC(1);
-    if (!sps30.begin(SP30_COMMS))
-        Serial.println("could not initialize communication channel.");
-
-    if (!sps30.probe()) {
-        Serial.println("could not probe / connect with SPS30.");
+    delay(2000);
+    
+    
+    if (!sps30.begin(SP30_COMMS)) {
+        Serial.println("Could not initialize SPS30 communication channel.");
         OPC_started = false;
-        return 0;
-    } else {
-        Serial.println(F("Detected SPS30."));
-        OPC_started = true;
-        return true;
+        return false;
     }
+
+    for (int attempt = 0; attempt < 3; attempt++) {
+        if (sps30.probe()) {
+            Serial.println(F("Detected SPS30."));
+            
+            sps30.stop();
+            delay(100);
+            
+            if (attempt > 0) {
+                Serial.println("Attempting SPS30 reset...");
+                sps30.reset();
+                delay(2000);
+            }
+            
+            // ✅ Fixed: start() returns bool, not error code
+            if (sps30.start()) {
+                Serial.println("SPS30 measurement started successfully!");
+                OPC_started = true;
+                delay(1000);
+                return true;
+            }
+            
+            Serial.println("Could not start SPS30 measurement");
+        }
+        
+        Serial.printlnf("SPS30 attempt %d failed, retrying...", attempt + 1);
+        delay(1000);
+    }
+    
+    Serial.println("Could not start SPS30 after 3 attempts.");
+    OPC_started = false;
+    return false;
 }
 
 bool CitySense::stopOPC()
@@ -134,28 +186,18 @@ bool CitySense::stopOPC()
 String CitySense::getOPCdata(int option)
 {
     if(OPC_started){
+        error_cnt = 0;
         do
         {
             ret = sps30.GetValues(&val);
-            // data might not have been ready
-            if (ret == SPS30_ERR_DATALENGTH)
-            {
-                if (error_cnt++ > 3)
-                {
-                    Serial.println("Error during reading values: ");
-                }
-                delay(1500);
-            }
 
-            // if other error
-            else if (ret != SPS30_ERR_OK)
-            {
-                Serial.println("Error during reading values: ");
-                Serial.println(ret);
-                delay(500);
-            }
+    if (ret != SPS30_ERR_OK)
+    {
+        error_cnt++;
+        delay(200);
+    }
 
-        } while (ret != SPS30_ERR_OK && error_cnt < 10);
+} while (ret != SPS30_ERR_OK && error_cnt < 10);
         if (ret == SPS30_ERR_OK) {
     error_cnt = 0; // Reset error count if successful
 }
@@ -180,10 +222,26 @@ String CitySense::getOPCdata(int option)
 
 bool CitySense::startTEMP()
 {
-    Wire.begin();
-    Serial.println(tempext.beginI2C());
+    //Wire.begin();
+    delay(100);
+    
+    uint8_t result = tempext.beginI2C();
+    Serial.printlnf("BME280 beginI2C returned: %d", result);
+    
+    if (result == 0) {
+        Serial.println("BME280 init failed");
+        TEMPext_started = false;
+        return false;
+    }
+    
+    // ✅ Discard first reading (often garbage)
+    tempext.readTempC();
+    tempext.readFloatHumidity();
+    delay(100);
+    
     TEMPext_started = true;
-    return 1;
+    Serial.println("BME280 initialized");
+    return true;
 }
 
 bool CitySense::stopTEMP()
@@ -220,11 +278,44 @@ String CitySense::getNOISEdata(){
 
 bool CitySense::startGAS()
 {
-    ads.InitializeADC();              // Core initialization
-    ads.setPGA(PGA_1);                // Optional: set gain (PGA_1 to PGA_64)
-    ads.setDRATE(DRATE_10SPS);        // Optional: set data rate (see header for options)
+    Serial.println("\n----- ADS1256 ADC -----");
+
+    // Check DRDY pin state before init
+    pinMode(ADS1256_DRDY_PIN, INPUT);
+    Serial.print("ADS1256: DRDY pin state before init: ");
+    Serial.println(digitalRead(ADS1256_DRDY_PIN) ? "HIGH" : "LOW");
+
+    // Initialize using library (handles CS, SPI setup, reset, calibration)
+    ads.InitializeADC();
+    delay(100);
+
+    // Read status register to check if device is responding
+    long status = ads.readRegister(STATUS_REG);
+    Serial.printlnf("ADS1256 Status: 0x%02lX", status);
+
+    // Check if we got a valid response (0xFF means no device)
+    if (status == 0xFF || status == -1) {
+        Serial.println("ADS1256: No response (check wiring/power)");
+        Serial.println("  - DRDY pin: D16");
+        Serial.println("  - CS pin: D4");
+        Serial.println("  - SPI1: MOSI/MISO/SCK");
+        Serial.print("ADS1256: DRDY pin state now: ");
+        Serial.println(digitalRead(ADS1256_DRDY_PIN) ? "HIGH" : "LOW");
+        GAS_started = false;
+        return false;
+    }
+
+    // Configure for gas sensor reading
+    ads.setPGA(PGA_1);           // PGA = 1 (+/- 5V range)
+    ads.setDRATE(DRATE_10SPS);   // 10 samples per second
+    ads.setBuffer(BUFFER_ENABLED); // Enable input buffer for high impedance sensors
+
+    // Read back settings
+    Serial.printlnf("ADS1256 PGA: %d", ads.getPGA());
+    Serial.printlnf("ADS1256 DRATE: 0x%02lX", ads.readRegister(DRATE_REG));
 
     GAS_started = true;
+    Serial.println("ADS1256: Initialized");
     return true;
 }
 
@@ -240,12 +331,20 @@ String CitySense::getGASdata()
 {
     if (!GAS_started) return "na,na,na,na";
 
-    ads.setMUX(SING_0); delay(5); float sn2_w = ads.convertToVoltage(ads.readSingle());
-    ads.setMUX(SING_1); delay(5); float sn2_r = ads.convertToVoltage(ads.readSingle());
-    ads.setMUX(SING_2); delay(5); float sn1_w = ads.convertToVoltage(ads.readSingle());
-    ads.setMUX(SING_3); delay(5); float sn1_r = ads.convertToVoltage(ads.readSingle());
+    // Read 4 channels (gas sensors) using single-ended inputs
+    // MUX values: AINx + AINCOM (GND)
+    uint8_t mux_vals[] = {SING_0, SING_1, SING_2, SING_3};
+    float voltages[4];
 
-    String payload = String::format("%.6f,%.6f,%.6f,%.6f", sn2_w, sn2_r, sn1_w, sn1_r);
+    for (int i = 0; i < 4; i++) {
+        ads.setMUX(mux_vals[i]);
+        long raw = ads.readSingle();
+        voltages[i] = ads.convertToVoltage(raw);
+    }
+
+    // SN2_W, SN2_R, SN1_W, SN1_R
+    String payload = String::format("%.6f,%.6f,%.6f,%.6f",
+        voltages[0], voltages[1], voltages[2], voltages[3]);
     return payload;
 }
 
@@ -284,4 +383,19 @@ void CitySense::sleepAllSensors()
 bool CitySense::stopRGB() {
     RGB_started = false;
     return true;
+}
+// Buzzer on A0 (M.2 pin 23 = BUZZER_PWM)
+#define BUZZER_PIN A0
+
+void CitySense::beep(uint16_t frequency, uint16_t duration_ms) {
+    tone(BUZZER_PIN, frequency, duration_ms);
+}
+
+void CitySense::startupBeep() {
+    // Three short beeps to indicate startup
+    beep(2000, 100);
+    delay(150);
+    beep(2500, 100);
+    delay(150);
+    beep(3000, 100);
 }

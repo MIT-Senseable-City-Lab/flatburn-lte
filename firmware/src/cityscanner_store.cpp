@@ -340,3 +340,64 @@ void CityStore::reInit()
   switch_logfile();
 }
 
+void CityStore::listAllFiles()
+{
+  Serial.println("LIST_START");
+
+  // List files in queue folder
+  File queueFolder = SD.open("/queue", O_READ);
+  if (queueFolder) {
+    File file = queueFolder.openNextFile(O_READ);
+    while (file) {
+      Serial.println("/queue/" + String(file.name()));
+      file.close();
+      file = queueFolder.openNextFile(O_READ);
+    }
+    queueFolder.close();
+  }
+
+  // List files in done folder
+  File doneFolder = SD.open("/done", O_READ);
+  if (doneFolder) {
+    File file = doneFolder.openNextFile(O_READ);
+    while (file) {
+      Serial.println("/done/" + String(file.name()));
+      file.close();
+      file = doneFolder.openNextFile(O_READ);
+    }
+    doneFolder.close();
+  }
+
+  // List active.csv if it exists
+  if (SD.exists("active.csv")) {
+    Serial.println("/active.csv");
+  }
+
+  Serial.println("LIST_END");
+}
+
+void CityStore::readFileToSerial(const char* filename)
+{
+  // Flush the active file first in case user wants to read it
+  if (activeFile) {
+    activeFile.flush();
+  }
+
+  File file = SD.open(filename, O_READ);
+  if (!file) {
+    Serial.println("FILE_ERROR:Cannot open file");
+    return;
+  }
+
+  Serial.println("FILE_START:" + String(filename));
+
+  uint8_t buf[256];
+  size_t n;
+  while ((n = file.read(buf, sizeof(buf))) > 0) {
+    Serial.write(buf, n);
+  }
+
+  file.close();
+  Serial.println("FILE_END:" + String(filename));
+}
+

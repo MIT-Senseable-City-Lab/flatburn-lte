@@ -40,6 +40,10 @@ class CityStore {
         bool dumpData(int files_to_dump);
         int countFilesInQueue();
         String deviceID = "na";
+
+        // Serial download support
+        void listAllFiles();
+        void readFileToSerial(const char* filename);
         
     
     private:

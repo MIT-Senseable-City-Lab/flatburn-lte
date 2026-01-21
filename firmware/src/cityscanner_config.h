@@ -15,7 +15,7 @@
 
 // Data sampling
 #define SAMPLE_RATE 5 //Seconds 
-#define VITALS_RATE 30 //Seconds
+#define VITALS_RATE 86400 //Seconds
 #define ROUTINE_RATE 60 //seconds
 
 // Data Storage and Broadcasting

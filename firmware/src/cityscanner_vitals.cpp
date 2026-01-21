@@ -1,23 +1,29 @@
 #include "cityscanner_vitals.h"
-#include "BQ27200_I2C.h"
+#include "BQ25798.h"
 #include "ISL28022.h"
 #include "CS_core.h"
 
 CityVitals *CityVitals::_instance = nullptr;
-BQ27200_I2C batt = BQ27200_I2C(0);
-SHTC3 shtc3;
-ISL28022 solar;
-FuelGauge fuelg; 
+BQ25798 battCharger;          // BQ25798 battery charger (I2C: 0x6B)
+ISL28022 solarMeter;          // ISL28022 for VBUS current sense (I2C: 0x40)
+ISL28022 vsysMeter;           // ISL28022 for VSYS current sense (I2C: 0x45)
+FuelGauge fuelg;
+// Note: V4 has only one BME280 used for ambient sensing in cityscanner_sense.cpp
+// Internal temperature monitoring uses BQ25798 die temperature (getTDIE)
 
 CityVitals::CityVitals() {}
 
 
 int CityVitals::init()
-{   if(!BATT_started && BATT_ENABLED)
+{
+    if(!BATT_started && BATT_ENABLED)
         startBattery();
     delay(DTIME);
     if(!SOLAR_started)
         startSolar();
+    delay(DTIME);
+    if(!VSYS_started)
+        startVSYS();
     delay(DTIME);
     if(!TEMPint_started)
         startTempInt();
@@ -33,6 +39,9 @@ int CityVitals::stop_all()
     if(SOLAR_started)
         stopSolar();
     delay(DTIME);
+    if(VSYS_started)
+        stopVSYS();
+    delay(DTIME);
     if(TEMPint_started)
         stopTempInt();
     delay(DTIME);
@@ -41,8 +50,15 @@ int CityVitals::stop_all()
 
 bool CityVitals::startBattery()
 {
-    BATT_started = true;
-    return 1;
+    // Initialize BQ25798 battery charger
+    if (battCharger.begin(I2C_ADDR_BQ25798)) {
+        Log.info("BQ25798 battery charger initialized");
+        BATT_started = true;
+    } else {
+        Log.error("BQ25798 battery charger init failed");
+        BATT_started = false;
+    }
+    return BATT_started;
 }
 
 bool CityVitals::stopBattery()
@@ -53,9 +69,33 @@ bool CityVitals::stopBattery()
 
 float CityVitals::getBatteryVoltage()
 {
-    int batt_volt_adc = analogRead(BATTERY_VOLTAGE_PIN);
-    float battery_voltage = (batt_volt_adc / 4095.0) * 3.3 * 2;
-    return battery_voltage;
+    // For V4 hardware without BQ25798 populated yet, return a safe default
+    // TODO: Implement proper battery reading once hardware is ready
+    // Options:
+    // 1. BQ25798 charger ADC (if populated)
+    // 2. ISL28022 on VSYS rail
+    // 3. Direct ADC with proper voltage divider
+
+    // For now, return a safe value to prevent unnecessary hibernation
+    // This should be updated once the actual hardware configuration is known
+    Log.info("Battery monitoring not yet configured for V4 hardware");
+    return 4.0;  // Return safe default (indicates ~80% charge)
+}
+
+float CityVitals::getBatteryCurrent()
+{
+    if (BATT_started) {
+        return battCharger.getIBAT();
+    }
+    return 0.0;
+}
+
+float CityVitals::getBatteryTemp()
+{
+    if (BATT_started) {
+        return battCharger.getTDIE();
+    }
+    return 0.0;
 }
 
 String CityVitals::getBatteryData() {
@@ -63,120 +103,70 @@ String CityVitals::getBatteryData() {
     {
         String battery_data;
         float batt_voltage = getBatteryVoltage();
-        if (batt_voltage > 4.19)
-        {
-            battery_data = "100";
-        }
-        else if (batt_voltage > 4.01)
-        {
-            battery_data = "80";
-        }
-        else if (batt_voltage > 3.86)
-        {
-            battery_data = "60";
-        }
-        else if (batt_voltage > 3.79)
-        {
-            battery_data = "40";
-        }
-        else if (batt_voltage > 3.72)
-        {
-            battery_data = "20";
-        }
-        else if (batt_voltage > 3.70)
-        {
-            battery_data = "15";
+
+        // Calculate SOC based on voltage thresholds
+        int soc = 0;
+        if (batt_voltage > 4.19) {
+            soc = 100;
+        } else if (batt_voltage > 4.01) {
+            soc = 80;
+        } else if (batt_voltage > 3.86) {
+            soc = 60;
+        } else if (batt_voltage > 3.79) {
+            soc = 40;
+        } else if (batt_voltage > 3.72) {
+            soc = 20;
+        } else if (batt_voltage > 3.70) {
+            soc = 15;
+        } else {
+            soc = 10;
         }
 
-        battery_data += ",";
+        // Format: SOC,temperature,voltage,current
+        battery_data = String::format("%d,%.1f,%.2f,%.1f",
+            soc,
+            getBatteryTemp(),
+            batt_voltage,
+            getBatteryCurrent());
 
-        String batteryVoltageStr = String::format("%.2f", getBatteryVoltage());
-        battery_data += batteryVoltageStr;
-        
         return battery_data;
     }
     else
     {
-        return "na,na";
+        return "na,na,na,na";
     }
-
 }
 
-bool isBatteryLow(){
-    int batt_volt_adc = analogRead(BATTERY_VOLTAGE_PIN);
-    float battery_v = (batt_volt_adc / 4095.0) * 3.3 * 2;
-    Log.info("Battery voltage:" + String(battery_v));
-    if(battery_v < 3.8)
-        return true;
-    else
-        return false;
+bool CityVitals::isBatteryLow(){
+    float battery_v = getBatteryVoltage();
+    Log.info("Battery voltage: %.2f V", battery_v);
+    return (battery_v < LOW_BATTERY_THRESHOLD);
 }
 
 
 String CityVitals::getChargingStatus(){
-    //String charge_status = String::format("%u,%u", CS_core::instance().isCharging(), CS_core::instance().isCharged());
+    String charge_status = "0,0,0";
 
-    //Serial.isConnected();
-    /*const uint32_t *usbRegStatus = (const uint32_t*)(0x40027470);
-    bool usbConnected = (usbRegStatus != 0);
-    Serial.print("Usb Connected? : ");
-    Serial.println(usbConnected);
+    if (BATT_started) {
+        // Use BQ25798 charger status
+        bool isCharging = battCharger.isCharging();
+        bool isChargingSolar = battCharger.isVBUSPresent() && isCharging;
+        bool isCharged = battCharger.isCharged();
 
-    String charge_status = "0";
-    if (SOLAR_started)
-    {
-        if (solar.getBusVoltage_V() > 0)
-        {
-            charge_status = String::format("%u", 1);
-        }
-        charge_status += ",";
-        if (getBatteryVoltage() > 4.25)
-        {
-            charge_status.concat(1);
-        } 
-        else
-        {
-            charge_status.concat(0);
-        }
-    }*/
-
-    String charge_status = "0";
-    // Check if USB is connected
-    const uint32_t *usbRegStatus = (const uint32_t*)(0x40027470);
-    bool usbConnected = (usbRegStatus != 0);
-
-    if (SOLAR_started)
-    {
-        if ((solar.getBusVoltage_V() > 0) && (getBatteryVoltage() < 4.19) && usbConnected)
-        {
-            charge_status = String::format("%u", 1);
-        }
-        charge_status += ",";
-        if ((solar.getBusVoltage_V() > 0) && (getBatteryVoltage() < 4.19) && !usbConnected)
-        {
-            charge_status.concat(1);
-        }
-        else
-        {
-            charge_status.concat(0);
-        }
-        charge_status += ",";
-        if (getBatteryVoltage() > 4.19)
-        {
-            charge_status.concat(1);
-        } 
-        else
-        {
-            charge_status.concat(0);
-        }
+        charge_status = String::format("%d,%d,%d",
+            isCharging ? 1 : 0,
+            isChargingSolar ? 1 : 0,
+            isCharged ? 1 : 0);
     }
 
     return charge_status;
 }
 
 bool CityVitals::startSolar(){
-    solar.begin(0x45, PV_SENSING);
+    // ISL28022 for VBUS current sensing at address 0x40
+    solarMeter.begin(I2C_ADDR_ISL28022_VBUS, PV_SENSING);
     SOLAR_started = true;
+    Log.info("Solar meter (ISL28022 @ 0x40) initialized");
     return 1;
 }
 
@@ -187,16 +177,38 @@ bool CityVitals::stopSolar(){
 
 String CityVitals::getSolarData(){
     if(SOLAR_started)
-    return String::format("%.2f",solar.getBusVoltage_V()) + "," + String::format("%.1f",solar.getCurrent_mA());
+        return String::format("%.2f,%.1f", solarMeter.getBusVoltage_V(), solarMeter.getCurrent_mA());
     else
-    return "na,na";
+        return "na,na";
+}
+
+bool CityVitals::startVSYS(){
+    // ISL28022 for VSYS current sensing at address 0x45
+    vsysMeter.begin(I2C_ADDR_ISL28022_VSYS, BATT_SENSING);
+    VSYS_started = true;
+    Log.info("VSYS meter (ISL28022 @ 0x45) initialized");
+    return 1;
+}
+
+bool CityVitals::stopVSYS(){
+    VSYS_started = false;
+    return 1;
+}
+
+String CityVitals::getVSYSData(){
+    if(VSYS_started)
+        return String::format("%.2f,%.1f", vsysMeter.getBusVoltage_V(), vsysMeter.getCurrent_mA());
+    else
+        return "na,na";
 }
 
 bool CityVitals::startTempInt(){
-    
-    errorDecoder(shtc3.begin());
+    // V4 hardware: No separate internal temperature sensor
+    // The BME280 is used for ambient sensing in cityscanner_sense.cpp
+    // Internal temperature can be read from BQ25798 die temperature if available
     TEMPint_started = true;
-    return 1;
+    Log.info("Internal temp: using BQ25798 die temperature (if available)");
+    return true;
 }
 
 bool CityVitals::stopTempInt(){
@@ -205,25 +217,13 @@ bool CityVitals::stopTempInt(){
 }
 
 String CityVitals::getTempIntData(){
-    if(TEMPint_started)
-    {
-        //return String::format("%.1f", temp_internal.readTemperature()) + "," + String::format("%.1f", temp_internal.readHumidity());
-        SHTC3_Status_TypeDef result = shtc3.update();
-        return String::format("%.2f,%.2f", shtc3.toDegC(), shtc3.toPercent());
+    // V4: Return BQ25798 die temperature if battery charger is started
+    // Otherwise return na - ambient temp is in main sensing payload
+    if(BATT_started) {
+        float dieTemp = battCharger.getTDIE();
+        return String::format("%.2f,na", dieTemp);
     }
-    else
     return "na,na";
-}
-
-void CityVitals::errorDecoder(SHTC3_Status_TypeDef message)                             // The errorDecoder function prints "SHTC3_Status_TypeDef" resultsin a human-friendly way
-{
-  switch(message)
-  {
-    case SHTC3_Status_Nominal : Serial.print("Nominal"); break;
-    case SHTC3_Status_Error : Serial.print("Error"); break;
-    case SHTC3_Status_CRC_Fail : Serial.print("CRC Fail"); break;
-    default : Serial.print("Unknown return code"); break;
-  }
 }
 
 String CityVitals::getSignalStrenght(){
@@ -234,6 +234,19 @@ String CityVitals::getSignalStrenght(){
     }
     else
         return "na";
-    
+}
 
+String CityVitals::getVitalsPayload(){
+    // Format: SOC,temp_batt,voltage_batt,current_batt,isCharging,isChargingSolar,isCharged,
+    //         temp_int,hum_int,voltage_solar,current_solar,voltage_vsys,current_vsys,cell_strength
+    String payload = "";
+
+    payload += getBatteryData() + ",";
+    payload += getChargingStatus() + ",";
+    payload += getTempIntData() + ",";
+    payload += getSolarData() + ",";
+    payload += getVSYSData() + ",";
+    payload += getSignalStrenght();
+
+    return payload;
 }

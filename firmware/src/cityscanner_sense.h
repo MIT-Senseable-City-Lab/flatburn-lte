@@ -42,6 +42,10 @@ class CitySense {
         bool startRGB(void);
         bool stopRGB(void);
         void setRGB(uint16_t r, uint16_t g, uint16_t b);
+        // Buzzer functions
+        void beep(uint16_t frequency, uint16_t duration_ms);
+        void startupBeep(void);
+        bool initI2C(void);
 
         bool RGB_started = false;
 

@@ -1,7 +1,7 @@
 #pragma once
 #include "cityscanner_config.h"
 #include "Particle.h"
-#include "SparkFun_SHTC3.h"
+// BME280 moved to cityscanner_sense.cpp for ambient sensing
 
 
 class CityVitals {
@@ -20,7 +20,8 @@ class CityVitals {
          */
         int init();
         int stop_all();
-    
+
+        // Battery charger functions (BQ25798)
         bool startBattery(void);
         bool stopBattery(void);
         bool BATT_started = false;
@@ -28,19 +29,32 @@ class CityVitals {
         String getChargingStatus(void);
         bool isBatteryLow();
         float getBatteryVoltage();
-        
+        float getBatteryCurrent();      // Battery charge/discharge current
+        float getBatteryTemp();         // Battery/charger temperature
+
+        // Solar/Power monitoring functions (ISL28022)
         bool startSolar(void);
         bool stopSolar(void);
         bool SOLAR_started = false;
         String getSolarData(void);
-        
+
+        // System voltage monitoring (ISL28022 @ 0x45)
+        bool startVSYS(void);
+        bool stopVSYS(void);
+        bool VSYS_started = false;
+        String getVSYSData(void);
+
+        // Internal temperature sensor (BME280 @ 0x77)
         bool startTempInt(void);
         bool stopTempInt(void);
         bool TEMPint_started = false;
         String getTempIntData(void);
-        void errorDecoder(SHTC3_Status_TypeDef message);                             // The errorDecoder function prints "SHTC3_Status_TypeDef" resultsin a human-friendly way
 
+        // Cellular signal
         String getSignalStrenght();
+
+        // Full vitals payload
+        String getVitalsPayload(void);
 
     private:
         CityVitals();

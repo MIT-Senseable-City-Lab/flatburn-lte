@@ -21,8 +21,11 @@ int initCLI()
 void serialEvent()
 {
   String s = "na";
-  s = Serial.readStringUntil(char(13));
-  commandLine(s);
+  s = Serial.readStringUntil('\n');  // Accept newline (Python script uses \n)
+  s.trim();  // Remove any trailing \r or whitespace
+  if (s.length() > 0) {
+    commandLine(s);
+  }
 }
 
 int commandLine(String command)
@@ -59,7 +62,17 @@ int commandLine(String command)
   Log.info("RECEIVED: " + first_parameter + "," + second_parameter + "," + third_parameter + "," + fourth_parameter);
   
   //FUNCTION CALLS
-  if (!first_parameter.compareTo("reboot"))
+  // Serial download commands (for Python script)
+  if (!first_parameter.compareTo("LIST"))
+  {
+    CityStore::instance().listAllFiles();
+  }
+  else if (first_parameter.startsWith("READ:"))
+  {
+    String filename = first_parameter.substring(5); // Remove "READ:" prefix
+    CityStore::instance().readFileToSerial(filename.c_str());
+  }
+  else if (!first_parameter.compareTo("reboot"))
   {
     System.reset();
   }

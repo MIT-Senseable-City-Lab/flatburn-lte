@@ -68,6 +68,7 @@ int Cityscanner::init()
   Log.info("Starting Core Library");
   core.begin(HW_VERSION);
   delay(DTIME);
+  //sense.startupBeep();
   Serial.println("Turning ON SD card");
   store.init();
   if (SD_FORMAT_ONSTARTUP)
@@ -124,6 +125,8 @@ int Cityscanner::init()
     delay(10s);
     core.enable5V(true);
     delay(DTIME);
+    sense.initI2C();
+    delay(DTIME);
     Serial.println("Turning ON GPS");
     delay(5s);
     locationService.start();
@@ -135,8 +138,12 @@ int Cityscanner::init()
     sense.startNOISE();
     delay(DTIME);
     Serial.println("Turning ON Temperature sensor");
-    delay(10s);
-    sense.startTEMP(); // TBC
+    delay(500);
+    for (int i = 0; i < 3; i++) {
+    if (sense.startTEMP()) break;
+    Serial.printlnf("TEMP init retry %d", i + 1);
+    delay(1000);
+    }
     delay(DTIME);
     Serial.println("Turning ON Gas sensor");
     delay(3s);
@@ -147,11 +154,14 @@ int Cityscanner::init()
     delay(5s);
     motionService.start();
     delay(DTIME);
-      Serial.println("Turning ON OPC");
-      delay(5s);
-      sense.startOPC();
-      delay(DTIME);
-    
+    Serial.println("Turning ON OPC");
+    delay(500);
+    for (int i = 0; i < 3; i++) {
+    if (sense.startOPC()) break;
+    Serial.printlnf("OPC init retry %d", i + 1);
+    delay(2000);  // ✅ Longer delay for SPS30
+    }
+    delay(DTIME);
     break;
   }
   Log.info("end INIT");
@@ -342,16 +352,16 @@ if (millis() - lastPublishTime >= publishInterval) {
 
 void Cityscanner::checkbattery()
 {
-  int batt_volt_adc = analogRead(BATTERY_VOLTAGE_PIN);
-  float battery_v = (batt_volt_adc / 4095.0) * 3.3 * 2;
-  Log.info("Battery voltage:" + String(battery_v));
+  // Use CityVitals for battery voltage reading (handles V4 hardware properly)
+  float battery_v = CityVitals::instance().getBatteryVoltage();
+  Log.info("Battery voltage: %.2f V", battery_v);
+
   // Check if the battery is low
     if (battery_v < LOW_BATTERY_THRESHOLD)
     {
         Log.info("Low battery detected. Rechecking in 10 seconds...");
         delay(10s);
-        batt_volt_adc = analogRead(BATTERY_VOLTAGE_PIN);
-        battery_v = (batt_volt_adc / 4095.0) * 3.3 * 2;
+        battery_v = CityVitals::instance().getBatteryVoltage();
 
         // If still low, enter hibernation or check charging status
         if (battery_v < LOW_BATTERY_THRESHOLD)
@@ -374,6 +384,7 @@ void Cityscanner::checkbattery()
         }
     }
 }
+
 
 
 void Cityscanner::sendWarning(String warning)
