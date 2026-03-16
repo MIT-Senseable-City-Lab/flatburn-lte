@@ -2,102 +2,75 @@
 sidebar_position: 4
 ---
 
-# 📊 Data retrieval via USB cable
+# 📊 Data Retrieval via USB Cable
 
-**Follow these steps to retrieve data from the Flatburn device using the python script.**
+**Follow these steps to retrieve data from the Flatburn device using the web-based downloader tool.**
 
-The Python script to use is [here](https://github.com/MIT-Senseable-City-Lab/flatburn-lte/blob/main/documentation/content/explore/usb_flatburn_v1.py)
+The Flatburn SD Downloader is a browser-based tool that connects to your device over USB. It works in **Google Chrome** or **Microsoft Edge** (requires Web Serial API support).
 
-**A sample demo of how to retrieve the data via USB**
-
-![USB Data Retrieval Demo](../explore/demo_usb_data.gif)
+The HTML tool is available [here](https://github.com/MIT-Senseable-City-Lab/flatburn-lte/blob/main/documentation/content/explore/flatburn_downloader.html). Download it and open it in Chrome or Edge.
 
 ## Step 1: Connect Flatburn to Your Computer
-Turn on your Flatburn device.
 
-Use a USB cable to connect the device to your computer.
-## Step 2: Run the USB Data Script
-**For `Mac/Linux`:** 
+1. Turn on your Flatburn device.
+2. Use a USB cable to connect the device to your computer.
+3. Open `flatburn_downloader.html` in **Google Chrome** or **Microsoft Edge**.
 
-Open your terminal and navigate to the folder where the `usb_flatburn.py` is saved: `cd path\to\your\script`
+## Step 2: Connect to the Serial Port
 
-run the script with admin permissions
+1. Click the **Connect** button.
+2. A browser dialog will show available serial ports.
+3. Select the Flatburn port; it will be labeled **"B-SoM CDC Mode"**.
+4. The status indicator will turn green once connected, and the file list will load automatically.
 
-`sudo python usb_flatburn.py`
+## Step 3: Download, Parse & Merge
 
-You will be prompted to enter your password to continue.
+The tool will display all available files on the SD card (e.g., files in `/queue/` and `active.csv`).
 
-**For `Windows`:** 
+1. Review the file list.
+2. Click **"Download All, Parse & Merge"**.
+3. The tool will:
+   - Download all files from the SD card
+   - Parse each CSV (filter columns, clean data)
+   - Convert epoch timestamps to human-readable format (e.g., `2025-03-15 22:37:17`)
+   - Merge everything into a single dataset
 
-Open Command Prompt or PowerShell as Administrator:
+A progress bar will show the download status, and stats badges will display the total files processed and rows merged.
 
-Press Start, search for `“cmd”` or `“powershell”`.
+## Step 4: Save the Merged CSV
 
-Right-click and choose `“Run as administrator”`.
+1. Click **"Save CSV File"** to download the merged data to your computer.
+2. The file is automatically named with a timestamp: `merged_20250315_223717.csv`
 
-Navigate to the folder where `usb_flatburn.py` is saved:
+The output CSV contains the following columns:
 
-Run the script using Python:
+| Column | Description |
+|--------|-------------|
+| `timestamp` | Date and time of the reading (human-readable) |
+| `latitude` | GPS latitude |
+| `longitude` | GPS longitude |
+| `PM1_0` | Particulate matter 1.0 µm |
+| `PM2_5` | Particulate matter 2.5 µm |
+| `PM4` | Particulate matter 4.0 µm |
+| `PM10` | Particulate matter 10 µm |
+| `temperature` | Temperature reading |
+| `humidity` | Humidity reading |
+| `gas_op1_w` | Gas sensor OP1 working electrode |
+| `gas_op1_r` | Gas sensor OP1 reference electrode |
+| `gas_op2_w` | Gas sensor OP2 working electrode |
+| `gas_op2_r` | Gas sensor OP2 reference electrode |
+| `noise` | Noise level reading |
 
-`python usb_flatburn.py`
-## Step 3: Select the USB Port
-The script will show a list of available serial ports:
+## Step 5: Clean Up the SD Card (Optional)
 
-`Available serial ports:`
-1. /dev/cu.xx - n/a
-2. /dev/cu.xx - n/a
-3. /dev/cu.xx - n/a
-4. /dev/cu.usbmodem3101 - B-SoM CDC Mode
+After saving your merged CSV, you can delete all files from the SD card to free up space:
 
-Enter the number of the port to use:
+1. Click **"Delete All Files from SD"**.
+2. A confirmation dialog will list all files that will be deleted.
+3. Click **OK** to confirm, or **Cancel** to keep the files.
 
-`Identify the Flatburn port (usually says "CDC Mode") and enter the corresponding number (e.g., 4)`.
-## Step 4: Choose Files to Download
-The script will show the available files on the SD card, for ex:
+The device will automatically create a fresh `active.csv` file after deletion, so it is ready to continue collecting data.
 
-`Available files:`
-1. /12052114.CSV
-2. /12052130.CSV
-3. /12061515.CSV
-
-You’ll be prompted to select which files to download:
-
-`Enter file numbers to download (comma-separated, or 'all')`
-
-To download all files: `type: all`
-
-`To download specific files, type their numbers (e.g., 3):`
-
-You'll the see the prompt display:
-
-`Downloading /12061515.CSV`
-
-`Saved: /Users/user/sd_card_downloads/12061515.CSV (63448 bytes)`
-
-Files are saved to the folder: `~/sd_card_downloads/`
-
-## Step 5: Choose Files to Parse
-Once files are downloaded, you'll see:
-Downloaded files:
-1. 12052114.CSV
-2. 12052130.CSV
-3. 12061515.CSV
-   
-You’ll be prompted to select which files to parse (i.e., clean and format for analysis):
-
-`Enter file numbers to parse (comma-separated, or 'all'):`
-
-To parse all downloaded files: `type: all`
-
-`To parse specific files, type their numbers (e.g., 3):`
-
-You'll the see the prompt display:
-
-`Parsed and saved: /Users/user/sd_card_downloads/parsed_files/12061515_parsed.csv`
-
-Parsed files will be saved to: `~/sd_card_downloads/parsed_files/`
-
-Each file is saved with a `_parsed.csv` suffix.
 ## Step 6: You're Done!
-You now have clean, ready-to-use CSV files containing environmental and telemetry data.
-You can now use these files for analysis, upload to cloud storage, or integrate them into your research workflow.
+
+You now have a single, clean CSV file containing all your environmental and telemetry data with human-readable timestamps. You can use this file for analysis, upload to cloud storage, or integrate into your research workflow.
