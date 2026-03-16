@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flatburn SD Downloader</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    min-height: 100vh;
+    padding: 30px 20px;
+    color: #e2e8f0;
+  }
+
+  .container { max-width: 720px; margin: 0 auto; }
+
+  .header {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .header h1 {
+    font-size: 1.6em;
+    font-weight: 700;
+    color: #f8fafc;
+    letter-spacing: -0.02em;
+  }
+  .header .subtitle {
+    font-size: 0.85em;
+    color: #94a3b8;
+    margin-top: 4px;
+  }
+
+  .status-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 12px;
+  }
+  .status-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .status-dot.connected { background: #4ade80; box-shadow: 0 0 8px #4ade8066; }
+  .status-dot.disconnected { background: #ef4444; box-shadow: 0 0 8px #ef444466; }
+  .status-text { font-size: 0.8em; color: #94a3b8; }
+
+  .card {
+    background: rgba(30, 41, 59, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 16px;
+    transition: all 0.3s ease;
+    animation: fadeIn 0.4s ease;
+  }
+  .card:hover { border-color: rgba(148, 163, 184, 0.2); }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .card .step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    background: #3b82f6;
+    color: #fff;
+    font-size: 0.7em;
+    font-weight: 700;
+    margin-right: 8px;
+    flex-shrink: 0;
+  }
+  .card h2 {
+    display: flex;
+    align-items: center;
+    font-size: 0.95em;
+    font-weight: 600;
+    color: #f1f5f9;
+    margin-bottom: 16px;
+  }
+  .card p.desc {
+    font-size: 0.8em;
+    color: #94a3b8;
+    margin-bottom: 14px;
+    line-height: 1.5;
+  }
+
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.85em;
+    font-weight: 500;
+    cursor: pointer;
+    margin-right: 8px;
+    margin-bottom: 4px;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  button:disabled { opacity: 0.4; cursor: not-allowed; }
+  button:active:not(:disabled) { transform: scale(0.97); }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+  }
+  .btn-primary:hover:not(:disabled) { box-shadow: 0 4px 16px rgba(37, 99, 235, 0.5); }
+
+  .btn-success {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(22, 163, 74, 0.3);
+  }
+  .btn-success:hover:not(:disabled) { box-shadow: 0 4px 16px rgba(22, 163, 74, 0.5); }
+
+  .btn-danger {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(220, 38, 38, 0.3);
+  }
+  .btn-danger:hover:not(:disabled) { box-shadow: 0 4px 16px rgba(220, 38, 38, 0.5); }
+
+  .btn-secondary {
+    background: rgba(148, 163, 184, 0.15);
+    color: #cbd5e1;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    box-shadow: none;
+  }
+  .btn-secondary:hover:not(:disabled) { background: rgba(148, 163, 184, 0.25); }
+
+  .btn-icon { margin-right: 6px; font-size: 1.1em; }
+
+  .file-list { list-style: none; padding: 0; margin-bottom: 16px; }
+  .file-list li {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-family: 'SF Mono', 'Menlo', 'Consolas', monospace;
+    font-size: 0.8em;
+    color: #cbd5e1;
+    transition: background 0.15s;
+  }
+  .file-list li:hover { background: rgba(148, 163, 184, 0.08); }
+  .file-list li .file-icon { margin-right: 10px; color: #64748b; font-size: 1.1em; }
+  .file-list li .file-num { color: #64748b; margin-right: 10px; font-size: 0.85em; min-width: 18px; }
+  .file-list .empty-state {
+    text-align: center;
+    color: #64748b;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  .progress-bar {
+    width: 100%;
+    height: 4px;
+    background: rgba(148, 163, 184, 0.15);
+    border-radius: 2px;
+    margin-top: 16px;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #3b82f6, #22c55e);
+    border-radius: 2px;
+    transition: width 0.4s ease;
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+  }
+
+  .stats-row {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+  }
+  .stat-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 0.75em;
+    color: #93c5fd;
+  }
+  .stat-badge.green {
+    background: rgba(34, 197, 94, 0.1);
+    border-color: rgba(34, 197, 94, 0.2);
+    color: #86efac;
+  }
+
+  #log {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    color: #94a3b8;
+    font-family: 'SF Mono', 'Menlo', 'Consolas', monospace;
+    font-size: 0.75em;
+    padding: 16px;
+    border-radius: 8px;
+    max-height: 350px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    line-height: 1.6;
+  }
+  #log::-webkit-scrollbar { width: 4px; }
+  #log::-webkit-scrollbar-track { background: transparent; }
+  #log::-webkit-scrollbar-thumb { background: rgba(148, 163, 184, 0.2); border-radius: 2px; }
+
+  .log-info { color: #94a3b8; }
+  .log-success { color: #4ade80; }
+  .log-error { color: #f87171; }
+  .log-warn { color: #fbbf24; }
+  .log-time { color: #64748b; margin-right: 8px; }
+
+  .hidden { display: none; }
+
+  .actions-row { display: flex; gap: 8px; flex-wrap: wrap; }
+
+  .divider {
+    height: 1px;
+    background: rgba(148, 163, 184, 0.1);
+    margin: 16px 0;
+  }
+
+  .delete-warning {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: rgba(239, 68, 68, 0.08);
+    border: 1px solid rgba(239, 68, 68, 0.15);
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-bottom: 14px;
+  }
+  .delete-warning .warn-icon { font-size: 1.2em; flex-shrink: 0; margin-top: 1px; }
+  .delete-warning p { font-size: 0.8em; color: #fca5a5; line-height: 1.5; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>Flatburn SD Downloader</h1>
+    <p class="subtitle">Download, parse, and manage Flatburn SD card data</p>
+    <div class="status-bar">
+      <span id="statusDot" class="status-dot disconnected"></span>
+      <span id="statusText" class="status-text">No device connected</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2><span class="step-number">1</span>Connect to Device</h2>
+    <p class="desc">Select your Flatburn serial port (look for "B-SoM CDC Mode").</p>
+    <div class="actions-row">
+      <button id="btnConnect" class="btn-primary" onclick="connectDevice()"><span class="btn-icon">&#9654;</span>Connect</button>
+      <button id="btnDisconnect" class="btn-secondary hidden" onclick="disconnectDevice()">Disconnect</button>
+    </div>
+  </div>
+
+  <div class="card hidden" id="actionsCard">
+    <h2><span class="step-number">2</span>Files on SD Card</h2>
+    <ul id="fileList" class="file-list"></ul>
+    <div class="actions-row">
+      <button class="btn-secondary" onclick="listFiles()">Refresh</button>
+      <button id="btnDownload" class="btn-success" onclick="downloadAll()" disabled><span class="btn-icon">&#11015;</span>Download All, Parse & Merge</button>
+    </div>
+    <div id="progressContainer" class="hidden">
+      <div class="progress-bar"><div id="progressFill" class="progress-fill" style="width: 0%"></div></div>
+    </div>
+    <div id="statsRow" class="stats-row hidden"></div>
+  </div>
+
+  <div class="card hidden" id="downloadCard">
+    <h2><span class="step-number">3</span>Download Merged CSV</h2>
+    <p class="desc" id="mergedInfo">Your merged data is ready.</p>
+    <button id="btnSave" class="btn-success" onclick="saveMerged()"><span class="btn-icon">&#128190;</span>Save CSV File</button>
+  </div>
+
+  <div class="card hidden" id="deleteCard">
+    <h2><span class="step-number">4</span>Clean Up SD Card</h2>
+    <div class="delete-warning">
+      <span class="warn-icon">&#9888;</span>
+      <p>This will permanently remove all data files from the SD card. Make sure you've saved your merged CSV first.</p>
+    </div>
+    <button id="btnDelete" class="btn-danger" onclick="confirmDelete()"><span class="btn-icon">&#128465;</span>Delete All Files from SD</button>
+  </div>
+
+  <div class="card">
+    <h2 style="margin-bottom: 12px;">Activity Log</h2>
+    <div id="log"></div>
+  </div>
+</div>
+
+<script>
+const BAUD_RATE = 115200;
+const SKIP_FILES = new Set(['_ACTIV~1.CSV']);
+const EXPECTED_COLUMNS = 22;
+const COLUMNS_TO_DELETE = [0, 1, 9, 10, 11, 12, 13, 14];
+const FINAL_COLUMN_NAMES = [
+  'timestamp', 'latitude', 'longitude', 'PM1_0', 'PM2_5', 'PM4',
+  'PM10', 'temperature', 'humidity', 'gas_op1_w', 'gas_op1_r',
+  'gas_op2_w', 'gas_op2_r', 'noise'
+];
+
+let port = null;
+let reader = null;
+let writer = null;
+let readBuffer = '';
+let mergedCSV = '';
+let fileListData = [];
+
+function log(msg, type = 'info') {
+  const el = document.getElementById('log');
+  const now = new Date();
+  const time = String(now.getHours()).padStart(2,'0') + ':' +
+               String(now.getMinutes()).padStart(2,'0') + ':' +
+               String(now.getSeconds()).padStart(2,'0');
+  const timeSpan = document.createElement('span');
+  timeSpan.className = 'log-time';
+  timeSpan.textContent = time + '  ';
+  const span = document.createElement('span');
+  span.className = `log-${type}`;
+  span.textContent = msg + '\n';
+  el.appendChild(timeSpan);
+  el.appendChild(span);
+  el.scrollTop = el.scrollHeight;
+}
+
+function setStatus(connected) {
+  const dot = document.getElementById('statusDot');
+  const text = document.getElementById('statusText');
+  dot.className = `status-dot ${connected ? 'connected' : 'disconnected'}`;
+  text.textContent = connected ? 'Device connected' : 'No device connected';
+  document.getElementById('btnConnect').classList.toggle('hidden', connected);
+  document.getElementById('btnDisconnect').classList.toggle('hidden', !connected);
+  document.getElementById('actionsCard').classList.toggle('hidden', !connected);
+}
+
+async function connectDevice() {
+  try {
+    port = await navigator.serial.requestPort();
+    await port.open({ baudRate: BAUD_RATE });
+    writer = port.writable.getWriter();
+    setStatus(true);
+    log('Connected to device.', 'success');
+    await sleep(2000);
+    await listFiles();
+  } catch (e) {
+    log('Connection failed: ' + e.message, 'error');
+  }
+}
+
+async function disconnectDevice() {
+  try {
+    if (reader) { await reader.cancel(); reader.releaseLock(); reader = null; }
+    if (writer) { writer.releaseLock(); writer = null; }
+    if (port) { await port.close(); port = null; }
+    setStatus(false);
+    log('Disconnected.', 'info');
+  } catch (e) {
+    log('Disconnect error: ' + e.message, 'error');
+  }
+}
+
+function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+async function sendCommand(cmd) {
+  const encoder = new TextEncoder();
+  await writer.write(encoder.encode(cmd + '\n'));
+}
+
+async function readLine(timeout = 10000) {
+  const startTime = Date.now();
+  const textDecoder = new TextDecoder();
+  while (true) {
+    if (Date.now() - startTime > timeout) {
+      throw new Error('Timeout reading from serial');
+    }
+    const newlineIdx = readBuffer.indexOf('\n');
+    if (newlineIdx !== -1) {
+      const line = readBuffer.substring(0, newlineIdx).replace(/\r/g, '').trim();
+      readBuffer = readBuffer.substring(newlineIdx + 1);
+      return line;
+    }
+    if (!reader) {
+      reader = port.readable.getReader();
+    }
+    try {
+      const { value, done } = await Promise.race([
+        reader.read(),
+        sleep(500).then(() => ({ value: null, done: false, timeout: true }))
+      ]);
+      if (done) break;
+      if (value) {
+        readBuffer += textDecoder.decode(value);
+      }
+    } catch (e) {
+      reader.releaseLock();
+      reader = null;
+      throw e;
+    }
+  }
+  return null;
+}
+
+async function readRawUntilMarker(marker, timeout = 30000) {
+  const startTime = Date.now();
+  const textDecoder = new TextDecoder();
+  let content = '';
+  while (true) {
+    if (Date.now() - startTime > timeout) {
+      throw new Error('Timeout reading file content');
+    }
+    const markerIdx = readBuffer.indexOf(marker);
+    if (markerIdx !== -1) {
+      content += readBuffer.substring(0, markerIdx);
+      readBuffer = readBuffer.substring(markerIdx + marker.length);
+      const nlIdx = readBuffer.indexOf('\n');
+      if (nlIdx !== -1) readBuffer = readBuffer.substring(nlIdx + 1);
+      return content;
+    }
+    if (!reader) {
+      reader = port.readable.getReader();
+    }
+    try {
+      const { value, done } = await Promise.race([
+        reader.read(),
+        sleep(500).then(() => ({ value: null, done: false }))
+      ]);
+      if (done) break;
+      if (value) {
+        readBuffer += textDecoder.decode(value);
+      }
+    } catch (e) {
+      reader.releaseLock();
+      reader = null;
+      throw e;
+    }
+  }
+  return content;
+}
+
+function shouldSkip(filename) {
+  const normalized = filename.replace(/^\/+/, '').toUpperCase();
+  return SKIP_FILES.has(normalized);
+}
+
+async function listFiles() {
+  try {
+    log('Sending LIST command...');
+    readBuffer = '';
+    if (reader) { await reader.cancel(); reader.releaseLock(); reader = null; }
+    await sendCommand('LIST');
+    fileListData = [];
+
+    while (true) {
+      const line = await readLine();
+      if (line === 'LIST_START') break;
+    }
+    while (true) {
+      const line = await readLine();
+      if (line === 'LIST_END') break;
+      if (line) fileListData.push(line);
+    }
+
+    const listEl = document.getElementById('fileList');
+    listEl.innerHTML = '';
+    const downloadable = fileListData.filter(f => !shouldSkip(f));
+    if (downloadable.length === 0) {
+      listEl.innerHTML = '<li class="empty-state">No files found on SD card.</li>';
+      document.getElementById('btnDownload').disabled = true;
+    } else {
+      downloadable.forEach((f, i) => {
+        const li = document.createElement('li');
+        li.innerHTML = `<span class="file-num">${i + 1}.</span><span class="file-icon">&#128196;</span>${f}`;
+        listEl.appendChild(li);
+      });
+      document.getElementById('btnDownload').disabled = false;
+    }
+    log(`Found ${downloadable.length} file(s).`, downloadable.length > 0 ? 'success' : 'warn');
+  } catch (e) {
+    log('List failed: ' + e.message, 'error');
+  }
+}
+
+function epochToDatetime(epoch) {
+  const num = parseInt(epoch, 10);
+  if (isNaN(num) || num <= 0) return '';
+  const d = new Date(num * 1000);
+  return d.getFullYear() + '-' +
+    String(d.getMonth() + 1).padStart(2, '0') + '-' +
+    String(d.getDate()).padStart(2, '0') + ' ' +
+    String(d.getHours()).padStart(2, '0') + ':' +
+    String(d.getMinutes()).padStart(2, '0') + ':' +
+    String(d.getSeconds()).padStart(2, '0');
+}
+
+function parseCSV(rawText) {
+  const rows = [];
+  const lines = rawText.split('\n');
+  for (const line of lines) {
+    const parts = line.trim().split(',');
+    if (parts.length === EXPECTED_COLUMNS) {
+      const filtered = parts.filter((_, i) => !COLUMNS_TO_DELETE.includes(i));
+      // Convert epoch timestamp to human-readable
+      filtered[0] = epochToDatetime(filtered[0]);
+      rows.push(filtered);
+    }
+  }
+  return rows;
+}
+
+async function downloadAll() {
+  const downloadable = fileListData.filter(f => !shouldSkip(f));
+  if (downloadable.length === 0) {
+    log('No files to download.', 'warn');
+    return;
+  }
+
+  const btnDownload = document.getElementById('btnDownload');
+  btnDownload.disabled = true;
+  document.getElementById('progressContainer').classList.remove('hidden');
+  const progressFill = document.getElementById('progressFill');
+
+  const allRows = [];
+  let completed = 0;
+
+  for (const fileName of downloadable) {
+    try {
+      log(`Downloading ${fileName}...`);
+      readBuffer = '';
+      if (reader) { await reader.cancel(); reader.releaseLock(); reader = null; }
+      await sendCommand(`READ:${fileName}`);
+
+      while (true) {
+        const line = await readLine();
+        if (line && line.startsWith('FILE_START:')) break;
+      }
+
+      const content = await readRawUntilMarker('FILE_END:', 60000);
+      const rows = parseCSV(content);
+      log(`  Parsed: ${rows.length} rows`, 'success');
+      allRows.push(...rows);
+
+      completed++;
+      progressFill.style.width = `${(completed / downloadable.length) * 100}%`;
+    } catch (e) {
+      log(`Failed to download ${fileName}: ${e.message}`, 'error');
+    }
+  }
+
+  if (allRows.length > 0) {
+    const header = FINAL_COLUMN_NAMES.join(',');
+    const body = allRows.map(r => r.join(',')).join('\n');
+    mergedCSV = header + '\n' + body + '\n';
+    log(`Merged: ${allRows.length} total rows from ${completed} file(s)`, 'success');
+
+    // Show stats
+    const statsRow = document.getElementById('statsRow');
+    statsRow.classList.remove('hidden');
+    statsRow.innerHTML = `
+      <span class="stat-badge">${completed} files processed</span>
+      <span class="stat-badge green">${allRows.length} total rows</span>
+    `;
+
+    document.getElementById('downloadCard').classList.remove('hidden');
+    document.getElementById('mergedInfo').textContent = `${allRows.length} rows from ${completed} file(s) ready to save.`;
+    document.getElementById('deleteCard').classList.remove('hidden');
+  } else {
+    log('No valid data found.', 'warn');
+  }
+
+  btnDownload.disabled = false;
+}
+
+function saveMerged() {
+  if (!mergedCSV) return;
+  const now = new Date();
+  const ts = now.getFullYear().toString() +
+    String(now.getMonth() + 1).padStart(2, '0') +
+    String(now.getDate()).padStart(2, '0') + '_' +
+    String(now.getHours()).padStart(2, '0') +
+    String(now.getMinutes()).padStart(2, '0') +
+    String(now.getSeconds()).padStart(2, '0');
+  const blob = new Blob([mergedCSV], { type: 'text/csv' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `merged_${ts}.csv`;
+  a.click();
+  URL.revokeObjectURL(url);
+  log(`Saved merged_${ts}.csv`, 'success');
+}
+
+async function confirmDelete() {
+  try {
+    log('Re-checking files on SD card before delete...');
+    readBuffer = '';
+    if (reader) { await reader.cancel(); reader.releaseLock(); reader = null; }
+    await sendCommand('LIST');
+    const currentFiles = [];
+
+    while (true) {
+      const line = await readLine();
+      if (line === 'LIST_START') break;
+    }
+    while (true) {
+      const line = await readLine();
+      if (line === 'LIST_END') break;
+      if (line) currentFiles.push(line);
+    }
+
+    if (currentFiles.length === 0) {
+      log('No files on SD card to delete.', 'warn');
+      return;
+    }
+
+    const fileNames = currentFiles.map((f, i) => `  ${i + 1}. ${f}`).join('\n');
+    const confirmed = confirm(
+      `Are you sure you want to delete ALL these files from the SD card?\n\n${fileNames}`
+    );
+
+    if (!confirmed) {
+      log('Delete cancelled.', 'info');
+      return;
+    }
+
+    log('Sending DELETE_ALL command...');
+    readBuffer = '';
+    if (reader) { await reader.cancel(); reader.releaseLock(); reader = null; }
+    await sendCommand('DELETE_ALL');
+
+    while (true) {
+      const line = await readLine(30000);
+      if (line === 'DELETE_START') break;
+    }
+    while (true) {
+      const line = await readLine(30000);
+      if (line) log(`  ${line}`, 'info');
+      if (line === 'DELETE_END') {
+        log('All files deleted from SD card.', 'success');
+        break;
+      }
+    }
+
+    await listFiles();
+  } catch (e) {
+    log('Delete failed: ' + e.message, 'error');
+  }
+}
+</script>
+</body>
+</html>
