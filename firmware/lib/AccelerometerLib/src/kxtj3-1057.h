@@ -155,7 +155,7 @@ class KXTJ3
 #define KXTJ3_DCST_RESP                                                        \
   0x0C // used to verify proper integrated circuit functionality.
        // It always has a byte value of 0x55
-#define KXTJ3_SOFT_REST          0x7F // used during software reset
+#define KXTJ3_SOFT_RESET          0x7F // used during software reset
 #define KXTJ3_XOUT_L             0x06
 #define KXTJ3_XOUT_H             0x07
 #define KXTJ3_YOUT_L             0x08

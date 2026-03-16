@@ -44,17 +44,28 @@ kxtj3_status_t KXTJ3::begin(float sampleRate, uint8_t accRange, bool highResSet,
     highRes = true;
   }
 
+  #if defined(PARTICLE)
+  if (!Wire.isEnabled()) {
+    KXTJ3_DEBUG.println(F("WARNING: Wire not enabled!"));
+    return IMU_HW_ERROR;
+  }
+  KXTJ3_DEBUG.println(F("Wire already enabled, skipping init"));
+  #else
   Wire.begin();
+  #endif
 
   // Power-up time is up to 30ms according to DataSheet, so delay 50ms just to
   // play it safe
   delay(50);
 
   // Perform software reset to make sure IMU is in good state
+  KXTJ3_DEBUG.println(F("Calling softwareReset()"));
   returnError = softwareReset();
-
+  KXTJ3_DEBUG.print(F("softwareReset returned: "));
+  KXTJ3_DEBUG.println(returnError);
   // Check previous returnError to see if we should stop
   if (returnError != IMU_SUCCESS) {
+    KXTJ3_DEBUG.println(F("begin() failed at softwareReset"));
     return returnError;
   }
 
@@ -64,6 +75,7 @@ kxtj3_status_t KXTJ3::begin(float sampleRate, uint8_t accRange, bool highResSet,
   readRegister(&_whoAmI, KXTJ3_WHO_AM_I);
 
   if (_whoAmI != 0x35) {
+    KXTJ3_DEBUG.println(F("begin() failed at WHO_AM_I check"));
     return IMU_HW_ERROR;
   }
 
@@ -226,70 +238,126 @@ kxtj3_status_t KXTJ3::softwareReset(void)
   // Start by copying the current I2C address to a temp variable
   // We must do this because the IMU could boot with a bit-flipped address
   uint8_t tempAddress        = I2CAddress;
+  uint8_t result;
 
-  // Write 0x00 to KXTJ3_SOFT_REST to confirm IMU is on the bus at address
+  uint8_t retries = 3;
+
   Wire.beginTransmission(I2CAddress);
-  Wire.write(KXTJ3_SOFT_REST);
+  Wire.write(KXTJ3_SOFT_RESET);
   Wire.write(0x00);
+  result = Wire.endTransmission();
+  
+  KXTJ3_DEBUG.print(F("Step 1 (SOFT_REST): "));
+  KXTJ3_DEBUG.println(result);
 
-  // If NACK returned, switch I2CAddress to flipped version and try again
-  if (Wire.endTransmission() != 0) {
-    if (I2CAddress == 0x0F) {
-      I2CAddress = 0x0D;
-    } else if (I2CAddress == 0x0E) {
-      I2CAddress = 0x0C;
-    }
-
-    Wire.beginTransmission(I2CAddress);
-    Wire.write(KXTJ3_SOFT_REST);
-    Wire.write(0x00);
-
-    // If still NACK, give up, need to power cycle IMU to recover
-    if (Wire.endTransmission() != 0) {
-      // Return I2CAddress to normal before returning
-      if (I2CAddress != tempAddress) {
-        I2CAddress = tempAddress;
-      }
-      return IMU_HW_ERROR;
-    }
-  }
-
-  // Attempt to address CTRL_REG2 and end if NACK returned
-  Wire.beginTransmission(I2CAddress);
-  Wire.write(KXTJ3_CTRL_REG2);
-  Wire.write(0x00);
-
-  if (Wire.endTransmission() != 0) {
-    // Return I2CAddress to normal before returning
-    if (I2CAddress != tempAddress) {
-      I2CAddress = tempAddress;
-    }
+  if (result != 0) {
+    // Don't try alternate addresses, just fail
+    KXTJ3_DEBUG.println(F("softwareReset: FAILED at step 1"));
     return IMU_HW_ERROR;
   }
 
-  // Send software reset command to CTRL_REG2 and end if NACK returned
+  Wire.beginTransmission(I2CAddress);
+  Wire.write(KXTJ3_CTRL_REG2);
+  Wire.write(0x00);
+  result = Wire.endTransmission();
+  
+  KXTJ3_DEBUG.print(F("Step 2 (CTRL_REG2=0x00): "));
+  KXTJ3_DEBUG.println(result);
+
+  if (result != 0) {
+    KXTJ3_DEBUG.println(F("softwareReset: FAILED at step 2"));
+    return IMU_HW_ERROR;
+  }
+
+  KXTJ3_DEBUG.print(F("Step 3 (CTRL_REG2=0x80): "));
   Wire.beginTransmission(I2CAddress);
   Wire.write(KXTJ3_CTRL_REG2);
   Wire.write(0x80);
-
-  if (Wire.endTransmission() != 0) {
-    // Return I2CAddress to normal before returning
-    if (I2CAddress != tempAddress) {
-      I2CAddress = tempAddress;
-    }
+  result = Wire.endTransmission();
+  if (result != 0) {
+    KXTJ3_DEBUG.println(F("softwareReset: FAILED at step 3"));
     return IMU_HW_ERROR;
   }
 
-  // Set I2CAddress back to normal since we've successfully reset the IMU
-  if (I2CAddress != tempAddress) {
-    I2CAddress = tempAddress;
-  }
 
-  // Delay for software start-up before returning (TN017 Table 1)
+  // If NACK returned, switch I2CAddress to flipped version and try again
+  // if (result != 0) {
+  //   if (I2CAddress == 0x0F) {
+  //     I2CAddress = 0x0D;
+  //   } else if (I2CAddress == 0x0E) {
+  //     I2CAddress = 0x0C;
+  //   }
+
+  //   Wire.beginTransmission(I2CAddress);
+  //   Wire.write(KXTJ3_SOFT_REST);
+  //   Wire.write(0x00);
+  //   result = Wire.endTransmission();
+
+  //   KXTJ3_DEBUG.print(F("Step 1 retry at 0x"));
+  //   KXTJ3_DEBUG.print(I2CAddress, HEX);
+  //   KXTJ3_DEBUG.print(F(": "));
+  //   KXTJ3_DEBUG.println(result);
+
+  //   // If still NACK, give up, need to power cycle IMU to recover
+  //   if (result != 0) {
+  //     // Return I2CAddress to normal before returning
+  //   if (I2CAddress != tempAddress) {
+  //           I2CAddress = tempAddress;
+  //         }
+  //         KXTJ3_DEBUG.println(F("softwareReset: FAILED at step 1"));
+  //         return IMU_HW_ERROR;
+  //   }
+  // }
+  // if (result != 0) {
+  //   KXTJ3_DEBUG.println(F("softwareReset: FAILED at step 3"));
+  //   return IMU_HW_ERROR;
+  // }
+
   delay(2);
-
+  KXTJ3_DEBUG.println(F("softwareReset: SUCCESS"));
   return returnError;
+
+  // // Attempt to address CTRL_REG2 and end if NACK returned
+  // Wire.beginTransmission(I2CAddress);
+  // Wire.write(KXTJ3_CTRL_REG2);
+  // Wire.write(0x00);
+  // result = Wire.endTransmission();
+
+  // if (result != 0) {
+  //   // Return I2CAddress to normal before returning
+  //   if (I2CAddress != tempAddress) {
+  //     I2CAddress = tempAddress;
+  //   }
+  //   KXTJ3_DEBUG.println(F("softwareReset: FAILED at step 2"));
+  //   return IMU_HW_ERROR;
+  // }
+
+  // // Send software reset command to CTRL_REG2 and end if NACK returned
+  // Wire.beginTransmission(I2CAddress);
+  // Wire.write(KXTJ3_CTRL_REG2);
+  // Wire.write(0x80);
+  // result = Wire.endTransmission();
+
+  // if (result != 0) {
+  //   // Return I2CAddress to normal before returning
+  //   if (I2CAddress != tempAddress) {
+  //     I2CAddress = tempAddress;
+  //   }
+  //   KXTJ3_DEBUG.println(F("softwareReset: FAILED at step 3"));
+  //   return IMU_HW_ERROR;
+  // }
+
+  // // Set I2CAddress back to normal since we've successfully reset the IMU
+  // if (I2CAddress != tempAddress) {
+  //   I2CAddress = tempAddress;
+  // }
+
+  // // Delay for software start-up before returning (TN017 Table 1)
+  // delay(2);
+  // KXTJ3_DEBUG.println(F("softwareReset: SUCCESS"));
+  // return returnError;
 }
+
 
 //****************************************************************************//
 //
