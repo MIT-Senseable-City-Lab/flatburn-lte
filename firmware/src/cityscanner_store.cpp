@@ -9,7 +9,8 @@ int CityStore::init()
   deviceID = System.deviceID();
   records = RECORDS_PER_FILE;
   Serial.println("\nInitializing SD card...");
-  if (!SD.begin(chipSelect))
+  sd_initialized = SD.begin(chipSelect);
+  if (!sd_initialized)
   {
     Serial.println("SD initialization failed");
   }
@@ -44,6 +45,7 @@ int CityStore::stop()
 {
   activeFile.flush();
   SD.end();
+  sd_initialized = false;
   return 1;
 }
 
@@ -130,6 +132,7 @@ void CityStore::writeData(String data)
   Serial.println(data);
   activeFile.println(data);
   activeFile.flush();
+  last_write_ms = millis();
   cnt += 1;
   Serial.print("N. records written to file : ");
   Serial.println(cnt);
@@ -261,6 +264,59 @@ int CityStore::countFilesInQueue()
   return k;
 }
 
+String CityStore::getSDHealth()
+{
+  bool active_exists = SD.exists("active.csv");
+  uint32_t active_size = 0;
+  if (active_exists) {
+    File f = SD.open("active.csv", O_READ);
+    if (f) {
+      active_size = f.size();
+      f.close();
+    }
+  }
+
+  int queue_count = -1;
+  File queueFolder = SD.open("/queue", O_READ);
+  if (queueFolder) {
+    queue_count = 0;
+    File file = queueFolder.openNextFile(O_READ);
+    while (file) {
+      queue_count++;
+      file.close();
+      file = queueFolder.openNextFile(O_READ);
+    }
+    queueFolder.close();
+  }
+
+  int done_count = -1;
+  File doneFolder = SD.open("/done", O_READ);
+  if (doneFolder) {
+    done_count = 0;
+    File file = doneFolder.openNextFile(O_READ);
+    while (file) {
+      done_count++;
+      file.close();
+      file = doneFolder.openNextFile(O_READ);
+    }
+    doneFolder.close();
+  }
+
+  uint32_t age_ms = 0;
+  if (last_write_ms != 0) {
+    age_ms = millis() - last_write_ms;
+  }
+
+  return String::format("sd_init:%d,active:%d,active_size:%lu,queue:%d,done:%d,rec_cnt:%u,last_write_ms:%lu",
+                        sd_initialized ? 1 : 0,
+                        active_exists ? 1 : 0,
+                        active_size,
+                        queue_count,
+                        done_count,
+                        cnt,
+                        age_ms);
+}
+
 bool CityStore::deleteAll(bool removeDirs)
 {
   delFiles("/queue");
@@ -316,6 +372,13 @@ void CityStore::delFiles(const char *folder_name)
 void CityStore::reInit()
 {
   Serial.println("Re-intializing the sd-card");
+  if (!sd_initialized) {
+    sd_initialized = SD.begin(chipSelect);
+    if (!sd_initialized) {
+      Serial.println("SD re-init failed");
+      return;
+    }
+  }
   Serial.println("Deleting all files...");
   activeFile.close();
   deleteAll(1);
@@ -374,6 +437,31 @@ void CityStore::listAllFiles()
   }
 
   Serial.println("LIST_END");
+}
+
+void CityStore::deleteAllForDownload()
+{
+  Serial.println("DELETE_START");
+
+  // Close active file before deleting
+  if (activeFile) {
+    activeFile.close();
+  }
+
+  // Delete files in queue and done folders
+  delFiles("/queue");
+  delFiles("/done");
+
+  // Delete active.csv
+  if (SD.exists("active.csv")) {
+    SD.remove("active.csv");
+    Serial.println("Deleted active.csv");
+  }
+
+  Serial.println("DELETE_END");
+
+  // Re-create a fresh active file
+  switch_logfile();
 }
 
 void CityStore::readFileToSerial(const char* filename)

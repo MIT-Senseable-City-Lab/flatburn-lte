@@ -34,8 +34,116 @@ float num_hrs_to_turn_on_cellular_pwrsave = 2.0; //150.0 / 60.0;     // Number o
 uint16_t num_mins_to_turn_on_cellular_pwrsave = 120; //0;          // Max num of minutes to wait before turning on modem in power saving mode
 
 bool msg_sent = false;
+bool boot_msg_sent = false;
+retained uint32_t last_low_batt_alert_epoch = 0;
+retained bool pending_hibernate_alert = false;
+retained uint16_t pending_hibernate_v_mv = 0;
+retained uint32_t pending_hibernate_epoch = 0;
 
 String deviceID = System.deviceID();
+
+namespace {
+  const uint32_t HIBERNATE_ALERT_MAGIC = 0x48424C54; // "HBLT"
+  const int EEPROM_ADDR_HIBERNATE_ALERT = 0;
+  const uint32_t WAKE_ALERT_MAGIC = 0x57414B45; // "WAKE"
+  const int EEPROM_ADDR_WAKE_ALERT = 64;
+  const uint32_t LOWBATT_ALERT_MAGIC = 0x4C4F4242; // "LOBB"
+  const int EEPROM_ADDR_LOWBATT_ALERT = 128;
+
+  struct HibernateAlertRecord {
+    uint32_t magic;
+    uint16_t batt_mv;
+    uint16_t reserved;
+    uint32_t epoch;
+    uint32_t count;
+  };
+
+  struct WakeAlertRecord {
+    uint32_t magic;
+    uint16_t batt_mv;
+    uint16_t reserved;
+    uint32_t epoch;
+    uint32_t count;
+  };
+
+  struct LowBattAlertRecord {
+    uint32_t magic;
+    uint16_t batt_mv;
+    uint16_t soc;
+    uint32_t epoch;
+    uint32_t count;
+  };
+
+  bool readHibernateAlert(HibernateAlertRecord &rec) {
+    EEPROM.get(EEPROM_ADDR_HIBERNATE_ALERT, rec);
+    return (rec.magic == HIBERNATE_ALERT_MAGIC);
+  }
+
+  void writeHibernateAlert(uint16_t batt_mv, uint32_t epoch) {
+    HibernateAlertRecord rec = {};
+    if (readHibernateAlert(rec)) {
+      rec.count++;
+    } else {
+      rec.magic = HIBERNATE_ALERT_MAGIC;
+      rec.count = 1;
+    }
+    rec.batt_mv = batt_mv;
+    rec.epoch = epoch;
+    EEPROM.put(EEPROM_ADDR_HIBERNATE_ALERT, rec);
+  }
+
+  void clearHibernateAlert() {
+    HibernateAlertRecord rec = {};
+    EEPROM.put(EEPROM_ADDR_HIBERNATE_ALERT, rec);
+  }
+
+  bool readWakeAlert(WakeAlertRecord &rec) {
+    EEPROM.get(EEPROM_ADDR_WAKE_ALERT, rec);
+    return (rec.magic == WAKE_ALERT_MAGIC);
+  }
+
+  void writeWakeAlert(uint16_t batt_mv, uint32_t epoch) {
+    WakeAlertRecord rec = {};
+    if (readWakeAlert(rec)) {
+      rec.count++;
+    } else {
+      rec.magic = WAKE_ALERT_MAGIC;
+      rec.count = 1;
+    }
+    rec.batt_mv = batt_mv;
+    rec.epoch = epoch;
+    EEPROM.put(EEPROM_ADDR_WAKE_ALERT, rec);
+  }
+
+  void clearWakeAlert() {
+    WakeAlertRecord rec = {};
+    EEPROM.put(EEPROM_ADDR_WAKE_ALERT, rec);
+  }
+
+  bool readLowBattAlert(LowBattAlertRecord &rec) {
+    EEPROM.get(EEPROM_ADDR_LOWBATT_ALERT, rec);
+    return (rec.magic == LOWBATT_ALERT_MAGIC);
+  }
+
+  void writeLowBattAlert(uint16_t batt_mv, uint16_t soc, uint32_t epoch) {
+    LowBattAlertRecord rec = {};
+    if (readLowBattAlert(rec)) {
+      rec.count++;
+    } else {
+      rec.magic = LOWBATT_ALERT_MAGIC;
+      rec.count = 1;
+    }
+    rec.batt_mv = batt_mv;
+    rec.soc = soc;
+    rec.epoch = epoch;
+    EEPROM.put(EEPROM_ADDR_LOWBATT_ALERT, rec);
+  }
+
+  void clearLowBattAlert() {
+    LowBattAlertRecord rec = {};
+    EEPROM.put(EEPROM_ADDR_LOWBATT_ALERT, rec);
+  }
+}
 
 Cityscanner::Cityscanner() : core(CS_core::instance()),
                              sense(CitySense::instance()),
@@ -118,15 +226,15 @@ int Cityscanner::init()
     break;
   default:
     Serial.println("Turning ON 3V3");
-    delay(10s);
+    delay(DTIME);
     core.enable3V3(true);
-    delay(DTIME);
-    Serial.println("Turning ON 5V line");
     delay(10s);
+    Serial.println("Turning ON 5V line");
+    delay(DTIME);
     core.enable5V(true);
-    delay(DTIME);
+    delay(10s);
     sense.initI2C();
-    delay(DTIME);
+    delay(10s);
     Serial.println("Turning ON GPS");
     delay(5s);
     locationService.start();
@@ -139,20 +247,22 @@ int Cityscanner::init()
     delay(DTIME);
     Serial.println("Turning ON Temperature sensor");
     delay(500);
-    for (int i = 0; i < 3; i++) {
+    for (int i = 0; i < 7; i++) {
     if (sense.startTEMP()) break;
     Serial.printlnf("TEMP init retry %d", i + 1);
-    delay(1000);
+    delay(2000);
     }
     delay(DTIME);
     Serial.println("Turning ON Gas sensor");
     delay(3s);
     sense.startGAS(); // TBC
     delay(DTIME);
-  
-    Log.info("Turning ON Accelerometer");
+    
     delay(5s);
+    Log.info("Turning ON Accelerometer");
+    delay(2s);
     motionService.start();
+    
     delay(DTIME);
     Serial.println("Turning ON OPC");
     delay(500);
@@ -170,6 +280,66 @@ int Cityscanner::init()
 
 void Cityscanner::loop()
 {
+  if (!boot_msg_sent && Particle.connected()) {
+    if (!vitals.BATT_started) {
+      vitals.startBattery();
+    }
+    int soc = vitals.getBatterySOC();
+    float batt_v = vitals.getBatteryVoltage();
+    String boot_msg = String::format("name=%s,func=cityscanner,mode=%d,batt_soc=%d,batt_v=%.2f",
+                                     deviceID.c_str(),
+                                     MODE,
+                                     soc,
+                                     batt_v);
+    Particle.publish("BOOT", boot_msg);
+
+    if (soc <= 20) {
+      String payload = String::format("soc=%d,batt_v=%.2f,reason=boot", soc, batt_v);
+      Particle.publish("LOW_BATT", payload);
+      if (Time.isValid()) {
+        last_low_batt_alert_epoch = Time.now();
+      } else {
+        last_low_batt_alert_epoch = 1;
+      }
+    }
+    boot_msg_sent = true;
+  }
+
+  if (Particle.connected()) {
+    HibernateAlertRecord rec = {};
+    if (readHibernateAlert(rec)) {
+      float hv = rec.batt_mv / 1000.0f;
+      String payload = String::format("batt_v=%.2f,reason=hibernate,ts=%lu,count=%lu",
+                                      hv, rec.epoch, rec.count);
+      Particle.publish("LOW_BATT", payload);
+      clearHibernateAlert();
+      pending_hibernate_alert = false;
+    } else if (pending_hibernate_alert) {
+      float hv = pending_hibernate_v_mv / 1000.0f;
+      String payload = String::format("batt_v=%.2f,reason=hibernate,ts=%lu", hv, pending_hibernate_epoch);
+      Particle.publish("LOW_BATT", payload);
+      pending_hibernate_alert = false;
+    }
+
+    WakeAlertRecord wrec = {};
+    if (readWakeAlert(wrec)) {
+      float hv = wrec.batt_mv / 1000.0f;
+      String payload = String::format("batt_v=%.2f,reason=stop,ts=%lu,count=%lu",
+                                      hv, wrec.epoch, wrec.count);
+      Particle.publish("WAKE", payload);
+      clearWakeAlert();
+    }
+
+    LowBattAlertRecord lrec = {};
+    if (readLowBattAlert(lrec)) {
+      float hv = lrec.batt_mv / 1000.0f;
+      String payload = String::format("soc=%u,batt_v=%.2f,reason=offline,ts=%lu,count=%lu",
+                                      lrec.soc, hv, lrec.epoch, lrec.count);
+      Particle.publish("LOW_BATT", payload);
+      clearLowBattAlert();
+    }
+  }
+
 if (millis() - lastPublishTime >= publishInterval) {
         // Construct the response string
         String response = String(Time.now());
@@ -244,26 +414,16 @@ if (millis() - lastPublishTime >= publishInterval) {
   {
     flag_vitals = false;
 
-    vitals_payload = String::format("%s,%s,%s,%s,%s", vitals.getBatteryData().c_str(), // SOC,temp,voltage,voltage_Partice,current_mA,is_charging
-                                    vitals.getChargingStatus().c_str(),                // isCharging,isCharged
-                                    vitals.getTempIntData().c_str(),                   // temp_int,hum_int
-                                    vitals.getSolarData().c_str(),                     // solar_volt,solar_current
-                                    vitals.getSignalStrenght().c_str());               // Cellular signal strenght
+    vitals_payload = vitals.getVitalsPayload();
 
-    switch (MODE)
-    {
-      case LOGGING:
-      store.logData(BROADCAST_NONE, Vitals, vitals_payload);
-      Log.info("Vitals Logging");
+    // Always persist vitals to SD for battery/solar testing, independent of mode.
+    store.logData(BROADCAST_NONE, Vitals, vitals_payload);
+    Log.info("Vitals Logging");
+
+    // Keep prior LOGGING-mode behavior for connectivity management.
+    if (MODE == LOGGING) {
       cellular.smartconnect();    // Check if cellular is connected, if not turn off modem
-      break;
-    case PWRSAVE:
-      store.logData(BROADCAST_NONE, Vitals, vitals_payload);
-      Log.info("Vitals Logging");
-      break;
-    default:
-      break;
-     }
+    }
 }
 
 
@@ -352,13 +512,52 @@ if (millis() - lastPublishTime >= publishInterval) {
 
 void Cityscanner::checkbattery()
 {
-  // Use CityVitals for battery voltage reading (handles V4 hardware properly)
+  // Ensure battery charger is initialized before reading
+  if (!CityVitals::instance().BATT_started) {
+    CityVitals::instance().startBattery();
+  }
+
   float battery_v = CityVitals::instance().getBatteryVoltage();
-  Log.info("Battery voltage: %.2f V", battery_v);
+  int soc = CityVitals::instance().getBatterySOC();
+
+  if (soc <= 20 && Particle.connected()) {
+    bool should_alert = false;
+    if (Time.isValid()) {
+      if (last_low_batt_alert_epoch == 0 ||
+          (Time.now() - last_low_batt_alert_epoch) >= LOW_BATT_ALERT_INTERVAL_SEC) {
+        should_alert = true;
+      }
+    } else if (last_low_batt_alert_epoch == 0) {
+      should_alert = true;
+    }
+
+    if (should_alert) {
+      uint16_t batt_mv = (uint16_t)(battery_v * 1000.0f);
+      uint32_t epoch = Time.isValid() ? Time.now() : 0;
+      writeLowBattAlert(batt_mv, (uint16_t)soc, epoch);
+      if (Particle.connected()) {
+        String payload = String::format("soc=%d,batt_v=%.2f,reason=periodic", soc, battery_v);
+        Particle.publish("LOW_BATT", payload);
+        clearLowBattAlert();
+      }
+      if (Time.isValid()) {
+        last_low_batt_alert_epoch = Time.now();
+      } else {
+        last_low_batt_alert_epoch = 1;
+      }
+    }
+  } else if (soc >= 25) {
+    last_low_batt_alert_epoch = 0;
+  }
 
   // Check if the battery is low
     if (battery_v < LOW_BATTERY_THRESHOLD)
     {
+        if (!LOW_BATTERY_HIBERNATE) {
+            Log.warn("Low battery (%.2fV) detected, hibernate disabled for test. Continuing measurements.", battery_v);
+            return;
+        }
+
         Log.info("Low battery detected. Rechecking in 10 seconds...");
         delay(10s);
         battery_v = CityVitals::instance().getBatteryVoltage();
@@ -380,9 +579,28 @@ void Cityscanner::checkbattery()
 
             // No charging detected, hibernate for 30 minutes
             Log.info("Battery low and no charging detected. Hibernating for 30 minutes.");
+            pending_hibernate_alert = true;
+            pending_hibernate_v_mv = (uint16_t)(battery_v * 1000.0f);
+            if (Time.isValid()) {
+              pending_hibernate_epoch = Time.now();
+            } else {
+              pending_hibernate_epoch = 0;
+            }
+            writeHibernateAlert(pending_hibernate_v_mv, pending_hibernate_epoch);
+            if (Particle.connected()) {
+              String payload = String::format("batt_v=%.2f,reason=hibernate,ts=%lu", battery_v, pending_hibernate_epoch);
+              Particle.publish("LOW_BATT", payload);
+              pending_hibernate_alert = false;
+              clearHibernateAlert();
+            }
             CitySleep::instance().hibernate(30, MINUTES);
         }
     }
+}
+
+void Cityscanner::recordWakeEvent(uint16_t batt_mv, uint32_t epoch)
+{
+  writeWakeAlert(batt_mv, epoch);
 }
 
 
@@ -422,7 +640,7 @@ void Cityscanner::printDebug()
   Serial.println(" *noise_level*");
   Serial.print("SOLAR: ");
   Serial.print(vitals.getSolarData());
-  Serial.println(" *solar_volt,solar_current*");
+  Serial.println(" *input_volt,input_current*");
   Serial.print("BATT: ");
   Serial.print(vitals.getBatteryData());
   Serial.println(" *SOC,temp,voltage,current_mA,is_charging*");

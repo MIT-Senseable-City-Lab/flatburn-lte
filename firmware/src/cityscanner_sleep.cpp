@@ -1,6 +1,7 @@
 #include "cityscanner_sleep.h"
 #include "cityscanner.h"
 #include "cityscanner_store.h"
+#include "Particle.h"
 
 CitySleep *CitySleep::_instance = nullptr;
 
@@ -17,19 +18,20 @@ int CitySleep::init(){
     return 1;
 }
 
-void CitySleep::stop(){
+void CitySleep::stop(uint8_t duration, uint8_t type){
     Log.info("Preparing for STOP mode");
     delay(100);
     //motionService.stop();
     locationService.stop();
     vitals.stop_all();
     sense.stop_all();
-     // Stop all sensors including SPS30
+    // Keep the shared sensor rail alive so the IMU can still wake the MCU.
     sense.sleepAllSensors();
     sense.stopOPC();
-    core.enable3V3(FALSE);
+    core.enable3V3(TRUE);
     core.enableOPC(FALSE);
     core.enable5V(FALSE);
+    
     //if(Particle.connected())
     //    Particle.publish("WAR","Going into STOP Mode");
     if(Cityscanner::instance().debug_mode){
@@ -38,22 +40,40 @@ void CitySleep::stop(){
     }
     delay(100);
     SystemSleepConfiguration config;
-    config.mode(SystemSleepMode::STOP)
-        .duration(std::chrono::hours(12))
-        //.gpio(WKP,CHANGE)
+    config.mode(SystemSleepMode::STOP);
+    switch (type)
+    {
+    case SECONDS:
+        config.duration(std::chrono::seconds(duration));
+        break;
+    case MINUTES:
+        config.duration(std::chrono::minutes(duration));
+        break;
+    case HOURS:
+        config.duration(std::chrono::hours(duration));
+        break;
+    default:
+        config.duration(std::chrono::hours(12));
+        break;
+    }
+    config
         .gpio(INT_ACC, CHANGE)
         .network(NETWORK_INTERFACE_CELLULAR, SystemSleepNetworkFlag::INACTIVE_STANDBY);
     System.sleep(config);
     if(Cityscanner::instance().debug_mode){
         Log.info("Back from STOP mode");
         waitFor(Particle.connected, 10000);
-        Cityscanner::instance().sendWarning("WOKENUP");
+        Cityscanner::instance().sendWarning("WOKENUP"); 
     }
     //Particle.publish("WAR","Waking up from STOP Mode");
     delay(1s);
     core.enable3V3(TRUE);
     locationService.start();
     vitals.init();
+    float batt_v = CityVitals::instance().getBatteryVoltage();
+    uint16_t batt_mv = (uint16_t)(batt_v * 1000.0f);
+    uint32_t epoch = Time.isValid() ? Time.now() : 0;
+    Cityscanner::instance().recordWakeEvent(batt_mv, epoch);
     sense.startNOISE();
     sense.startTEMP();
     sense.startGAS();

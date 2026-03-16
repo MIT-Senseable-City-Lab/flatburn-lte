@@ -72,9 +72,21 @@ int commandLine(String command)
     String filename = first_parameter.substring(5); // Remove "READ:" prefix
     CityStore::instance().readFileToSerial(filename.c_str());
   }
+  else if (!first_parameter.compareTo("DELETE_ALL"))
+  {
+    CityStore::instance().deleteAllForDownload();
+  }
   else if (!first_parameter.compareTo("reboot"))
   {
     System.reset();
+  }
+  else if (!first_parameter.compareTo("dfu"))
+  {
+    Log.info("Entering DFU mode");
+    if (Particle.connected())
+      Particle.publish("DFU", "entering");
+    delay(200);
+    System.dfu();
   }
   else if (!first_parameter.compareTo("stop"))
   {
@@ -116,6 +128,21 @@ int commandLine(String command)
       if (Particle.connected())
         Particle.publish("FILES", files_in_queue);
     }
+    else if (!second_parameter.compareTo("health")) // SD card health status for debugging
+    {
+      String status = CityStore::instance().getSDHealth();
+      Log.info(status);
+      if (Particle.connected())
+        Particle.publish("SDHEALTH", status);
+    }
+    else if (!second_parameter.compareTo("reinit")) // SD card reboot for remote management
+    {
+      CityStore::instance().init();
+      String status = CityStore::instance().getSDHealth();
+      Log.info(status);
+      if (Particle.connected())
+        Particle.publish("SDHEALTH", status);
+    }
 
 
     else if (!second_parameter.compareTo("format"))
@@ -127,7 +154,7 @@ int commandLine(String command)
     }
   }
 
-  else if (!first_parameter.compareTo("autosleep"))
+  else if (!first_parameter.compareTo("autosleep")) // Remote control of the autosleep function
   {
     if (!second_parameter.compareTo("on")){   
       MotionService::instance().setOverrideAutosleep(FALSE);
@@ -139,7 +166,7 @@ int commandLine(String command)
   }
   }
 
-  else if (!first_parameter.compareTo("heat-cool"))
+  else if (!first_parameter.compareTo("heat-cool")) // Heater is outdated? Can be removed?
   {
     if (!second_parameter.compareTo("on")){   
       CS_core::instance().enableHEATER(TRUE);
@@ -193,18 +220,129 @@ else if (!first_parameter.compareTo("location"))
     if (Particle.connected())
       Particle.publish("GPS", status);
   }
-  else if (!first_parameter.compareTo("battery"))
+  else if (!first_parameter.compareTo("gpsdebug")) // GPS debugging, can be removed now since functional
+  {
+    String status = LocationService::instance().getGPSDebug();
+    Log.info(status);
+    if (Particle.connected())
+      Particle.publish("GPSDBG", status);
+  }
+  else if (!first_parameter.compareTo("gpsraw")) // Can be removed
+  {
+    LocationService::instance().testRawGPS();
+  }
+  else if (!first_parameter.compareTo("battery")) // Battery debugging, can be removed now since functional
   {
     String status = "na";
-    status = CityVitals::instance().getBatteryData();
+    status = CityVitals::instance().getBatteryDetails();
     Log.info(status);
     if (Particle.connected())
       Particle.publish("BATT", status);
   }
-  else if (!first_parameter.compareTo("solar"))
+  else if (!first_parameter.compareTo("lowbatt")) // Slack debugging can be removed
+  {
+    if (!second_parameter.compareTo("test"))
+    {
+      String payload = "soc=test,batt_v=0.00,reason=manual";
+      Log.info(payload);
+      if (Particle.connected())
+        Particle.publish("LOW_BATT", payload);
+    }
+  }
+  else if (!first_parameter.compareTo("stationary")) // Slack debugging
+  {
+    if (!second_parameter.compareTo("reset"))
+    {
+      MotionService::resetInactivityCounter();
+      Log.info("stationary reset");
+    }
+    else if (!second_parameter.compareTo("test")) // Slack debugging
+    {
+      if (!CityVitals::instance().BATT_started) {
+        CityVitals::instance().startBattery();
+      }
+      float batt_v = CityVitals::instance().getBatteryVoltage();
+      int inactive_s = MotionService::getInactivityCounter();
+      String payload = String::format("inactive_s=%d,batt_v=%.2f,reason=manual", inactive_s, batt_v);
+      Log.info(payload);
+      if (Particle.connected())
+        Particle.publish("STATIONARY", payload);
+    }
+    else if (!second_parameter.compareTo("sleep")) // Sleep vs Hibernation? Will verify later. Hibernation can be removed if not useful. Attempted this for remote-triggered hibernation but did not work as expected, needs further investigation.
+    {
+      int duration = third_parameter.toInt();
+      if (duration <= 0) {
+        duration = 5;
+      }
+      if (!fourth_parameter.compareTo("seconds"))
+        CitySleep::instance().stop(duration, SECONDS);
+      else if (!fourth_parameter.compareTo("hours"))
+        CitySleep::instance().stop(duration, HOURS);
+      else
+        CitySleep::instance().stop(duration, MINUTES);
+    }
+    else
+    {
+      if (!CityVitals::instance().BATT_started) {
+        CityVitals::instance().startBattery();
+      }
+      String charging_status = CityVitals::instance().getChargingStatus();
+      float batt_v = CityVitals::instance().getBatteryVoltage();
+      int inactive_s = MotionService::getInactivityCounter();
+      String status = String::format("inactive_s=%d,inactivity_cfg_s=%d,charging=%c,batt_v=%.2f",
+                                     inactive_s,
+                                     INACTIVITY_TIME,
+                                     charging_status.startsWith("1") ? '1' : '0',
+                                     batt_v);
+      Log.info(status);
+      if (Particle.connected())
+        Particle.publish("STATIONARY_STATUS", status);
+    }
+  }
+  else if (!first_parameter.compareTo("bmewd")) // BME was inconsistent sometimes, Watchdog was added to check for loops and slack notification was added. Can be removed for Brazil.
+  {
+    String status = CitySense::instance().getBMEWatchdogStats();
+    Log.info(status);
+    if (Particle.connected())
+      Particle.publish("BMEWD", status);
+  }
+  else if (!first_parameter.compareTo("imu")) // IMU debugging, can be removed potentially
+  {
+    uint32_t irq_count = MotionService::getImuIrqCount();
+    uint32_t irq_total = MotionService::getImuIrqTotal();
+    uint32_t last_irq_ms = MotionService::getImuIrqLastMs();
+    uint32_t age_ms = 0;
+    if (last_irq_ms > 0) {
+      age_ms = millis() - last_irq_ms;
+    }
+    int inactive_s = MotionService::getInactivityCounter();
+    int int_state = digitalRead(INT_ACC);
+    String status = String::format("irq_boot=%lu,irq_total=%lu,last_irq_ms=%lu,age_ms=%lu,inactive_s=%d,int_acc=%d",
+                                   irq_count, irq_total, last_irq_ms, age_ms, inactive_s, int_state);
+    Log.info(status);
+    if (Particle.connected())
+      Particle.publish("IMUDBG", status);
+  }
+  else if (!first_parameter.compareTo("wake")) // Wake command did not function as expected, needs further investigation. Remote management feature again.
+  {
+    if (!second_parameter.compareTo("test"))
+    {
+      if (!CityVitals::instance().BATT_started) {
+        CityVitals::instance().startBattery();
+      }
+      float batt_v = CityVitals::instance().getBatteryVoltage();
+      uint32_t epoch = Time.isValid() ? Time.now() : 0;
+      String payload = String::format("batt_v=%.2f,reason=manual,ts=%lu", batt_v, epoch);
+      Log.info(payload);
+      if (Particle.connected())
+        Particle.publish("WAKE", payload);
+    }
+  }
+  else if (!first_parameter.compareTo("solar") || !first_parameter.compareTo("input")) // Solar debugging.
   {
     String status = "na";
     status = CityVitals::instance().getSolarData();
+    status += "," + String((unsigned int)CityVitals::instance().getVBUSStatusCode());
     Log.info(status);
     if (Particle.connected())
       Particle.publish("SOLAR", status);

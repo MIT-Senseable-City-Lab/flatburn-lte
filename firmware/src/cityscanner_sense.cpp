@@ -7,6 +7,7 @@
 #include <Adafruit_TLC59711.h>
 #include <map>
 #include <string>
+#include <math.h>
 
 
 // Define SPI and ADS1256-related pins
@@ -35,6 +36,9 @@ SPS30 sps30;
 uint8_t ret, error_cnt = 0;
 struct sps_values val;
 BME280 tempext;
+
+retained uint32_t bme_reinit_count = 0;
+retained uint32_t bme_reset_count = 0;
 
 
 CitySense::CitySense() {}
@@ -153,7 +157,6 @@ bool CitySense::startOPC()
                 delay(2000);
             }
             
-            // ✅ Fixed: start() returns bool, not error code
             if (sps30.start()) {
                 Serial.println("SPS30 measurement started successfully!");
                 OPC_started = true;
@@ -234,12 +237,13 @@ bool CitySense::startTEMP()
         return false;
     }
     
-    // ✅ Discard first reading (often garbage)
     tempext.readTempC();
     tempext.readFloatHumidity();
     delay(100);
     
     TEMPext_started = true;
+    temp_fail_start_ms = 0;
+    temp_last_reinit_ms = 0;
     Serial.println("BME280 initialized");
     return true;
 }
@@ -252,15 +256,41 @@ bool CitySense::stopTEMP()
 
 String CitySense::getTEMPdata()
 {
-    if(TEMPext_started)
+    if (TEMPext_started)
     {
-        return String::format("%.1f,%.1f", tempext.readTempC(), tempext.readFloatHumidity());
-    } else
-        return "na,na";
+        float temp_c = tempext.readTempC();
+        float humid = tempext.readFloatHumidity();
+        if (!isnan(temp_c) && !isnan(humid)) {
+            temp_fail_start_ms = 0;
+            return String::format("%.1f,%.1f", temp_c, humid);
+        }
+    }
+
+    uint32_t now = millis();
+    if (temp_fail_start_ms == 0) {
+        temp_fail_start_ms = now;
+    }
+    if (now - temp_last_reinit_ms >= BME_FAIL_REINIT_MS) {
+        temp_last_reinit_ms = now;
+        bme_reinit_count++;
+        stopTEMP();
+        startTEMP();
+    }
+    if (now - temp_fail_start_ms >= BME_FAIL_RESET_MS) {
+        Log.error("BME280 failed for %lu ms, resetting", (now - temp_fail_start_ms));
+        bme_reset_count++;
+        System.reset();
+    }
+    return "na,na";
+}
+
+String CitySense::getBMEWatchdogStats()
+{
+    return String::format("bme_reinit:%lu,bme_reset:%lu", bme_reinit_count, bme_reset_count);
 }
 
 bool CitySense::startNOISE(){
-    pinMode(A4,INPUT);
+    pinMode(A7,INPUT);
     NOISE_started = true;
     return 1;
 }
@@ -271,7 +301,7 @@ bool CitySense::stopNOISE(){
 
 String CitySense::getNOISEdata(){
     if(NOISE_started)
-        return String(analogRead(A4));
+        return String(analogRead(A7));
     else
         return "na";
 }

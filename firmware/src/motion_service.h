@@ -1,7 +1,7 @@
 #pragma once
 #include "Particle.h"
 #include "kxtj3-1057.h"
-#include "cityscanner_CONFIG.h"
+#include "cityscanner_config.h"
 #include "cityscanner_sleep.h"
 
 
@@ -36,6 +36,9 @@ class MotionService {
     void testAccelerometer();
     static void resetInactivityCounter();
     static int getInactivityCounter(void);
+    static uint32_t getImuIrqCount(void);
+    static uint32_t getImuIrqTotal(void);
+    static uint32_t getImuIrqLastMs(void);
     void loop();
 
     private:

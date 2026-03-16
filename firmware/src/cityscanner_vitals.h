@@ -31,6 +31,14 @@ class CityVitals {
         float getBatteryVoltage();
         float getBatteryCurrent();      // Battery charge/discharge current
         float getBatteryTemp();         // Battery/charger temperature
+        int getBatterySOC();            // Battery SOC estimate (0-100)
+        float getBatteryVBUS();
+        float getBatteryIBUS();
+        float getBatteryVSYS();
+        float getBatteryTS();
+        uint8_t getChargeStatusCode();
+        uint8_t getVBUSStatusCode();
+        String getBatteryDetails();
 
         // Solar/Power monitoring functions (ISL28022)
         bool startSolar(void);

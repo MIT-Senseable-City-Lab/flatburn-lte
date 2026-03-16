@@ -26,8 +26,10 @@ public:
     //byte month, Day, Hour, Minute, Second;
     bool location_started = false;
     String getGPSdata(void);
+    String getGPSDebug(void);
     String getGPStime(void);
     String getEpochTime(void);
+    void testRawGPS(void);
 
 private:
     LocationService();

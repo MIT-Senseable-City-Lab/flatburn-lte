@@ -1,5 +1,5 @@
 #pragma once
-#include "cityscanner_CONFIG.h"
+#include "cityscanner_config.h"
 #include "Particle.h"
 #define BASE 0 
 #define EXTENDED 1 
@@ -29,6 +29,7 @@ class CitySense {
         bool stopTEMP(void); 
         bool TEMPext_started = false;
         String getTEMPdata(void);
+        String getBMEWatchdogStats(void);
         bool startNOISE(void);
         bool stopNOISE(void);
         bool NOISE_started = false;
@@ -53,4 +54,6 @@ class CitySense {
     private:
         CitySense();
         static CitySense* _instance;
+        uint32_t temp_fail_start_ms = 0;
+        uint32_t temp_last_reinit_ms = 0;
 };

@@ -36,7 +36,7 @@ class CitySleep {
          * @retval SYSTEM_ERROR_NONE
          */
         int init();
-        void stop();
+        void stop(uint8_t duration = 12, uint8_t type = HOURS);
         void hibernate(uint8_t duration, uint8_t type);
         
 

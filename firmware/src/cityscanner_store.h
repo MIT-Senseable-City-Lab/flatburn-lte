@@ -39,11 +39,13 @@ class CityStore {
         void writeData(String data);
         bool dumpData(int files_to_dump);
         int countFilesInQueue();
+        String getSDHealth();
         String deviceID = "na";
 
         // Serial download support
         void listAllFiles();
         void readFileToSerial(const char* filename);
+        void deleteAllForDownload();
         
     
     private:
@@ -51,6 +53,8 @@ class CityStore {
         static CityStore* _instance;
         File activeFile;
         unsigned int cnt = 1;
+        uint32_t last_write_ms = 0;
+        bool sd_initialized = false;
         TCPClient client;
         const char* s3endpoint = "0";
         

@@ -43,6 +43,7 @@ class Cityscanner {
         void loop();
         void startShippingMode();
         void checkbattery();
+        void recordWakeEvent(uint16_t batt_mv, uint32_t epoch);
         void sendWarning(String);
         int counter = 0;
         bool debug_mode = DEBUG;
