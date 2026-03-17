@@ -23,6 +23,8 @@ The HTML tool is available [here](https://github.com/MIT-Senseable-City-Lab/flat
 3. Select the Flatburn port; it will be labeled **"B-SoM CDC Mode"**.
 4. The status indicator will turn green once connected, and the file list will load automatically.
 
+**Note** After connecting, the tool waits about 1 minute for the device to finish initializing before loading the file list. This is normal, just wait for the file list to appear.
+
 ## Step 3: Download, Parse & Merge
 
 The tool will display all available files on the SD card (e.g., files in `/queue/` and `active.csv`).
