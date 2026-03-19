@@ -4,9 +4,10 @@ sidebar_position: 5
 
 import Top from '@site/static/files/assembly/DSC09227.jpg'
 import Middle from '@site/static/files/printed/middle.png'
-import Bottom from '@site/static/files/printed/bottom.png'
+import Bottom from '@site/static/files/assembly/DSC09240.jpg'
 import BatteryCover from '@site/static/files/printed/battery_cover.png'
 import SwitchTop from '@site/static/files/printed/switch_top.png'
+
 
 # 🔩 Mechanics (files)
 
@@ -28,15 +29,7 @@ Since the device might also be exposed to moisture, vibration and stress – dur
 
 These settings were used for time estimations below, with a total time of approximately **15 hours**.
 
-### Supports
-
-_image with where supports are needed_
-
 ### Parts List
-
-:::warning
-Both _middle_ and _camera_ are the only parts that need supports.
-:::
 
 :::tip
 The 3d files below are provided with optimal orientation for printing, which is different from their respective reference images.
