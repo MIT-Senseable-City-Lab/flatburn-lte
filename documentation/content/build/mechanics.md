@@ -11,10 +11,6 @@ import CameraMount from '@site/static/files/printed/camera.png'
 
 # 🔩 Mechanics (files)
 
-## 3D Printed parts
-
-![3D Printed Parts](@site/static/files/printed/printedparts.jpg)
-
 ###
 
 ### Material and Suggested Settings
