@@ -49,7 +49,7 @@ The 3d files below are provided with optimal orientation for printing, which is 
 
 | ID       | name              |                                              image                                              | support | weight | ~time |            download            |
 | :------- | :---------------- | :---------------------------------------------------------------------------------------------: | :-----: | -----: | :---: | :----------------------------: |
-| MP_01    | **top**           |  <img src={Top} style={{width: "75%", filter: "drop-shadow(0 0 1px rgba(0,0,0,1))"}} />      |    N    |  350 g | 07:30 | [link](https://github.com/MIT-Senseable-City-Lab/flatburn-lte/tree/main/hardware/enclosure/stl) |
+| MP_01    | **top**           |  <img src={Top} style={{width: "75%", filter: "drop-shadow(0 0 1px rgba(0,0,0,1))"}} />      |    N    |  350 g | 07:30 | [link](https://github.com/MIT-Senseable-City-Lab/flatburn-lte/blob/main/hardware/enclosure/stl/MP-01%20top.stl) |
 | MP_02    | **middle**        |  <img src={Middle} style={{width: "75%", filter: "drop-shadow(0 0 1px rgba(0,0,0,1))"}} />    |    Y    |  150 g | 03:30 | [link](https://github.com/MIT-Senseable-City-Lab/flatburn-lte/tree/main/hardware/enclosure/stl) |
 | MP_03    | **bottom**        |  <img src={Bottom} style={{width: "75%", filter: "drop-shadow(0 0 1px rgba(0,0,0,1))"}} />    |    N    |  150 g | 03:30 | [link](https://github.com/MIT-Senseable-City-Lab/flatburn-lte/tree/main/hardware/enclosure/stl) |
 | MP_04    | **switch_top**    |  <img src={SwitchTop} style={{width: "20%", filter: "drop-shadow(0 0 1px rgba(0,0,0,1))"}} />   |    N    |    5 g | 00:10 | [link](https://github.com/MIT-Senseable-City-Lab/flatburn-lte/tree/main/hardware/enclosure/stl) |
