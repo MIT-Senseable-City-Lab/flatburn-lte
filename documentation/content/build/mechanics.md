@@ -34,14 +34,13 @@ These settings were used for time estimations below, with a total time of approx
 :::tip
 The 3d files below are provided with optimal orientation for printing, which is different from their respective reference images.
 :::
-
-| ID       | name              |                                              image                                              | support | weight | ~time |            download            |
-| :------- | :---------------- | :---------------------------------------------------------------------------------------------: | :-----: | -----: | :---: | :----------------------------: |
-| MP_01    | **top**           |  <img src={Top} style={{width: "75%", filter: "drop-shadow(0 0 1px rgba(0,0,0,1))"}} />      |    N    |  350 g | 07:30 | [link](https://github.com/MIT-Senseable-City-Lab/flatburn-lte/blob/main/hardware/enclosure/stl/MP-01%20top.stl) |
-| MP_02    | **middle**        |  <img src={Middle} style={{width: "75%", filter: "drop-shadow(0 0 1px rgba(0,0,0,1))"}} />    |    Y    |  150 g | 03:30 | [link](https://github.com/MIT-Senseable-City-Lab/flatburn-lte/blob/main/hardware/enclosure/stl/MP-02%20middle.stl) |
-| MP_03    | **bottom**        |  <img src={Bottom} style={{width: "75%", filter: "drop-shadow(0 0 1px rgba(0,0,0,1))"}} />    |    N    |  150 g | 03:30 | [link](https://github.com/MIT-Senseable-City-Lab/flatburn-lte/blob/main/hardware/enclosure/stl/MP-03%20bottom.stl) |
-| MP_04    | **switch_top**    |  <img src={SwitchTop} style={{width: "20%", filter: "drop-shadow(0 0 1px rgba(0,0,0,1))"}} />   |    N    |    5 g | 00:10 | [link](https://github.com/MIT-Senseable-City-Lab/flatburn-lte/blob/main/hardware/enclosure/stl/MP-04%20switch_top.stl) |
-| MP_05_02 | **switch_bottom** | <img src={SwitchTop} style={{width: "20%", filter: "drop-shadow(0 0 1px rgba(0,0,0,1))"}} /> |    N    |    5 g | 00:10 | [link](https://github.com/MIT-Senseable-City-Lab/flatburn-lte/blob/main/hardware/enclosure/stl/switch%20radial%20-%20R10307RN02Q/MP-05%20switch_bottom.stl) |
-| MP_06    | **battery_cover** | <img src={SwitchTop} style={{width: "25%", filter: "drop-shadow(0 0 1px rgba(0,0,0,1))"}} />  |    Y    |   15 g | 00:30 | [link](https://github.com/MIT-Senseable-City-Lab/flatburn-lte/blob/main/hardware/enclosure/stl/MP-06%20battery_cover.stl) |
+| ID       | name              | support | weight | ~time | download |
+| :------- | :---------------- | :-----: | -----: | :---: | :---: |
+| MP_01    | **top**           |    N    |  350 g | 07:30 | [link](https://github.com/MIT-Senseable-City-Lab/flatburn-lte/blob/main/hardware/enclosure/stl/MP-01%20top.stl) |
+| MP_02    | **middle**        |    Y    |  150 g | 03:30 | [link](https://github.com/MIT-Senseable-City-Lab/flatburn-lte/blob/main/hardware/enclosure/stl/MP-02%20middle.stl) |
+| MP_03    | **bottom**        |    N    |  150 g | 03:30 | [link](https://github.com/MIT-Senseable-City-Lab/flatburn-lte/blob/main/hardware/enclosure/stl/MP-03%20bottom.stl) |
+| MP_04    | **switch_top**    |    N    |    5 g | 00:10 | [link](https://github.com/MIT-Senseable-City-Lab/flatburn-lte/blob/main/hardware/enclosure/stl/MP-04%20switch_top.stl) |
+| MP_05_02 | **switch_bottom** |    N    |    5 g | 00:10 | [link](https://github.com/MIT-Senseable-City-Lab/flatburn-lte/blob/main/hardware/enclosure/stl/switch%20radial%20-%20R10307RN02Q/MP-05%20switch_bottom.stl) |
+| MP_06    | **battery_cover** |    Y    |   15 g | 00:30 | [link](https://github.com/MIT-Senseable-City-Lab/flatburn-lte/blob/main/hardware/enclosure/stl/MP-06%20battery_cover.stl) |
 
 The sources are available [here](https://github.com/MIT-Senseable-City-Lab/flatburn-lte/tree/main/hardware/enclosure/step) in *.STEP* format.
